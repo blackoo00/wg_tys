@@ -1,0 +1,169 @@
+<include file="Public:head"/>
+<style>
+    .bloodsuger{width: 800px; border:solid #add9c0; border-width:1px 0px 0px 1px; margin-top: 5px;}
+    .bloodsuger th,.bloodsuger td{border:solid #add9c0; border-width:0px 1px 1px 0px; height: 30px;}
+    .bloodsuger td{text-align: center; font-size: 1.2em;}
+    .xtjl{color:red;}
+    .cdul li{display: inline-block; width: 200px;}
+    .cdul li img{width: 100%;}
+</style>
+<div class="content" <if condition="session('isQcloud') eq true">style="float:center;"</if>
+>
+<div class="cLineB">
+  <h4>患者详细</h4>
+  <a href="javascript:history.go(-1);"  class="right btnGrayS vm" style="margin-top:-27px" >返回</a>
+</div>
+<div class="msgWrap">
+  <TABLE class="userinfoArea" style=" margin:20px 0 0 0;" border="0" cellSpacing="0" cellPadding="0" width="100%">
+    <input type="hidden" name="id" value="{pigcms:$info.id}" />
+    <tr>
+      <th style="font-size:15px; color:red;">基本信息</th>
+    </tr>
+    <TR>
+      <TH valign="top">
+        <label for="keyword">患者姓名：</label>
+      </TH>
+      <TD>{pigcms:$info.name}</TD>
+    </TR>
+    <TR>
+      <TH valign="top">
+        <label for="keyword">性别：</label>
+      </TH>
+      <TD>
+        <if condition="$info.sex eq 1">
+          男
+          <else/>
+          女
+        </if>
+      </TD>
+    </TR>
+    <TR>
+      <TH valign="top">
+        <label for="keyword">年龄：</label>
+      </TH>
+      <TD>{pigcms:$info.age}</TD>
+    </TR>
+    <TR>
+      <TH valign="top">
+        <label for="keyword">患者电话：</label>
+      </TH>
+      <TD>{pigcms:$info.tel}</TD>
+    </TR>
+    <TR>
+      <TH valign="top">
+        <label for="keyword">地址：</label>
+      </TH>
+      <TD>{pigcms:$info.address}</TD>
+    </TR>
+    <TR>
+      <TH valign="top">
+        <label for="keyword">糖尿病类型：</label>
+      </TH>
+      <TD>{pigcms:$info.diabetes}</TD>
+    </TR>
+    <TR>
+      <TH valign="top">
+        <label for="keyword">关注医生：</label>
+      </TH>
+      <TD>{pigcms:$info.doctor.name}</TD>
+    </TR>
+    <tr>
+      <th style="font-size:15px; color:red;">血糖详情</th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table class="bloodsuger">
+            <tr>
+                <td rowspan="2">日期</td>
+                <td></td>
+                <td colspan="2">早餐</td>
+                <td colspan="2">午餐</td>
+                <td colspan="2">晚餐</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>凌晨</td>
+                <td>空腹</td>
+                <td>餐后</td>
+                <td>餐前</td>
+                <td>餐后</td>
+                <td>餐前</td>
+                <td>餐后</td>
+                <td>睡前</td>
+            </tr>
+            <volist id="list" name="bsuger">
+                <tr>
+                    <td class="xtjl">{pigcms:$list.recordtime|friendlyDate=###,md,false}</td>
+                    <td class="xtjl">{pigcms:$list.lctxs}</td>
+                    <td class="xtjl">{pigcms:$list.kf}</td>
+                    <td class="xtjl">{pigcms:$list.zchtxs}</td>
+                    <td class="xtjl">{pigcms:$list.acq}</td>
+                    <td class="xtjl">{pigcms:$list.achtxs}</td>
+                    <td class="xtjl">{pigcms:$list.wcq}</td>
+                    <td class="xtjl">{pigcms:$list.wchtxs}</td>
+                    <td class="xtjl">{pigcms:$list.sq}</td>
+                </tr>
+            </volist>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th style="font-size:15px; color:red;">重要指标</th>
+    </tr>
+    <TR>
+      <TH valign="top">
+        <label for="keyword">糖化血红蛋白(HbA1c):</label>
+      </TH>
+      <TD class="xtjl">{pigcms:$bprotein.hbaic}</TD>
+    </TR>
+    <TR>
+      <TH valign="top">
+        <label for="keyword">BMI:</label>
+      </TH>
+      <TD class="xtjl">{pigcms:$bprotein.bmi}</TD>
+    </TR>
+    <TR>
+      <TH valign="top">
+        <label for="keyword">血压(mmHg):</label>
+      </TH>
+      <TD class="xtjl">{pigcms:$bprotein.presure}</TD>
+    </TR>
+    <TR>
+      <TH valign="top">
+        <label for="keyword">甘油三脂(mmol/L):</label>
+      </TH>
+      <TD class="xtjl">{pigcms:$bprotein.xiezhi}</TD>
+    </TR>
+    <TR>
+      <TH valign="top">
+        <label for="keyword">用药情况:</label>
+      </TH>
+      <TD class="xtjl">{pigcms:$bprotein.note}</TD>
+    </TR>
+    <tr>
+      <th style="font-size:15px; color:red;">化验单</th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <ul class="cdul">
+          <volist id="list" name="laboratory">
+            <li>
+            <a href="{pigcms:$list.pic}" target="_blank"><img src="{pigcms:$list.pic}"></a>
+            </li>
+          </volist>
+        </ul>
+      </td>
+    </tr>
+  </TABLE>
+</div>
+</div>
+<div class="clr"></div>
+
+
+
+
+<!--底部-->
+
+<if condition="session('isQcloud') neq true">
+<include file="Public:footer"/>
+</if>

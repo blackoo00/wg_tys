@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>分店详细</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="{pigcms::RES}/distri/css/jquery.mobile-1.3.2.min.css">
+<script src="{pigcms::RES}/distri/js/jquery-1.8.3.min.js"></script>
+<script src="{pigcms::RES}/distri/js/jquery.mobile-1.3.2.min.js"></script>
+<style>
+.ui-content{padding:0}
+.ui-btn{text-align:left}
+.header{display:-webkit-box;-webkit-box-align:center;}
+.header img{width:25%;display:block}
+.header div{padding-left:5%;font-size:16px;line-height:30px;font-weight:bold}
+.middleShow{display:-webkit-box;text-align:center;height:50px;line-height:50px;color:#fff;}
+.middleShow span{display:block;background:url({pigcms::RES}/distri/images/bg2014.jpg) repeat;width:50%;}
+.middleShow span.leftInfo{border-right:1px #fff solid;border-top:1px #fff solid}
+.middleShow span.rightInfo{border-top:1px #fff solid}
+.buttonMsgBg{float:right;background:#fe0000;display:block;color:#fff;padding:1px 15px;-moz-border-radius: 15px;-webkit-border-radius:15px;border-radius:15px;}
+.buttonMsg{float:right;color:#fe0000;}
+</style>
+</head>
+<body >
+
+<div data-role="page" id="pageone" style="background:#fff4a7">
+  <div data-role="content" data-theme="e">
+   <div style="padding:30px 20px;background:url({pigcms:$set.topbg}) repeat">
+	<div class="header"><img <eq name="my.headimgurl" value="">src="{pigcms::RES}/distri/images/portrait.jpg"<else/>src="{pigcms:$member.headimgurl}"</eq>><div><span>昵称：<eq name="my.headimgurl" value="">未获取<else/>{pigcms:$member.nickname}</eq></span><br/><span>关注时间：{pigcms:$member.createtime|date='Y-m-d',###}</span></div></div>
+   </div>
+   <div class="middleShow">
+		<span class="leftInfo">累计销售：{pigcms::sprintf("%.2f",$member['totalMoney']/100)}元</span><span class="rightInfo">贡献佣金：{pigcms::sprintf("%.2f",$offerMoney/100)}元</span>
+   </div>
+   <div style="padding:30px 20px;">
+		    <div data-role="collapsible">
+			  <h1><span class="buttonMsgBg">{pigcms:$member.firstNums}家</span>他的A分店</h1>
+			  <p><a href="{pigcms::U('Distribution/agentList',array('token'=>$token,'wecha_id'=>$wecha_id,'mid'=>$member['id'],'type'=>'first'))}" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right"><span class="buttonMsg">{pigcms:$member.firstNums}家</span>分店数</a>
+			  <a href="#" data-role="button" data-icon="star" data-iconpos="right"><span class="buttonMsg">{pigcms::sprintf("%.2f",$member['first_member_totalMoney']/100)}元</span>消费金额</a>
+			  <a href="#" data-role="button" data-icon="star" data-iconpos="right"><span class="buttonMsg">{pigcms::sprintf("%.2f",$member['first_member_offerMoney']/100)}元</span>贡献佣金</a></p>
+			</div>
+			 <div data-role="collapsible">
+			  <h1><span class="buttonMsgBg">{pigcms:$member.secondNums}家</span>他的B分店</h1>
+			  <p><a href="{pigcms::U('Distribution/agentList',array('token'=>$token,'wecha_id'=>$wecha_id,'mid'=>$member['id'],'type'=>'second'))}" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right"><span class="buttonMsg">{pigcms:$member.secondNums}家</span>分店数</a>
+			  <a href="#" data-role="button" data-icon="star" data-iconpos="right"><span class="buttonMsg">{pigcms::sprintf("%.2f",$member['second_member_totalMoney']/100)}元</span>消费金额</a>
+			  <a href="#" data-role="button" data-icon="star" data-iconpos="right"><span class="buttonMsg">{pigcms::sprintf("%.2f",$member['second_member_offerMoney']/100)}元</span>贡献佣金</a></p>
+			</div>
+			 <div data-role="collapsible">
+			  <h1><span class="buttonMsgBg">{pigcms:$member.thirdNums}家</span>他的C分店</h1>
+			  <p><a href="{pigcms::U('Distribution/agentList',array('token'=>$token,'wecha_id'=>$wecha_id,'mid'=>$member['id'],'type'=>'third'))}" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right"><span class="buttonMsg">{pigcms:$member.thirdNums}家</span>分店数</a>
+			  <a href="#" data-role="button" data-icon="star" data-iconpos="right"><span class="buttonMsg">{pigcms::sprintf("%.2f",$member['third_member_totalMoney']/100)}元</span>消费金额</a>
+			  <a href="#" data-role="button" data-icon="star" data-iconpos="right"><span class="buttonMsg">{pigcms::sprintf("%.2f",$member['third_member_offerMoney']/100)}元</span>贡献佣金</a></p>
+			</div>
+   </div>
+  </div>
+</div> 
+<script>
+function onBridgeReady(){
+ WeixinJSBridge.call('hideOptionMenu');
+}
+
+if (typeof WeixinJSBridge == "undefined"){
+    if( document.addEventListener ){
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    }else if (document.attachEvent){
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+}else{
+    onBridgeReady();
+}
+</script>
+</body>
+</html>

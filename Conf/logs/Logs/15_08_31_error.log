@@ -1,0 +1,4 @@
+[ 2015-08-31T21:38:34+08:00 ] ERR: (ThinkException) Table 'tys.pigcms_bprotein_list' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_bprotein_list`
+[ 2015-08-31T21:42:20+08:00 ] ERR: (ThinkException) Table 'tys.pigcms_bprotein_list' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_bprotein_list`

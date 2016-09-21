@@ -1,0 +1,57 @@
+<include file="Public:head"/>
+<div class="content" <if condition="session('isQcloud') eq true">style="float:center;"</if>
+>
+<div class="cLineB">
+  <h4>编辑销售</h4>
+  <a href="javascript:history.go(-1);"  class="right btnGrayS vm" style="margin-top:-27px" >返回</a>
+</div>
+<div class="msgWrap">
+  <form class="form" method="post" action="{pigcms::U('Salesman/upsave')}" enctype="multipart/form-data" >
+    <TABLE class="userinfoArea" style=" margin:20px 0 0 0;" border="0" cellSpacing="0" cellPadding="0" width="100%">
+     <input type="hidden" name="id" value="{pigcms:$info.id}" />
+      <THEAD>
+        <TR>
+          <TH valign="top">
+            <span class="red">*</span><label for="keyword">销售姓名：</label>
+          </TH>
+          <TD>
+            <input type="text" class="px" id="name" value="{pigcms:$info.name}" name="name" style="width:500px" >
+          </TD>
+        </TR>
+      </THEAD>
+      <TBODY>
+        <TR>
+          <TH valign="top">
+            <label for="text">销售简介：</label>
+          </TH>
+          <TD>
+            <textarea  class="px" id="info" name="info" style="width:500px; height:150px">{pigcms:$info.info}</textarea>
+          </TD>
+
+          <TR>
+            <TH></TH>
+            <TD>
+              <button type="submit"  name="button"  class="btnGreen left" >保存</button>&nbsp;&nbsp;&nbsp;
+              <a href="javascript:history.go(-1);"  class="btnGray vm">取消</a>
+              <div class="right" style="margin-right:10px"  ></div>
+              <div class="clr"></div>
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+    </form>
+
+  </div>
+
+</div>
+
+<div class="clr"></div>
+</div>
+</div>
+</div>
+
+<!--底部-->
+</div>
+<if condition="session('isQcloud') neq true">
+<include file="Public:footer"/>
+</if>

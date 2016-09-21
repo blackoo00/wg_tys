@@ -1,0 +1,291 @@
+[ 2015-06-19T14:06:34+08:00 ] 0.0.0.0 /wg_tzhrmy/index.php?g=Wap&m=Distribution&a=myScanner&token=boqxuo1411350351&wecha_id=1&mid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.021001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.041002s ]
+NOTIC: [8] Undefined index: HTTP_REFERER D:\www\wg_tzhrmy\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [8] Undefined index: Hm_lpvt_d804bbf6e06872863e6110c106c5ac63 D:\www\wg_tzhrmy\Extend\Vendor\tongji\hm.php 第 78 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/a/f/af2b5c1812fd6c0cd612a1735ff3a965.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/7/c/7c5f8876e214a041ca786252e0f282d9.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/8/c88349f00a7a4aec80444f6baeaaaf5f.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined variable: curl D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [2] curl_setopt() expects parameter 1 to be resource, null given D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [8] Undefined variable: data D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 436 行.
+NOTIC: [8] Undefined index: access_token D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 279 行.
+NOTIC: [8] Undefined variable: curl D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [2] curl_setopt() expects parameter 1 to be resource, null given D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [8] Undefined variable: data D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 436 行.
+NOTIC: [8] Undefined index: ticket D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 228 行.
+NOTIC: [8] Undefined variable: curl D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [2] curl_setopt() expects parameter 1 to be resource, null given D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [8] Undefined variable: data D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 436 行.
+NOTIC: [8] Undefined index: nickname D:\www\wg_tzhrmy\PigCms\Lib\Action\Wap\DistributionAction.class.php 第 374 行.
+NOTIC: [8] Undefined index: headimgurl D:\www\wg_tzhrmy\PigCms\Lib\Action\Wap\DistributionAction.class.php 第 375 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-4.664267s ]
+INFO: [ view_template ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./tpl/Wap/default/Index_styleInclude.html): failed to open stream: No such file or directory D:\www\wg_tzhrmy\Lib\Template\ThinkTemplate.class.php 第 624 行.
+NOTIC: [2] file_get_contents(tpl/Wap/default/Index_menuStyle0.html): failed to open stream: No such file or directory D:\www\wg_tzhrmy\Lib\Template\ThinkTemplate.class.php 第 624 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-4.700269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099006s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-4.799275s ]
+INFO: Run TokenBuild Behavior [ RunTime:-4.810275s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-4.813276s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-4.816276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-4.818276s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-06-19T15:37:54+08:00 ] 0.0.0.0 /wg_tzhrmy/index.php?g=Wap&m=Distribution&a=myScanner&token=mhfcjx1421158741&wecha_id=1&mid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: HTTP_REFERER D:\www\wg_tzhrmy\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c139b42fabff9dea8efee5e6e9d51e40.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/6/9/694eae36a435d0d236a7a0164df28367.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/2/d/2d3ed53150bf132337f55d98a62cd90a.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined variable: curl D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [2] curl_setopt() expects parameter 1 to be resource, null given D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [8] Undefined variable: data D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 436 行.
+NOTIC: [8] Undefined variable: curl D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [2] curl_setopt() expects parameter 1 to be resource, null given D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [8] Undefined variable: data D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 436 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-3.357192s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./tpl/Wap/default/Index_styleInclude.html): failed to open stream: No such file or directory D:\www\wg_tzhrmy\Lib\Template\ThinkTemplate.class.php 第 624 行.
+NOTIC: [2] file_get_contents(tpl/Wap/default/Index_menuStyle0.html): failed to open stream: No such file or directory D:\www\wg_tzhrmy\Lib\Template\ThinkTemplate.class.php 第 624 行.
+NOTIC: [8] Undefined index: follow D:\www\wg_tzhrmy\Conf\logs\Cache\Wap\f24f4225c6be767c301e9b50cd1a405d.php 第 35 行.
+NOTIC: [8] Undefined index: follow D:\www\wg_tzhrmy\Conf\logs\Cache\Wap\f24f4225c6be767c301e9b50cd1a405d.php 第 41 行.
+NOTIC: [8] Undefined index: tongji D:\www\wg_tzhrmy\Conf\logs\Cache\Wap\f24f4225c6be767c301e9b50cd1a405d.php 第 75 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-3.359192s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.112006s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-3.471198s ]
+INFO: Run TokenBuild Behavior [ RunTime:-3.473198s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-3.476199s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-3.480199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-3.482199s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-06-19T15:39:14+08:00 ] 0.0.0.0 /wg_tzhrmy/index.php?g=Wap&m=Distribution&a=myScanner&token=mhfcjx1421158741&wecha_id=1&mid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: HTTP_REFERER D:\www\wg_tzhrmy\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c139b42fabff9dea8efee5e6e9d51e40.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/6/9/694eae36a435d0d236a7a0164df28367.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/2/d/2d3ed53150bf132337f55d98a62cd90a.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined variable: access_str D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 245 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.292074s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./tpl/Wap/default/Index_styleInclude.html): failed to open stream: No such file or directory D:\www\wg_tzhrmy\Lib\Template\ThinkTemplate.class.php 第 624 行.
+NOTIC: [2] file_get_contents(tpl/Wap/default/Index_menuStyle0.html): failed to open stream: No such file or directory D:\www\wg_tzhrmy\Lib\Template\ThinkTemplate.class.php 第 624 行.
+NOTIC: [8] Undefined index: follow D:\www\wg_tzhrmy\Conf\logs\Cache\Wap\f24f4225c6be767c301e9b50cd1a405d.php 第 35 行.
+NOTIC: [8] Undefined index: follow D:\www\wg_tzhrmy\Conf\logs\Cache\Wap\f24f4225c6be767c301e9b50cd1a405d.php 第 41 行.
+NOTIC: [8] Undefined index: tongji D:\www\wg_tzhrmy\Conf\logs\Cache\Wap\f24f4225c6be767c301e9b50cd1a405d.php 第 75 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.293074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.313075s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.314075s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.315075s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.316075s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.317075s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-19T15:39:24+08:00 ] 0.0.0.0 /wg_tzhrmy/index.php?g=Wap&m=Distribution&a=myScanner&token=mhfcjx1421158741&wecha_id=o3mw-s2byHCb4QnPLFQlI-6vsOQo&mid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: HTTP_REFERER D:\www\wg_tzhrmy\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/6/9/694eae36a435d0d236a7a0164df28367.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/2/d/2d3ed53150bf132337f55d98a62cd90a.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined variable: access_str D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 245 行.
+NOTIC: [8] Undefined variable: curl D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [2] curl_setopt() expects parameter 1 to be resource, null given D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [8] Undefined variable: data D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 436 行.
+NOTIC: [8] Undefined variable: curl D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 404 行.
+NOTIC: [2] curl_setopt() expects parameter 1 to be resource, null given D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 404 行.
+NOTIC: [8] Undefined index: errcode D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 416 行.
+NOTIC: [8] Undefined index: errcode D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 420 行.
+NOTIC: [8] Undefined index: errmsg D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 420 行.
+NOTIC: [8] Trying to get property of non-object D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 420 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.936111s ]
+INFO: [ view_template ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\www\wg_tzhrmy\Conf\logs\Cache\Wap\7c4e0743909f5235724297d7c4074dfc.php 第 32 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.953112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054003s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-2.007115s ]
+INFO: Run TokenBuild Behavior [ RunTime:-2.009115s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-2.012115s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-2.013115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-2.015115s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-06-19T15:39:26+08:00 ] 0.0.0.0 /wg_tzhrmy/index.php?g=Wap&m=Distribution&a=getqrCode&token=mhfcjx1421158741&wecha_id=o3mw-s2byHCb4QnPLFQlI-6vsOQo&mid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] unlink(./Conf/logs/Temp/6/9/694eae36a435d0d236a7a0164df28367.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/2/d/2d3ed53150bf132337f55d98a62cd90a.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined variable: access_str D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 245 行.
+
+[ 2015-06-19T15:39:36+08:00 ] 0.0.0.0 /wg_tzhrmy/index.php?g=Wap&m=Distribution&a=myScanner&token=mhfcjx1421158741&wecha_id=o3mw-s2byHCb4QnPLFQlI-6vsOQo&mid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: HTTP_REFERER D:\www\wg_tzhrmy\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/6/9/694eae36a435d0d236a7a0164df28367.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/2/d/2d3ed53150bf132337f55d98a62cd90a.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined variable: access_str D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 245 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.286074s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\www\wg_tzhrmy\Conf\logs\Cache\Wap\7c4e0743909f5235724297d7c4074dfc.php 第 32 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.287074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.302075s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.303075s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.304075s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.305075s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.306075s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-06-19T15:39:38+08:00 ] 0.0.0.0 /wg_tzhrmy/index.php?g=Wap&m=Distribution&a=getqrCode&token=mhfcjx1421158741&wecha_id=o3mw-s2byHCb4QnPLFQlI-6vsOQo&mid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] unlink(./Conf/logs/Temp/6/9/694eae36a435d0d236a7a0164df28367.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/2/d/2d3ed53150bf132337f55d98a62cd90a.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined variable: access_str D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 245 行.
+
+[ 2015-06-19T17:17:34+08:00 ] 0.0.0.0 /wg_tzhrmy/index.php?g=Wap&m=Distribution&a=myScanner&token=mhfcjx1421158741&wecha_id=o3mw-s2byHCb4QnPLFQlI-6vsOQo&mid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: HTTP_REFERER D:\www\wg_tzhrmy\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/6/9/694eae36a435d0d236a7a0164df28367.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/2/d/2d3ed53150bf132337f55d98a62cd90a.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined variable: curl D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [2] curl_setopt() expects parameter 1 to be resource, null given D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [8] Undefined variable: data D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 436 行.
+NOTIC: [8] Undefined variable: curl D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [2] curl_setopt() expects parameter 1 to be resource, null given D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [8] Undefined variable: data D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 436 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-3.107177s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\www\wg_tzhrmy\Conf\logs\Cache\Wap\7c4e0743909f5235724297d7c4074dfc.php 第 32 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-3.109178s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-3.149180s ]
+INFO: Run TokenBuild Behavior [ RunTime:-3.150180s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-3.152180s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-3.153180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-3.154180s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-06-19T17:17:36+08:00 ] 0.0.0.0 /wg_tzhrmy/index.php?g=Wap&m=Distribution&a=getqrCode&token=mhfcjx1421158741&wecha_id=o3mw-s2byHCb4QnPLFQlI-6vsOQo&mid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] unlink(./Conf/logs/Temp/6/9/694eae36a435d0d236a7a0164df28367.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/2/d/2d3ed53150bf132337f55d98a62cd90a.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined variable: access_str D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 245 行.
+
+[ 2015-06-19T18:08:16+08:00 ] 0.0.0.0 /wg_tzhrmy/index.php?g=Wap&m=Distribution&a=myScanner&token=mhfcjx1421158741&wecha_id=o3mw-s2byHCb4QnPLFQlI-6vsOQo&mid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [8] Undefined index: HTTP_REFERER D:\www\wg_tzhrmy\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/6/9/694eae36a435d0d236a7a0164df28367.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/2/d/2d3ed53150bf132337f55d98a62cd90a.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined variable: curl D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [2] curl_setopt() expects parameter 1 to be resource, null given D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [8] Undefined variable: data D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 436 行.
+NOTIC: [8] Undefined variable: curl D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [2] curl_setopt() expects parameter 1 to be resource, null given D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 432 行.
+NOTIC: [8] Undefined variable: data D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 436 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-3.189183s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\www\wg_tzhrmy\Conf\logs\Cache\Wap\7c4e0743909f5235724297d7c4074dfc.php 第 32 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-3.191183s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-3.244186s ]
+INFO: Run TokenBuild Behavior [ RunTime:-3.245186s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-3.252186s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-3.253186s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-3.255187s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-19T18:08:18+08:00 ] 0.0.0.0 /wg_tzhrmy/index.php?g=Wap&m=Distribution&a=getqrCode&token=mhfcjx1421158741&wecha_id=o3mw-s2byHCb4QnPLFQlI-6vsOQo&mid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] unlink(./Conf/logs/Temp/6/9/694eae36a435d0d236a7a0164df28367.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/2/d/2d3ed53150bf132337f55d98a62cd90a.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined variable: access_str D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 245 行.
+
+[ 2015-06-19T18:22:10+08:00 ] 0.0.0.0 /wg_tzhrmy/index.php?g=Wap&m=Distribution&a=myScanner&token=mhfcjx1421158741&wecha_id=o3mw-s2byHCb4QnPLFQlI-6vsOQo&mid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: HTTP_REFERER D:\www\wg_tzhrmy\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/6/9/694eae36a435d0d236a7a0164df28367.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/2/d/2d3ed53150bf132337f55d98a62cd90a.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined variable: access_str D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 245 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.309075s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\www\wg_tzhrmy\Conf\logs\Cache\Wap\7c4e0743909f5235724297d7c4074dfc.php 第 32 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.311075s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.356078s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.357078s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.361078s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.362078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.364078s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-06-19T18:22:12+08:00 ] 0.0.0.0 /wg_tzhrmy/index.php?g=Wap&m=Distribution&a=getqrCode&token=mhfcjx1421158741&wecha_id=o3mw-s2byHCb4QnPLFQlI-6vsOQo&mid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] unlink(./Conf/logs/Temp/6/9/694eae36a435d0d236a7a0164df28367.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/2/d/2d3ed53150bf132337f55d98a62cd90a.php): No such file or directory D:\www\wg_tzhrmy\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined variable: access_str D:\www\wg_tzhrmy\PigCms\Lib\Action\WapAction.class.php 第 245 行.
+

@@ -1,0 +1,1652 @@
+[ 2015-08-28T08:56:16+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [8] Undefined index: Hm_lpvt_d804bbf6e06872863e6110c106c5ac63 D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 78 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+
+[ 2015-08-28T09:03:26+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.067061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.068061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020002s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.089063s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.090063s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.091063s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.092063s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.093063s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T09:03:31+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+
+[ 2015-08-28T09:05:31+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] mkdir(): Invalid path D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 228 行.
+
+[ 2015-08-28T09:08:12+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.059060s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.060060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.067061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.067061s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.067061s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.067061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.068061s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T09:08:16+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfb480b89f6.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+
+[ 2015-08-28T09:08:30+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.054060s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.055060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.062061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.062061s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.062061s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.062061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.063061s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T09:08:33+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfb491acb44.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+
+[ 2015-08-28T09:18:09+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.083061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.084061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.090062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.090062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.090062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.090062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.091062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T09:18:13+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+
+[ 2015-08-28T09:19:34+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+
+[ 2015-08-28T09:32:07+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.092063s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.092063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.098063s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.098063s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.099063s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.099063s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.099063s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T09:32:13+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+
+[ 2015-08-28T09:42:06+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.095063s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.096063s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.102063s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.102063s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.103063s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.103063s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.103063s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T09:42:20+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+
+[ 2015-08-28T09:43:00+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.081061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.081061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.086062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.087062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.087062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.087062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.087062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T09:43:04+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfbca895c6f.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+NOTIC: [2] getimagesize(uploads/55dfbca895c6f.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\Image.class.php 第 30 行.
+
+[ 2015-08-28T09:43:56+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.070062s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.071062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.078062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.078062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.078062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.079062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.079062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T09:44:00+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] imagejpeg(uploads/consult/thumb_55dfbce048b36.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\Image.class.php 第 222 行.
+NOTIC: [2] md5_file(uploads/55dfbce048b36.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+
+[ 2015-08-28T09:44:21+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.079062s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.080062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.085062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.086062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.086062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.086062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.087062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T09:44:24+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfbcf8e4c0d.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+
+[ 2015-08-28T09:49:36+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+
+[ 2015-08-28T09:49:52+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.061061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.061061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.067061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.067061s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.067061s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.068061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.068061s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T09:49:56+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfbe4427d57.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+NOTIC: [8] Undefined index: thumbPath D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 59 行.
+NOTIC: [8] Undefined index: thumbPath D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 59 行.
+
+[ 2015-08-28T09:50:44+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.056060s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.056060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.066060s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.067061s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.067061s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.068061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.068061s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T09:50:47+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfbe77c50c8.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+NOTIC: [8] Undefined index: thumbpath D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 59 行.
+NOTIC: [8] Undefined index: thumbpath D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 59 行.
+
+[ 2015-08-28T09:51:56+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.057060s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.058060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.065061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.065061s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.065061s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.065061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.066061s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T09:52:00+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfbec0037c8.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+NOTIC: [8] Undefined index: thumbpath D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 60 行.
+NOTIC: [8] Undefined index: thumbpath D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 60 行.
+
+[ 2015-08-28T09:52:37+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.057061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.058061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.065061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.065061s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.066061s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.066061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.067061s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T09:52:44+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfbeec0970f.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+NOTIC: [8] Undefined index: thumbpath D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 59 行.
+NOTIC: [8] Undefined index: thumbpath D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 59 行.
+
+[ 2015-08-28T09:54:26+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.059061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.060061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.068061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.069062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.069062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.069062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.069062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T09:54:29+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfbf55ea43f.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+NOTIC: [8] Undefined index: thumbpath D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 59 行.
+NOTIC: [8] Undefined index: thumbpath D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 59 行.
+
+[ 2015-08-28T09:54:55+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.056060s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.057060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.062061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.063061s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.063061s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.063061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.064061s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T09:54:59+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfbf7332f6c.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+NOTIC: [8] Undefined index: thumbpath D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 72 行.
+NOTIC: [8] Undefined index: thumbpath D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 72 行.
+
+[ 2015-08-28T09:56:40+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.094062s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.095062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.106063s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.106063s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.107063s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.108063s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.108063s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T09:56:52+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.077062s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 11 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 13 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 14 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 15 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 16 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 25 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 85 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 90 行.
+NOTIC: [8] Undefined variable: doctor D:\WWW\wg_tys\Conf\logs\Cache\Wap\cbb7c601042fc11eebd97836e626413c.php 第 91 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-1.077062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.082062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.083062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.083062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.083062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.083062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T09:56:55+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfbfe7dcc7e.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+NOTIC: [8] Undefined index: thumbpath D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 59 行.
+NOTIC: [8] Undefined index: thumbpath D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 59 行.
+
+[ 2015-08-28T09:57:50+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+
+[ 2015-08-28T09:57:53+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.079061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.080061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.085062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.086062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.086062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.087062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.087062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T09:57:55+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.049060s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.049060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.054061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.054061s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.055061s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.055061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.055061s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T09:57:59+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/consult/55dfc027d594c.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+
+[ 2015-08-28T09:59:48+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.075061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.075061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.082062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.082062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.082062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.083062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.083062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T09:59:52+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/consult/55dfc09817c78.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+
+[ 2015-08-28T10:27:39+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.093062s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.094062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.102063s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.103063s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.103063s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.104063s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.104063s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:27:54+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.068062s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.069062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.076062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.076062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.076062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.076062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.077062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T10:27:55+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.071061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.072061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.078061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.079062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.079062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.079062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.079062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:27:56+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.063061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.063061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.070062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.071062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.071062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.072062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.072062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:27:57+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.059061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.060061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.066061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.067062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.067062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.067062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.068062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:28:01+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfc731d17e3.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+
+[ 2015-08-28T10:30:30+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.067061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.068061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.073061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.073061s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.074061s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.074061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.075061s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T10:30:33+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfc7c9ebd35.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+
+[ 2015-08-28T10:32:15+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.060060s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.062060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.069061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.070061s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.070061s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.071061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.071061s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:32:19+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfc8332d35a.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+
+[ 2015-08-28T10:32:28+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.083062s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.084062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.090062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.091062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.091062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.091062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.092062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T10:32:31+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfc83f648e5.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+
+[ 2015-08-28T10:35:10+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.076062s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.076062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.082062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.082062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.083062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.083062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.083062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:35:34+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.069061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.070061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.075061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.075061s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.075061s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.075061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.076061s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T10:36:00+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.071061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.072061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.077062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.077062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.077062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.078062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.078062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T10:39:22+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.052061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.053061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.059061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.059061s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.059061s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.059061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.060061s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T10:39:26+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfc9dea23d7.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+
+[ 2015-08-28T10:42:09+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.062060s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.063060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.068061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.068061s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.069061s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.069061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.069061s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:42:13+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfca8572854.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+
+[ 2015-08-28T10:46:11+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=index&id=33
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: HTTP_REFERER D:\WWW\wg_tys\Extend\Vendor\tongji\hm.php 第 74 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.072061s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.073061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.079062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.080062s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.080062s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.080062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.081062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:46:15+08:00 ] 127.0.0.1 /wg_tys/index.php?g=Wap&m=Consult&a=picupsave
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of ConsultAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\WWW\wg_tys\PigCms\Lib\Action\Wap\ConsultAction.class.php 第 2 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/8/b/8b27330c23d5c53e2409cb5a50d9703d.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [8] Undefined index: wecha_id D:\WWW\wg_tys\PigCms\Lib\Action\WapAction.class.php 第 31 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/9/d/9d3cf84cb58c07e8eac5b6e93e43ff1e.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/0/d/0d2c1c12d6393e604b6e35e960614004.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/8/5848d5204b5e414e87c386581aa4207f.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/e/f/efe21af28ac2c16b2c3515b7a677c7a3.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/c/1/c12b83863679c53a027170a94c2d1853.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] unlink(./Conf/logs/Temp/5/f/5f590e6483487102f9aedcd019d413c0.php): No such file or directory D:\WWW\wg_tys\Lib\Driver\Cache\CacheFile.class.php 第 176 行.
+NOTIC: [2] md5_file(uploads/55dfcb7767403.jpg): failed to open stream: No such file or directory D:\WWW\wg_tys\PigCms\Lib\ORG\UploadFile.class.php 第 266 行.
+

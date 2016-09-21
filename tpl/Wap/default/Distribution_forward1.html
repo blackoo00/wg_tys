@@ -1,0 +1,44 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <title>{pigcms:$wxuser.wxname}</title>
+<meta content="target-densitydpi=device-dpi, width=640, user-scalable=no" name="viewport">
+        <!-- Mobile Devices Support @begin -->
+            <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+            <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+            <meta content="no-cache" http-equiv="pragma">
+            <meta content="0" http-equiv="expires">
+            <meta content="telephone=no, address=no" name="format-detection">
+            <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <!-- Mobile Devices Support @end -->
+		<link href="{pigcms::RES}/distri/css/index.css" rel="stylesheet" type="text/css" />
+ <style>
+.white{color:#fff;}
+.scroll{height:40px;font-weight:bold;letter-spacing:2px;}
+.scroll ul{ height:40px; overflow: hidden; display:block; }
+.scroll ul li{ list-style:none;line-height:40px;height:40px;color:#FCD224;}
+#bg1{display:none;position:absolute; top: 0%; left: 0%; width: 100%; height: 100%; z-index:1001;}
+#show1{display:none;position: absolute; top: 0; right: 0;z-index:1002;}
+ </style>
+<body>
+<div style="background:url({pigcms::RES}/distri/images/web_scanner.jpg) no-repeat #e10741;margin:0 auto;text-align:center;max-width:640px;;min-height:1007px">
+</div>
+<script>
+function onBridgeReady(){
+ WeixinJSBridge.call('hideOptionMenu');
+}
+
+if (typeof WeixinJSBridge == "undefined"){
+    if( document.addEventListener ){
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    }else if (document.attachEvent){
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+}else{
+    onBridgeReady();
+}
+</script>
+</body>
+</html>

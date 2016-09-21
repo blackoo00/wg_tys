@@ -1,0 +1,48 @@
+<div style="height:68px;"></div>
+<footer>
+	<script src="{pigcms::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<ul>
+		<li><a href="{pigcms::U('Doctor/details',array('id'=>$doctor['id'],'token'=>$token))}" title="医生详细">医生首页</a></li>
+		<!-- <li id="interactive">
+			<div>
+				<span id="zxhd">在线互动</span>
+				<div class="cc">
+					<span><a href="{pigcms::U('Consult/index',array('id'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">在线提问</a></span>
+					<span><a onclick="return checkcomment()" href="{pigcms::U('Comment/index',array('id'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">在线评价</a><input type="hidden" id="commentcheck"></span>
+				</div>
+			</div>
+		</li> -->
+		<li><a href="{pigcms::U('User/consultm',array('token'=>$token,'wecha_id'=>$wecha_id))}">用户中心</a></li>
+		<div class="clear"></div>
+	</ul>
+	<script>
+		// $("#zxhd").click(function(){
+		// 	if($(this).hasClass("active")){
+		// 		$('.cc').show().animate({top:"0"},100,function(){$('.cc').hide()});
+		// 		$(this).removeClass("active");
+		// 	}else{
+		// 		$('.cc').show().animate({top:"-90px"},100);
+		// 		$(this).addClass("active");
+		// 	}
+		// })
+		function checkcomment(){
+			$.ajax({
+				url:'{pigcms::U('Comment/checkcomment',array('token'=>$token,'wecha_id'=>$wecha_id))}',
+				async : false,
+				data:{id:$('#did').val()},
+				success:function(data){
+					console.log(data);
+					if(data=='1'){
+						alert("您已做出过评价");
+						$("#commentcheck").val(1);
+					}
+				}
+			})
+			if($("#commentcheck").val()==1){
+				return false;
+			}
+		}
+	</script>
+</footer>
+</body>
+</html>

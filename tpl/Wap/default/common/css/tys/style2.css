@@ -1,0 +1,290 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td, p {
+  margin: 0;
+  padding: 0; }
+
+input, button, select, textarea {
+  outline: none; }
+
+li {
+  list-style: none; }
+
+img {
+  border: none; }
+
+textarea {
+  resize: none; }
+
+body {
+  color: #666;
+  background: #fff;
+  word-break: break-all;
+  word-wrap: break-word; }
+
+body, input, textarea {
+  font-size: 12px;
+  font-family: \5b8b\4f53,Verdana,Arial;
+  background-color: #F0F0F0; }
+
+a {
+  color: #305999;
+  text-decoration: none;
+  outline: none; }
+
+a:hover {
+  color: #090; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clear {
+  clear: both; }
+
+.f_l {
+  float: left; }
+
+.f_r {
+  float: right; }
+
+#wrapper {
+  max-width: 640px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 3%;
+  box-sizing: border-box; }
+
+section {
+  border-radius: 5px;
+  box-shadow: 0 5px 3px #DDD;
+  background-color: #fff; }
+
+#cztable {
+  width: 100%;
+  border: solid 1px #add9c0; }
+  #cztable td {
+    border: solid 1px #add9c0;
+    height: 35px;
+    line-height: 35px;
+    text-align: center; }
+
+/*CONSULT BEGIN*/
+.doctor_head {
+  background-image: url("images/d_details.jpg");
+  background-size: 100% 100%;
+  background-position: 0 0;
+  margin-bottom: 10px;
+  max-width: 640px;
+  margin: 0 auto; }
+  .doctor_head .hd1 {
+    float: left; }
+    .doctor_head .hd1.dpic {
+      width: 30%;
+      padding: 5%;
+      box-sizing: border-box; }
+      .doctor_head .hd1.dpic img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%; }
+    .doctor_head .hd1.dinfo {
+      box-sizing: border-box;
+      color: #fff;
+      width: 50%;
+      padding: 6% 0 0 0; }
+      .doctor_head .hd1.dinfo div:nth-of-type(1) > span:first-child {
+        font-size: 1.2em;
+        font-weight: bold; }
+      .doctor_head .hd1.dinfo div:nth-of-type(2) {
+        height: 25px; }
+      .doctor_head .hd1.dinfo div:nth-of-type(3) > a {
+        display: inline-block;
+        width: 40%;
+        height: 20px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-right: 6px;
+        color: #fff; }
+      .doctor_head .hd1.dinfo div:nth-of-type(3) > a:first-child {
+        background-color: #F1A85B; }
+      .doctor_head .hd1.dinfo div:nth-of-type(3) > a:nth-of-type(2) {
+        background-color: #67c474; }
+
+/*CONSULT END*/
+/*DOCTOR BEGIN*/
+.hospital-detail {
+  overflow: hidden; }
+  .hospital-detail > div:first-child {
+    margin: 5px 2%;
+    padding: 6px 0;
+    border-bottom: 3px solid #DDD; }
+  .hospital-detail > div:nth-of-type(2) {
+    padding: 8px 0; }
+
+.doctor_list {
+  margin-top: 15px; }
+  .doctor_list > div:first-child {
+    margin: 15px 2% 0;
+    padding: 13px 0;
+    border-bottom: 3px solid blue; }
+  .doctor_list > div:nth-of-type(2) {
+    text-indent: 1.5em; }
+  .doctor_list > div:nth-of-type(3) {
+    padding: 2% 1%; }
+    .doctor_list > div:nth-of-type(3) ul li > div:first-child {
+      width: 30%;
+      overflow: hidden; }
+      .doctor_list > div:nth-of-type(3) ul li > div:first-child img {
+        width: 100%;
+        border: 1px solid #ddd;
+        padding: 3%;
+        background-color: red;
+        box-sizing: border-box; }
+    .doctor_list > div:nth-of-type(3) ul li > div:nth-of-type(2) {
+      width: 70%;
+      padding: 2% 5%;
+      box-sizing: border-box; }
+      .doctor_list > div:nth-of-type(3) ul li > div:nth-of-type(2) > div:first-child {
+        position: relative; }
+        .doctor_list > div:nth-of-type(3) ul li > div:nth-of-type(2) > div:first-child .doctor_status {
+          display: block;
+          position: absolute;
+          right: 0;
+          top: -15px;
+          width: 35%;
+          color: #fff;
+          text-align: center;
+          height: 20px;
+          line-height: 20px;
+          background-color: #92D265; }
+        .doctor_list > div:nth-of-type(3) ul li > div:nth-of-type(2) > div:first-child > span:first-child {
+          color: #FFAB3D;
+          font-size: 1.3em;
+          font-weight: bold; }
+        .doctor_list > div:nth-of-type(3) ul li > div:nth-of-type(2) > div:first-child > span:nth-of-type(2) {
+          text-indent: 1.2em;
+          color: #C4C4C4; }
+      .doctor_list > div:nth-of-type(3) ul li > div:nth-of-type(2) > div:nth-of-type(2) {
+        padding: 2% 0; }
+
+/*DOCTOR END*/
+/*DOCTOR DETAILS BEGIN*/
+.doctor_details section {
+  margin-bottom: 10px;
+  padding-bottom: 10px; }
+  .doctor_details section div:first-child {
+    color: #33C80E;
+    line-height: 30px;
+    height: 30px;
+    text-indent: 1.3em;
+    border-bottom: 2px solid #F0F0F0; }
+  .doctor_details section div:nth-of-type(2) {
+    padding: 4%;
+    line-height: 15px;
+    height: 58px;
+    overflow: hidden;
+    box-sizing: border-box; }
+
+/*DOCTOR DETAILS END*/
+/*HOSPITAL BEGIN*/
+.hospital_list {
+  padding: 2%;
+  margin: 5px 0 0 0;
+  box-sizing: border-box; }
+  .hospital_list ul li {
+    width: 46%;
+    overflow: hidden;
+    display: inline-block; }
+    .hospital_list ul li > a:first-child {
+      display: block;
+      float: left;
+      max-width: 80%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+    .hospital_list ul li > span {
+      display: block;
+      float: left; }
+
+/*HOPITAL END*/
+/*FOOTER BEGIN*/
+footer {
+  position: fixed;
+  width: 100%;
+  border-top: 1px solid #DDD;
+  bottom: 0;
+  background: -webkit-linear-gradient(bottom, #A6A6A6, #fff);
+  background: -moz-linear-gradient(bottom, #A6A6A6, #fff);
+  background: -ms-linear-gradient(bottom, #A6A6A6, #fff);
+  background: -o-linear-gradient(bottom, #A6A6A6, #fff);
+  background: linear-gradient(bottom, #A6A6A6, #fff); }
+  footer ul > li {
+    display: block;
+    float: left;
+    width: 33.3333%;
+    text-align: center;
+    height: 54px;
+    line-height: 40px;
+    color: #000;
+    box-sizing: border-box; }
+    footer ul > li > a {
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center 5px;
+      color: #000;
+      line-height: 84px; }
+    footer ul > li:nth-of-type(1) > a {
+      background-image: url("images/icon1.png"); }
+    footer ul > li:nth-of-type(3) > a {
+      background-image: url("images/icon3.png"); }
+    footer ul > li:nth-of-type(2) > div {
+      position: relative; }
+      footer ul > li:nth-of-type(2) > div > span {
+        display: block;
+        background-image: url("images/icon2.png");
+        background-repeat: no-repeat;
+        background-position: center 5px;
+        line-height: 84px; }
+      footer ul > li:nth-of-type(2) > div div {
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        top: 0;
+        display: none;
+        width: 100%;
+        border: 1px solid #DDD;
+        border-radius: 5px;
+        padding: 0 15px;
+        box-sizing: border-box; }
+        footer ul > li:nth-of-type(2) > div div span {
+          display: block; }
+          footer ul > li:nth-of-type(2) > div div span:first-child {
+            border-bottom: 1px solid #DDD; }
+        footer ul > li:nth-of-type(2) > div div:before {
+          content: "";
+          position: absolute;
+          bottom: -8px;
+          left: 47%;
+          border-top: 8px solid #DDD;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent; }
+        footer ul > li:nth-of-type(2) > div div:after {
+          content: "";
+          position: absolute;
+          bottom: -6px;
+          left: 48%;
+          border-top: 7px solid #fff;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent; }
+
+/*FOOTER END*/
+/*STARS BEGIN*/
+#stars span {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background-image: url("star.gif");
+  background-position: 0 17px; }
+
+/*STARS END*/
+
+/*# sourceMappingURL=style2.css.map */

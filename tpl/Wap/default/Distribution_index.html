@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>用户中心</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="{pigcms::RES}/distri/css/jquery.mobile-1.3.2.min.css">
+<script src="{pigcms::RES}/distri/js/jquery-1.8.3.min.js"></script>
+<script src="{pigcms::RES}/distri/js/jquery.mobile-1.3.2.min.js"></script>
+<style>
+.ui-content{padding:0}
+.ui-btn{text-align:left}
+.header{display:-webkit-box;-webkit-box-align:center;}
+.header img{width:25%;display:block}
+.header div{padding-left:5%;font-size:16px;line-height:25px;font-weight:bold}
+.middleShow{display:-webkit-box;text-align:center;height:50px;line-height:50px;color:#fff;}
+.middleShow span{display:block;background:url({pigcms::RES}/distri/images/bg2014.jpg) repeat;width:50%;}
+.middleShow span.leftInfo{border-right:1px #fff solid;border-top:1px #fff solid}
+.middleShow span.rightInfo{border-top:1px #fff solid}
+</style>
+</head>
+<body >
+
+<div data-role="page" id="pageone" style="background:#fff4a7">
+  <div data-role="content" data-theme="e">
+   <div style="padding:30px 20px;background:url({pigcms:$set.topbg}) repeat">
+     <div class="header"><img <eq name="my.headimgurl" value="">src="{pigcms::RES}/distri/images/portrait.jpg"<else/>src="{pigcms:$my.headimgurl}"</eq>><div><span>分店ID：{pigcms::$my['id']+$set['startNums']}</span><br/>
+	 <span>昵称：<eq name="my.headimgurl" value="">未获取<else/>{pigcms:$my.nickname}</eq></span><br/>
+	 <span>关注时间：{pigcms:$my.createtime|date='Y-m-d',###}</span><br/>
+	 <span>来自好友：<eq name="my.recommended" value="">红日化妆品<else/>{pigcms:$my.recommended}</eq></span><br/>
+	 <span>金牌店主：<eq name="my.distritime" value="0">否<a href="{pigcms::C('site_url')}/index.php?g=Wap&m=Store&a=index&token=mhfcjx1421158741" rel="external" style="color:red">(购买成为金牌店主)</a><else/>是</eq></span></div></div>
+   </div>
+   <div class="middleShow">
+		<span class="leftInfo">余额：{pigcms::sprintf("%.2f",($order['status_4']-$my['alreadyGetMoney'])/100)}元</span><span class="rightInfo">积分：{pigcms::intval($totalScore)}分</span>
+   </div>
+   <div style="padding:30px 20px;">
+		<eq name="Think.get.notBe" value="1"><div style="color:red;text-align:center;line-height:40px;">您目前还未获得分店资格！</div></eq>
+		<a href="{pigcms::U('Store/my',array('token'=>$token,'wecha_id'=>$wecha_id))}" data-role="button" data-icon="arrow-r" rel="external" data-iconpos="right">我的订单</a>
+		<a href="{pigcms::U('Distribution/myDistribution',array('token'=>$_GET['token'],'wecha_id'=>$wecha_id))}" rel="external" data-role="button" data-icon="arrow-r"  data-iconpos="right">我的分店</a>
+		<a href="{pigcms::U('Distribution/collection',array('token'=>$token,'wecha_id'=>$wecha_id))}" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">我的收藏</a>
+		<a href="{pigcms::U('Distribution/myInfo',array('token'=>$token,'wecha_id'=>$wecha_id))}" data-role="button" rel="external" data-icon="arrow-r" data-iconpos="right">我的资料</a>
+		<a href="{pigcms::U('Distribution/myScanner',array('token'=>$token,'mid'=>$my['id']))}" data-role="button" rel="external" data-icon="arrow-r" data-iconpos="right">我的推广二维码</a>
+		<a <eq name="update" value="1">href="#popupBasic"<else/>href="#popupBasicNo"</eq> data-role="button" data-rel="popup" data-icon="arrow-r" data-iconpos="right">更新头像昵称</a>
+   </div>
+   <div data-role="popup" id="popupBasic">
+	<div style="padding:20px;">
+	<p>每天只能更新一次，您确定要更新吗？</p> 
+	<a href="{pigcms::U('Distribution/updateMyInfo',array('token'=>$token,'wecha_id'=>$wecha_id))}" rel="external" data-role="button" style="text-align:center">是</a>
+	<a href="#" data-role="button" data-rel="back" style="text-align:center">否</a>
+	</div>
+  </div>
+   <div data-role="popup" id="popupBasicNo">
+	<div style="padding:20px;">
+	<p>您今天已经更新过了</p> 
+	<a href="#" data-role="button" data-rel="back" style="text-align:center">关闭</a>
+	</div>
+  </div>
+</div> 
+<script>
+function onBridgeReady(){
+ WeixinJSBridge.call('hideOptionMenu');
+}
+
+if (typeof WeixinJSBridge == "undefined"){
+    if( document.addEventListener ){
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    }else if (document.attachEvent){
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+}else{
+    onBridgeReady();
+}
+</script>
+</body>
+</html>

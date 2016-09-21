@@ -1,0 +1,253 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link href="<?php echo RES;?>/bsuger/Content/comm/css/weixin.css" rel="stylesheet" />
+    <script src="<?php echo RES;?>/bsuger/Content/comm/js/jquery-1.7.1.min.js"></script>
+    <script src="<?php echo RES;?>/bsuger/Areas/LWeChat/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script src="<?php echo RES;?>/bsuger/Areas/LWeChat/Scripts/jquery.validate.js"></script>
+<script src="<?php echo RES;?>/bsuger/Areas/LWeChat/Scripts/jquery.validate.unobtrusive.js"></script>
+
+    <script src="<?php echo RES;?>/bsuger/Scripts/base.js"></script>
+    <link href="<?php echo RES;?>/bsuger/Content/css/diabetes.css" rel="stylesheet" />
+    <script>
+        function Begin() {
+            //$("#TimeSlice").val($('#timearea').html());
+            $("#StartTime").val($('#now').val());
+            $("#EndTime").val($('#end').val());
+            //$("#Number").val($('#mod_val').html());
+        }
+    </script>
+    <title></title>
+</head>
+<body class="index">
+<form action="<?php echo U('Steward/mupdate',array('token'=>$token,'wecha_id'=>$wecha_id));?>" data-ajax="true" data-ajax-begin="Begin" data-ajax-method="Post" data-ajax-success="OnSuccess" id="form0" method="post"><input data-val="true" data-val-number="字段 ID 必须是一个数字。" data-val-required="The ID field is required." id="ID" name="ID" type="hidden" value="0" />        <div class="ol">
+            <div class="pagetitle ul">
+                <div>
+                    <a href="javascript:history.go(-1);"><i class="icon-back"></i></a>
+                </div>
+                <div class="f1">用药记录</div>
+                <input type="hidden" name="mid" value="<?php echo ($medicine["id"]); ?>">
+                <div>
+                    <a href="javascript:window.location.reload();"><i class="font2-arrows-cw"></i></a>
+                </div>
+            </div>
+            <article class="f1  bc1">
+                <section class="record " style="padding-top: 10px;">
+
+
+                    <dl>
+                        <dt class="ul">
+                            <div class="title ">口服药：</div>
+
+                            <div class="f1 title2 ul" style="padding-right: 0px;" data-role="boxer">
+                                <input class="f1" data-role="boxname" id="Name" name="Name" type="text" value="<?php echo ($medicine["oralmedicine"]); ?>" />
+                                <div class="select_box" style="">
+                                    请选择<i class="font2-angle-down"></i>
+                                    <select style="">
+                                        <option value="1">万苏平(格列美脲)</option>
+                                        <option value="2">亚莫利(格列美脲)</option>
+                                        <option value="3">伊瑞(格列美脲)</option>
+                                        <option value="4">优降糖(格列本脲)</option>
+                                        <option value="5">佳维乐(维格列汀)</option>
+                                        <option value="6">倍欣(伏格列波糖)</option>
+                                        <option value="7">卡博平(阿卡波糖)</option>
+                                        <option value="8">卡司平(盐酸吡格列酮)</option>
+                                        <option value="9">唐力(那格列奈)</option>
+                                        <option value="10">唐贝克缓释胶囊(格列吡嗪缓释片)</option>
+                                        <option value="11">孚来迪(瑞格列奈)</option>
+                                        <option value="12">安立泽(沙格列汀)</option>
+                                        <option value="13">尼欣那(阿格列汀)</option>
+                                        <option value="14">德赛天(米格列醇)</option>
+                                        <option value="15">拜唐苹(阿卡波糖)</option>
+                                        <option value="16">捷诺维(磷酸西格列汀)</option>
+                                        <option value="17">捷诺达(西格列汀二甲双胍片)</option>
+                                        <option value="18">文达敏(二甲双胍马来酸罗格列酮)</option>
+                                        <option value="19">文迪雅(马来酸罗格列酮)</option>
+                                        <option value="20">格华止(二甲双胍)</option>
+                                        <option value="21">欧糖宁(利格列汀)</option>
+                                        <option value="22">法迪(米格列奈钙片)</option>
+                                        <option value="23">瑞易宁控释片(格列吡嗪控释片)</option>
+                                        <option value="24">瑞舒(米格列醇)</option>
+                                        <option value="25">百泌达(艾塞那肽注射液)</option>
+                                        <option value="26">糖适平(格列喹酮)</option>
+                                        <option value="27">美吡达(格列吡嗪)</option>
+                                        <option value="28">美迪康(二甲双胍)</option>
+                                        <option value="29">艾可拓(盐酸吡格列酮)</option>
+                                        <option value="30">诺和力(利拉鲁肽)</option>
+                                        <option value="31">诺和龙(瑞格列奈)</option>
+                                        <option value="32">达美康(格列齐特)</option>
+                                        <option value="33">达美康缓释片(格列齐特缓释片)</option>
+                                        <option value="0">其他(手动输入)</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+                        </dt>
+
+
+
+                    </dl>
+
+
+
+                    <dl>
+
+                        <dt class="ul">
+                            <div class="title">开始时间：</div>
+                            <div class="f1 title2">
+
+                                <input id="now" type="text" />
+                                <input id="StartTime" name="StartTime" type="hidden" value="<?php echo ($medicine["starttime"]); ?>" />
+                            </div>
+                        </dt>
+                        <dt class="ul">
+                            <div class="title">结束时间：</div>
+                            <div class="f1 title2">
+                                <input id="end" type="text" />
+                                <input id="EndTime" name="EndTime" type="hidden" value="<?php echo ($medicine["endtime"]); ?>" />
+                            </div>
+                        </dt>
+
+                    </dl>
+                    <dl>
+                        <dt>
+                            <div class="title">备注：</div>
+                        </dt>
+                        <dd>
+                            <div class="input">
+                                <textarea cols="20" id="Remark" name="Remark" placeholder="今天情况特殊，等等" rows="2"><?php echo ($medicine["note"]); ?>
+</textarea>
+                            </div>
+                        </dd>
+                    </dl>
+                </section>
+                <section class="sure_box">
+                    <button class="sure" onclick="Begin();">保存</button>
+                </section>
+
+
+            </article>
+
+        </div>
+</form>    <article class="bg">
+    </article>
+    <article class="seltime">
+        <div class="seltime_box">
+            <header>选择时间</header>
+            <section>
+                <table>
+                    <tr>
+                        <td>日期：</td>
+                        <td>
+                            <input type="text" id="date_start" readonly="readonly" /></td>
+                    </tr>
+
+
+                </table>
+                <div class="ul">
+                    <div class="f1"></div>
+                    <div class="bc2 sbtn" id="suretime">确定</div>
+                    <div class="f1"></div>
+                    <div class="bc3 sbtn close">取消</div>
+                    <div class="f1"></div>
+                </div>
+            </section>
+        </div>
+    </article>
+</body>
+<script src="<?php echo RES;?>/bsuger/Content/comm/js/iscroll.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/4.0.3/highcharts.js"></script>
+<script src="<?php echo RES;?>/bsuger/Content/comm/js/date_input_rooms_old.js"></script>
+<script src="<?php echo RES;?>/bsuger/Content/comm/js/timeformat.js"></script>
+
+<script>
+    $(function () {
+
+
+
+        //当前时间
+        var now = new Date();
+        if ($("#StartTime").val() != "") {
+            $('#now').val($("#StartTime").val());
+            $('#end').val($("#EndTime").val());
+        } else {
+            $('#now').val(now.format("yyyy-MM-dd"));
+            $('#end').val(now.format("yyyy-MM-dd"));
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    });
+</script>
+
+
+
+
+
+
+
+<script src="<?php echo RES;?>/bsuger/Content/comm/js/mobiscroll.core-2.5.2.js" type="text/javascript"></script>
+<script src="<?php echo RES;?>/bsuger/Content/comm/js/mobiscroll.core-2.5.2-zh.js" type="text/javascript"></script>
+<link href="<?php echo RES;?>/bsuger/Content/comm/css/mobiscroll.core-2.5.2.css" rel="stylesheet" type="text/css">
+<link href="<?php echo RES;?>/bsuger/Content/comm/css/mobiscroll.animation-2.5.2.css" rel="stylesheet" type="text/css">
+<script src="<?php echo RES;?>/bsuger/Content/comm/js/mobiscroll.datetime-2.5.1.js" type="text/javascript"></script>
+<script src="<?php echo RES;?>/bsuger/Content/comm/js/mobiscroll.datetime-2.5.1-zh.js" type="text/javascript"></script>
+
+<!-- S 可根据自己喜好引入样式风格文件 -->
+<script src="<?php echo RES;?>/bsuger/Content/comm/js/mobiscroll.android-ics-2.5.2.js" type="text/javascript"></script>
+<link href="<?php echo RES;?>/bsuger/Content/comm/css/mobiscroll.android-ics-2.5.2.css" rel="stylesheet" type="text/css">
+<!-- E 可根据自己喜好引入样式风格文件 -->
+<script type="text/javascript">
+    $(function () {
+        var currYear = (new Date()).getFullYear();
+        var opt = {};
+        opt.date = { preset: 'date', width: 36 };
+        opt.datetime = { preset: 'datetime', width: 50 };
+        opt.time = { preset: 'time' };
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式 
+            mode: 'scroller', //日期选择模式
+            lang: 'zh',
+            startYear: currYear - 1, //开始年份
+            endYear: currYear + 1 //结束年份
+        };
+
+        var optDateTime = $.extend(opt['datetime'], opt['default']);
+        var optTime = $.extend(opt['time'], opt['default']);
+        $("#now").mobiscroll(optDateTime).date(optDateTime);
+        $("#end").mobiscroll(optDateTime).date(optDateTime);
+    });
+</script>
+
+
+<script>
+    $('.select_box select').change(function () {
+        var n = $(this).val();
+        if (n == 0) {
+            $(this).parents('[data-role=boxer]').find('[data-role=boxname]').val('').focus();
+        } else {
+            var name = $(this).find('[value=' + n + ']').html();
+            $(this).parents('[data-role=boxer]').find('[data-role=boxname]').val(name);
+        }
+
+    });
+</script>
+</html>

@@ -1,0 +1,64 @@
+<include file="Public:head"/>
+<body>
+	<script src="{pigcms::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<style>
+        .refresh{
+            display: inline-block;
+            width:50px; height:50px; border-radius:50%; border:1px solid #c5c5c5; margin:5px auto; background-color:#fff;
+            line-height: 50px; font-size: 2em; text-align: center;
+        }
+    </style>
+	<div id="wrapper" style="padding:0" class="doctor_custom">
+		<ul>
+			<div class="searchli">
+				<div>
+					<i class="icon-search"></i>
+					<input type="text" id="search" placeholder="输入患者姓名">
+				</div>
+				<a class="" href="{pigcms::U('Doctor/custom',array('token'=>$token,'wecha_id'=>$wecha_id))}">刷新</a>
+			</div>
+			<script>
+				$(function(){
+					$('#search').blur(function(){
+						var l=$("#search").val();
+						console.log(l);
+						var r=$(".doctor_custom ul li").find('#customname').text().indexOf(l);
+						$(".doctor_custom ul li").each(function(){
+							var t=$(this).find('#customname').text();
+							if(t){
+								r=t.indexOf(l);
+								if(r>=0){
+									$(this).show();
+								}else{
+									$(this).hide();
+								}
+							}
+						})
+					})
+				})
+			</script>
+			<div id="qunfa">
+				<!-- <a href="{pigcms::U('Doctor/custom',array('token'=>$token,'wecha_id'=>$wecha_id))}" class="refresh"><i class="icon-loop2"></i></a> -->
+				<span>患者列表</span>
+				<a style="float:right;" href="{pigcms::U('Consult/allsendpage',array('did'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}" class="button blue">群发</a>
+				<div class="clear"></div>
+			</div>
+			<div class="clear">	</div>
+			<volist id="list" name="custom">
+				<a href="{pigcms::U('Consult/consultb',array('did'=>$doctor['id'],'cid'=>$list['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">
+				<li>
+					<div class="prompt">
+						<img src="{pigcms:$list.pic}">
+						<eq name="list.consult.cnew" value="1"><font class="newmessage" style="color:red"><span></span></font></eq>
+						<p id="customname">{pigcms:$list.name}</p>
+					</div>
+					<div class="clear"></div>
+				</li>
+				</a>
+			</volist>
+			<div class="wappages">{pigcms:$page}</div>
+		</ul>
+	</div>
+	<include file="Doctor:foot" />
+</body>
+</html>

@@ -1,0 +1,60 @@
+<include file="Public:head"/>
+<div class="content" <if condition="session('isQcloud') eq true">style="float:center;"</if>
+>
+<div class="cLine">
+  <div class="pageNavigator left">
+    <a href='{pigcms::U("Hospital/add")}' title='新增医院' class='btnGrayS vm bigbtn'>
+      <img src="{pigcms::RES}/images/text.png" class="vm" />
+      新增医院
+    </a>
+  </div>
+
+  <div class="clr"></div>
+</div>
+<div class="msgWrap">
+  <form method="post"  action="index.php?ac=importtxt&amp;id=9379&amp;wxid=gh_858dwjkeww5" id="info" >
+    <input name="delall"  type="hidden" value="del" />
+    <input name="wxid"  type="hidden" value="gh_858dwjkeww5" />
+    <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%">
+      <THEAD>
+        <TR>
+          <th>医院名称</th>
+          <th>医生数量</th>
+          <th>医院简介</th>
+		  <th>订单数量</th>
+          <th>操作</th>
+        </TR>
+      </THEAD>
+      <TBODY>
+        <TR></TR>
+        <volist id="list" name="hospital">
+          <tr>
+            <td>{pigcms:$list.name}</td>
+            <td>{pigcms:$list.doctornum}</td>
+            <td>{pigcms:$list.info}</td>
+			<td>{pigcms:$list.orderNums}（<a href="{pigcms::U('Store/orders',array('hid'=>$list['id']))}" style="color:blue">明细</a>）</td>
+            <td class="norightborder"> <a href="{pigcms::U('Hospital/edit',array('id'=>$list['id']))}" title="编辑文本">编辑</a> <a onclick="return confirm('确定要删除么？');" href="{pigcms::U('Hospital/del',array('id'=>$list['id']))}">删除</a></td>
+          </tr>
+        </volist>
+
+      </TBODY>
+    </TABLE>
+  </form>
+</div>
+<div class="cLine">
+  <div class="pageNavigator right">
+    <div class="pages">{pigcms:$page}</div>
+  </div>
+  <div class="clr"></div>
+</div>
+</div>
+
+<div class="clr"></div>
+</div>
+</div>
+</div>
+<!--底部-->
+</div>
+<if condition="session('isQcloud') neq true">
+<include file="Public:footer"/>
+</if>

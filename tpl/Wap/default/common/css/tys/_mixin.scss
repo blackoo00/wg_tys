@@ -1,0 +1,92 @@
+@mixin font-smoothing($font-smoothing){
+	-webkit-font-smoothing: $font-smoothing;
+	-moz-font-smoothing: $font-smoothing;
+	-ms-font-smoothing: $font-smoothing;
+	-o-font-smoothing: $font-smoothing;
+	font-smoothing: $font-smoothing;
+}
+
+@mixin perspective($perspective){
+	-webkit-perspective: $perspective;
+	-moz-perspective: $perspective;
+	-ms-perspective: $perspective;
+	-o-perspective: $perspective;
+	perspective: $perspective;
+}
+
+@mixin transition($transition){
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+@mixin transform($transform){
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
+}
+
+@mixin transform-style($transform-style){
+	-webkit-transform-style: $transform-style;
+	-moz-transform-style: $transform-style;
+	-ms-transform-style: $transform-style;
+	-o-transform-style: $transform-style;
+	transform-style: $transform-style;
+}
+
+@mixin pointer-events($pointer-events){
+	-webkit-pointer-events: $pointer-events;
+	-moz-pointer-events: $pointer-events;
+	-ms-pointer-events: $pointer-events;
+	-o-pointer-events: $pointer-events;
+	pointer-events: $pointer-events;
+}
+
+@mixin box-sizing($box-sizing){
+	-webkit-box-sizing: $box-sizing;
+	-moz-box-sizing: $box-sizing;
+	-ms-box-sizing: $box-sizing;
+	-o-box-sizing: $box-sizing;
+	box-sizing: $box-sizing;
+}
+
+@mixin transform-origin($origin){
+	-webkit-transform-origin:$origin;
+	-moz-transform-origin:$origin;
+	-ms-transform-origin:$origin;
+	-o-transform-origin:$origin;
+	transform-origin:$origin;
+}
+
+@mixin backface-visibility($origin){
+	-webkit-backface-visibility:$origin;
+	-moz-backface-visibility:$origin;
+	-ms-backface-visibility:$origin;
+	-o-backface-visibility:$origin;
+	backface-visibility:$origin;
+}
+
+@mixin background($origin){
+	background:-webkit - $origin;
+	background:-moz - $origin;
+	background:-ms - $origin;
+	background:-o - $origin;
+	background:$origin;
+}
+
+@mixin scale($scale){
+	-webkit-transform: scale($scale);
+	-moz-transform: scale($scale);
+	-ms-transform: scale($scale);
+	-o-transform: scale($scale);
+	transform: scale($scale);
+}
+
+@mixin opacity($opacity){
+	opacity: $opacity;
+	filter:alpha(opacity=$opacity*100);
+}

@@ -1,0 +1,171 @@
+<include file="Public:head"/>
+<body>
+    <link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/tys/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/tys/default.css">
+    <link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/tys/styles.css">
+    <!-- <link href='http://fonts.useso.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'> -->
+    <script src="{pigcms::RES}/js/tys/jquery-1.11.1.min.js"></script>
+    <!--[if IE]>
+        <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+    <div class="htmleaf-container" style="max-width:640px; margin:0 auto; width:100%;">
+            <div class="htmleaf-content bgcolor-3">
+                <div id="chatbox">
+
+                    <div id="chatview" class="p1" style="display: block;">      
+                        <div id="profile" class="animate">
+                            <img style="vertical-align:middle; width: 80px; height:80px;" src="{pigcms:$custom.pic}" class="floatingImg"> 
+                            <p style="display:block; float:left;">{pigcms:$custom.name}</p>
+                            <a href="{pigcms::U('Doctor/cdetails',array('id'=>$custom['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">患者<br>详情</a>
+                        </div>
+                        <div id="loading" style="text-align:center;display:none;"><img src="{pigcms::RES}/css/tys/loading_more.gif"></div>
+                        <input type="hidden" id="cmid" value="{pigcms:$cmid}">
+                        <input type="hidden" id="noconsult" value="1">
+                        <div id="twrapper">
+                            <div id="chat-messages" class="animate">
+                                <!-- <label>Thursday 02</label> -->
+                                 <volist id="list" name="consultb">
+                                    
+                                    <div class="message <eq name='list.dtalk' value='1'>right<else/>left</eq>">
+                                        <span>{pigcms:$list.time|friendlyDate}</span>
+                                        <input type="hidden" id="time" value="{pigcms:$list.time}">
+                                        <img src="{pigcms:$list.pic}" />
+                                         <div class="bubble">
+                                             {pigcms:$list.content}
+                                             <!-- <div class="corner"></div> -->
+                                         </div>
+                                         <div class="clear"></div>
+                                     </div>
+
+                                 </volist>
+            
+                            </div>
+                        </div>
+                        <script src="{pigcms::RES}/js/tys/iscroll.js" type="text/javascript" charset="utf-8"></script>
+                        <script>
+                            $(function(){
+                                var th=$("#profile").height();
+                                var bh=$("#sendmessage").height();
+                                var wh=$(window).height();
+                                var h=wh-th-bh-24;
+                                $("#twrapper").height(h);
+                                myIscroll.refresh();
+                                myIscroll.scrollTo(0, myIscroll.maxScrollY, 200)
+                            })
+                           var myIscroll = new iScroll("twrapper",{checkDOMChanges:true,hScrollbar:false, vScrollbar:false,
+                               onRefresh:function(){
+                                    if($("#loading").hasClass("flip")){
+                                        $("#loading").removeClass("flip");
+                                        $("#loading").hide();
+                                    }
+                               },
+                               onScrollMove:function(){
+                                    var noconsult=$("#noconsult").val();
+                                    if(this.y>50){
+                                        if(noconsult==1){
+                                            $("#loading").addClass("flip");
+                                            $("#loading").show();
+                                        }
+                                    }
+                               },
+                               onScrollEnd:function(){
+                                    if($("#loading").hasClass("flip")){
+                                        laodmore();
+                                    }
+                               },
+                           });
+                           function laodmore(){
+                                var cmid=$("#cmid").val();
+                                var cnums=$("#chat-messages .message").length;
+                                var noconsult=$("#noconsult").val();
+                                setTimeout(function () {
+                                if(noconsult==1){
+                                    $.ajax({
+                                        url:"{pigcms::U('Consult/loadmore',array('token'=>$token,'wecha_id'=>$wecha_id))}",
+                                        data:{cmid:cmid,cnums:cnums},
+                                        success:function(data){
+                                            if(data=="none"){
+                                                $("#noconsult").val(0);
+                                            }else{
+                                                $("#chat-messages").prepend(data);
+                                            }
+                                            myIscroll.refresh();
+                                        }
+                                    })
+                                }else{
+                                    $("#loading").hide();
+                                }
+                                }, 1000);
+                           }
+                        </script>
+                        <div id="sendmessage">
+                            <input type="hidden" id="cid" value="{pigcms:$custom.id}">
+                            <input type="hidden" id="did" value="{pigcms:$did}">
+                            <input type="hidden" id="checkcm" value="1">
+                            <input type="text" id="consultcon" value="" palceholder="发送信息" />
+                            <button onclick="send()" id="send">发送</button>
+                        </div>
+                    
+                    </div>      
+                </div>  
+            </div>
+        </div>
+        <script>
+            //发送
+            function send(){
+                var con=$("#consultcon").val();
+                var cid=$("#cid").val();
+                var did=$("#did").val();
+                var cmid=$("#cmid").val();
+                var ccm=$("#checkcm").val();
+                if(con){
+                    $.ajax({
+                        url:"{pigcms::U('Consult/sendconsult2',array('token'=>$token,'wecha_id'=>$wecha_id))}",
+                        data:{cid:cid,did:did,cmid:cmid,con:con,ccm:ccm},
+                        success:function(data){
+                            if(data!='error'){
+                                $("#chat-messages").append(data);
+                                myIscroll.refresh();
+                                myIscroll.scrollTo(0, myIscroll.maxScrollY, 200)
+                                // var scrollBottom = $("#chat-messages").scrollTop() + $("#chat-messages").height();
+                                // $("#chat-messages").animate({
+                                //     scrollTop: scrollBottom
+                                // }, 700);
+                                $('#consultcon').val('');
+                                $('#checkcm').val(0);
+                            }
+                        }
+                    })
+                }
+            }
+            //刷新咨询记录
+            function refresh(){
+                var time=$('.message').last().find('#time').val();
+                var cid=$("#cid").val();
+                var did=$("#did").val();
+                $.ajax({
+                    url:"{pigcms::U('Consult/refreshconsult2',array('token'=>$token,'wecha_id'=>$wecha_id))}",
+                    data:{cid:cid,did:did,time:time},
+                    success:function(data){
+                        if(data!="none"){
+                            $("#chat-messages").append(data);
+                            myIscroll.refresh();
+                            myIscroll.scrollTo(0, myIscroll.maxScrollY, 200)
+                            // var scrollBottom = $("#chat-messages").scrollTop() + $("#chat-messages").height();
+                            //     $("#chat-messages").animate({
+                            //         scrollTop: scrollBottom
+                            //     }, 700);
+                        }
+                    }
+                })
+            }
+            $(function(){
+                // var scrollBottom = $('#chat-messages')[0].scrollHeight;
+                // $("#chat-messages").animate({
+                //     scrollTop: scrollBottom
+                // }, 700);
+                setInterval("refresh()",5000);
+            })
+        </script>
+</body>
+</html>

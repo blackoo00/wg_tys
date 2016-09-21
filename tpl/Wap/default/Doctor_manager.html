@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理</title>
+</head>
+<body>
+	<form action="{pigcms::U('Doctor/msave',array('token'=>$token,'wecha_id'=>$wecha_id))}" enctype="multipart/form-data" method="post">
+	<input name="id" type="hidden" value="{pigcms:$doctor.id}">
+	<ul>
+		<li>姓名：<input name="name" type="text" value="{pigcms:$doctor.name}"></li>
+		<li>
+			<select name="hid">
+				<volist id="hospital" name="hospital">
+					<option value="{pigcms:$hospital.id}" <eq name="hospital.id" value="$doctor.hid">selected</eq> >{pigcms:$hospital.name}</option>
+				</volist>
+			</select>
+		</li>
+		<li>职位：<input type="text" name="persition" value="{pigcms:$doctor.persition}"></li>
+		<li>专业特长：<textarea name="profession">{pigcms:$doctor.profession}</textarea></li>
+		<li>医生简介：<textarea name="info">{pigcms:$doctor.info}</textarea></li>
+		<li>二维码上传：<input name="pic" type="file" value="选择图片"></li>
+		<li><a href="{pigcms::U('Doctor/modify',array('token'=>$token,'wecha_id'=>$wecha_id))}">修改登陆信息</a></li>
+		<li><a href="{pigcms::U('Doctor/loginout',array('token'=>$token,'wecha_id'=>$wecha_id))}">退出</a></li>
+	</ul>
+	<input type="submit" value="提交">
+	</form>
+</body>
+</html>

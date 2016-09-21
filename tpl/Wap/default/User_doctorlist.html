@@ -1,0 +1,63 @@
+<include file="Public:head"/>
+<body>
+	<script src="{pigcms::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<style>
+        .refresh{
+            display: block;
+            width:50px; height:50px; border-radius:50%; border:1px solid #c5c5c5; margin:5px auto; background-color:#fff;
+            line-height: 50px; font-size: 2em; text-align: center;
+        }
+    </style>
+	<div id="wrapper" style="padding:0" class="doctor_custom">
+		<ul>
+			<li class="searchli">
+				<div>
+					<i class="icon-search"></i>
+					<input type="text" id="search" placeholder="搜索">
+				</div>
+				<a href="{pigcms::U('User/doctorlist',array('token'=>$token,'wecha_id'=>$wecha_id))}">刷新</a>
+			</li>
+			<script>
+				$(function(){
+					$('#search').blur(function(){
+						var l=$("#search").val();
+						console.log(l);
+						var r=$(".doctor_custom ul li").find('#customname').text().indexOf(l);
+						$(".doctor_custom ul li").each(function(){
+							var t=$(this).find('#customname').text();
+							if(t){
+								r=t.indexOf(l);
+								if(r>=0){
+									$(this).show();
+								}else{
+									$(this).hide();
+								}
+							}
+						})
+					})
+				})
+			</script>
+			<!-- <a href="{pigcms::U('User/doctorlist',array('token'=>$token,'wecha_id'=>$wecha_id))}" class="refresh"><i class="icon-loop2"></i></a> -->
+			<volist id="list" name="doctor">
+				<a href="{pigcms::U('User/customconsultb',array('did'=>$list['id'],'cid'=>$cid,'token'=>$token,'wecha_id'=>$wecha_id))}">
+				<li>
+					<div class="prompt">
+						<img src="{pigcms:$list.pic}">
+						<eq name="custom.consult.dnew" value="1"><span></span></eq>
+						<p>{pigcms:$list.name}</p>
+					</div>
+					<!-- <div class="doctor_custom_details">
+						<span id="customname">{pigcms:$list.name}</span>
+						<span>性别:<if condition="$list.sex eq 1">男<else/>女</if></span>
+						<span>糖尿病类型:<notempty  name="list['diabetes']">{pigcms:$list.diabetes}</notempty></span>
+						<span>起病方式:<notempty  name="list['disease']">{pigcms:$list.disease}</notempty></span>
+					</div> -->
+					<div class="clear"></div>
+				</li>
+				</a>
+			</volist>
+		</ul>
+	</div>
+	<include file="User:foot"/>
+</body>
+</html>

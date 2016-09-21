@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'font-home';
+    src: url('font/font-home.eot?96093073');
+    src: url('font/font-home.eot?96093073#iefix') format('embedded-opentype'), url('font/font-home.woff?96093073') format('woff'), url('font/font-home.ttf?96093073') format('truetype'), url('font/font-home.svg?96093073#font-home') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "font-home";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+ 
+.icon-ok-circled2:before { content: '\e82f'; } /* '' */
+.icon-wallet:before { content: '\e82d'; } /* '' */
+.icon-tag:before { content: '\e839'; } /* '' */
+.icon-thumbs-up:before { content: '\e83a'; } /* '' */
+.icon-edit:before { content: '\e817'; } /* '' */
+.icon-gamepad:before { content: '\e81e'; } /* '' */
+.icon-attention:before { content: '\e800'; } /* '' */
+.icon-trash:before { content: '\e83c'; } /* '' */
+.icon-basket:before { content: '\e802'; } /* '' */
+.icon-down-dir:before { content: '\e814'; } /* '' */
+.icon-down-open:before { content: '\e816'; } /* '' */
+.icon-laptop:before { content: '\e826'; } /* '' */
+.icon-flight:before { content: '\e81b'; } /* '' */
+.icon-leaf:before { content: '\e827'; } /* '' */
+.icon-book-1:before { content: '\e806'; } /* '' */
+.icon-check-1:before { content: '\e80c'; } /* '' */
+.icon-check-empty-1:before { content: '\e80e'; } /* '' */
+.icon-circle-empty:before { content: '\e80f'; } /* '' */
+.icon-credit-card:before { content: '\e811'; } /* '' */
+.icon-hdd:before { content: '\e822'; } /* '' */
+.icon-money-1:before { content: '\e82c'; } /* '' */
+.icon-coffee:before { content: '\e810'; } /* '' */
+.icon-food:before { content: '\e81c'; } /* '' */
+.icon-beer:before { content: '\e803'; } /* '' */
+.icon-hospital:before { content: '\e825'; } /* '' */
+.icon-building:before { content: '\e808'; } /* '' */
+.icon-pagelines:before { content: '\e830'; } /* '' */
+.icon-user:before { content: '\e83d'; } /* '' */
+.icon-cancel-squared:before { content: '\e80a'; } /* '' */
+.icon-back:before { content: '\e801'; } /* '' */
+.icon-map:before { content: '\e829'; } /* '' */
+.icon-home:before { content: '\e824'; } /* '' */
+.icon-clock-1:before { content: '\e83e'; } /* '' */
+.icon-down-dir-1:before { content: '\e815'; } /* '' */
+.icon-suitcase:before { content: '\e838'; } /* '' */
+.icon-credit-card-1:before { content: '\e812'; } /* '' */
+.icon-heart-filled:before { content: '\e823'; } /* '' */
+.icon-pencil:before { content: '\e831'; } /* '' */
+.icon-edit-2:before { content: '\e81a'; } /* '' */
+.icon-location-outline:before { content: '\e828'; } /* '' */
+.icon-menu:before { content: '\e82a'; } /* '' */
+.icon-beer-1:before { content: '\e804'; } /* '' */
+.icon-book-open:before { content: '\e807'; } /* '' */
+.icon-headphones:before { content: '\e832'; } /* '' */
+.icon-mobile:before { content: '\e834'; } /* '' */
+.icon-money-2:before { content: '\e82e'; } /* '' */
+.icon-pitch:before { content: '\e836'; } /* '' */
+.icon-restaurant:before { content: '\e837'; } /* '' */
+.icon-group:before { content: '\e821'; } /* '' */
+.icon-th-large:before { content: '\e83b'; } /* '' */
+.icon-edit-1:before { content: '\e818'; } /* '' */
+.icon-edit-alt:before { content: '\e819'; } /* '' */
+.icon-doc-new:before { content: '\e813'; } /* '' */
+.icon-phone-1:before { content: '\e835'; } /* '' */
+.icon-check:before { content: '\e80b'; } /* '' */
+.icon-check-empty:before { content: '\e80d'; } /* '' */
+.icon-gift:before { content: '\e81f'; } /* '' */
+.icon-graduation-cap:before { content: '\e820'; } /* '' */
+.icon-megaphone:before { content: '\e833'; } /* '' */
+.icon-money:before { content: '\e82b'; } /* '' */
+.icon-food-1:before { content: '\e81d'; } /* '' */
+.icon-book:before { content: '\e805'; } /* '' */
+/*----------------------------------------------------------------------------------------------------------*/
+
+
+[class^="icona-"]:after, [class*=" icona-"]:after {
+    font-family: "font-home";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+}
+
+.icona-down-dir::after {
+    content: '\e800';
+}
+[class=icon-credit-card] {
+    position:relative;
+    left:-1px;
+}

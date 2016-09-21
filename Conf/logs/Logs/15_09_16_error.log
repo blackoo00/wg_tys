@@ -1,0 +1,2 @@
+[ 2015-09-16T10:38:52+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY time desc LIMIT 19' at line 1
+ [ SQL语句 ] : SELECT * FROM `pigcms_consult_branch` WHERE cmid= ORDER BY time desc LIMIT 19  

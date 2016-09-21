@@ -1,0 +1,6 @@
+[ 2015-07-11T15:30:42+08:00 ] ERR: (ThinkException) _ERROR_ACTION_:updateMyInfo
+[ 2015-07-11T15:31:50+08:00 ] ERR: (ThinkException) _ERROR_ACTION_:updateMyInfo
+[ 2015-07-11T15:32:02+08:00 ] ERR: (ThinkException) Unknown column 'updateInfoTime' in 'field list'
+ [ SQL语句 ] : SELECT `updateInfoTime` FROM `pigcms_distribution_member` WHERE ( `token` = 'mhfcjx1421158741' ) AND ( `wecha_id` = 'o3mw-s2byHCb4QnPLFQlI-6vsOQo' ) LIMIT 1  
+[ 2015-07-11T15:33:54+08:00 ] ERR: (ThinkException) _ERROR_ACTION_:updateMyInfo
+[ 2015-07-11T15:34:15+08:00 ] ERR: (ThinkException) _ERROR_ACTION_:updateMyInfo

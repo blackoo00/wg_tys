@@ -1,0 +1,20 @@
+<include file="Public:head"/>
+<body>
+	<div id="wrapper">
+		<div>总共{pigcms:$hospitalnum}家医院  {pigcms:$doctornum}位医生</div>
+		<section>
+			<div class="hospital_list">
+				<ul>
+					<volist id="list" name="hospital">
+						<li>
+							<a href="{pigcms::U('Doctor/index',array('id'=>$list['id']))}" title="{pigcms:$list.name}">{pigcms:$list.name}</a>
+							<span>({pigcms:$list.doctornum})</span>
+							<div class="clear"></div>
+						</li>
+					</volist>
+				</ul>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

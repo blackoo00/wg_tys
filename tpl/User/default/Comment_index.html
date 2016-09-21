@@ -1,0 +1,79 @@
+<include file="Public:head"/>
+<div class="content" <if condition="session('isQcloud') eq true">style="float:center;"</if>
+>
+<div class="cLine">
+  <div style="float:right;line-height:30px;">
+    <form action="#" method="post">
+      <input type="text" placeholder="请输入医生姓名" value="{pigcms:$_POST['search']}" class="px" name="search" />    
+      <button class="btnGrayS" style="height: 29px;">搜索</button>
+    </form>
+  </div>
+  <div class="clr"></div>
+</div>
+<div class="msgWrap">
+  <form method="post"  action="index.php?ac=importtxt&amp;id=9379&amp;wxid=gh_858dwjkeww5" id="info" >
+    <input name="delall"  type="hidden" value="del" />
+    <input name="wxid"  type="hidden" value="gh_858dwjkeww5" />
+    <style type="text/css">
+      .doctor{display: inline-block; border-radius: 10px; border: 1px solid #DDD; cursor: pointer; font-size: 1.3em; margin: 0 8px 7px 0;}
+      .doctor a{text-decoration: none; display: block; padding: 2px 22px;}
+      .doctor:hover{background-color: #ECF5E5;}
+      #stars span{display: inline-block; width: 17px; height: 17px; background-image: url(/tpl/static/images/star.gif);}
+    </style>
+<!--     <volist id="list" name="doctor">
+    <span class='doctor' <eq name="list.id" value="$did">style="background-color: #ECF5E5;"</eq>>
+        <a href="{pigcms::U('Comment/index',array('did'=>$list['id']))}" title="{pigcms:$list.name}">{pigcms:$list.name}</a>
+      </span>
+    </volist> -->
+    <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%">
+      <colgroup>
+        <col width="15%;"></col> 
+        <col width="15%;"></col>  
+        <col width="10%;"></col>  
+      </colgroup>
+      <THEAD>
+        <TR>
+          <th>评价医生</th>
+          <th>评价患者</th>
+          <th>评价星级</th>
+          <th>评价内容</th>
+        </TR>
+      </THEAD>
+      <TBODY>
+        <TR></TR>
+        <volist id="list" name="comment">
+          <tr>
+            <td>{pigcms:$list.doctor.name}</td>
+            <td>{pigcms:$list.custom.name}</td>
+            <td>
+              <div id="stars">
+                <for start="0" end="$list.stars">
+                  <span></span>
+                </for>
+              </div>
+            </td>
+            <td>{pigcms:$list.info}</td>
+          </tr>
+        </volist>
+
+      </TBODY>
+    </TABLE>
+  </form>
+</div>
+<div class="cLine">
+  <div class="pageNavigator right">
+    <div class="pages">{pigcms:$page}</div>
+  </div>
+  <div class="clr"></div>
+</div>
+</div>
+
+<div class="clr"></div>
+</div>
+</div>
+</div>
+<!--底部-->
+</div>
+<if condition="session('isQcloud') neq true">
+<include file="Public:footer"/>
+</if>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>胰岛素记录修改</title>
+</head>
+<body>
+	<form action="{pigcms::U('Steward/iupdate',array('token'=>$token,'wecha_id'=>$wecha_id))}" method="post">
+		<input type="hidden" name="id" value="{pigcms:$insulin.id}">
+		<ul>
+			<li>口服药:<input type="text" name="oralmedicine" value="{pigcms:$insulin.oralmedicine}"></li>
+			<li>开始时间:<input type="text" name="starttime" value="{pigcms:$insulin.starttime}"></li>
+			<li>结束时间:<input type="text" name="endtime" value="{pigcms:$insulin.endtime}"></li>
+			<li>备注:<input type="text" name="note" value="{pigcms:$insulin.note}"></li>
+		</ul>
+		<input type="submit" value="保存">
+	</form>
+</body>
+</html>

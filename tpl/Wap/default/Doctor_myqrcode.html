@@ -1,0 +1,57 @@
+<include file="Public:head"/>
+<body>
+	<style type="text/css" media="screen">
+		#qrcode{
+			width: 100%;
+			height: 1600px;
+			background-color: #fff;
+			color: #000;
+			font-size: 1.3em;
+		}
+
+		#qrcode img{
+			display: block;
+			width: 80%;
+			margin: 2% auto;
+		}
+		#qrcode div{
+			padding-top: 10px;
+			box-sizing:border-box;
+			text-align: center;
+			margin: 0 auto;
+			font: 1.3em;
+			font-weight: bold;
+			line-height: 18px;
+		}
+	</style>
+	<div id="wrapper" style="padding:0" class="doctor_myqrcode">
+		<div id="qrcode">
+			<div style="font-size:1.3em;">糖医师</div>
+			<div>
+				患者扫一扫与医生建立专属联系
+			</div>
+			<img src="{pigcms:$doctor.qrcode}">
+			<div style="font-size:1.3em;">{pigcms:$doctor.name}</div>
+			<div>{pigcms:$doctor.hname}</div>
+			<div>{pigcms:$doctor.profession}</div>
+			<div>{pigcms:$doctor.persition}</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function onBridgeReady(){
+		 WeixinJSBridge.call('showOptionMenu');
+		}
+
+		if (typeof WeixinJSBridge == "undefined"){
+		    if( document.addEventListener ){
+		        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+		    }else if (document.attachEvent){
+		        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+		        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+		    }
+		}else{
+		    onBridgeReady();
+		}
+	</script>
+</body>
+</html>

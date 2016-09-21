@@ -1,0 +1,48 @@
+[ 2015-08-12T08:20:34+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Hospital
+[ 2015-08-12T08:20:51+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Patient
+[ 2015-08-12T08:21:07+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Patient
+[ 2015-08-12T08:21:17+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Patient
+[ 2015-08-12T08:25:12+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Patient
+[ 2015-08-12T08:29:30+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Distribution
+[ 2015-08-12T08:29:37+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Patient
+[ 2015-08-12T08:32:28+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Patient
+[ 2015-08-12T08:32:40+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Patient
+[ 2015-08-12T09:49:08+08:00 ] ERR: 新增医生失败,错误信息:
+[ 2015-08-12T09:50:05+08:00 ] ERR: 新增医生失败,错误信息:
+[ 2015-08-12T09:50:17+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Patient
+[ 2015-08-12T09:51:46+08:00 ] ERR: 新增医生失败,错误信息:
+[ 2015-08-12T09:52:46+08:00 ] ERR: 新增医生失败,错误信息:
+[ 2015-08-12T10:27:06+08:00 ] ERR: 新增医生失败,错误信息:
+[ 2015-08-12T10:28:23+08:00 ] ERR: 新增医生失败,错误信息:
+[ 2015-08-12T10:35:08+08:00 ] ERR: 新增医生失败,错误信息:
+[ 2015-08-12T10:37:33+08:00 ] ERR: 新增医生失败,错误信息:1
+[ 2015-08-12T11:24:39+08:00 ] ERR: (ThinkException) Duplicate entry '4' for key 'PRIMARY'
+ [ SQL语句 ] : INSERT INTO `pigcms_doctor_list` (`id`,`name`,`hid`,`persition`,`profession`,`info`) VALUES ('4','反反复复2','2','嘎嘎嘎嘎','啊啊�\�','反反复复')
+[ 2015-08-12T11:25:23+08:00 ] ERR: (ThinkException) Duplicate entry '9' for key 'PRIMARY'
+ [ SQL语句 ] : INSERT INTO `pigcms_doctor_list` (`id`,`name`,`hid`,`persition`,`profession`,`info`) VALUES ('9','ggg','2','asa','gg','gg')
+[ 2015-08-12T11:35:05+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Distribution
+[ 2015-08-12T13:44:21+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Distribution
+[ 2015-08-12T14:04:06+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Distribution
+[ 2015-08-12T14:15:49+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Distribution
+[ 2015-08-12T14:22:26+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Distribution
+[ 2015-08-12T14:43:21+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc' at line 1
+ [ SQL语句 ] : SELECT `name`,`id` FROM `pigcms_hospital_list` ORDER BY desc 
+[ 2015-08-12T14:51:00+08:00 ] ERR: 医院医生数量自增失败!
+[ 2015-08-12T14:53:22+08:00 ] ERR: 医院医生数量自减失败!
+[ 2015-08-12T14:54:20+08:00 ] ERR: 医院医生数量自减失败!
+[ 2015-08-12T15:11:44+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Distribution
+[ 2015-08-12T15:39:28+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Distribution
+[ 2015-08-12T15:56:45+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Consult
+[ 2015-08-12T15:57:15+08:00 ] ERR: (ThinkException) Table 'tys.pigcms_message' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_message`
+[ 2015-08-12T15:58:11+08:00 ] ERR: (ThinkException) Table 'tys.pigcms_consult' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_consult`
+[ 2015-08-12T15:58:52+08:00 ] ERR: (ThinkException) Table 'tys.pigcms_consult' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_consult`
+[ 2015-08-12T15:58:58+08:00 ] ERR: (ThinkException) Table 'tys.pigcms_consult' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_consult`
+[ 2015-08-12T15:59:22+08:00 ] ERR: (ThinkException) Table 'tys.pigcms_consult' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_consult`
+[ 2015-08-12T17:01:54+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Distribution
+[ 2015-08-12T17:19:57+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `pigcms_doctor_list` LIMIT ,  

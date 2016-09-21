@@ -1,0 +1,103 @@
+<include file="Public:head"/>
+<body>
+    <!-- <div id='custom_head'>
+        <img src="{pigcms:$custom.doctor.pic}">
+        <div class="custom_name">{pigcms:$custom.doctor.name}</div>
+        <div class="clear"></div>
+    </div> -->
+    <style>
+        .title{
+            color:#33C80E;
+            line-height: 30px;
+            height: 30px;
+            text-indent: 1.3em;
+            border-bottom: 2px solid #F0F0F0;
+        }
+        .bloodsuger{width: 100%; border:solid #add9c0; border-width:1px 0px 0px 1px; margin-top: 5px;}
+        .bloodsuger th,.bloodsuger td{border:solid #add9c0; border-width:0px 1px 1px 0px; height: 30px;}
+        .bloodsuger td{text-align: center; font-size: 1.2em;}
+        .xtjl{color:red;}
+        .textare{
+            width: 100%;
+            height: 50px;
+            border-radius: 6px;
+            padding: 3px;
+            box-sizing:border-box;
+            text-indent: 12px;
+            background-color: #fff;
+        }
+    </style>
+    <div id="wrapper" class="doctor_cdetails">
+        <section>
+            <div class="title">基本信息</div>
+            <ul>
+                <li>患者姓名：{pigcms:$custom.name}</li>
+                <li>患者性别:<eq name='custom.sex' value='1'>男<else/>女</eq></li>
+                <li>年龄:{pigcms:$custom.age}</li>
+                <li>电话/手机:{pigcms:$custom.tel}</li>
+                <li>地址:{pigcms:$custom.address}
+                    <!-- <textarea readonly="true" class="textare">{pigcms:$custom.address}</textarea> -->
+                </li>
+                <li>糖尿病类型:{pigcms:$custom.diabetes}</li>
+            </ul>
+        </section>
+        <section>
+            <div class="title">血糖详情</div>
+            <table class="bloodsuger">
+                <tr>
+                    <td rowspan="2">日期</td>
+                    <td></td>
+                    <td colspan="2">早餐</td>
+                    <td colspan="2">午餐</td>
+                    <td colspan="2">晚餐</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>凌晨</td>
+                    <td>空腹</td>
+                    <td>餐后</td>
+                    <td>餐前</td>
+                    <td>餐后</td>
+                    <td>餐前</td>
+                    <td>餐后</td>
+                    <td>睡前</td>
+                </tr>
+                <volist id="list" name="bsuger">
+                    <tr>
+                        <td class="xtjl">{pigcms:$list.recordtime|friendlyDate=###,md,false}</td>
+                        <td class="xtjl">{pigcms:$list.lctxs}</td>
+                        <td class="xtjl">{pigcms:$list.kf}</td>
+                        <td class="xtjl">{pigcms:$list.zchtxs}</td>
+                        <td class="xtjl">{pigcms:$list.acq}</td>
+                        <td class="xtjl">{pigcms:$list.achtxs}</td>
+                        <td class="xtjl">{pigcms:$list.wcq}</td>
+                        <td class="xtjl">{pigcms:$list.wchtxs}</td>
+                        <td class="xtjl">{pigcms:$list.sq}</td>
+                    </tr>
+                </volist>
+            </table>
+        </section>
+        <section>
+            <div class="title">重要指标</div>
+            <ul>
+                <li><span>糖化血红蛋白(HbA1c):<font class="xtjl">{pigcms:$bprotein.hbaic}</font></span><span></span></li>
+                <li><span>BMI:<font class="xtjl">{pigcms:$bprotein.bmi}</font></span><span></span></li>
+                <li><span>血压(mmHg):<font class="xtjl">{pigcms:$bprotein.presure}</font></span><span></span></li>
+                <li><span>甘油三脂(mmol/L):<font class="xtjl">{pigcms:$bprotein.xiezhi}</font></span><span></span></li>
+                <li><span>用药情况:</span>
+                    <textarea readonly="true" class="textare" style="color:red">{pigcms:$bprotein.note}</textarea>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <div class="title">化验单</div>
+            <ul>
+                <volist id="list" name="laboratory">
+                <li><a href="{pigcms::U('Doctor/bigpic',array('src'=>$list['pic'],'token'=>$token,'wecha_id'=>$wecha_id))}"><img style="width: 100%;" src="{pigcms:$list.pic}"></a></li>
+                </volist>
+            </ul>
+        </section>
+    </div>
+    <include file="Doctor:foot" />
+</body>
+</html>

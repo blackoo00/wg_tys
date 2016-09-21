@@ -1,0 +1,70 @@
+<include file="Public:head"/>
+<body>
+    <script src="{pigcms::RES}/js/tys/require.js" data-main="{pigcms::RES}/js/tys/main" type="text/javascript"></script>
+    <div class="steward_laboratory">
+        <div>
+            化验数据
+        </div>
+        <div>
+            <ul>
+                <volist id="list" name="info">
+                    <a href="{pigcms::U('Steward/showbigpic',array('id'=>$list[id], 'src'=>$list['pic'],'token'=>$token,'wecha_id'=>$wecha_id))}">
+                    <li class="labpic">
+                        <input type="hidden" id="labid" name="labid" value="{pigcms:$list.id}">
+                        <img src="{pigcms:$list.pic}">
+                        <span>{pigcms:$list.recordtime|friendlyDate=###,ymd,false}</span>
+                        <span>{pigcms:$list.recordtime|friendlyDate=###,his,false}</span>
+                    </li>
+                    </a>
+                </volist>
+                <div id="loading" style="display:none">
+                    <img src="{pigcms::RES}/css/tys/photoswipe-loader.gif">
+                </div>
+            </ul>
+            <div class="showbigpic">
+                <div>
+                    <img src="">
+                    <a onclick="return closepic()" href="#">返回</a>
+                    <a onclick="return delpic()" class="delpic" data-id="" href="#">删除</a>
+                </div>
+            </div>
+        </div>
+        <script src="{pigcms::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+        <script>
+            // $(function(){
+            //     $('.labpic').click(function(){
+            //         var id=$(this).find("#labid").val();
+            //         var src=$(this).find("img").attr("src");
+            //         $('.delpic').attr('data-id',id);
+            //         $('.showbigpic').find("img").attr("src",src);
+            //         $('.showbigpic').show();
+            //     })
+            // })
+            // function closepic(){
+            //     $('.showbigpic').hide();
+            //     return false;
+            // }
+            // function delpic(){
+            //     if(window.confirm('确定删除吗')){
+            //         $.ajax({
+            //             url:'{pigcms::U('Steward/dellaboratorypic',array('token'=>$token,'wecha_id'=>$wecha_id))}',
+            //             data:{id:$('.delpic').attr('data-id')},
+            //             success:function(data){
+            //                 if(data==1);
+            //                 alert("删除成功！");
+            //                 location.reload();
+            //             }
+            //         })
+            //     }
+            // }
+        </script>
+        <div>
+            <button class="greenbtn">上传化验图片</button>
+            <input id="pic" name="pic" type="file" title="化验图片" onchange="return laboratorypic('{pigcms::U('Steward/laboratorypic',array('token'=>$token,'wecha_id'=>$wecha_id))}')"> 
+        </div>
+        <include file="Public:support"/>
+    </div>
+</body>
+</html>
+
+

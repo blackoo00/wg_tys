@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>后台管理登陆</title>
+	<link href="{pigcms::RES}/css/tys/login.css?time={pigcms::time()}" rel="stylesheet">
+	<script src="{pigcms::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+</head>
+<style>
+body{background:#BCDAF2;}
+li{list-style-type:none;padding:0}
+.submit_btn{margin-top:10px;}
+</style>
+<body>
+	<div class="per_login">
+		<section class="inner_content">
+		<form id="loginform" name="loginform" method="post" action="{pigcms::U('Manager/checklogin',array('token'=>$token,'wecha_id'=>$wecha_id))}">
+		<li class="username"><input type="text" name="username" placeholder="账号" id="username" value="" /></li>
+		<li class="pwd"><input type="password" name="password" placeholder="密码" id="password" value="" /></li>
+		<li class="submit_btn"><button type="submit" id="login_btn">登 录</button></li>
+		</form>
+		</section>
+	</div>
+	<script type="text/javascript">
+	$('#login_btn').click(function(){
+		if($('#username').val()==''){
+			alert('帐号不能为空');
+			return false;
+		}
+		if($('#password').val()==''){
+			alert('密码不能为空');
+			return false;
+		}
+		$('loginform').submit();
+	});
+	</script>
+	<include file="Public:support"/>
+</body>
+</html>

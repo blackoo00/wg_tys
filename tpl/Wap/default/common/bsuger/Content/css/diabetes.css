@@ -1,0 +1,485 @@
+﻿body {
+}
+
+.index .menu li {
+    width: 50%;
+    float: left;
+    border: 1px #f1f1f1 solid;
+    box-sizing: border-box;
+    border-top: 0;
+    border-left: 0;
+}
+
+    .index .menu li a {
+        display: block;
+        padding: 40px 0 40px;
+    }
+
+        .index .menu li a:active {
+            color: #000;
+        }
+
+
+    .index .menu li .img, .index .menu li .title {
+        text-align: center;
+    }
+
+
+    .index .menu li .title {
+        padding-top: 6px;
+        font-size: 14px;
+    }
+
+    .index .menu li i {
+        font-size: 45px;
+    }
+    .index .menu li .img {
+        height:63px;
+    }
+        .index .menu li img {
+  width: 63px;
+height: 58px;
+margin: auto;
+margin: auto;
+display:block;
+    }
+
+
+
+.meter {
+    background: url('../images/danwei.png');
+background-size: 27px auto;
+background-position: right 1px;
+background-repeat: no-repeat;
+padding-right: 29px;
+}
+
+.record .title2 input[type=text].meter {
+    padding-right: 29px;
+}
+
+
+.kg {
+    background: url('../images/danwei.png');
+background-size: 27px auto;
+background-position: right -21px;
+background-repeat: no-repeat;
+padding-right: 29px;
+}
+
+.record .title2 input[type=text].kg {
+    padding-right: 29px;
+}
+
+.fc1 {
+    color: #92dbd3;
+}
+
+.fc2 {
+    color: #db9d3f;
+}
+
+.fc3 {
+    color: #e0787a;
+}
+
+.fc4 {
+    color: #38b59f;
+}
+
+.fc5 {
+    color: #e9b57c;
+}
+
+.fc6 {
+    color: #db9795;
+}
+
+.fc7 {
+    color: #88D56C;
+}
+.pagetitle {
+    line-height: 2.4em;
+    background: #00C07B;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+    .pagetitle div {
+        padding: 0 10px;
+    }
+
+    .pagetitle a {
+        display: inline-block;
+        width: 20px;
+        height: 27px;
+        font-size: 19px;
+    }
+
+
+.record {
+}
+
+    .record .title, .record .title2 {
+        font-size: 16px;
+        padding: 10px;
+       
+    }
+
+    .record .title4 {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .record .title3 {
+        font-size: 16px;
+        padding: 3px;
+    }
+
+    .record .title2 {
+        text-align: right;
+        color: #000;
+    }
+
+    .record .title4 time {
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.5);
+        margin-right: 10px;
+        position: relative;
+        top: 1px;
+    }
+
+
+    .record .input {
+        padding: 0 10px;
+        padding-bottom: 10px;
+    }
+
+    .record select {
+        padding: 3px 5px;
+        margin-right: 3px;
+    }
+
+    .record .input time {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .record textarea {
+        border: 1px #f1f1f1 solid;
+        padding: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100px;
+    }
+
+    .record #mod_val, .record .mod_val {
+        font-weight: bold;
+        font-size: 18px;
+        padding: 0 5px;
+    }
+
+    .record .danwei {
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+/*横向滚动*/
+html {
+    -ms-touch-action: none;
+}
+
+
+
+.mol_box {
+    padding: 4px 7px;
+    border: 1px #f1f1f1 solid;
+    margin: 0 0px 10px;
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.5) inset;
+}
+
+    .mol_box .index {
+        position: absolute;
+        height: 99%;
+        border-left: 2px red solid;
+        width: 0px;
+        top: 0;
+        /*left: 98px;*/
+        z-index: 99;
+    }
+
+
+
+#mol_wrapper,.mol_wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*background: #ccc;*/
+    overflow: hidden;
+    height: 100%;
+}
+
+#mol_scroller, .mol_scroller{
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 5000px;
+    height: 100%;
+    /*background-color: #a00;*/
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+    #mol_scroller .ul1, .mol_scroller .ul1 {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+        #mol_scroller .ul1 li ,.mol_scroller .ul1 li {
+            display: block;
+            float: left;
+            width: 300px;
+            height: 50%;
+            border: none;
+            border-right: 1px solid #38b59f;
+            /*background-color: #fafafa;*/
+            font-size: 14px;
+            width: 10px;
+            box-sizing: border-box;
+        }
+
+    #mol_scroller .ul2  ,   .mol_scroller .ul2 {
+        position: absolute;
+        top: 26px;
+        left: 1px;
+    }
+
+        #mol_scroller .ul2 li ,.mol_scroller .ul2 li{
+            float: left;
+            width: 10px;
+            box-sizing: border-box;
+        }
+
+.mol {
+    height: 40px;
+    position: relative;
+}
+
+#mol_scroller li:nth-of-type(5n) {
+    height: 70%;
+}
+
+#mol_scroller li:nth-of-type(10n) {
+    height: 100%;
+}
+
+#mol_scroller li.no {
+    border-color: #fff;
+}
+
+.sure_box {
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+button.sure {
+    background: #db9d3f;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 17px;
+    border-radius: 3px;
+    margin-bottom:10px;
+}
+
+
+.bc1 {
+    background: #f1f1f1;
+}
+
+.bc2 {
+    background: #00C07B;
+    color: #fff;
+}
+
+.bc3 {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+
+.record dl {
+    background: #fff;
+    margin-bottom: 10px;
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+    color: #666666;
+}
+
+
+article.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.53);
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    display: none;
+}
+
+
+article.seltime {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.seltime_box {
+    margin: 10px;
+    background: #fff;
+    padding-bottom: 10px;
+}
+
+    .seltime_box header {
+        background-color: #38b59f;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .seltime_box table {
+        width: 100%;
+    }
+
+        .seltime_box table td {
+            padding: 5px 8px;
+            font-size: 15px;
+        }
+
+            .seltime_box table td:first-child {
+                width: 50px;
+                text-align: center;
+            }
+
+    .seltime_box select {
+        padding: 4px 10px;
+        font-size:15px;
+        margin-right: 6px;
+    }
+#suretime {
+    margin-top:21px;    
+}
+    .seltime_box input {
+        border: 1px #f1f1f1 solid;
+        padding: 5px;
+        font-size:15px;
+    }
+
+
+.sbtn {
+    padding: 6px 0;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+    border-radius: 3px;
+    display: block;
+    margin: auto;
+}
+
+
+dt + dt {
+    border-top: 1px #f1f1f1 solid;
+}
+
+
+
+.record .sel_f {
+    position: relative;
+}
+
+    .record .sel_f select {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+.record .title2 input[type=text] {
+    width: 100%;
+    text-align: right;
+    font-size: 16px;
+    padding: 2px 0px 0px;
+}
+
+.record .title2 input[type=text].f1 {
+    width: auto;
+ 
+}
+.height-chart {
+    margin-bottom: 16px;
+}
+
+
+a:visited {
+    color:#000;
+}
+
+a.bc2:visited {
+    color:#fff;
+}
+
+        .select_box {
+            border-left: 1px #C0C0C0 solid;
+            padding-left: 3px;
+            color: #B6B6B6;
+            line-height: 21px;
+            position: relative;
+            font-size: 12px;
+            margin-left: 3px;
+        }
+
+            .select_box select {
+                position: absolute;
+                top: 0;
+                right: 0;
+                max-width: 100%;
+                opacity: 0;
+            }
+
+     .medica   .record .title4 time {
+            display:inline-block;
+        }
+           .medica .record .title4 time:nth-of-type(2) {
+                position:relative;top:-2px
+            }
+
+.medica .record .center.ol {
+    -webkit-box-align: initial;
+}

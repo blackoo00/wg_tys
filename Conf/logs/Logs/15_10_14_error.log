@@ -1,0 +1,4 @@
+[ 2015-10-14T17:03:36+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pigcms_custom_list` WHERE id= LIMIT 1  
+[ 2015-10-14T17:20:33+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `pigcms_custom_list` WHERE id= LIMIT 1  

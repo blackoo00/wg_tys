@@ -1,0 +1,99 @@
+<include file="Public:head"/>
+<body>
+<div id='custom_head'>
+	<a href="{pigcms::U('Doctor/modify',array('token'=>$token,'wecha_id'=>$wecha_id))}">
+		<img src="{pigcms:$doctor.pic}">
+		<div class="custom_name">{pigcms:$doctor.name}</div>
+		<div class="jiantou"><img src="{pigcms::RES}/css/tys/images/jiantou.png"/></div>
+		<div class="clear"></div>
+	</a>
+</div>
+<script src="{pigcms::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="{pigcms::RES}/js/tys/jquery.range.js" type="text/javascript"></script>
+<link rel="stylesheet" href="{pigcms::RES}/css/tys/jquery.range.css">
+<style>
+	input { font-size: 14px; font-weight: bold;  }
+
+	input[type=range]:before { content: attr(min); padding-right: 5px; }
+	input[type=range]:after { content: attr(max); padding-left: 5px;}
+
+	output {
+	    display: block;
+	    font-size: 5.5em;
+	    font-weight: bold;
+	}
+</style>
+	<div id="wrapper" class="Doctor_personal">
+		<!-- <div id="qrcode">
+			<div>
+				患者扫一扫与医生建立专属联系
+			</div>
+			<img src="{pigcms:$doctor.qrcode}">
+			<div>{pigcms:$doctor.name}</div>
+			<div>{pigcms:$doctor.hospital.name}</div>
+			<div>{pigcms:$doctor.persition}</div>
+		</div> -->
+		<ul>
+			<a id="editinfo" href="{pigcms::U('Doctor/modify',array('token'=>
+				$token,'wecha_id'=>$wecha_id))}">
+				<li>个人简介(方便患者了解您)</li>
+			</a>
+			<a id="editinfo" href="{pigcms::U('Doctor/feedback',array('token'=>
+				$token,'wecha_id'=>$wecha_id,'id'=>$doctor[id]))}">
+				<li>反馈建议</li>
+			</a>
+			<li id="myqrcode"><a style="display:block;" href="{pigcms::U('Doctor/myqrcode',array('token'=>$token,'wecha_id'=>$wecha_id,'id'=>$doctor[id]))}">我的专属二维码</a></li>
+			<!-- <a href="{pigcms::U('Doctor/consultm',array('token'=>
+				$token,'wecha_id'=>$wecha_id))}">
+				<li>我的回答:({pigcms:$doctor.consultnums}个)</li>
+			</a> -->
+			<a href="{pigcms::U('Doctor/custom',array('token'=>
+				$token,'wecha_id'=>$wecha_id))}">
+				<li>我的患者:({pigcms:$doctor.followers}个)</li>
+			</a>
+			<li>今日咨询:({pigcms:$dconsultnums}个)</li>
+			<li>总咨询量:({pigcms:$doctor.consultnums}个)</li>
+			<li>
+				日咨询量
+				<input type="text" name="dailyconsult" style="font-size:1.5em; width:15%; color:orange; border:none; background-color:#fff;" readonly="true" id="show" value="{pigcms:$doctor.dailyconsult}">			
+				<input class="button blue" type="button" value="保存" onclick="saveconsult()">
+				<div style="padding:20px 0">
+				<input type="hidden" class="single-slider" value="{pigcms:$doctor.dailyconsult}"/> 
+				</div>
+			</li>
+			<script type="text/javascript">
+			    function saveconsult(){
+					$.ajax({
+						url:'{pigcms::U('Doctor/dailyconsult',array('token'=>$token,'wecha_id'=>$wecha_id))}',
+						data:{dailyconsult:document.getElementById("show").value},
+						success:function(data){
+							if(data==1){
+								alert("修改成功");
+							}else{
+								alert("系统出错");
+							}
+						}
+					})
+			    }
+				$(document).ready(function(){
+				    console.log("11");
+				    $('.single-slider').jRange({
+				        from: 0,
+				        to: 100,
+				        step: 1,
+				        scale: [0,25,50,75,100],
+				        format: '%s',
+				        width: 250,
+				        showLabels: true,
+				        tag:'#show'
+				    });
+				});
+			</script>
+			<!-- <li>
+				<include file="Public:week"/>			
+			</li> -->
+		</ul>
+	</div>
+	<include file="Doctor:foot" />
+</body>
+</html>

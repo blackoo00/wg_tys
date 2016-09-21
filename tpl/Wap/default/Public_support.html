@@ -1,0 +1,24 @@
+<style type="text/css" media="screen">
+	#surport{
+		text-align: center;
+		margin: 10px auto 0;
+		font-size: 1.2em;
+	}
+</style>
+<script>
+function onBridgeReady(){
+ WeixinJSBridge.call('hideOptionMenu');
+}
+
+if (typeof WeixinJSBridge == "undefined"){
+    if( document.addEventListener ){
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    }else if (document.attachEvent){
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+}else{
+    onBridgeReady();
+}
+</script>
+<!-- <div id="surport">技术支持:微广互动</div> -->

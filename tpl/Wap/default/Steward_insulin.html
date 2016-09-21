@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>胰岛素记录</title>
+</head>
+<body>
+	<a href="{pigcms::U('Steward/iinsert',array('token'=>$token))}">添加</a>
+	<ul>
+		<volist id="list" name="insulin">
+			<a href="{pigcms::U('Steward/iupdate',array('id'=>$list['id'],'token'=>$token))}">
+				<li>开始时间:{pigcms:$list.starttime}结束时间:{pigcms:$list.endtime}药物:{pigcms:$list.oralmedicine}</li>
+			</a>
+		</volist>
+	</ul>
+</body>
+</html>

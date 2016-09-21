@@ -1,0 +1,15 @@
+<include file="Public:support"/>
+<div style="height:68px;"></div>
+<footer id="doctor_foot">
+	<ul>
+		<!-- <li><a href="{pigcms::U('Consult/consultm',array('did'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">我的医信</a></li> -->
+		<li>
+			<div>
+				<a href="{pigcms::U('Doctor/custom',array('token'=>$token,'wecha_id'=>$wecha_id))}">我的患者
+					<eq name="check" value="1"><span></span></eq>
+				</a>
+			</div>
+		</li>
+		<li><div><a href="{pigcms::U('Doctor/personal',array('token'=>$token,'wecha_id'=>$wecha_id))}">我</a></div></li>
+	</ul>
+</footer>

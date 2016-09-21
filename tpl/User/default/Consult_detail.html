@@ -1,0 +1,56 @@
+<include file="Public:head"/>
+<div class="content" <if condition="session('isQcloud') eq true">style="float:center;"</if>
+>
+<div class="cLineB">
+  <h4>关于<font style="color:red;">{pigcms:$consultb['0']['consult']['title']}</font>的咨询详细</h4>
+  <a href="javascript:history.go(-1);"  class="right btnGrayS vm" style="margin-top:-27px" >返回</a>
+</div>
+<div class="msgWrap">
+  <form method="post"  action="index.php?ac=importtxt&amp;id=9379&amp;wxid=gh_858dwjkeww5" id="info" >
+    <input name="delall"  type="hidden" value="del" />
+    <input name="wxid"  type="hidden" value="gh_858dwjkeww5" />
+    <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%">
+      <THEAD>
+        <TR>
+          <th>{pigcms:$consult.doctor.name}</th>
+          <th>{pigcms:$consult.custom.name}</th>
+        </TR>
+      </THEAD>
+      <TBODY>
+        <TR></TR>
+        <volist id="list" name="consultb">
+          <tr>
+            <td style="line-height:22px; font-size:14px; letter-spacing:1px;"><if condition="$list.dtalk eq 1"><div>{pigcms:$list.content}</div>
+                <span style="float:right; color:rgba(68,221,221,0.8);">{pigcms:$list.time|friendlyDate}</span>
+                </if>
+            </td>
+            <td style="line-height:22px; font-size:14px; letter-spacing:1px;"><if condition="$list.ctalk eq 1"><div>{pigcms:$list.content}</div>
+                <span style="float:right; color:rgba(68,221,221,0.8);">{pigcms:$list.time|friendlyDate}</span>
+                </if>
+            </td>
+          </tr>
+        </volist>
+      </TBODY>
+    </TABLE>
+  </form>
+</div>
+
+<div class="cLine">
+  <div class="pageNavigator right">
+    <div class="pages">{pigcms:$page}</div>
+  </div>
+  <div class="clr"></div>
+</div>
+
+</div>
+
+<div class="clr"></div>
+</div>
+</div>
+</div>
+
+<!--底部-->
+</div>
+<if condition="session('isQcloud') neq true">
+<include file="Public:footer"/>
+</if>

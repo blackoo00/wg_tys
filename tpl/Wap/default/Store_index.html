@@ -1,0 +1,51 @@
+<include file="Store:header1"/>
+<!--form id="search_form" name="search_form" action="" method="post">
+	<div class="m-l-search">
+		<input type="hidden" name="wecha_id" value="{pigcms:$wecha_id}">
+		<input type="hidden" name="token" value="{pigcms:$token}">
+		<input id="search_name" class="inp-search" name="search_name" type="search" value="" placeholder="输入关键字搜索">
+		<input class="btn-search" name="search-btn" type="submit" value="">
+	</div>
+</form-->
+
+<!--div class="m-select c666 order_control">
+<span><a href="javascript:" order="time" class="arrow-down">时间<i><em></em></i></a></span>
+<span><a href="javascript:" order="salecount">销量<i><em></em></i></a></span>
+<span><a href="javascript:" order="price">价格<i><em></em></i></a></span>
+<span><a href="javascript:" order="discount">折扣<i><em></em></i></a></span>
+<input type="hidden" id="view_list" value="">
+<!-- <span class="filter"><a href="javascript:;" class="ary li">排列</a><a href="javascript:;" class="flt">筛选</a></span> -->
+</div-->
+<volist name="cats" id="cat" key="i"> 
+<div class="cate"><span class="more"><a href="{pigcms::U('Store/products',array('token' => $_GET['token'], 'catid' => $cat['id'],'mid'=>$my['id']))}" style="color:#fff">更多></a></span><span class="title">{pigcms:$cat.name}</span></div>
+<ul id="m_list" class="m-list " style="overflow:hidden">
+<volist name="cat.products" id="hostlist"> 
+	<li>
+		<div style="width:95%;margin:0 auto;background:#fff;">
+		<span class="pic">
+			<a href="{pigcms::U('Store/product',array('token' => $_GET['token'], 'id' => $hostlist['id'],'mid'=>$my['id']))}">
+			<img src="{pigcms:$hostlist.logourl}" data-original="{pigcms:$hostlist.logourl}" style="width:100%;height:120px;">
+			</a>
+			<a class="t" href="{pigcms::U('Store/product',array('token' => $_GET['token'], 'id' => $hostlist['id'],'mid'=>$my['id']))}">{pigcms:$hostlist.name|msubstr=0,15}</a><br/>
+			<b>￥{pigcms:$hostlist.vprice}</b><del>￥{pigcms:$hostlist.oprice}</del>
+		</span>
+		</div>
+	</li>
+</volist>
+</ul>
+</volist> 
+</body>
+<script type="text/javascript">
+window.shareData = {  
+            "moduleName":"Store",
+            "moduleID":"{pigcms:$res['id']}",
+            "imgUrl": "{pigcms:$res['pic']}", 
+            "timeLineLink": "{pigcms::C('site_url') .  U('Store/index',array('token' => $_GET['token'],'mid'=>$my['id']))}",
+            "sendFriendLink": "{pigcms::C('site_url') .  U('Store/index',array('token' => $_GET['token'],'mid'=>$my['id']))}",
+            "weiboLink": "{pigcms::C('site_url') .  U('Store/products',array('token' => $_GET['token'],'mid'=>$my['id']))}",
+            "tTitle": "{pigcms:$metaTitle}",
+            "tContent": "{pigcms:$res.text}"
+        };
+</script>
+{pigcms:$shareScript}
+</html>

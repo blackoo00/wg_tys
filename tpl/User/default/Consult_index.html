@@ -1,0 +1,57 @@
+<include file="Public:head"/>
+<div class="content" <if condition="session('isQcloud') eq true">style="float:center;"</if>
+>
+<div class="cLine">
+  <div style="float:right;line-height:30px;">
+    <form action="#" method="post">
+      <input type="text" placeholder="请输入医生姓名" value="{pigcms:$_POST['search']}" class="px" name="search" />    
+      <button class="btnGrayS" style="height: 29px;">搜索</button>
+    </form>
+  </div>
+  <div class="clr"></div>
+</div>
+<div class="msgWrap">
+  <form method="post"  action="index.php?ac=importtxt&amp;id=9379&amp;wxid=gh_858dwjkeww5" id="info" >
+    <input name="delall"  type="hidden" value="del" />
+    <input name="wxid"  type="hidden" value="gh_858dwjkeww5" />
+    <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%">
+      <THEAD>
+        <TR>
+          <th>咨询医生</th>
+          <th>咨询人</th>
+          <th>性别</th>
+          <th>操作</th>
+        </TR>
+      </THEAD>
+      <TBODY>
+        <TR></TR>
+        <volist id="list" name="consult">
+          <tr>
+            <td>{pigcms:$list.doctor.name}</td>
+            <td>{pigcms:$list.custom.name}</td>
+            <td><if condition="$list.sex eq 1">男<else/>女</if></td>
+            <td class="norightborder"> <a href="{pigcms::U('Consult/detail',array('id'=>$list['id']))}" title="查看详细">查看详细</a></td>
+          </tr>
+        </volist>
+
+      </TBODY>
+    </TABLE>
+  </form>
+</div>
+<div class="cLine">
+  <div class="pageNavigator right">
+    <div class="pages">{pigcms:$page}</div>
+  </div>
+  <div class="clr"></div>
+</div>
+</div>
+
+<div class="clr"></div>
+</div>
+</div>
+</div>
+<!--底部-->
+</div>
+<if condition="session('isQcloud') neq true">
+<include file="Public:footer"/>
+</if>

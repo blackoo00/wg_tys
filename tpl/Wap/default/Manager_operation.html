@@ -1,0 +1,17 @@
+<include file="Public:head"/>
+<body>
+	<div id="wrapper" class="manager_operation">
+		<ul>
+			<volist id="list" name="doctor">
+				<li><a href="{pigcms::U('Manager/doctor',array('id'=>$list['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">{pigcms:$list.name}</a></li>
+			</volist>
+		</ul>
+		<div class="wappages">{pigcms:$page}</div>
+		<section>
+			<a class="greenbtn" href="{pigcms::U('Manager/doctoradd',array('token'=>$token,'wecha_id'=>$wecha_id))}">添加医生</a>
+			<a class="greenbtn" href="{pigcms::U('Manager/loginout',array('token'=>$token,'wecha_id'=>$wecha_id))}">退出</a>
+		</section>
+		<include file="Public:support"/>
+	</div>
+</body>
+</html>

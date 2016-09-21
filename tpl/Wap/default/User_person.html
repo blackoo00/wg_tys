@@ -1,0 +1,22 @@
+<include file="Public:head"/>
+<body>
+	<div id='custom_head'>
+		<img src="{pigcms:$custom.pic}">
+		<div class="custom_name">{pigcms:$custom.name}</div>
+		<div class="clear"></div>
+	</div>
+	<div id="wrapper" class="user_person">
+		<section>
+			<form action="{pigcms::U('User/pinsert',array('token'=>$token,'wecha_id'=>$wecha_id))}" method="post">
+			<ul>
+				<li><input name="name" type="text" placeholder="姓名" value="{pigcms:$custom.name}"></li>
+				<li><input name="tel" type="text" placeholder="电话" value="{pigcms:$custom.tel}"></li>
+				<li><input name="card" type="text" placeholder="身份证号" value="{pigcms:$custom.card}"></li>
+				<li><input type="submit" value="提交"></li>
+			</ul>
+			</form>
+		</section>
+	</div>
+	<include file="User:foot"/>
+</body>
+</html>

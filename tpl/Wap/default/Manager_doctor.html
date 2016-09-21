@@ -1,0 +1,67 @@
+<include file="Public:head"/>
+<body>
+<script src="{pigcms::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <div id="wrapper" class="manager_doctor">
+      <section>
+        <TABLE class="userinfoArea" style=" margin:20px 0 0 0;" border="0" cellSpacing="0" cellPadding="0" width="100%">
+          <input type="hidden" id="doctorid" name="id" value="{pigcms:$info.id}" />     
+          <colgroup>
+            <col width="25%">
+            <col width="25%">
+            <col width="25%">
+            <col width="25%">
+          </colgroup> 
+          <tr>
+            <td colspan="4" style="text-align:center">
+              <empty name="info['pic']">
+                <img style="width: 100px;" src="{pigcms::STATICS}/images/doctor.jpg" alt="{pigcms:$info.name}">      
+                <else/>      
+                <img style="width: 100px;" src="{pigcms:$info.pic}" alt="{pigcms:$info.name}"></empty>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="keyword">医生姓名：</label>
+            </td>
+            <td>{pigcms:$info.name}</td>
+            <td>
+              <label for="keyword">职称：</label>
+            </td>
+            <td>{pigcms:$info.persition}</td>
+          </tr>
+          <tr>
+            <td>
+              <label for="keyword">患者数：</label>
+            </td>
+            <td>{pigcms:$info.followers}</td>
+            <td>
+              <label for="keyword">科室：</label>
+            </td>
+            <td>{pigcms:$info.profession}</td>
+          </tr>
+          <tr>
+            <td>
+              <label for="keyword">咨询量：</label>
+            </td>
+            <td>{pigcms:$info.consultnums}</td>
+            <td>
+              <label for="keyword">二维码：</label>
+            </td>
+            <td>
+              <img style="width:120px; height:auto;" src="{pigcms:$info.qrcode}">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <include file="Public:week"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" style="padding:2%;">{pigcms:$info.info}</td>
+          </tr>
+        </TABLE>
+        <include file="Public:support"/>      
+      </section>
+  </div>
+</body>
+</html>

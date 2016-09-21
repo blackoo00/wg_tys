@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>咨询支表</title>
+</head>
+<body>
+	<ul>
+		<volist id="list" name="consultb">
+			<li>
+				<if condition="$list.dtalk eq 1">{pigcms:$doctorname}:<else/>{pigcms:$customname}:</if>
+				{pigcms:$list.content}<br>{pigcms:$list.time|friendlyDate}
+			</li>
+		</volist>
+	</ul>
+	<form action="{pigcms::U('Doctor/insert',array('id'=>$cmid,'token'=>$token,'wecha_id'=>$wecha_id))}" method="post">
+		<textarea name="content"></textarea><br>
+		<input type="submit" value="发送">
+	</form>
+</body>
+</html>

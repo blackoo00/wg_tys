@@ -1,0 +1,28 @@
+<include file="Public:head"/>
+<body>
+    <div id='custom_head'>
+        <img src="{pigcms:$doctor.pic}">
+        <div class="custom_name">{pigcms:$doctor.name}</div>
+        <div class="clear"></div>
+    </div>
+	<div id="wrapper" class="doctor_consultm">
+		<ul>
+			<empty name="consult">暂时没有咨询！<else/>
+				<volist id="list" name="consult">
+					<a href="{pigcms::U('Consult/consultb',array('id'=>
+							$list['id'],'talk'=>'doctor','token'=>$token,'wecha_id'=>$wecha_id))}">
+						<li>
+							<img src="{pigcms:$list.custom.pic}">
+							<div><span>标题：{pigcms:$list.title}</span><span>{pigcms:$list.time|friendlyDate}</span></div>
+							<div>内容：{pigcms:$list.info}</div>	
+							<div class="clear"></div>
+						</li>
+					</a>
+				</volist>
+				<div class="wappages">{pigcms:$page}</div>
+			</empty>
+		</ul>
+	</div>
+	<include file="Doctor:foot" />
+</body>
+</html>
