@@ -1,23 +1,86 @@
-﻿body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td, p {
-  margin: 0;
-  padding: 0; }
-.per_login section{padding:35px 20px; font-size:14px;}
-
-.per_login .username,
-.per_login .pwd{padding:0 5px;}
-
-.per_login input[type="text"],
-.per_login input[type="password"]{-webkit-appearance:none; width:100%; height:18px; line-height:18px; padding:11px 5px; display:block; border-radius:5px; border:1px solid #C9C9C9; border-bottom-left-radius:0; border-bottom-right-radius:0; margin-left:-5px;}
-.per_login input[type="password"]{border-bottom-left-radius:5px; border-bottom-right-radius:5px; border-top-left-radius:0; border-top-right-radius:0; border-top:0; box-shadow:0 1px 1px #E5E5E5;}
-
-.per_login .login_free{height:50px; line-height:50px;}
-.per_login .login_free div{height:18px; line-height:18px; display:inline-block; position:relative; padding-left:3px;}
-.per_login .login_free input[type="checkbox"]{position:absolute; top:0; left:0; opacity:0; width:18px; height:18px;}
-.per_login .login_free label{height:18px; line-height:18px; padding-left:22px; background:url(../../Touch_img/icon1.png) no-repeat 0 -74px; background-size:150px 150px; display:block;}
-.per_login .login_free input:checked + label{background-position:0 -99px;}
-
-.per_login button{border-radius:2px; width:100%; background:#289ED7; border:0; height:38px; line-height:38px; font-size:16px; color:#FFF;}
-
-.per_login .reg_findPwd{padding-top:20px; text-align:right;}
-.per_login .reg_findPwd a:visited{color:#1155CD;}
-.per_login .reg_findPwd a:last-child{margin-left:20px;}
+﻿*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img{
+	display: block;
+}
+html,body{
+	height: 100%;
+}
+.per_login{
+	height: 100%;
+	overflow: hidden;
+	background: url(./images/login_bg.jpg) no-repeat top left;
+	max-width: 640px;
+	margin: 0 auto;
+}
+.inner_content{
+	height: 100%;
+	overflow: hidden;
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 40%,rgba(253,253,204,1) 100%); 
+}
+.logo{
+	margin:50px auto 20px;
+	width: 40%;
+}
+.logo img{
+	width: 100%;
+}
+.form_item{
+	width: 80%;
+	margin: 0 auto;
+}
+input,button{
+	width: 100%;
+	background: rgba(255,255,255,0);
+	border: 2px solid #e4e4e4;
+	border-radius: 20px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0 auto;
+	display: block;
+	outline: none;
+	margin-bottom: 17px;
+}
+input{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	color: #fff;
+	text-indent: 67px;
+	font-size: 19px;
+}
+input:active{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.username,.pwd{
+	position: relative;
+}
+.username:before,.pwd:before{
+	content: "";
+	position: absolute;
+	color: #fff;
+	top: 11px;
+	left: 16px;
+}
+.username:before{
+	content: "账号";
+}
+.pwd:before{
+	content: "密码";
+}
+.username:after,.pwd:after{
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 55px;
+	width: 1px;
+	background-color: #fff;
+	height: 24px;
+}
+#login_btn{
+	background-color: #ff6666;
+	border: none;
+	color: #fff;
+	font-size: 20px;
+}

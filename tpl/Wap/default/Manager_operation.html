@@ -3,7 +3,9 @@
 	<div id="wrapper" class="manager_operation">
 		<ul>
 			<volist id="list" name="doctor">
-				<li><a href="{pigcms::U('Manager/doctor',array('id'=>$list['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">{pigcms:$list.name}</a></li>
+				<a href="{pigcms::U('Manager/doctor',array('id'=>$list['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">
+					<li>{pigcms:$list.name}</li>
+				</a>
 			</volist>
 		</ul>
 		<div class="wappages">{pigcms:$page}</div>

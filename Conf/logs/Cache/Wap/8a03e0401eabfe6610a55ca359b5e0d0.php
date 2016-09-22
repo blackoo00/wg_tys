@@ -68,12 +68,13 @@
 				</a><?php endforeach; endif; else: echo "" ;endif; ?>
 		</ul>
 	</div>
-	<footer id="user_foot">
+	<div id="user_foot">
 	<ul>
 		<!-- <li><a href="<?php echo U('User/consultm',array('token'=>$token,'wecha_id'=>$wecha_id));?>">咨询</a></li> -->
-		<li><a href="<?php echo U('User/doctor',array('id'=>$did,'token'=>$token,'wecha_id'=>$wecha_id));?>">医生简介</a></li>
-		<li><a href="<?php echo U('User/custom',array('id'=>$cid,'token'=>$token,'wecha_id'=>$wecha_id));?>">我</a></li>
+		<li><a href="<?php echo U('User/doctor',array('id'=>$did,'token'=>$token,'wecha_id'=>$wecha_id));?>" class="iconfont">我的医生</a></li>
+		<li><a href="<?php echo U('Steward/index',array('token'=>$token,'wecha_id'=>$wecha_id));?>" class="iconfont">我的数据</a></li>
+		<li><a href="<?php echo U('User/custom',array('token'=>$token,'wecha_id'=>$wecha_id));?>" class="iconfont">我</a></li>
 	</ul>
-</footer>
+</div>
 </body>
 </html>

@@ -258,7 +258,7 @@ if (!isset($_SESSION['isQcloud'])){ ?>
 <div class="catalogList">
 <ul id="menu">
 <?php
-$menus=array( array( 'name'=>'基础设置', 'iconName'=>'base', 'display'=>0, 'subs'=>array( array('name'=>'关注时回复与帮助','link'=>U('Areply/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Areply')), array('name'=>'微信－文本回复','link'=>U('Text/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Text')), array('name'=>'微信－图文回复','link'=>U('Img/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Img','a'=>'index')), array('name'=>'微信－多图文回复','link'=>U('Img/multi',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Img','a'=>'multi')), array('name'=>'微信－语音回复','link'=>U('Voiceresponse/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Voiceresponse')), array('name'=>'自定义LBS回复','link'=>U('Company/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Company')), array('name'=>'自定义菜单','link'=>U('Diymen/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Diymen')), array('name'=>'微信用户信息授权','link'=>U('Auth/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Auth')), array('name'=>'回答不上来的配置','link'=>U('Other/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Other')), )), array( 'name'=>'销售管理', 'iconName'=>'crm', 'display'=>0, 'subs'=>array( array('name'=>'销售人员','link'=>U('Salesman/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Salesman')), )), array( 'name'=>'医患管理', 'iconName'=>'card', 'display'=>0, 'subs'=>array( array('name'=>'医院列表','link'=>U('Hospital/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Hospital')), array('name'=>'医生列表','link'=>U('Doctor/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Doctor')), array('name'=>'患者列表','link'=>U('Custom/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Custom')), array('name'=>'咨询列表','link'=>U('Consult/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Consult')), array('name'=>'评价列表','link'=>U('Comment/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Comment')), )), array( 'name'=>'电商系统', 'iconName'=>'store', 'display'=>0, 'subs'=>array( array('name'=>'在线支付设置','link'=>U('Alipay_config/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Alipay_config')), array('name'=>'微信商城系统','link'=>U('Store/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Store')), )), ); ?>
+$menus=array( array( 'name'=>'基础设置', 'iconName'=>'base', 'display'=>0, 'subs'=>array( array('name'=>'关注时回复与帮助','link'=>U('Areply/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Areply')), array('name'=>'微信－文本回复','link'=>U('Text/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Text')), array('name'=>'微信－图文回复','link'=>U('Img/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Img','a'=>'index')), array('name'=>'微信－多图文回复','link'=>U('Img/multi',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Img','a'=>'multi')), array('name'=>'微信－语音回复','link'=>U('Voiceresponse/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Voiceresponse')), array('name'=>'自定义LBS回复','link'=>U('Company/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Company')), array('name'=>'自定义菜单','link'=>U('Diymen/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Diymen')), array('name'=>'微信用户信息授权','link'=>U('Auth/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Auth')), array('name'=>'回答不上来的配置','link'=>U('Other/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Other')), )), array( 'name'=>'销售管理', 'iconName'=>'crm', 'display'=>0, 'subs'=>array( array('name'=>'销售人员','link'=>U('Salesman/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Salesman')), )), array( 'name'=>'医患管理', 'iconName'=>'card', 'display'=>0, 'subs'=>array( array('name'=>'医院列表','link'=>U('Hospital/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Hospital')), array('name'=>'医生列表','link'=>U('Doctor/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Doctor')), array('name'=>'患者列表','link'=>U('Custom/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Custom')), array('name'=>'咨询列表','link'=>U('Consult/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Consult')), array('name'=>'反馈列表','link'=>U('Feedback/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Feedback')), )), array( 'name'=>'电商系统', 'iconName'=>'store', 'display'=>0, 'subs'=>array( array('name'=>'在线支付设置','link'=>U('Alipay_config/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Alipay_config')), array('name'=>'微信商城系统','link'=>U('Store/index',array('token'=>$token)),'new'=>0,'selectedCondition'=>array('m'=>'Store')), )), ); ?>
 <?php
 $i=0; $parms=$_SERVER['QUERY_STRING']; $parms1=explode('&',$parms); $parmsArr=array(); if ($parms1){ foreach ($parms1 as $p){ $parms2=explode('=',$p); $parmsArr[$parms2[0]]=$parms2[1]; } } $subMenus=array(); $t=0; $currentMenuID=0; $currentParentMenuID=0; foreach ($menus as $m){ $loopContinue=1; if ($m['subs']){ $st=0; foreach ($m['subs'] as $s){ $includeArr=1; if ($s['selectedCondition']){ foreach ($s['selectedCondition'] as $condition){ if (!in_array($condition,$parmsArr)){ $includeArr=0; break; } } } if ($includeArr){ if ($s['exceptCondition']){ foreach ($s['exceptCondition'] as $epkey=>$eptCondition){ if ($epkey=='a'){ $parm_a_values=explode(',',$eptCondition); if ($parm_a_values){ if (in_array($parmsArr['a'],$parm_a_values)){ $includeArr=0; break; } } }else { if (in_array($eptCondition,$parmsArr)){ $includeArr=0; break; } } } } } if ($includeArr){ $currentMenuID=$st; $currentParentMenuID=$t; $loopContinue=0; break; } $st++; } if ($loopContinue==0){ break; } } $t++; } foreach ($menus as $m){ $displayStr=''; if ($currentParentMenuID!=0||0!=$currentMenuID){ $m['display']=0; } if (!$m['display']){ $displayStr=' style="display:none"'; } if ($currentParentMenuID==$i){ $displayStr=''; } $aClassStr=''; if ($displayStr){ $aClassStr=' nav-header-current'; } if($i == 0){ echo '<a class="nav-header'.$aClassStr.'" style="border-top:none !important;"><b class="'.$m['iconName'].'"></b>'.$m['name'].'</a><ul class="ckit"'.$displayStr.'>'; }else{ echo '<a class="nav-header'.$aClassStr.'"><b class="'.$m['iconName'].'"></b>'.$m['name'].'</a><ul class="ckit"'.$displayStr.'>'; } if ($m['subs']){ $j=0; foreach ($m['subs'] as $s){ $selectedClassStr='subCatalogList'; if ($currentParentMenuID==$i&&$j==$currentMenuID){ $selectedClassStr='selected'; } $newStr=''; if ($s['test']){ $newStr.='<span class="test"></span>'; }else { if ($s['new']){ $newStr.='<span class="new"></span>'; } } if ($s['name']!='微信墙'&&$s['name']!='摇一摇'){ echo '<li class="'.$selectedClassStr.'"> <a href="'.$s['link'].'">'.$s['name'].'</a>'.$newStr.'</li>'; }else { switch ($s['name']){ case '微信墙': case '摇一摇': if (file_exists($_SERVER['DOCUMENT_ROOT'].'/PigCms/Lib/Action/User/WallAction.class.php')&&file_exists($_SERVER['DOCUMENT_ROOT'].'/PigCms/Lib/Action/User/ShakeAction.class.php')){ echo '<li class="'.$selectedClassStr.'"> <a href="'.$s['link'].'">'.$s['name'].'</a>'.$newStr.'</li>'; } break; } } if ($s['name']=='模板管理'&&is_dir($_SERVER['DOCUMENT_ROOT'].'/cms')&&!strpos($_SERVER['HTTP_HOST'],'pigcms')){ echo '<li class="subCatalogList"> <a href="/cms/manage/index.php">高级模板</a><span class="new"></span></li>'; } $j++; } } echo '</ul>'; $i++; } ?>
 
@@ -284,6 +284,15 @@ $i=0; $parms=$_SERVER['QUERY_STRING']; $parms1=explode('&',$parms); $parmsArr=ar
 </script>
 <div class="content" <?php if(session('isQcloud') == true): ?>style="float:center;"<?php endif; ?>
 >
+<div class="cLine">
+  <div style="float:right;line-height:30px;">
+    <form action="#" method="post">
+      <input type="text" placeholder="请输入医生姓名" value="<?php echo ($_POST['search']); ?>" class="px" name="search" />    
+      <button class="btnGrayS" style="height: 29px;">搜索</button>
+    </form>
+  </div>
+  <div class="clr"></div>
+</div>
 <div class="msgWrap">
   <form method="post"  action="index.php?ac=importtxt&amp;id=9379&amp;wxid=gh_858dwjkeww5" id="info" >
     <input name="delall"  type="hidden" value="del" />
@@ -291,24 +300,18 @@ $i=0; $parms=$_SERVER['QUERY_STRING']; $parms1=explode('&',$parms); $parmsArr=ar
     <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%">
       <THEAD>
         <TR>
-          <th>咨询标题</th>
-          <th>咨询内容</th>
           <th>咨询医生</th>
           <th>咨询人</th>
           <th>性别</th>
-          <th>出生年份</th>
           <th>操作</th>
         </TR>
       </THEAD>
       <TBODY>
         <TR></TR>
         <?php if(is_array($consult)): $i = 0; $__LIST__ = $consult;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><tr>
-            <td><?php echo ($list["title"]); ?></td>
-            <td><?php echo ($list["info"]); ?></td>
             <td><?php echo ($list["doctor"]["name"]); ?></td>
             <td><?php echo ($list["custom"]["name"]); ?></td>
             <td><?php if($list["sex"] == 1): ?>男<?php else: ?>女<?php endif; ?></td>
-            <td><?php echo ($list["born"]); ?></td>
             <td class="norightborder"> <a href="<?php echo U('Consult/detail',array('id'=>$list['id']));?>" title="查看详细">查看详细</a></td>
           </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 

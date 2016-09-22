@@ -42,6 +42,20 @@ table {
   box-sizing: border-box; }
 
 @font-face {
+  font-family: 'iconfont';
+  src: url("//at.alicdn.com/t/font_1474528511_8302639.eot");
+  /* IE9*/
+  src: url("//at.alicdn.com/t/font_1474528511_8302639.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1474528511_8302639.woff") format("woff"), url("//at.alicdn.com/t/font_1474528511_8302639.ttf") format("truetype"), url("//at.alicdn.com/t/font_1474528511_8302639.svg#iconfont") format("svg");
+  /* iOS 4.1- */ }
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+@font-face {
   font-family: 'icomoon';
   src: url("fonts/icomoon.eot?-dk90fi");
   src: url("fonts/icomoon.eot?#iefix-dk90fi") format("embedded-opentype"), url("fonts/icomoon.ttf?-dk90fi") format("truetype"), url("fonts/icomoon.woff?-dk90fi") format("woff"), url("fonts/icomoon.svg?-dk90fi#icomoon") format("svg");
@@ -668,31 +682,30 @@ footer {
   #user_foot ul > li {
     display: block;
     float: left;
-    width: 50%;
+    width: 33.33333333333333333333333333333333333333%;
     text-align: center;
     height: 65px;
     line-height: 40px;
     color: #000;
-    box-sizing: border-box;
-    /*&:nth-of-type(3){
-    	>a{
-    		background-image: url('images/icon6.png');
-    	}
-    }*/ }
+    box-sizing: border-box; }
     #user_foot ul > li > a {
       display: block;
-      background-repeat: no-repeat;
-      background-position: center 5px;
       color: #fff;
-      line-height: 100px; }
-    #user_foot ul > li:nth-of-type(1) > a {
-      background-image: url("images/icon2.png");
-      -webkit-background-size: 40px 40px;
-      background-size: 40px 40px; }
-    #user_foot ul > li:nth-of-type(2) > a {
-      background-image: url("images/icon6.png");
-      -webkit-background-size: 40px 40px;
-      background-size: 40px 40px; }
+      line-height: 100px;
+      position: relative; }
+      #user_foot ul > li > a:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        line-height: 42px;
+        font-size: 32px; }
+    #user_foot ul > li:nth-of-type(1) > a:after {
+      content: "\e601"; }
+    #user_foot ul > li:nth-of-type(2) > a:after {
+      content: "\e602"; }
+    #user_foot ul > li:nth-of-type(3) > a:after {
+      content: "\e600"; }
 
 /*USER_FOOT END*/
 /*DOCTOR_CUSTOM BEGIN*/
@@ -1010,14 +1023,18 @@ body html {
           top: 2px;
           border-radius: 50%;
           background-color: red; }
-    #doctor_foot ul > li:nth-of-type(1) div > a {
-      background-image: url("images/icon4.png");
-      -webkit-background-size: 40px 40px;
-      background-size: 40px 40px; }
-    #doctor_foot ul > li:nth-of-type(2) div > a {
-      background-image: url("images/icon6.png");
-      -webkit-background-size: 40px 40px;
-      background-size: 40px 40px; }
+        #doctor_foot ul > li div > a:after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          line-height: 42px;
+          font-size: 32px; }
+    #doctor_foot ul > li:nth-of-type(1) a:after {
+      content: "\e603";
+      font-size: 39px; }
+    #doctor_foot ul > li:nth-of-type(2) a:after {
+      content: "\e600"; }
 
 /*USER_FOOT END*/
 /*Doctor_personal begin*/
@@ -1114,7 +1131,7 @@ body html {
 .manager_operation section {
   padding: 2%; }
   .manager_operation section a {
-    width: 40%; }
+    width: 95%; }
 
 /*manager_operation end*/
 /*manager_doctor begin*/

@@ -3,37 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="msapplication-tap-highlight" content="no">
 	<title>后台管理登陆</title>
-	<link href="<?php echo RES;?>/css/tys/login.css?time=<?php echo time();?>" rel="stylesheet">
+	<link href="<?php echo RES;?>/css/tys/login.css" rel="stylesheet">
 	<script src="<?php echo RES;?>/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="<?php echo RES;?>/js/tys/notification.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="<?php echo RES;?>/css/tys/css/notification.css">
 </head>
-<style>
-body{background:#BCDAF2;}
-li{list-style-type:none;padding:0}
-.submit_btn{margin-top:10px;}
-</style>
-<body>
+<body id="scnhtm5">
 	<div class="per_login">
 		<section class="inner_content">
-		<form id="loginform" name="loginform" method="post" action="<?php echo U('Manager/checklogin',array('token'=>$token,'wecha_id'=>$wecha_id));?>">
-		<li class="username"><input type="text" name="username" placeholder="账号" id="username" value="" /></li>
-		<li class="pwd"><input type="password" name="password" placeholder="密码" id="password" value="" /></li>
-		<li class="submit_btn"><button type="submit" id="login_btn">登 录</button></li>
-		</form>
+			<p class="logo">
+				<img src="<?php echo RES;?>/css/tys/images/login_logo.png" alt="">
+			</p>
+			<form id="loginform" name="loginform" method="post" action="<?php echo U('Manager/checklogin');?>">
+				<p class="username form_item"><input type="text" name="username" id="username" value="" /></p>
+				<p class="pwd form_item"><input type="password" name="password" id="password" value="" /></p>
+				<p class="submit_btn form_item"><button id="login_btn">登 录</button></p>
+			</form>
 		</section>
 	</div>
 	<script type="text/javascript">
-	$('#login_btn').click(function(){
-		if($('#username').val()==''){
-			alert('帐号不能为空');
-			return false;
-		}
-		if($('#password').val()==''){
-			alert('密码不能为空');
-			return false;
-		}
-		$('loginform').submit();
-	});
+		$('#login_btn').click(function(){
+			if($('#username').val()==''){
+				alert('帐号不能为空');
+				return false;
+			}
+			if($('#password').val()==''){
+				alert('密码不能为空');
+				return false;
+			}
+			$('#loginform').submit();
+		});
 	</script>
 	<style type="text/css" media="screen">
 	#surport{

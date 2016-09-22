@@ -36,45 +36,40 @@
 			//  if($doctor['login']==1){
 			// 	//$this->redirect(U('Doctor/personal',array('did'=>$doctor['id'],'token'=>$this->token,'wecha_id'=>$this->wecha_id)));
 			//  }
-			dump($this->wecha_id);
 			$this->display();
 		}
 		//登陆判断
 		public function login(){
-			$db=D('Doctor');
-			if ($db->create() === false) {//进行验证
-	            $this->error($db->getError());
-	        }
-			$where['username']=$_POST['username'];
-			$doctor=$db->where($where)->find();
-			if(!$doctor){//账号不存在
-				$this->error('账号或密码不正确',U('Doctor/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
-			}
-			if($doctor['password']!=md5($_POST['password'])){//密码错误
-				$this->error('账号或密码不正确',U('Doctor/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
-			}if($doctor['openid']==$this->wecha_id||$doctor['openid']==NULL){
-					$where['id']=$doctor['id'];
-					//设置二维码
-					if($doctor['qrcode']==NULL){
-						$qrcode=$this->makeCode($this->token,$this->wecha_id,$doctor['id']);
-						$qrcode='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket='.$qrcode;
-						$data['qrcode']=$qrcode;
-					}
-					//设置微信ID
-					if($doctor['openid']==NULL){
-						$data['openid']=$this->wecha_id;
-					}
-					// $pic=D('Custom')->field('pic')->where("openid='".$this->wecha_id."'")->find();
-					// $pic=$pic['pic'];
-					// //设置头像图片
-					// if($doctor['pic']==NULL||$doctor['pic']!=$pic){
-					// 	$data['pic']=$pic;
-					// }
-					$data['login']=1;
-					$db->where($where)->save($data);
-					$this->success('登陆成功',U('Doctor/personal',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
-			}else{//该账号已经被人使用
-				$this->error('该账号已经被人使用',U('Doctor/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+			if(IS_POST){
+				$db=D('Doctor');
+				$where['username']=$_POST['username'];
+				$doctor=$db->where($where)->find();
+				if(!$doctor){//账号不存在
+					$this->error('账号或密码不正确',U('Doctor/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+				}
+				if($doctor['password']!=md5($_POST['password'])){//密码错误
+					$this->error('账号或密码不正确',U('Doctor/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+				}
+				if($doctor['openid']==$this->wecha_id||$doctor['openid']==NULL){
+						$where['id']=$doctor['id'];
+						//设置二维码
+						// if($doctor['qrcode']==NULL){
+						// 	$qrcode=$this->makeCode($this->token,$this->wecha_id,$doctor['id']);
+						// 	$qrcode='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket='.$qrcode;
+						// 	$data['qrcode']=$qrcode;
+						// }
+						//设置微信ID
+						if($doctor['openid']==NULL){
+							$data['openid']=$this->wecha_id;
+						}
+						$data['login']=1;
+						$db->where($where)->save($data);
+						$this->success('登陆成功',U('Doctor/personal',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+				}else{//该账号已经被人使用
+					$this->error('该账号已经被人使用',U('Doctor/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+				}
+			}else{
+				$this->display();
 			}
 		}
 		//退出

@@ -173,12 +173,13 @@
 			<a href="javascript:if(confirm('取消关注后将无法和医生进行互动?'))location='<?php echo U('User/cancel',array('id'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id));?>'">取消关注</a>
 		</section>
 	</div>
-<footer id="user_foot">
+<div id="user_foot">
 	<ul>
 		<!-- <li><a href="<?php echo U('User/consultm',array('token'=>$token,'wecha_id'=>$wecha_id));?>">咨询</a></li> -->
-		<li><a href="<?php echo U('User/doctor',array('id'=>$did,'token'=>$token,'wecha_id'=>$wecha_id));?>">我的医生</a></li>
-		<li><a href="<?php echo U('User/custom',array('token'=>$token,'wecha_id'=>$wecha_id));?>">我</a></li>
+		<li><a href="<?php echo U('User/doctor',array('id'=>$did,'token'=>$token,'wecha_id'=>$wecha_id));?>" class="iconfont">我的医生</a></li>
+		<li><a href="<?php echo U('Steward/index',array('token'=>$token,'wecha_id'=>$wecha_id));?>" class="iconfont">我的数据</a></li>
+		<li><a href="<?php echo U('User/custom',array('token'=>$token,'wecha_id'=>$wecha_id));?>" class="iconfont">我</a></li>
 	</ul>
-</footer>
+</div>
 </body>
 </html>

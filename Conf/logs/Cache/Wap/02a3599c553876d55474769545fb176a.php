@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	<link rel="stylesheet" type="text/css" href="<?php echo RES;?>/css/tys/style.css?time=<?php echo time();?>" />
-	<title>患者服务</title>
+	<title><?php echo ($wxuser["wxname"]); ?></title>
 </head>
 <body>
 <script src="<?php echo RES;?>/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
@@ -36,17 +36,17 @@
             </td>
             <td><?php echo ($info["name"]); ?></td>
             <td>
-              <label for="keyword">职位：</label>
+              <label for="keyword">职称：</label>
             </td>
             <td><?php echo ($info["persition"]); ?></td>
           </tr>
           <tr>
             <td>
-              <label for="keyword">粉丝数：</label>
+              <label for="keyword">患者数：</label>
             </td>
             <td><?php echo ($info["followers"]); ?></td>
             <td>
-              <label for="keyword">专业特长：</label>
+              <label for="keyword">科室：</label>
             </td>
             <td><?php echo ($info["profession"]); ?></td>
           </tr>
@@ -56,24 +56,18 @@
             </td>
             <td><?php echo ($info["consultnums"]); ?></td>
             <td>
-              <label for="keyword">评价量：</label>
-            </td>
-            <td><?php echo ($info["commentnums"]); ?></td>
-          </tr>
-          <tr>
-            <td colspan="2">
               <label for="keyword">二维码：</label>
             </td>
-            <td colspan="2">
+            <td>
               <img style="width:120px; height:auto;" src="<?php echo ($info["qrcode"]); ?>">
             </td>
           </tr>
           <tr>
             <td colspan="4">
               <style>#cztable tr td[data-cz]{color: red}</style>
-<div>出诊时间表</div>
+<div class="title1">出诊时间表</div>
 <table id="cztable">
-	<input type="hidden" id="chuzhen" value="">		
+	<input type="hidden" name="visitstime" id="chuzhen" value="">		
 	<input type="hidden" id="clcikaccess" value="<?php echo ($click); ?>">		
 	<tr>
 		<td>出诊</td>
@@ -96,7 +90,7 @@
 		<td data-cz="0"></td>
 	</tr>
 	<tr>
-		<td>中午</td>
+		<td>下午</td>
 		<td data-cz="0"></td>
 		<td data-cz="0"></td>
 		<td data-cz="0"></td>
@@ -117,11 +111,11 @@
 	</tr>
 </table>
 <script type="text/javascript">
-			//红色专家门诊 绿色普通门诊
+			//显示
 			$(function(){
 				if($("#clcikaccess").val()!="manager"){
 					$.ajax({
-						url:'<?php echo U('Doctor/showvisits',array('token'=>$token,'wecha_id'=>$wecha_id));?>',
+						url:'<?php echo U('Doctor/showvisits',array('id'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id));?>',
 						async:'false',
 						success:function(data){
 							$("#chuzhen").val(data);
@@ -141,7 +135,7 @@
 				}
 				var week,day,chuzhen,str;
 				//修改
-				if($("#clcikaccess").val()=="yes"){
+				if($("#clcikaccess").val()=="yes"||$("#clcikaccess").val()=="manager"){
 					$("#cztable tr td:empty").bind('click',function(){
 						//1专家门诊 2普通 0为空
 						// var newcz=$(this).attr('data-cz')>1?0:parseInt($(this).attr('data-cz'))+1;
@@ -203,7 +197,23 @@
 		font-size: 1.2em;
 	}
 </style>
-<div id="surport">技术支持:微广互动</div>
+<script>
+function onBridgeReady(){
+ WeixinJSBridge.call('hideOptionMenu');
+}
+
+if (typeof WeixinJSBridge == "undefined"){
+    if( document.addEventListener ){
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    }else if (document.attachEvent){
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+}else{
+    onBridgeReady();
+}
+</script>
+<!-- <div id="surport">技术支持:微广互动</div> -->
       
       </section>
   </div>

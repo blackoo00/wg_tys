@@ -1,10 +1,7 @@
 <?php 
 	class ManagerAction extends WapAction{
 		public function index(){
-			$db=D('Custom');
-			$where['openid']=$this->wecha_id;
-			$custom=$db->where($where)->find();
-			if($custom['login']==1){
+			if(session("tys_manager_login") == '1'){
 				$this->redirect(U('Manager/operation',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
 			}
 			$this->display();
@@ -26,6 +23,7 @@
 				}else{
 					$condition['openid']=$this->wecha_id;
 					D('Custom')->where($condition)->setInc('login');
+					session("tys_manager_login", '1');
 					$this->success('登陆成功', U('Manager/operation',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
 				}
 			}
@@ -49,6 +47,26 @@
 			$this->assign('doctor',$doctor);
 			$this->display();
 		}
+		//判断医生账号是否存在(AJAX)
+		public function judgeDoctorByUsernameAjax($username){
+			$username = $this->_get('username');
+			if($this->judgeDoctorByUsername($username)){
+				$this->ajaxReturn('','该医生账号已经存在',2);
+			}else{
+				$this->ajaxReturn('','',1);
+			}
+		}
+		//判断医生账号是否存在
+		public function judgeDoctorByUsername($username){
+			$db=D('Doctor');
+			$where['username']=$username;
+			$doctor=$db->where($where)->find();
+			if($doctor){
+				return true;
+			}else{
+				return false;
+			}
+		}
 		//添加医生
 		public function doctoradd(){
 			if($_POST==NULL){
@@ -59,11 +77,11 @@
 				$this->display();
 			}else{
 				$db=D('Doctor');
-				$where['username']=$_POST['username'];
-				$doctor=$db->where($where)->find();
-				if($doctor){
-					$this->error('用户名已存在', U('Manager/doctoradd',array('id' => $id,'token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+
+				if($this->judgeDoctorByUsername($_POST['username'])){
+					$this->error('登陆账号已存在', U('Manager/doctoradd',array('id' => $id,'token'=>$this->token,'wecha_id'=>$this->wecha_id)));
 				}
+
 				if ($db->create() === false) {
 		            $this->error($db->getError());
 		        }
@@ -86,19 +104,20 @@
 		        	$db->pic=$pic;
 		        }
 		        //判断医院是否存在
-		        $hcondition['name']=$_POST['hname'];
-		        $hospital=D('Hospital')->where($hcondition)->find();
-		        if($hospital){
-		        	$db->hid=$hospital['id'];
-		        	D('Hospital')->where($hcondition)->setInc('doctornum');
-		        }else{
-		        	$data=array(
-		        		'name'=>$_POST['hname'],
-		        		'doctornum'=>1,
-		        	);
-		        	$hid=D('Hospital')->add($data);
-					$db->hid=$hid;
-		        }
+		   //      $hcondition['name']=$_POST['hname'];
+		   //      $hospital=D('Hospital')->where($hcondition)->find();
+		   //      if($hospital){
+		   //      	$db->hid=$hospital['id'];
+		   //      	D('Hospital')->where($hcondition)->setInc('doctornum');
+		   //      }else{
+		   //      	$data=array(
+		   //      		'name'=>$_POST['hname'],
+		   //      		'doctornum'=>1,
+		   //      	);
+		   //      	$hid=D('Hospital')->add($data);
+					// $db->hid=$hid;
+		   //      }
+
 		        $id = $db->add();
 		        if ($id == true) {
 		            $this->success('操作成功', U('Manager/operation',array('id' => $id,'token'=>$this->token,'wecha_id'=>$this->wecha_id)));

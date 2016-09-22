@@ -9,17 +9,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	<link rel="stylesheet" type="text/css" href="<?php echo RES;?>/css/tys/style.css?time=<?php echo time();?>" />
-	<title>患者服务</title>
+	<title><?php echo ($wxuser["wxname"]); ?></title>
 </head>
 <body>
 	<div id="wrapper" class="manager_operation">
 		<ul>
-			<?php if(is_array($doctor)): $i = 0; $__LIST__ = $doctor;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Manager/doctor',array('id'=>$list['id'],'token'=>$token,'wecha_id'=>$wecha_id));?>"><?php echo ($list["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+			<?php if(is_array($doctor)): $i = 0; $__LIST__ = $doctor;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><a href="<?php echo U('Manager/doctor',array('id'=>$list['id'],'token'=>$token,'wecha_id'=>$wecha_id));?>">
+					<li><?php echo ($list["name"]); ?></li>
+				</a><?php endforeach; endif; else: echo "" ;endif; ?>
 		</ul>
 		<div class="wappages"><?php echo ($page); ?></div>
 		<section>
-			<a href="<?php echo U('Manager/doctoradd',array('token'=>$token,'wecha_id'=>$wecha_id));?>">添加医生</a>
-			<a href="<?php echo U('Manager/loginout',array('token'=>$token,'wecha_id'=>$wecha_id));?>">退出</a>
+			<a class="greenbtn" href="<?php echo U('Manager/doctoradd',array('token'=>$token,'wecha_id'=>$wecha_id));?>">添加医生</a>
+			<a class="greenbtn" href="<?php echo U('Manager/loginout',array('token'=>$token,'wecha_id'=>$wecha_id));?>">退出</a>
 		</section>
 		<style type="text/css" media="screen">
 	#surport{
@@ -28,7 +30,23 @@
 		font-size: 1.2em;
 	}
 </style>
-<div id="surport">技术支持:微广互动</div>
+<script>
+function onBridgeReady(){
+ WeixinJSBridge.call('hideOptionMenu');
+}
+
+if (typeof WeixinJSBridge == "undefined"){
+    if( document.addEventListener ){
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    }else if (document.attachEvent){
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+}else{
+    onBridgeReady();
+}
+</script>
+<!-- <div id="surport">技术支持:微广互动</div> -->
 
 	</div>
 </body>

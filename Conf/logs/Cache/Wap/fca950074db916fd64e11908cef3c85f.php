@@ -236,12 +236,11 @@ if (typeof WeixinJSBridge == "undefined"){
 		<!-- <li><a href="<?php echo U('Consult/consultm',array('did'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id));?>">我的医信</a></li> -->
 		<li>
 			<div>
-				<a href="<?php echo U('Doctor/custom',array('token'=>$token,'wecha_id'=>$wecha_id));?>">我的患者
-					<?php if(($check) == "1"): ?><span></span><?php endif; ?>
+				<a href="<?php echo U('Doctor/custom',array('token'=>$token,'wecha_id'=>$wecha_id));?>" class="iconfont">我的患者<?php if(($check) == "1"): ?><span></span><?php endif; ?>
 				</a>
 			</div>
 		</li>
-		<li><div><a href="<?php echo U('Doctor/personal',array('token'=>$token,'wecha_id'=>$wecha_id));?>">我</a></div></li>
+		<li><div><a href="<?php echo U('Doctor/personal',array('token'=>$token,'wecha_id'=>$wecha_id));?>" class="iconfont">我</a></div></li>
 	</ul>
 </footer>
 </body>
