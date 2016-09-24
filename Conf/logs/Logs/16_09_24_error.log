@@ -1,0 +1,4 @@
+[ 2016-09-24T10:34:54+08:00 ] ERR: (ThinkException) _TEMPLATE_NOT_EXIST_[./tpl/Wap/default/Doctor_index.html]
+[ 2016-09-24T10:35:42+08:00 ] ERR: (ThinkException) _TEMPLATE_NOT_EXIST_[./tpl/Wap/default/Doctor_index.html]
+[ 2016-09-24T10:57:38+08:00 ] ERR: (ThinkException) _TEMPLATE_NOT_EXIST_[./tpl/Wap/default/Doctor_index.html]
+[ 2016-09-24T11:17:58+08:00 ] ERR: (ThinkException) _TEMPLATE_NOT_EXIST_[./tpl/Wap/default/Doctor_index.html]

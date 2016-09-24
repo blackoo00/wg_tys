@@ -1,5 +1,8 @@
 <?php 
 	class ConsultAction extends WapAction{
+		public function test(){
+			$this->display();
+		}
 		//咨询列表
 		public function index(){
 			//获取医生ID
