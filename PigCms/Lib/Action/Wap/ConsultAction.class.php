@@ -84,11 +84,10 @@
 		public function consultb(){
 			$did=$this->_get('did','intval');
 			$cid=$this->_get('cid','intval');
-			// $condition['did']=$did;
-			// $condition['cid']=$cid;
 			$where['did']=$did;
 			$where['cid']=$cid;
 			$cmid=D('Consult')->field('id')->where($where)->find();
+			$doctor = M('Doctor_list')->where(array('id'=>$did))->find();
 			if($cmid){
 				$cmid=$cmid['id'];
 				$data['cnew']=0;
@@ -112,6 +111,7 @@
 			$this->assign('custom',$custom);
 			$this->assign('cmid',$cmid);
 			$this->assign('did',$did);
+			$this->assign('doctor',$doctor);
 			$this->assign('consultb',$consultb);
 			$this->display();
 		}
@@ -286,10 +286,8 @@
 		        $str.=	"<img src='".$pic."' />";
 		        $str.=    "<div class='bubble'>";
 		        $str.=    	$content;
-		       	// $str.=        "<span>".friendlyDate($v['time'],'normal',false)."</span>";
 		        $str.=    "</div>";
 		        $str.=    "<div class='clear'></div>";
-		        // $str.=        "<span>".friendlyDate(time(),'normal',false)."</span>";
 		        $str.="</div>";
 		        echo $str;
 			}else{

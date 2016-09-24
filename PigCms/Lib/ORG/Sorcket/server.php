@@ -17,13 +17,13 @@ function wsOnMessage($clientID, $message, $messageLength, $binary) {
 	}
 
 	//The speaker is the only person in the room. Don't let them feel lonely.
-	if ( sizeof($Server->wsClients) == 1 )
-		$Server->wsSend($clientID, $clientID."There isn't anyone else in the room, but I'll still listen to you. --Your Trusty Server");
-	else
+	if ( sizeof($Server->wsClients) == 1 ){
+		//$Server->wsSend($clientID, $test2['con']);
+	}else
 		//Send the message to everyone but the person who said it
 		foreach ( $Server->wsClients as $id => $client )
 			if ( $id != $clientID )
-				$Server->wsSend($id, "Visitor $clientID ($ip) said \"$message\"");
+				$Server->wsSend($id, $message);
 }
 
 // when a client connects
@@ -36,8 +36,9 @@ function wsOnOpen($clientID)
 
 	//Send a join notice to everyone but the person who joined
 	foreach ( $Server->wsClients as $id => $client )
-		if ( $id != $clientID )
-			$Server->wsSend($id, "Visitor $clientID ($ip) has joined the room.");
+		if ( $id != $clientID ){
+			//$Server->wsSend($id, "Visitor $clientID ($ip) has joined the room.");
+		}
 }
 
 // when a client closes or lost connection
@@ -48,8 +49,9 @@ function wsOnClose($clientID, $status) {
 	$Server->log( "$ip ($clientID) has disconnected." );
 
 	//Send a user left notice to everyone in the room
-	foreach ( $Server->wsClients as $id => $client )
-		$Server->wsSend($id, "Visitor $clientID ($ip) has left the room.");
+	foreach ( $Server->wsClients as $id => $client ){
+		//$Server->wsSend($id, "Visitor $clientID ($ip) has left the room.");
+	}
 }
 
 // start the server

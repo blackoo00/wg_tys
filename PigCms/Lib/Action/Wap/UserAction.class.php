@@ -111,6 +111,8 @@
 			$consultb=D('Consultb')->where('cmid='.$cmid)->limit(10)->order('time desc')->select();
 			krsort($consultb);
 			$this->assign('cmid',$cmid);
+			$this->assign('custom',$custom);
+			$this->assign('doctor',$doctor);
 			$this->assign('consultb',$consultb);
 
 			$this->display();

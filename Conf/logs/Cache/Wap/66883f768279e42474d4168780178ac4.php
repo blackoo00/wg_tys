@@ -16,11 +16,8 @@
     <link rel="stylesheet" type="text/css" href="<?php echo RES;?>/css/tys/default.css">
     <link rel="stylesheet" type="text/css" href="<?php echo RES;?>/css/tys/styles.css">
     <link rel="stylesheet" type="text/css" href="<?php echo RES;?>/css/tys/css/jquery-weui.min.css">
-    <!-- <link href='http://fonts.useso.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'> -->
     <script src="<?php echo RES;?>/js/tys/jquery-1.11.1.min.js"></script>
-    <!--[if IE]>
-        <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
-    <![endif]-->
+    <script src="<?php echo RES;?>/websorcket/fancywebsocket.js"></script>
     <div class="htmleaf-container" style="max-width:640px; margin:0 auto; width:100%;">
             <div class="htmleaf-content bgcolor-3">
                 <div id="chatbox">
@@ -31,7 +28,6 @@
                             <p style="display:block; float:left;"><?php echo ($custom["name"]); ?></p>
                             <a href="<?php echo U('Doctor/cdetails',array('id'=>$custom['id'],'token'=>$token,'wecha_id'=>$wecha_id));?>">患者<br>详情</a>
                         </div>
-                        <!-- <div id="loading" style="text-align:center;display:none;"><img src="<?php echo RES;?>/css/tys/loading_more.gif"></div> -->
                         <input type="hidden" id="cmid" value="<?php echo ($cmid); ?>">
                         <input type="hidden" id="noconsult" value="1">
                         <div id="twrapper" style="overflow: hidden;">
@@ -62,7 +58,7 @@
                             <input type="hidden" id="did" value="<?php echo ($did); ?>">
                             <input type="hidden" id="checkcm" value="1">
                             <input type="text" id="consultcon" value="" palceholder="发送信息" />
-                            <button onclick="send()" id="send">发送</button>
+                            <button id="message_send">发送</button>
                         </div>
                     
                     </div>      
@@ -73,16 +69,28 @@
 </html>
 <script src="<?php echo RES;?>/js/tys/jquery-weui.js"></script>
 <script>
-    var messages = $('#chat-messages');
-    var messageslist = messages.find('.message_list');
-    var chat_nums = messages.find('.message ').length;
-    //发送
-    function send(){
+    var Server;
+    $(document).ready(function() {
+      console.log('Connecting...');
+      Server = new FancyWebSocket('ws://127.0.0.1:8080');
+
+      //发送
+      $('#message_send').click(function(e) {
         var con=$("#consultcon").val();
         var cid=$("#cid").val();
         var did=$("#did").val();
         var cmid=$("#cmid").val();
         var ccm=$("#checkcm").val();
+
+        // var messgae_data = [{'con':con},{'cid':cid},{'did':did},{'cmid':cmid},{'ccm':ccm}];
+
+        // send_con = JSON.stringify(messgae_data);
+
+        log( con );
+        send( con );
+
+        $('#consultcon').val('');
+
         if(con){
             $.ajax({
                 url:"<?php echo U('Consult/sendconsult2',array('token'=>$token,'wecha_id'=>$wecha_id));?>",
@@ -90,8 +98,8 @@
                 async:false,
                 success:function(data){
                     if(data!='error'){
-                        messageslist.append(data);
-                        $('#consultcon').val('');
+                        // log(data);
+                        // $('#consultcon').val('');
                         $('#checkcm').val(0);
 
                         chat_nums = messages.find('.message ').length;
@@ -102,6 +110,62 @@
                 }
             })
         }
+      });
+
+      //Let the user know we're connected
+      Server.bind('open', function() {
+        console.log( "Connected." );
+      });
+
+      //OH NOES! Disconnection occurred.
+      Server.bind('close', function( data ) {
+        console.log( "Disconnected." );
+      });
+
+      //Log any messages sent from server
+      Server.bind('message', function( payload ) {
+        log( payload, '' ,'left');
+      });
+
+      Server.connect();
+    });
+
+    function send( text ) {
+      Server.send( 'message', text );
+    }
+
+    var messages = $('#chat-messages');
+    var messageslist = messages.find('.message_list');
+    var chat_nums = messages.find('.message ').length;
+    //写入聊天版
+    function log(text,type = '',direction = ''){
+      var str = '';
+      str += "<div class='message ";
+      if(direction == 'left'){
+        str += "left'>";
+      }else{
+        str += "right'>";
+      }
+      if(direction == 'left'){
+        str +=   "<img src='<?php echo ($custom["pic"]); ?>' />";
+      }else{
+        str +=   "<img src='<?php echo ($doctor["pic"]); ?>' />";
+      }
+      str +=     "<div class='bubble'>";
+      str +=       text;
+      str +=     "</div>";
+      str +=     "<div class='clear'></div>";
+      str += "</div>";
+
+      if(type == 'pre'){
+        messageslist.prepend(str);
+      }else{
+        messageslist.append(str);
+      }
+      chat_nums = messages.find('.message ').length;
+      messages.animate({
+          scrollTop: 71*chat_nums
+      })
     }
     //刷新咨询记录
     function refresh(){
@@ -114,7 +178,7 @@
             async:false,
             success:function(data){
                 if(data!="none"){
-                    messageslist.append(data);
+                    log(data);
 
                     chat_nums = messages.find('.message ').length;
                     messages.animate({
@@ -124,9 +188,9 @@
             }
         })
     }
-    $(function(){
-        setInterval("refresh()",5000);
-    })
+    // $(function(){
+    //     setInterval("refresh()",5000);
+    // })
     //下拉刷新
     $("#chat-messages").pullToRefresh().on("pull-to-refresh", function() {
       setTimeout(function() {
@@ -151,7 +215,7 @@
                      if(data=="none"){
                          $("#noconsult").val(0);
                      }else{
-                         messageslist.prepend(data);
+                         log(data,'pre');
                      }
                  }
              })

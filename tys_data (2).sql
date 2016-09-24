@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version phpStudy 2014
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- 主机: localhost
--- 生成日期: 2016 年 09 月 21 日 10:34
--- 服务器版本: 5.5.40
--- PHP 版本: 5.4.33
+-- Host: 127.0.0.1
+-- Generation Time: 2016-09-24 11:31:00
+-- 服务器版本： 5.6.17
+-- PHP Version: 5.5.12
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- 数据库: `tys_data`
+-- Database: `tys_data`
 --
 
 -- --------------------------------------------------------
@@ -7289,28 +7289,14 @@ CREATE TABLE IF NOT EXISTS `pigcms_bsuger_list` (
   `note` text CHARACTER SET utf8 COMMENT '备注',
   `openid` varchar(50) DEFAULT NULL COMMENT '微信ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=163 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- 转存表中的数据 `pigcms_bsuger_list`
 --
 
 INSERT INTO `pigcms_bsuger_list` (`id`, `cid`, `recordtime`, `kf`, `zchtxs`, `acq`, `achtxs`, `wcq`, `wchtxs`, `sq`, `lctxs`, `note`, `openid`) VALUES
-(148, 21, '1442044140', 7, NULL, NULL, NULL, NULL, NULL, 7, NULL, NULL, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(149, 21, '1441957740', 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(150, 21, '1441871400', 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(151, 21, '1441785000', 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(152, 21, '1441698600', 7, NULL, NULL, NULL, NULL, 8.96, NULL, NULL, NULL, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(153, 21, '1441612200', 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(154, 21, '1441525800', 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(155, 21, '1441439400', 8.41, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(156, 16, '1442050440', 9.77, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'oaOmmt_TcsPhYrVdOtWnYaVLsvVw'),
-(157, 16, '1441966500', 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'oaOmmt_TcsPhYrVdOtWnYaVLsvVw'),
-(158, 18, '1442103300', 9.01, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'oaOmmt32L05AMruuiG9xGIpkus8s'),
-(159, 27, '1442213580', 7.81, 8.9, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'oaOmmt07L3kp3h8ij1lZEtcS3quw'),
-(160, 21, '1441351920', 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(161, 27, '1442286960', NULL, 9.54, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'oaOmmt07L3kp3h8ij1lZEtcS3quw'),
-(162, 0, '1459388340', 7.1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '123');
+(1, 21, '1474449300', 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY');
 
 -- --------------------------------------------------------
 
@@ -11090,37 +11076,33 @@ CREATE TABLE IF NOT EXISTS `pigcms_consult_branch` (
   `month` int(11) NOT NULL COMMENT '月',
   `day` int(11) NOT NULL COMMENT '日',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=392 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=21 ;
 
 --
 -- 转存表中的数据 `pigcms_consult_branch`
 --
 
 INSERT INTO `pigcms_consult_branch` (`id`, `pic`, `cmid`, `did`, `cid`, `dtalk`, `ctalk`, `content`, `time`, `year`, `month`, `day`) VALUES
-(375, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 104, 64, 21, 1, 0, '5', '1442297459', 2015, 9, 15),
-(374, 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 104, 64, 21, 0, 1, '6', '1442297448', 2015, 9, 15),
-(367, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 104, 64, 21, 1, 0, '13', '1442218778', 2015, 9, 14),
-(373, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 104, 64, 21, 1, 0, '7', '1442281925', 2015, 9, 15),
-(372, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 104, 64, 21, 1, 0, '8', '1442281911', 2015, 9, 15),
-(366, 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 104, 64, 21, 0, 1, '14', '1442218773', 2015, 9, 14),
-(365, 'uploads/doctor/thumb_55f526d7edaab.jpg', 105, 63, 16, 1, 0, '一一六月', '1442213739', 2015, 9, 14),
-(369, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 104, 64, 21, 1, 0, '电话电话', '1442275925', 2015, 9, 15),
-(370, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 104, 64, 21, 1, 0, '10', '1442281822', 2015, 9, 15),
-(371, 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 104, 64, 21, 0, 1, '9', '1442281826', 2015, 9, 15),
-(368, 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 104, 64, 21, 0, 1, '高规格', '1442275664', 2015, 9, 15),
-(376, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 104, 64, 21, 1, 0, '4', '1442365328', 2015, 9, 16),
-(377, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 104, 64, 21, 1, 0, '3', '1442365330', 2015, 9, 16),
-(378, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 104, 64, 21, 1, 0, '2', '1442365331', 2015, 9, 16),
-(379, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 104, 64, 21, 1, 0, '1', '1442367744', 2015, 9, 16),
-(384, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 111, 64, 0, 1, 0, '123', '1444814452', 2015, 10, 14),
-(383, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 104, 64, 21, 1, 0, '1', '1442367854', 2015, 9, 16),
-(385, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 111, 64, 0, 1, 0, '123', '1444814453', 2015, 10, 14),
-(386, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 111, 64, 0, 1, 0, '123', '1444814454', 2015, 10, 14),
-(387, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 111, 64, 0, 1, 0, '123', '1444814456', 2015, 10, 14),
-(388, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 111, 64, 0, 1, 0, '123', '1444814458', 2015, 10, 14),
-(389, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 111, 64, 0, 1, 0, '123', '1444814460', 2015, 10, 14),
-(390, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 111, 64, 0, 1, 0, '123', '1444814461', 2015, 10, 14),
-(391, 'uploads/doctor/thumb_55f3ced14eae3.jpg', 111, 64, 0, 1, 0, '123', '1444814462', 2015, 10, 14);
+(1, 'uploads/doctor/thumb_57e2226a4d9c7.jpg', 2, 41, 21, 1, 0, '123', '1474687900', 2016, 9, 24),
+(2, 'uploads/doctor/thumb_57e2226a4d9c7.jpg', 2, 41, 21, 1, 0, '123', '1474687930', 2016, 9, 24),
+(3, 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 2, 41, 21, 0, 1, '123', '1474696165', 2016, 9, 24),
+(4, 'uploads/doctor/thumb_57e2226a4d9c7.jpg', 2, 41, 21, 1, 0, '123', '1474707764', 2016, 9, 24),
+(5, 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 2, 41, 21, 0, 1, '123', '1474708009', 2016, 9, 24),
+(6, 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 2, 41, 21, 0, 1, '123', '1474708068', 2016, 9, 24),
+(7, 'uploads/doctor/thumb_57e2226a4d9c7.jpg', 2, 41, 21, 1, 0, '123', '1474708081', 2016, 9, 24),
+(8, 'uploads/doctor/thumb_57e2226a4d9c7.jpg', 2, 41, 21, 1, 0, '123', '1474708103', 2016, 9, 24),
+(9, 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 2, 41, 21, 0, 1, '123', '1474708139', 2016, 9, 24),
+(10, 'uploads/doctor/thumb_57e2226a4d9c7.jpg', 2, 41, 21, 1, 0, '222', '1474708149', 2016, 9, 24),
+(11, 'uploads/doctor/thumb_57e2226a4d9c7.jpg', 2, 41, 21, 1, 0, '222', '1474708198', 2016, 9, 24),
+(12, 'uploads/doctor/thumb_57e2226a4d9c7.jpg', 2, 41, 21, 1, 0, '333', '1474708203', 2016, 9, 24),
+(13, 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 2, 41, 21, 0, 1, '123', '1474708253', 2016, 9, 24),
+(14, 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 2, 41, 21, 0, 1, '444', '1474708257', 2016, 9, 24),
+(15, 'uploads/doctor/thumb_57e2226a4d9c7.jpg', 2, 41, 21, 1, 0, '555', '1474708338', 2016, 9, 24),
+(16, 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 2, 41, 21, 0, 1, '666', '1474708342', 2016, 9, 24),
+(17, 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 2, 41, 21, 0, 1, '123', '1474708468', 2016, 9, 24),
+(18, 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 2, 41, 21, 0, 1, '123', '1474708544', 2016, 9, 24),
+(19, 'uploads/doctor/thumb_57e2226a4d9c7.jpg', 2, 41, 21, 1, 0, '11', '1474708618', 2016, 9, 24),
+(20, 'uploads/doctor/thumb_57e2226a4d9c7.jpg', 2, 41, 21, 1, 0, '22', '1474708632', 2016, 9, 24);
 
 -- --------------------------------------------------------
 
@@ -11136,20 +11118,14 @@ CREATE TABLE IF NOT EXISTS `pigcms_consult_master` (
   `dnew` int(11) NOT NULL DEFAULT '0' COMMENT '医生新咨询',
   `time` varchar(20) DEFAULT NULL COMMENT '咨询时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=112 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=3 ;
 
 --
 -- 转存表中的数据 `pigcms_consult_master`
 --
 
 INSERT INTO `pigcms_consult_master` (`id`, `did`, `cid`, `cnew`, `dnew`, `time`) VALUES
-(106, 68, 35, 0, 0, '1442235030'),
-(105, 63, 16, 0, 1, '1442213739'),
-(104, 64, 21, 0, 0, '1442623292'),
-(108, 63, 27, 0, 0, '1442623292'),
-(109, 0, 0, 0, 0, '1444813416'),
-(110, 0, 0, 0, 0, '1444814433'),
-(111, 64, 46, 0, 0, '1444814442');
+(2, 41, 21, 0, 0, '1474708618');
 
 -- --------------------------------------------------------
 
@@ -11235,39 +11211,15 @@ CREATE TABLE IF NOT EXISTS `pigcms_custom_list` (
   `pic` varchar(200) DEFAULT 'uploads/touxiang.jpg' COMMENT '微信头像',
   `orderNums` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=38 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=39 ;
 
 --
 -- 转存表中的数据 `pigcms_custom_list`
 --
 
 INSERT INTO `pigcms_custom_list` (`id`, `name`, `sex`, `age`, `address`, `born`, `tel`, `card`, `height`, `weight`, `confirmed`, `diabetes`, `disease`, `insurance`, `did`, `consultnum`, `login`, `focus`, `openid`, `pic`, `orderNums`) VALUES
-(28, 'FAB叔哥', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'oaOmmt1Zz6cWbeD9JyFf7jHu_5M0', 'http://wx.qlogo.cn/mmopen/1bINFMohZleK7aKmksgcCfdDggG2GqAtFfw0KEiaicu6GtnCxRyR9XYXOzrtO9ecfP6HOAVtN4Ad0fSmjjWuJYWQ/0', 0),
-(9, '台州微广互动', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'oaOmmt7EVeZLNQsa1e6uKB9eqK0A', 'http://wx.qlogo.cn/mmopen/SCug0ESSOHibxG3W9hNo0VYHVMibSDSFmvdQ8Uho7pRO7s01O0QPoI15LC5UtpxUCnicVwyvF5tAoYb1bQUqPSbiamIwBg4pJUia3/0', 0),
-(10, 'c.j.', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'oaOmmtwyp8lsen5pTzhnsKoY_emU', 'http://wx.qlogo.cn/mmopen/ajNVdqHZLLCQyQxhXSwPrcfUtmbK7BmPESTTeD2QH2LjyUGbsYDszUm6REIfZZprfZ5icfXQ9vphHcCYuWPgTCiaweUJNaQQELAAs2Fibm8Ct0/0', 0),
-(11, 'luo', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'oaOmmt_tLJ0RXCz_PhkSqx1HNccQ', 'http://wx.qlogo.cn/mmopen/1bINFMohZlcZkJKW7hRQbXFhHTcw3OFcAe61GaPB6X6ibmgxh5Eh1wSxTudgVXGfCSz8iaD5nCaysJFBTURmPdRibBG3SGiaTkSU/0', 0),
-(21, 'Hello World', 0, 26, '椒江金卡是房间卡上的风景可拉伸的尽快发哈时间快点发合计可拉伸的风景可拉伸的', NULL, '15867681220', NULL, NULL, NULL, NULL, '妊娠', NULL, NULL, 64, 0, 1, 1, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY', 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 0),
-(14, '章永新', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'oaOmmt6tGeHbTneBgovuB0PusPI0', 'http://wx.qlogo.cn/mmopen/ajNVdqHZLLCQyQxhXSwPrSzbk76wxkDoNNCibxMmzZOrHS45ibSyzlMsicnnibDfGZD3M8KcV3WIDJbV34icYAIMQm6qNAfNILxyF7FKEPTnNLvw/0', 0),
-(15, '独舞萱萱', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'oaOmmt3q1aDE0JTmwhzw0P1AfEjY', 'http://wx.qlogo.cn/mmopen/LOCt9SE42XV2xgHNkBXZFy8bOM1VOHicXJ85ZaYPrYIYib4DyEkep1AOPM1ZdPwtwJLRViahnOOlx7BnRhPt2l3r1uEcAQLIknb/0', 0),
-(17, '米斯特.李', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 41, 0, 0, 1, 'oaOmmt9-NLLLUqSSC82reaGSN11M', 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpDnwWiaJN6QSMLf70Wre6KXd05AazF6iayKSJ3Yg6aC4OGTPAfF6uD3zrxRJcRGOPop9zZaDekJ2ZTdJO04J5icCsR/0', 0),
-(16, '陈素素', 0, 46, '台州市路桥区下里桥', NULL, '13777778888', NULL, NULL, NULL, NULL, '2型', NULL, NULL, 63, 1, 0, 1, 'oaOmmt_TcsPhYrVdOtWnYaVLsvVw', 'http://wx.qlogo.cn/mmopen/LOCt9SE42XV1uhicQtzMQnlOfiaMofKVg5eWCB7qMjxgXz4PImuTArhLKO1WicZtDsibYm6wLK2zje4bR9T9DPQeLpq8tqJqkEBy/0', 0),
-(18, '余丹飞', 0, 43, '天奋斗', NULL, '13756784566', NULL, NULL, NULL, NULL, '', NULL, NULL, 55, 0, 0, 0, 'oaOmmt32L05AMruuiG9xGIpkus8s', 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpDnwWiaJN6QSMJxibvhoVYhhjPGqpRJ5jx1yIMayXHbLRKYgKgRGQuRrKS8ew9sHpuJKG17MiaOHVZaicTNoY4pdHhW/0', 0),
-(19, 'hkx', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'oaOmmt3Fvjjf77mgwwGAM808mlsM', 'http://wx.qlogo.cn/mmopen/Q3auHgzwzM6pqAKaFcIkfhIoTt9ZGwIa737RxGHSNzNNO7JubLa4DpJ9rTX3Oibzmh2kib4wBSLVmY2AdedG0UQQ/0', 0),
-(20, '叶淑仰（微广互动）', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'oaOmmt7Iq7X1z4REyA4GAKPJGq2I', 'http://wx.qlogo.cn/mmopen/SCug0ESSOH8QICMBVVdN4EibZWIMtuNxHySLM9SibBqZuu8Htz7FD2eFIQ9TDZdvKDxsfdwLHPiaUVPdxdiaJgJkZQ/0', 0),
-(22, 'A微广互动', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'oaOmmt_IWli4MjRCUdUPcGI7Vz7g', 'http://wx.qlogo.cn/mmopen/SCug0ESSOHibQXic3zB0ic2joxqRZicCU3yiaPxXSOgBAVmdU6aicndoYAcWhnlYBjIduAqspu6BJWbxz78q2LrE1icQw/0', 0),
-(23, '杨峰', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'oaOmmt2kJ11ndaifziI3H_iPHVh8', 'http://wx.qlogo.cn/mmopen/ajNVdqHZLLD8BoyNzFQG1VnFJIBgKpK4jUo8ibpic3icIHiaibAeRm9jhGFlCbqQsmW4UVYM7BoLJlawSGxUXzcAfwQ/0', 0),
-(24, '落子无悔', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'oaOmmt1pogjHL3-e9Qo1MdPcBWxM', 'http://wx.qlogo.cn/mmopen/ajNVdqHZLLCc7FicK2Zkxxq68hSMyYmOSpMc66wvNkqvGTEY0Wc3TPPfIDmGy3s9LZRTYdmITnoDiadEvsXGIEKg/0', 0),
-(25, '王鼎', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'oaOmmt2wcy5ucqf6wZh1c006_d8k', 'http://wx.qlogo.cn/mmopen/SCug0ESSOHibZpfotoECjCicyaJXnvDcqIAGzzw76u9Gc4KUvq0QWE4zKjXibjE4JG0gLa8jY0s7ofUm29twTHZVEXVjzFuicsKt/0', 0),
-(27, '长仙', 1, 0, '台州椒江区下里桥西路心中有数灬一一对应一一一一', NULL, '', NULL, NULL, NULL, NULL, '', NULL, NULL, 0, 0, 0, 1, 'oaOmmt07L3kp3h8ij1lZEtcS3quw', 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpDnwWiaJN6QSMAic967CjZQplIkibb77EBIC2JU4PiaqtfF2xzENZU5ciakyrJRhRiagoVcQzLC3mC54uYzrCV5zKtuia6/0', 0),
-(29, '车洪福', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'oaOmmtxsyH5G4VQJfXCWUNYt4iwQ', 'http://wx.qlogo.cn/mmopen/1bINFMohZlcZkJKW7hRQbeOQmibaV3IrckPsHxicddZevj3PYgVqavWYNFncFFdnibllrXut9af0wibp57wg7XCGtQmjcjYUELFp/0', 0),
-(30, '秦立', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'oaOmmt59RpNUDesy-_bcdEjfHmnc', 'http://wx.qlogo.cn/mmopen/SCug0ESSOHibxG3W9hNo0VSlE7uOVZJKU2Ymw1GUVBiakuXqpMw5ibQBice1PGsh0ickcD8wreOQgSkt5oDicf4sMjghLfpFiaaibdlX/0', 0),
-(31, '海天一角', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'oaOmmtyLXgV6Re7TUogYNZ8HOdl4', 'http://wx.qlogo.cn/mmopen/PiajxSqBRaEItMqT12RAhs1tqAS2EURxicgWF4KXho4ldSUr3872BcDicLP22VQZyt49CyU47cNTQtndD7oeLN9QA/0', 0),
-(32, '婉茹', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'oaOmmt80J_Q4QvOUfrn-U5usMCVY', 'http://wx.qlogo.cn/mmopen/SCug0ESSOHibxG3W9hNo0VWkEfqXC8DibpTK7AQNXNyibAFn7LmuBiacb8xk948FVwiar84EoOCp2ficN98LY8Uh3MBAnkHYp518rl/0', 0),
-(33, 'A-整形美容咨询', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'oaOmmt3-AGecLO_UuvQrVn9g1XXg', 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpAdqkMLiaibiaRsWpm5ib1xde27HQnOBF24SMpDE0cZx1iaVJj1HrA5X3GBVrLc5KbCann2synSJrlW5p99pr7bmS3Vr/0', 0),
-(34, '阿杜', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'oaOmmt9dJvOAn8D74rAr6cpnqSFw', 'http://wx.qlogo.cn/mmopen/1bINFMohZlcZkJKW7hRQbfb95OICH9hibdE1owkyzV7FNzUVxFwktSx9BX24HWiaJcCI3lX516HfcPhtDvibibibkBwb5h8x8YMnT/0', 0),
-(35, '张跃霞', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 68, 0, 0, 1, 'oaOmmtyHeA2K5Bl7WVsLYEz1BWuE', 'http://wx.qlogo.cn/mmopen/SCug0ESSOHibxG3W9hNo0VbdcNL3Nib48JAMDdT6hqMckRob5njUx4TclR5JumRYraKyyL5ZHVCBlHxcZ1mT0u7PSXY7LL1F8t/0', 0),
-(36, 'LQ', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'oaOmmt8fqhVapuH3LWaKISFigwHc', 'http://wx.qlogo.cn/mmopen/SCug0ESSOHibxG3W9hNo0VZ1CiadUvcTWE7jMckBb6hnfzXJwTR4oUJuHHzaP9yOtvH0rVVzAibzwRTkic9KcQYnNKzvCaWEtMRD/0', 0),
-(37, '符鸿俊', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'oaOmmt93NLma6XY_POC42g09DpPk', 'http://wx.qlogo.cn/mmopen/Q3auHgzwzM4KysbRJbLbToQzxVfFCXlWONhyq3wrgUc82vWiawt3iaVNo04qIaIKibs9eg1tickhv1NaNMicXaiaEoL24qIKT0mgsY/0', 0);
+(21, 'Hello World', 0, 26, '椒江金卡是房间卡上的风景可拉伸的尽快发哈时间快点发合计可拉伸的风景可拉伸的', NULL, '15867681220', NULL, NULL, NULL, NULL, '妊娠', NULL, NULL, 41, 0, 0, 1, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY', 'http://wx.qlogo.cn/mmopen/YjiarcNVibcpA1BWFU2ibpXyccp8a9pC1ibG6fkhGqSxqC01e5Phb3H0ktqAnZLszxiaosBZbXsznUzSFxfBiag1CntGicW8lPJS2Lj/0', 0),
+(38, 'Hello World', 0, 26, '椒江金卡是房间卡上的风景可拉伸的尽快发哈时间快点发合计可拉伸的风景可拉伸的', NULL, '15867681220', NULL, NULL, NULL, NULL, '妊娠', NULL, NULL, 41, 0, 0, 1, 'o3mw-s2byHCb4QnPLFQlI-6vsOQo', 'http://wx.qlogo.cn/mmopen/ZBSPvN4KwNMO2RgFbohm6ibYZNGgmlsAff9huKcuMMNC6y5xCibIqqTbhWqyboXAcIqxdX1lNmg1ZASurSmqW2qYpja0ubUpKL/0', 0);
 
 -- --------------------------------------------------------
 
@@ -19788,26 +19740,15 @@ CREATE TABLE IF NOT EXISTS `pigcms_doctor_list` (
   `openid` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '微信ID',
   `orderNums` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=81 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=82 ;
 
 --
 -- 转存表中的数据 `pigcms_doctor_list`
 --
 
 INSERT INTO `pigcms_doctor_list` (`id`, `hid`, `hname`, `name`, `pic`, `persition`, `followers`, `profession`, `info`, `consultnums`, `commentnums`, `dailyconsult`, `username`, `password`, `qrcode`, `status`, `visitstime`, `login`, `openid`, `orderNums`) VALUES
-(41, 13, NULL, '8月28', 'uploads/touxiang.jpg', '123123', 1, '123', '蝴蝶结的就是今生今世嫁鸡随鸡时间', 2, 3, 34, '123', '202cb962ac59075b964b07152d234b70', 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQEf8ToAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xLzJrekF2U1BsSkNGZGVTTkNBbUNzAAIEhvPfVQMEAAAAAA==', 0, '', 1, 'oaOmmt_IWli4MjRCUdUPcGI7Vz7g', 0),
-(63, 10, '路桥医院', '金长仙', 'uploads/doctor/thumb_55f526d7edaab.jpg', '主治', 1, '内分泌', '内分泌专业，糖尿病，甲亢特专业', 0, 0, 10, '10001', 'e10adc3949ba59abbe56e057f20f883e', 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFE8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL3cweVNOaHJsWWlFYjBqcmRVR0NzAAIEMp7yVQMEAAAAAA==', 0, '2,1,1@5,1,1@', 1, 'oaOmmt07L3kp3h8ij1lZEtcS3quw', 0),
-(64, 14, '测试医院', '最后一人', 'uploads/doctor/thumb_55f3ced14eae3.jpg', '职称测试2', 1, '科室测试2', '医生简介测试2222非常丰富2\r\n', 2, 0, 2, '中文', '202cb962ac59075b964b07152d234b70', 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHw7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL3BreWJHaXpsY3lFS3JWLXBXV0NzAAIECcvzVQMEAAAAAA==', 0, '1,1,1@2,1,1@2,2,1@', 1, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY', 0),
-(66, 13, '路桥第二人民医院', '余秋雨', 'uploads/touxiang.jpg', '主治', 0, '内科', '季军南图那句我了', 0, 0, 20, '10002', 'e10adc3949ba59abbe56e057f20f883e', 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQGm8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL28wenRydExsS2lGVDRscHlMMkNzAAIEqb/0VQMEAAAAAA==', 0, '2,1,1@5,1,1@', 1, 'oaOmmt32L05AMruuiG9xGIpkus8s', 0),
-(67, 14, '路桥医院', '测试人员', 'uploads/touxiang.jpg', '主治', 0, '内分泌科', '', 0, 0, 20, '10003', 'e10adc3949ba59abbe56e057f20f883e', 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHH7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL1pVeTRDNC1sVHlFMjNKem5lbUNzAAIEa3T1VQMEAAAAAA==', 0, '', 1, 'oaOmmt_tLJ0RXCz_PhkSqx1HNccQ', 0),
-(68, 15, '南通第一人民医院', '车洪福', 'uploads/touxiang.jpg', '主治', 1, '内分泌科', '', 0, 0, 20, '20001', 'e10adc3949ba59abbe56e057f20f883e', 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQH77zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2lVeUZ2blBsWmlFZmVYQkdSMkNzAAIE6lL2VQMEAAAAAA==', 0, '', 1, 'oaOmmtxsyH5G4VQJfXCWUNYt4iwQ', 0),
-(72, 15, '南通第一人民医院', 'adfsgdfg', 'uploads/touxiang.jpg', 'fgds', 0, 'dfgd', 'fgsdf', 0, 0, 20, 'gjhtyvbnvb', '202cb962ac59075b964b07152d234b70', NULL, 0, '1,1,1@', 0, NULL, 0),
-(74, 14, '路桥医院', '沈屹', 'uploads/touxiang.jpg', '主任医师', 0, '内分泌科', '从事内分泌代谢病风湿病专业。', 0, 0, 20, '11680', '6ef34bd85206c3fa9038e5fa585202b7', 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQGT7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2pFejhnY0xsRmlGdjhuVndQbUNzAAIEDW72VQMEAAAAAA==', 0, '1,1,1@3,1,1@5,1,1@5,2,1@', 1, 'oaOmmt59RpNUDesy-_bcdEjfHmnc', 0),
-(75, 14, '路桥医院', '潘勤', 'uploads/touxiang.jpg', '主治', 0, '内分泌科', '从事内分泌专业近20年，曾在上海瑞金医院内分泌全国高级医师进修班学习一年，本人擅长甲状腺糖尿病痛风特别是儿童糖尿病及胰岛泵的应用。', 0, 0, 20, '10008', 'e10adc3949ba59abbe56e057f20f883e', 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHQ7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xLy1VeVQtM3psWVNFWVF3UVdVV0NzAAIER3r2VQMEAAAAAA==', 0, '1,2,1@3,1,1@3,2,1@', 1, 'oaOmmtyLXgV6Re7TUogYNZ8HOdl4', 0),
-(76, 14, '路桥医院', '王婉茹', 'uploads/touxiang.jpg', '主管护师', 0, '内分泌科', '', 0, 0, 20, '10007', 'e10adc3949ba59abbe56e057f20f883e', 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQHB8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2kweUlydjdsZWlFRDVuSkhTbUNzAAIEGYD2VQMEAAAAAA==', 0, '1,1,1@2,1,1@3,1,1@4,1,1@5,1,1@', 1, 'oaOmmt80J_Q4QvOUfrn-U5usMCVY', 0),
-(77, 17, '台州医院', '杜春连', 'uploads/touxiang.jpg', '主治', 0, '内分泌科', '', 0, 0, 20, '10005', 'e10adc3949ba59abbe56e057f20f883e', 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQEp8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL1kweUl0NlhsZVNFQVRKcGRTbUNzAAIEf7v2VQMEAAAAAA==', 0, '', 1, 'oaOmmt9dJvOAn8D74rAr6cpnqSFw', 0),
-(79, 14, '路桥医院', '林琴', 'uploads/touxiang.jpg', '副主任医师', 0, '内分泌科', '擅长内分泌常见疾病糖尿病、痛风、甲状腺疾病、高脂血症的诊治', 0, 0, 20, '10009', '7e720dbb671d40f64d6742dbdd88464a', 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQEZ8ToAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2trempOV25sSENGbDgydlJJV0NzAAIEnoz3VQMEAAAAAA==', 0, '2,1,1@4,1,1@2,2,1@4,2,1@', 1, 'oaOmmt8fqhVapuH3LWaKISFigwHc', 0),
-(80, 14, '路桥医院', '符鸿俊', 'uploads/touxiang.jpg', '主任医师', 0, '内分泌科', '', 0, 0, 20, '10088', 'e10adc3949ba59abbe56e057f20f883e', NULL, 0, '', 0, NULL, 0);
+(41, 13, NULL, '测试医生', 'uploads/doctor/thumb_57e2226a4d9c7.jpg', '123123', 1, '123', '蝴蝶结的就是今生今世嫁鸡随鸡时间', 7, 3, 1, '123', '', 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQEf8ToAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xLzJrekF2U1BsSkNGZGVTTkNBbUNzAAIEhvPfVQMEAAAAAA==', 0, '2,3,1@', 1, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY', 0),
+(81, 19, '123', '123', 'uploads/touxiang.jpg', '123', 0, '123', '123', 0, 0, 1, 'aaa', '202cb962ac59075b964b07152d234b70', NULL, 0, '', 1, 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY', 0);
 
 -- --------------------------------------------------------
 
@@ -20687,7 +20628,7 @@ CREATE TABLE IF NOT EXISTS `pigcms_hospital_list` (
   `info` text CHARACTER SET utf8 COMMENT '医院简介',
   `orderNums` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=19 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=20 ;
 
 --
 -- 转存表中的数据 `pigcms_hospital_list`
@@ -20697,7 +20638,8 @@ INSERT INTO `pigcms_hospital_list` (`id`, `sid`, `name`, `doctornum`, `info`, `o
 (15, 0, '南通第一人民医院', 1, NULL, 0),
 (14, 0, '路桥医院', 6, NULL, 0),
 (13, 0, '路桥第二人民医院', 1, NULL, 0),
-(17, 0, '台州医院', 1, NULL, 0);
+(17, 0, '台州医院', 1, NULL, 0),
+(19, 0, '123', 1, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -21097,25 +21039,7 @@ CREATE TABLE IF NOT EXISTS `pigcms_laboratory_list` (
   `recordtime` varchar(15) DEFAULT NULL COMMENT '记录日期',
   `openid` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
-
---
--- 转存表中的数据 `pigcms_laboratory_list`
---
-
-INSERT INTO `pigcms_laboratory_list` (`id`, `cid`, `pic`, `recordtime`, `openid`) VALUES
-(17, 21, 'uploads/laboratory/thumb_55e3f0594e739.jpg', '1441001561', 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(23, 0, 'uploads/laboratory/thumb_55e695a3dacdb.jpg', '1441174948', 'oaOmmt9-NLLLUqSSC82reaGSN11M'),
-(24, 0, 'uploads/laboratory/thumb_55eba7ef90c6e.jpg', '1441507311', 'oaOmmt07L3kp3h8ij1lZEtcS3quw'),
-(25, 0, 'uploads/laboratory/thumb_55ed77961c8b3.jpg', '1441626006', 'oaOmmt32L05AMruuiG9xGIpkus8s'),
-(26, 0, 'uploads/laboratory/thumb_55ee43d61dcc3.jpg', '1441678294', 'oaOmmt_TcsPhYrVdOtWnYaVLsvVw'),
-(29, 21, 'uploads/laboratory/thumb_55f0ee0e1b0eb.jpg', '1441852942', 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(30, 21, 'uploads/laboratory/thumb_55f3dbf064917.jpg', '1442044912', 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(31, 21, 'uploads/laboratory/thumb_55f3dbf48a826.jpg', '1442044916', 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(33, 21, 'uploads/laboratory/thumb_55f3dbfe5c24a.jpg', '1442044926', 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(36, 21, 'uploads/laboratory/thumb_55f68062eecbb.jpg', '1442218082', 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY'),
-(37, 27, 'uploads/laboratory/thumb_55f680bd79fa6.jpg', '1442218173', 'oaOmmt07L3kp3h8ij1lZEtcS3quw'),
-(38, 21, 'uploads/laboratory/thumb_55f762dd840cf.jpg', '1442276061', 'oaOmmt4UOtNFlfA5zGxKjj3i7ycY');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -26145,10 +26069,7 @@ CREATE TABLE IF NOT EXISTS `pigcms_users` (
 --
 
 INSERT INTO `pigcms_users` (`id`, `openid`, `inviter`, `gid`, `username`, `mp`, `smscount`, `password`, `email`, `createtime`, `lasttime`, `status`, `createip`, `lastip`, `diynum`, `activitynum`, `card_num`, `card_create_status`, `money`, `moneybalance`, `spend`, `viptime`, `connectnum`, `lastloginmonth`, `attachmentsize`, `wechat_card_num`, `serviceUserNum`, `invitecode`, `remark`) VALUES
-(5, '', 0, 5, 'nihao', '', 0, '7036317bfa74b871c8687f0d6bf412f8', 'nihao@126.com', '1406275170', '1406275170', '1', '127.0.0.1', '127.0.0.1', 0, 1, 0, 0, 0, 0, 0, '1408867170', 0, 0, 0, 0, 0, 'wennqp', ''),
-(4, '', 1, 5, '123456987', '', 0, '635092b43f6daab6e117b2429f5e6236', 'asfasf@asf.com', '1406116707', '1406117158', '1', '113.93.129.67', '113.93.129.67', 0, 1, 9, 0, 0, 0, 0, '1406304000', 2, 7, 0, 1, 0, 'snzbtw', ''),
-(6, '', 0, 5, 'admin', '', 0, 'e10adc3949ba59abbe56e057f20f883e', '7321768@qq.com', '1411350303', '1439264750', '1', '0.0.0.0', '127.0.0.1', 0, 0, 0, 0, 0, 0, 0, '1445443200', 0, 8, 0, 1, 0, 'gqauge', ''),
-(7, '', 0, 5, '糖医师', '', 0, 'e10adc3949ba59abbe56e057f20f883e', 'TZHYMY0560@126.com', '1421158689', '1444614380', '1', '123.153.123.114', '127.0.0.1', 0, 0, 0, 0, 0, 0, 0, '1452614400', 0, 10, 285503775, 1, 0, '', '');
+(7, '', 0, 5, '糖医师', '', 0, 'e10adc3949ba59abbe56e057f20f883e', 'TZHYMY0560@126.com', '1421158689', '1474684613', '1', '123.153.123.114', '127.0.0.1', 0, 0, 0, 0, 0, 0, 0, '1552614400', 0, 9, 285503775, 1, 0, '', '');
 
 -- --------------------------------------------------------
 
