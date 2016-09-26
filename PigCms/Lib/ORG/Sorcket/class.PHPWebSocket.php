@@ -248,6 +248,7 @@ class PHPWebSocket
 
 		// fetch next client ID
 		$clientID = $this->wsGetNextClientID();
+		// $clientID = $clientIP;
 
 		// store initial client data
 		$this->wsClients[$clientID] = array($socket, '', self::WS_READY_STATE_CONNECTING, time(), false, 0, $clientIP, false, 0, '', 0, 0);
@@ -739,7 +740,13 @@ class PHPWebSocket
 
 	function log( $message )
 	{
-		echo date('Y-m-d H:i:s: ') . $message . "\n";
+		if(is_string($message)){
+			$oldfile = file_get_contents('log.txt');
+			$myfile = fopen("log.txt", "w");
+			fwrite($myfile, $oldfile."\r\n".$message);
+			fclose($myfile);
+		}
+		//echo date('Y-m-d H:i:s: ') . $message . "\n";
 	}
 
 	function bind( $type, $func )

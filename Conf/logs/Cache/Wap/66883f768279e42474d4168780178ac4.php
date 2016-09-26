@@ -57,6 +57,7 @@
                             <input type="hidden" id="cid" value="<?php echo ($custom["id"]); ?>">
                             <input type="hidden" id="did" value="<?php echo ($did); ?>">
                             <input type="hidden" id="checkcm" value="1">
+                            <input type="hidden" id="cip" value="<?php echo ($consultm["cip"]); ?>">
                             <input type="text" id="consultcon" value="" palceholder="发送信息" />
                             <button id="message_send">发送</button>
                         </div>
@@ -72,7 +73,7 @@
     var Server;
     $(document).ready(function() {
       console.log('Connecting...');
-      Server = new FancyWebSocket('ws://127.0.0.1:8080');
+      Server = new FancyWebSocket('ws://192.168.1.119:8080');
 
       //发送
       $('#message_send').click(function(e) {
@@ -87,9 +88,29 @@
         // send_con = JSON.stringify(messgae_data);
 
         log( con );
-        send( con );
+
+        //判断患者是否在聊天框
+        send( con +'?cid = 123');
+        cip = $('#cip').val();
+        if(cip){
+          send( con +'?cid = 123' );
+        }else{
+          $.ajax({
+              url:"<?php echo U('Consult/getCipFromCmid');?>",
+              data:{cmid:cmid},
+              async:false,
+              success:function(data){
+                  if(data.status == 1){
+                    $('#cip').val(data.data);
+                  }
+              }
+          })
+        }
+
 
         $('#consultcon').val('');
+
+        return;
 
         if(con){
             $.ajax({

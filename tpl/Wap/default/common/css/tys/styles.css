@@ -208,7 +208,7 @@ body {
 #chat-messages.animate{
 	opacity: 1;
 	margin-top: -40px;
-	height: 449px;
+	height: 390px;
 	overflow: auto;
 }
 #chat-messages label{
@@ -359,6 +359,7 @@ div.message.right .corner{
 	padding:10px 0;
 	color: #7f8389;
 	background-color: #f4f4f6;
+	cursor: pointer;
 }
 #sendmessage button:hover{
 	cursor:pointer;

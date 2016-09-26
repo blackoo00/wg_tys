@@ -72,7 +72,7 @@
     var Server;
     $(document).ready(function() {
       console.log('Connecting...');
-      Server = new FancyWebSocket('ws://127.0.0.1:8080');
+      Server = new FancyWebSocket('ws://192.168.1.119:8080');
 
       //发送
       $('#message_send').click(function(e) {
@@ -129,7 +129,7 @@
     }
 
     //写入聊天版
-    function log(text,type = '',direction = ''){
+    function log(text,type,direction){
       var str = '';
 
       str += "<div class='message ";

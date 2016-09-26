@@ -36,7 +36,7 @@
 			//  if($doctor['login']==1){
 			// 	//$this->redirect(U('Doctor/personal',array('did'=>$doctor['id'],'token'=>$this->token,'wecha_id'=>$this->wecha_id)));
 			//  }
-			$this->display();
+			$this->display('login');
 		}
 		//登陆判断
 		public function login(){

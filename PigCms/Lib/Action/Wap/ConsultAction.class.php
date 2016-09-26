@@ -1,7 +1,8 @@
 <?php 
 	class ConsultAction extends WapAction{
 		public function test(){
-			$this->display();
+			Log::write('test','DEBUG');
+			// $this->display();
 		}
 		//咨询列表
 		public function index(){
@@ -82,11 +83,14 @@
 		}
 		//咨询支表
 		public function consultb(){
+
 			$did=$this->_get('did','intval');
 			$cid=$this->_get('cid','intval');
 			$where['did']=$did;
 			$where['cid']=$cid;
-			$cmid=D('Consult')->field('id')->where($where)->find();
+			$consultm = D('Consult')->where($where)->find();
+			$cmid=$consultm['id'];
+
 			$doctor = M('Doctor_list')->where(array('id'=>$did))->find();
 			if($cmid){
 				$cmid=$cmid['id'];
@@ -113,7 +117,18 @@
 			$this->assign('did',$did);
 			$this->assign('doctor',$doctor);
 			$this->assign('consultb',$consultb);
+			$this->assign('consultm',$consultm);
 			$this->display();
+		}
+		//获取患者IP
+		public function getCipFromCmid(){
+			$cmid = $this->_get('cmid');
+			$consult = D('Consult')->where(array('id'=>$cmid))->find();
+			if($consult['cip']){
+				$this->ajaxReturn($consult['cip'],'',1);
+			}else{
+				$this->ajaxReturn('','',2);
+			}
 		}
 		//AJAX删除consult中的new
 		public function ajaxconsultb(){
