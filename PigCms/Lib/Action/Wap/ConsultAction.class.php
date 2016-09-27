@@ -130,6 +130,50 @@
 				$this->ajaxReturn('','',2);
 			}
 		}
+		//判断新加入的是否是自己的患者
+		public function judgeCustom(){
+			$cmid = $this->_get('cmid');
+			$cip = $this->_get('cip');
+			$consult = D('Consult')->where(array('id'=>$cmid))->find();
+			if($cip == $consult['cip']){
+				$this->ajaxReturn('','',1);
+			}else{
+				$this->ajaxReturn('','',2);
+			}
+		}
+		//判断新加入的是否是自己的医生
+		public function judgeDoctor(){
+			$cmid = $this->_get('cmid');
+			$dip = $this->_get('dip');
+			$consult = D('Consult')->where(array('id'=>$cmid))->find();
+			if($dip == $consult['dip']){
+				$this->ajaxReturn('','',1);
+			}else{
+				$this->ajaxReturn('','',2);
+			}
+		}
+		//更新医生对话IP
+		public function updateDip(){
+			$cmid = $this->_get('cmid');
+			$dip = $this->_get('dip');
+			$re = D('Consult')->where(array('id'=>$cmid))->setField('dip',$dip);
+			if($re){
+				$this->ajaxReturn('','',1);
+			}else{
+				$this->ajaxReturn('','',2);
+			}
+		}
+		//更新患者对话IP
+		public function updateCip(){
+			$cmid = $this->_get('cmid');
+			$cip = $this->_get('cip');
+			$re = D('Consult')->where(array('id'=>$cmid))->setField('cip',$cip);
+			if($re){
+				$this->ajaxReturn('','',1);
+			}else{
+				$this->ajaxReturn('','',2);
+			}
+		}
 		//AJAX删除consult中的new
 		public function ajaxconsultb(){
 			$did=$this->_get('did','intval');

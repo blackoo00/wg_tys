@@ -58,8 +58,10 @@
         <input type="hidden" id="cid" value="<?php echo ($custom["id"]); ?>">
         <input type="hidden" id="did" value="<?php echo ($doctor["id"]); ?>">
         <input type="hidden" id="checkcm" value="1">
-        <input type="text" id="consultcon" value="" palceholder="发送信息" />
-        <button id="message_send">发送</button>
+        <input type="hidden" id="dip" value="<?php echo ($consultm["dip"]); ?>">
+        <input type="hidden" id="cip" value="<?php echo ($consultm["cip"]); ?>">
+        <input type="text" id="consultcon" value="" placeholder="发送信息" />
+        <!-- <button id="message_send">发送</button> -->
     </div>
 </div>
 </div>
@@ -71,38 +73,58 @@
 <script>
     var Server;
     $(document).ready(function() {
+
+        var top_h = $('#profile').height();
+        var bot_h = $('#sendmessage').height();
+        var w_h = $(window).height();
+        console.log(w_h);
+        console.log(top_h);
+        console.log(bot_h);
+        var log_h = w_h-top_h-bot_h+18;
+        $('#chat-messages').height(log_h);
+
       console.log('Connecting...');
-      Server = new FancyWebSocket('ws://192.168.1.119:8080');
+      Server = new FancyWebSocket('ws://192.168.1.118:8080');
 
+      var cmid=$("#cmid").val();
+      var did=$("#did").val();
       //发送
-      $('#message_send').click(function(e) {
-        var con=$("#consultcon").val();
-        var cid=$("#cid").val();
-        var did=$("#did").val();
-        var cmid=$("#cmid").val();
-        var ccm=$("#checkcm").val();
+      $('#consultcon').keypress(function(e) {
+        if ( e.keyCode == 13 && this.value ) {
+            var con=$("#consultcon").val();
+            var cid=$("#cid").val();
+            var ccm=$("#checkcm").val();
+            var dip = $('#dip').val();
 
-        log( con );
-        send( con );
 
-        $('#consultcon').val('');
-        if(con){
-            $.ajax({
-                url:"<?php echo U('Consult/sendconsult',array('did'=>$doctor[id],'token'=>$token,'wecha_id'=>$wecha_id));?>",
-                data:{cid:cid,did:did,cmid:cmid,con:con,ccm:ccm},
-                success:function(data){
-                    if(data!='error'){
-                        // log(data);
-                        // $('#consultcon').val('');
-                        $('#checkcm').val(0);
+            var messgae_data = [{'con':con},{'ip':dip},{'fromid':cid}];
 
-                        chat_nums = messages.find('.message ').length;
-                        messages.animate({
-                            scrollTop: 71*chat_nums
-                        })
+            send_con = JSON.stringify(messgae_data);
+
+            log( con );
+
+            send( send_con );
+
+            $('#consultcon').val('');
+
+            if(con){
+                $.ajax({
+                    url:"<?php echo U('Consult/sendconsult',array('did'=>$doctor[id],'token'=>$token,'wecha_id'=>$wecha_id));?>",
+                    data:{cid:cid,did:did,cmid:cmid,con:con,ccm:ccm},
+                    success:function(data){
+                        if(data!='error'){
+                            // log(data);
+                            // $('#consultcon').val('');
+                            $('#checkcm').val(0);
+
+                            chat_nums = messages.find('.message ').length;
+                            messages.animate({
+                                scrollTop: 71*chat_nums
+                            })
+                        }
                     }
-                }
-            })
+                })
+            }
         }
       });
 
@@ -118,7 +140,39 @@
 
       //Log any messages sent from server
       Server.bind('message', function( payload ) {
-        log( payload, '' ,'left');
+        if (payload.match("^\{(.+:.+,*){1,}\}$")){
+            var dip = jQuery.parseJSON(payload).clientID;
+            var myip = jQuery.parseJSON(payload).myID;
+            var cip =  $('#cip').val();
+            var old_dip =  $('#dip').val();
+            //更新自己IP
+            if(myip && myip != cip){
+                $('#cip').val(myip);
+                $.ajax({
+                    url:"<?php echo U('Consult/updateCip');?>",
+                    data:{cmid:cmid,cip:myip},
+                })
+            }
+            //判断新加入的是否是自己的患者
+            if(dip && dip != old_dip){
+              $.ajax({
+                  url:"<?php echo U('Consult/judgeDoctor');?>",
+                  data:{cmid:cmid,dip:dip},
+                  async:false,
+                  success:function(data){
+                      if(data.status == 1){
+                        $('#dip').val(dip);
+                      }
+                  }
+              })
+            }
+        }else{
+            var con = eval(payload)[0]['con'];
+            var fromid = eval(payload)[2]['fromid'];
+            if(fromid && fromid == did){
+              log( con, '' ,'left');
+            }
+        }
       });
 
       Server.connect();
@@ -212,7 +266,7 @@
                     if(data=="none"){
                         $("#noconsult").val(0);
                     }else{
-                        log(data,'pre');
+                        messageslist.prepend(data);
                     }
                 }
              })

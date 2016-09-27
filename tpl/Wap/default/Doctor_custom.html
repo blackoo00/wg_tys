@@ -62,3 +62,30 @@
 	<include file="Doctor:foot" />
 </body>
 </html>
+<script src="{pigcms::RES}/websorcket/fancywebsocket.js"></script>
+<script>
+	var Server;
+	$(document).ready(function() {
+		console.log('Connecting...');
+		Server = new FancyWebSocket('ws://192.168.1.118:4000');
+		//Let the user know we're connected
+		Server.bind('open', function() {
+			console.log( "Connected." );
+		});
+
+		//OH NOES! Disconnection occurred.
+		Server.bind('close', function( data ) {
+			// $.get('http://localhost/wg_tys/PigCms/Lib/ORG/Sorcket/server.php',function(data){
+			// 	console.log(data);
+			// })
+			console.log( "Disconnected." );
+		});
+
+		//Log any messages sent from server
+		Server.bind('message', function( payload ) {
+			console.log( payload );
+		});
+
+		Server.connect();
+	});
+</script>

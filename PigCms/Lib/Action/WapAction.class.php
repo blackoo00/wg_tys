@@ -25,7 +25,8 @@ class WapAction extends BaseAction
             S('wxuser_' . $this->token, $this->wxuser);
         }
         $this->assign('wxuser', $this->wxuser);
-        session('newwecha_id','oaOmmt4UOtNFlfA5zGxKjj3i7ycY');
+        // session('newwecha_id','oaOmmt4UOtNFlfA5zGxKjj3i7ycY');
+        session('newwecha_id',$_GET['wecha_id']);
         $this->wecha_id=session('newwecha_id');
         if (!$_GET['wecha_id'] && $this->wxuser['winxintype'] == 3 && !isset($_GET['code']) && $this->wxuser['oauth']) {
             $customeUrl = 'http://'.$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
