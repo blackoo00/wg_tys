@@ -7,14 +7,20 @@
 </div>
 <div class="msgWrap">
     <TABLE class="userinfoArea" style=" margin:20px 0 0 0;" border="0" cellSpacing="0" cellPadding="0" width="100%">
-      <input type="hidden" id="doctorid" name="id" value="{pigcms:$info.id}" />
-      <input type="hidden" name="id" value="{pigcms:$info.id}" />
+      <input type="hidden" id="doctorid" name="id" value="{wghd:
+$info.id}" />
+      <input type="hidden" name="id" value="{wghd:
+$info.id}" />
         <TR>
           <TH valign="top">
             <label for="keyword">医生照片：</label>
           </TH>
           <TD>
-          <empty name="info['pic']"><img style="width: 300px;" src="{pigcms::STATICS}/images/doctor.jpg" alt="{pigcms:$info.name}"><else/><img style="width: 300px;" src="{pigcms:$info.pic}" alt="{pigcms:$info.name}"></empty>
+          <empty name="info['pic']"><img style="width: 300px;" src="{wghd:
+:STATICS}/images/doctor.jpg" alt="{wghd:
+$info.name}"><else/><img style="width: 300px;" src="{wghd:
+$info.pic}" alt="{wghd:
+$info.name}"></empty>
           </TD>
         </TR>
         <TR>
@@ -22,7 +28,8 @@
             <label for="keyword">医生姓名：</label>
           </TH>
           <TD>
-            {pigcms:$info.name}
+            {wghd:
+$info.name}
           </TD>
         </TR>
         <TR>
@@ -30,7 +37,8 @@
             <label for="keyword">所属医院：</label>
           </TH>
           <TD>
-            {pigcms:$info.hname}
+            {wghd:
+$info.hname}
           </TD>
         </TR>
         <TR>
@@ -38,7 +46,8 @@
             <label for="keyword">科室：</label>
           </TH>
           <TD>
-            {pigcms:$info.profession}
+            {wghd:
+$info.profession}
           </TD>
         </TR>
         <TR>
@@ -46,7 +55,8 @@
             <label for="keyword">职称：</label>
           </TH>
           <TD>
-            {pigcms:$info.persition}
+            {wghd:
+$info.persition}
           </TD>
         </TR>
         <TR>
@@ -54,7 +64,8 @@
             <label for="keyword">粉丝数：</label>
           </TH>
           <TD>
-            {pigcms:$info.followers}
+            {wghd:
+$info.followers}
           </TD>
         </TR>
         <TR>
@@ -62,7 +73,8 @@
             <label for="keyword">日咨询量：</label>
           </TH>
           <TD>
-            {pigcms:$dcnums}
+            {wghd:
+$dcnums}
           </TD>
         </TR>
         <TR>
@@ -70,7 +82,8 @@
             <label for="keyword">总咨询量：</label>
           </TH>
           <TD>
-            {pigcms:$info.consultnums}
+            {wghd:
+$info.consultnums}
           </TD>
         </TR>
         <TR>
@@ -88,7 +101,8 @@
             //红色专家门诊 绿色普通门诊
             $(function(){
               $.ajax({
-                url:'{pigcms::U('Doctor/showvisits')}',
+                url:'{wghd:
+:U('Doctor/showvisits')}',
                 async:'false',
                 data:{id:$("#doctorid").val()},
                 success:function(data){
@@ -167,7 +181,8 @@
             <label for="keyword">二维码：</label>
           </TH>
           <TD>
-            <img style="width:300px; height:auto;" src="{pigcms:$info.qrcode}">
+            <img style="width:300px; height:auto;" src="{wghd:
+$info.qrcode}">
           </TD>
         </TR>
         <TR>
@@ -175,7 +190,8 @@
             <label for="keyword">医生简介：</label>
           </TH>
           <TD>
-            {pigcms:$info.info}
+            {wghd:
+$info.info}
           </TD>
         </TR>
       </TABLE>

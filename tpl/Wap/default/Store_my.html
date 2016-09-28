@@ -1,132 +1,118 @@
-<include file="Store:header"/>
-<if condition="$ordersCount neq 0">
-	<volist name="orders" id="o">
-		<ul class="m-uc-order-li">
-			<span info_link="{pigcms::U('Store/myDetail',array('token'=>$token,'cartid'=>$o['id'],'wecha_id'=>$wecha_id))}" onclick="order_jump($(this))">
-				<li class="p-li">
-					<volist name="o['productInfo']" id="row">
-						<a href="{pigcms::U('Store/product',array('token'=>$token,'id'=>$row['id'],'wecha_id'=>$wecha_id))}">
-						<img title="{pigcms:$row.name}" src="{pigcms:$row.logourl}" width="45" height="45">
-						</a>
-					</volist>
-				</li>
-				<!-- <li>订单编号：<a href="{pigcms::U('Store/product',array('token'=>$token,'id'=>$row['id'],'wecha_id'=>$wecha_id))}">{pigcms:$o.orderid}</a></li> -->
-				<li>支付状态：<php>if($o['paid']){echo '<span style="color:green">已付款</span>';}else{echo '<span style="color:red">待付款</span>';}</php><i class="t">{pigcms:$o.time|date="Y-m-d H:i:s",###}</i></li>
-				<li>发货状态：<php>if($o['sent']){echo '<span style="color:green">已发货</span>';}else{echo '<span style="color:red">待发货</span>';}</php><i class="t">{pigcms:$o.time|date="Y-m-d H:i:s",###}</i></li>
-				<li>收货状态：<php>if($o['receive']){echo '<span style="color:green">已收货</span>';}else{echo '<span style="color:red">待收货</span>';}</php><i class="t">{pigcms:$o.time|date="Y-m-d H:i:s",###}</i></li>
-				<li>订单总额：￥{pigcms:$o.price}
-					<if condition="($o['returnMoney'] eq 0)">
-						<if condition="($o['paid'] eq 0) AND ($alipayConfig['open'] eq 1)">
-						<a href="{pigcms::U('Alipay/pay', array('token' => $token, 'wecha_id' => $wecha_id,'success'=>1,'from'=>'Store', 'price' => $o['price'], 'orderName' => $o['orderid'], 'orderid' => $o['orderid']))}" class="pay-btn">立即付款</a>
-						</if>
-						<eq name="o.paid" value="1">
-							<eq name="o.sent" value="1">
-								<eq name="o.receive" value="0">
-									<a href="javascript:void(0)" onclick="getProduct({pigcms:$o.id})" class="pay-btn">确认收货</a>
-								<else/>
-									<a href="#" class="pay-btn" style="background:#cccccc;border:1px #cccccc solid;color:red">已完成</a>
-								</eq>
-							<else/>
-								<a href="#" class="pay-btn" style="background:#cccccc;border:1px #cccccc solid;color:red">待发货</a>
-							</eq>
-						</eq>
-					<else/>
-						<if condition="($o['returnMoney'] eq 1)">
-						<a href="#" class="pay-btn" style="background:#cccccc;border:1px #cccccc solid;color:red">退款中</a>
-						</if>
-						<if condition="($o['returnMoney'] eq 2)">
-						<a href="#" class="pay-btn" style="background:#cccccc;border:1px #cccccc solid">已退款</a>
-						</if>
-					</if>
-				</li>
-			</span>
-		</ul>
-	</volist>
-	<php> if($totalpage > 1) {</php>
-		<div class="m-page uc-orderlist">
-			<if condition="$page eq 1">
-				<div class="pg-pre pg-grey"><a href="javascript:void(0);">上一页<i><em></em></i></a></div>
-			<else/>
-				<div class="pg-pre"><a href="{pigcms::U('Store/my',array('token'=>$token,'page'=>intval($page - 1),'wecha_id'=>$wecha_id))}">上一页<i><em></em></i></a></div>
-			</if>
-			<div class="pg-num">{pigcms:$page}/{pigcms:$totalpage}</div>
-			<if condition="$page eq $totalpage">
-				<div class="pg-next pg-grey"><a href="javascript:void(0);">下一页<i><em></em></i></a></div>
-			<else/>
-				<div class="pg-next"><a href="{pigcms::U('Store/my',array('token'=>$token,'page'=>intval($page + 1),'wecha_id'=>$wecha_id))}">上一页<i><em></em></i></a></div>
-			</if>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="ID=edge, chorome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>我的订单</title>
+	<script src="{wghd::RES}/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{wghd::RES}/original/js/notification.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="{wghd::RES}/original/css/notification.css">
+	<link rel="stylesheet" href="{wghd::RES}/original/css/weui.min.css">
+	<link rel="stylesheet" href="{wghd::RES}/original/css/style.css">
+	<link rel="stylesheet" href="{wghd::RES}/original/css/jquery-weui.min.css"></head>
+    <link rel="stylesheet" href="{wghd::RES}/original/others2/main.css">
+<body style="position: relative;" id="scnhtm5">
+	<style>
+		html,body{
+			height: 100%;
+			background-color: #eeeeee;
+		}
+	</style>
+	<div class="container">
+		<div class="weui-row weui-no-gutter" style="background-color: #fff;" id="orders_head">
+			<div class="weui-col-20 store_my_col_20 store_my_col_20_extend <if condition="($Think.request.status eq -1) OR ($Think.request.status eq '')">store_my_col_choose</if>">全部</div>
+			<div class="weui-col-20 store_my_col_20 store_my_col_20_extend <eq name="Think.request.status" value="0">store_my_col_choose</eq>">待付款</div>
+			<div class="weui-col-20 store_my_col_20 store_my_col_20_extend <eq name="Think.request.status" value="1">store_my_col_choose</eq>">待发货</div>
+			<div class="weui-col-20 store_my_col_20 store_my_col_20_extend <eq name="Think.request.status" value="2">store_my_col_choose</eq>">待收货</div>
+			<div class="weui-col-20 store_my_col_20 store_my_col_20_extend <eq name="Think.request.status" value="3">store_my_col_choose</eq>">已完成</div>
 		</div>
-	<php>}else{}</php>
-<else/>
-	<ul style="margin: 15px 10px;border-radius: 4px;line-height: 1.4em;font-size: 16px;border: 1px solid #ddd;background: #f5f5f5;padding: 10px 10px 6px;">
-		<span><li class="p-li" style="padding:10px; text-align:center;">没有订单</li></span>
-	</ul>
-</if>
-<script type="text/javascript">
-function order_jump(obj) {
-	location.href = $(obj).attr('info_link');
-}
-</script>
-<script type="text/javascript">
-function getProduct(id){
-	event.cancelBubble=true;
-    confirm =floatNotify.confirm("确定该商品收货了吗？", "",
-        function(t, n) {
-            if(n==true){
-				var dataJson = {
-					productid:id
-				}
-                $.ajax({
-                	type:"POST",
-                	url: "{pigcms::U('Store/getProduct',array('token' => $token,'wecha_id' => $_GET['wecha_id']))}",
-					data:dataJson,
-                    dataType:"json",
-                    success:function(data){
-                        if(data.error_code == false){
-                            floatNotify.simple('确认收货成功');
-                            setTimeout("location.href='{pigcms::U('Store/my',array('token' => $token, 'wecha_id' => $_GET['wecha_id']))}'",1200);  
-                        }else{
-                           return floatNotify.simple(data.msg);  
-                        }
-                    },
-                    error:function(){
-                       return floatNotify.simple("收货失败");
-                    }
-                });
-            }
-    	this.hide();
-      }),
-    confirm.show();
-}
-</script>
+		<div id="my_orders_content">
+			<volist id="o" name="orders">
+				<div class="weui_cells" style="margin-top: 0; margin-bottom: 10px;">
+					<volist name="o['productInfo']" id="row">
+						<notempty name="row['detail']">
+							<volist name="row['detail']" id="d">
+								<div class="weui_cell" style="padding: 5px;">
+									<div class="weui_cell_hd">
+										<img style="width: 70px; display: block;" src="{wghd:$row.logourl}" alt="" style="width:20px;margin-right:5px;display:block"></div>
+									<div class="weui_cell_bd weui_cell_primary">
+										<p style="font-size: 16px; line-height: 25px; text-indent: 5px;">{wghd:$row.name}</p>
+										<p style="font-size: 16px; line-height: 25px; text-indent: 5px;">
+											{wghd:$row.formatTitle}：{wghd:$d['formatName']}
+										</p>
+										<p style="font-size: 16px; line-height: 25px; text-indent: 5px;">{wghd:$row.colorTitle}：{wghd:$d['colorName']}</p>
+											
+									</div>
+									<div class="weui_cell_ft">
+										<p>
+				                            {wghd::sprintf("%.2f",$row['detail'][0]['showprice'])}
+										</p>
+										<p>×
+				                            {wghd:$row['detail'][0]['count']}
+										</p>
+									</div>
+								</div>
+							</volist>
+							<else/>
+								<div class="weui_cell" style="padding: 5px;">
+								<div class="weui_cell_hd">
+									<img style="width: 70px; display: block;" src="{wghd:$row.logourl}" alt="" style="width:20px;margin-right:5px;display:block"></div>
+								<div class="weui_cell_bd weui_cell_primary">
+									<p style="font-size: 16px; line-height: 25px; text-indent: 5px;">{wghd:$row.name}</p>
+									<p style="font-size: 16px; line-height: 25px; text-indent: 5px;">默认属性</p>
+								</div>
+								<div class="weui_cell_ft">
+									<p>
+										{wghd::sprintf("%.2f",$row['showprice'])}
+									</p>
+									<p>×
+										{wghd:$row['count']}
+									</p>
+								</div>
+							</div>
+						</notempty>
+					</volist>
+					<div class="weui_cell" style="padding: 10px;">
+						<div class="weui_cell_bd weui_cell_primary">
+							<p style="font-size: 14px;">
+								共
+								<label>{wghd:$o['total']}</label>
+								件商品
+							</p>
+						</div>
+						<div class="weui_cell_ft" style="font-size: 14px;">
+							合计：￥
+							<lable><eq name="o.price" value="0">{wghd:$o['gold']}<else/>{wghd:$o['price']}</eq></lable>
+						</div>
+					</div>
+					<div class="weui_cell">
+						<div class="weui_cell_bd weui_cell_primary"></div>
+						<div class="weui_cell_ft">
+							<!-- <eq name="o.paid" value="0">
+								<a href="{wghd::U('Store/payNow',array('id'=>$o['id']))}" data-id="{wghd:$o.id}" class="weui_btn weui_btn_mini weui_btn_primary cancel_order" style="font-size: 16px; background: #EF4F4F;">取消订单</a>
+							</eq> -->
+							<if condition ="($o.paid eq 0) AND ($o.returnMoney eq 0)">
+								<a href="{wghd::U('Store/payNow',array('id'=>$o['id']))}" data-id="{wghd:$o.id}" class="weui_btn weui_btn_mini weui_btn_primary place_order" style="font-size: 16px;">立即支付</a>
+							</if>
+							<if condition="($o.sent eq 1) AND ($o.receive eq 0)">
+								<a href="javascript:;" data-id="{wghd:$o.id}" class="weui_btn weui_btn_mini weui_btn_primary get_product" style="font-size: 16px;">确认收货</a>
+							</if>
+							<a href="{wghd::U('Store/orderDetails',array('id'=>$o['orderid']))}" class="weui_btn weui_btn_mini weui_btn_primary coad_bnfo_lage" style="font-size: 16px;">订单详情</a>
+						</div>
+					</div>
+				</div>
+			</volist>
+		</div>
+	</div>
+	<include file="Public:footer"/>
 </body>
-<script>
-function onBridgeReady(){
- WeixinJSBridge.call('hideOptionMenu');
-}
-
-if (typeof WeixinJSBridge == "undefined"){
-    if( document.addEventListener ){
-        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
-    }else if (document.attachEvent){
-        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
-        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
-    }
-}else{
-    onBridgeReady();
-}
-</script>
-<script type="text/javascript">
-window.shareData = {  
-            "moduleName":"Store",
-            "moduleID":"",
-            "imgUrl": "", 
-            "timeLineLink": "{pigcms::C('site_url') .  U('Store/my',array('token' => $_GET['token']))}",
-            "sendFriendLink": "{pigcms::C('site_url') .  U('Store/my',array('token' => $_GET['token']))}",
-            "weiboLink": "{pigcms::C('site_url') .  U('Store/my',array('token' => $_GET['token']))}",
-            "tTitle": "{pigcms:$metaTitle}",
-            "tContent": "{pigcms:$metaTitle}"
-        };
-</script>
-{pigcms:$shareScript}
 </html>
+<script type="text/javascript" src="{wghd::RES}/original/js/require.js" data-main="{wghd::RES}/original/js/main"></script>
+<script>
+    function getAction(module,action){
+        return "http://{wghd:$url_par}?g=Wap&m="+module+"&a="+action;
+    }
+</script>

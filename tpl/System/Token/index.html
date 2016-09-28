@@ -18,14 +18,20 @@
 	  </tr>
 	    <volist name="list" id="vo">
 			<tr>
-				<td align='center'>{pigcms:$vo.id}</td>
-				<td >{pigcms:$vo.wxname}</td>
-				<td ><if condition="$vo['usr']['gid'] eq -1">0<else/>{pigcms:$vo.user.gid}</if></td>
-				<td >{pigcms:$vo.user.username}</td>
-				<td align='center' style="display:none">{pigcms:$vo.usenum}</td>
+				<td align='center'>{wghd:
+$vo.id}</td>
+				<td >{wghd:
+$vo.wxname}</td>
+				<td ><if condition="$vo['usr']['gid'] eq -1">0<else/>{wghd:
+$vo.user.gid}</if></td>
+				<td >{wghd:
+$vo.user.username}</td>
+				<td align='center' style="display:none">{wghd:
+$vo.usenum}</td>
 				<td align='center' style="display:none"><eq name="vo.status" value="1"><font color="red">√</font><else/><font color="blue">×</font></eq> 
 				</td>
-				<td align='center'><a href="javascript:void(0)" onclick="if(confirm('确定删除吗')){location.href='{pigcms::U('Token/del/',array('id'=>$vo['id']))}'}">删除</a>
+				<td align='center'><a href="javascript:void(0)" onclick="if(confirm('确定删除吗')){location.href='{wghd:
+:U('Token/del/',array('id'=>$vo['id']))}'}">删除</a>
 				</td>
 			</tr>
 	    </volist>
@@ -34,7 +40,8 @@
 		</style>
      <tr bgcolor="#FFFFFF"> 
 	 
-      <td colspan="7"><div class="listpage">{pigcms:$page}</div></td>
+      <td colspan="7"><div class="listpage">{wghd:
+$page}</div></td>
      
     </tr>
    

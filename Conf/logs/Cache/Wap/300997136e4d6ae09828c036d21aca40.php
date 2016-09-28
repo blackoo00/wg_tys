@@ -1,214 +1,213 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-<html>
+<html lang="en" style="font-size: 20px;">
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" /><meta charset="utf-8" />
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<meta name="format-detection" content="telephone=no"/>
-<title><?php echo ($metaTitle); ?></title>
-<script src="<?php echo RES;?>/css/store/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="<?php echo RES;?>/css/store/js/jquery.lazyload.js" type="text/javascript"></script>
-<script src="<?php echo RES;?>/css/store/js/notification.js" type="text/javascript"></script>
-<script src="<?php echo RES;?>/css/store/js/swiper.min.js" type="text/javascript"></script>
-<script src="<?php echo RES;?>/css/store/js/main.js" type="text/javascript"></script>
-<link type="text/css" rel="stylesheet" href="<?php echo RES;?>/css/store/css/style_touch11.css">
-</head>
-<body>
-<div id="top"></div>
-<div id="scnhtm5" class="m-body">
-<div class="m-detail-mainout">
-<div style="width:100%;height:50px;line-height:50px;background:#fff;text-align:center"><span style="float:right;padding-right:10px;"><a href="<?php echo U('Store/index',array('token' => $_GET['token'], 'catid' => $hostlist['id'],'mid'=>$my['id']));?>"><img src="<?php echo RES;?>/css/store/css/img/home1.jpg"></a></span><span style="padding-left:10px;float:left"><a href="javascript:history.go(-1)"><img src="<?php echo RES;?>/css/store/css/img/return1.jpg" ></a></span><span style="font-size:16px"><?php echo (msubstr($metaTitle,0,10)); ?></span></div>
-<ul class="sub-menu-list">
-<li><a href="<?php echo U('Store/cats',array('token' => $_GET['token'], 'catid' => $hostlist['id'],'mid'=>$my['id']));?>">首页</a></li>
-<?php if(is_array($cats)): $i = 0; $__LIST__ = $cats;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$hostlist): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Store/products',array('token' => $_GET['token'], 'catid' => $hostlist['id'],'mid'=>$my['id']));?>"><?php echo ($hostlist["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-</ul>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<title>下单结算</title>
+	<link rel="stylesheet" href="<?php echo RES;?>/address/css/address.css">
+	<link rel="stylesheet" href="<?php echo RES;?>/address/css/iconfont.css">
+    <link rel="stylesheet" href="<?php echo RES;?>/original/css/style.css">
+	<link rel="stylesheet" href="<?php echo RES;?>/original/css/weui.min.css">
+	<link rel="stylesheet" href="<?php echo RES;?>/original/css/jquery-weui.min2.css">
 
-<!-- 线路分类控制器 -->
-<form method="post" action="<?php echo U('Store/ordersave',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']));?>" id="FromID">
-<div>
-	<div class="m-ck-module">
-	<h1>收货信息</h1>
-	<ul>
-		<li class="addr-info">
-			<ul class="addr-addnew-form addr-edit-form" id="addr-edit-form" style="display: none1;">
-				<li>
-					<label>收货人姓名：</label><span><input name="truename" id="truename" value="<?php echo ($fans["name"]); ?>" type="text" placeholder="输入收货人姓名"></span>
-					<label>手机：</label><span><input name="tel" id="tel" value="<?php echo ($fans["tele"]); ?>" type="text" placeholder="输入您的收货电话"></span>
-					<label>所属区域：</label><span><input name="province" id="province" value="<?php echo ($fans["province"]); ?>" type="text" style="width:60px;">&nbsp;省（直辖市）<input name="city" id="city" value="<?php echo ($fans["city"]); ?>" type="text" style="width:80px;">&nbsp;市&nbsp;<input name="county" id="county" value="<?php echo ($fans["county"]); ?>" type="text" style="width:100px;">&nbsp;县（区）</span>
-					<label>详细地址：</label><span><input name="address" id="address" value="<?php echo ($fans["address"]); ?>" type="text" placeholder="输入您的收货地址"></span>
-					<label>备注信息：</label><span><input name="remark" id="remark" value="<?php echo ($fans["remark"]); ?>" type="text" placeholder="输入您的备注信息"></span>
-				</li>
-			</ul>
-			<label>联系方式保存到用户库</label>
-			<input type="hidden" value="1" name="saveinfo" id="saveinfo" style="width: 16px;" checked="true"/>
-		</li>
-	</ul>
-	</div>
-	<?php if($alipayConfig['open'] == 1 OR $setting['paymode'] == 1 OR $fans['balance'] > 0): ?><div class="m-ck-module">
-		<h1>付款方式</h1>
-		<ul id="payment_mode" class="rd">
-			<li>
-				<?php if($alipayConfig['open'] == 1): ?><label><input name="paymode" value="1" type="radio" checked>在线支付</label><?php endif; ?>
-				<!-- <label><input name="paymode" value="2" type="radio">财付通</label> -->
-				<?php if($setting['paymode'] == 1): ?><label><input name="paymode" value="3" type="radio">货到付款</label><?php endif; ?>
-				<?php if($fans['balance'] > 0): ?><label><input name="paymode" value="4" type="radio">会员卡支付</label><?php endif; ?>
-			</li>    
-		</ul>
-	</div><?php endif; ?>
-	<!-- <div class="m-ck-module">
-		<h1>送货方式</h1>
-		<ul id="shipping" class="rd"><input id="delivery" type="hidden" name="delivery" value="">
-		<li shipping="15"><label><input name="dt_id" value="535" type="radio">普通快递<b class="c_red">0元</b></label></li></ul>
-	</div> -->
-<div class="m-ck-module">
-<h1>商品清单</h1>
-<ul>
-<ul class="m-cart-list">
-<?php if(is_array($products)): $i = 0; $__LIST__ = $products;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i; if(empty($p['detail']) != true): if(is_array($p['detail'])): $i = 0; $__LIST__ = $p['detail'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$row): $mod = ($i % 2 );++$i;?><li>
-				<span class="pic"><img src="<?php echo ($p["logourl"]); ?>" width="75" height="75"></span>
-				<span class="con">
-				<i class="t"><?php echo ($p["name"]); ?></i>
-				<i class="d"><?php if(empty($p['formatTitle']) != true): echo ($p["formatTitle"]); ?>：<?php echo ($row["formatName"]); endif; ?> <?php if(empty($p['colorTitle']) != true): ?>，<?php echo ($p["colorTitle"]); ?>：<?php echo ($row["colorName"]); endif; ?></i>
-				<p><label>数量：</label><?php echo ($row["count"]); ?>　<label>销售价：</label><span class="price">￥<?php echo ($row["price"]); ?></span></p>
-				</span>
-			</li><?php endforeach; endif; else: echo "" ;endif; ?>
-	<?php else: ?>
-		<li>
-			<span class="pic"><img src="<?php echo ($p["logourl"]); ?>" width="75" height="75"></span>
-			<span class="con">
-			<i class="t"><?php echo ($p["name"]); ?></i>
-			<p><label>数量：</label><?php echo ($p["count"]); ?>　<label>销售价：</label><span class="price">￥<?php echo ($p["price"]); ?></span></p>
-			</span>
-		</li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-</ul>
-</ul>
-</div>
-<div class="m-cart-toal m-checkout-toal">
-<p id="price_total" class="check">商品总数：<b><?php echo ($totalCount); ?></b>　件<br>
-商品原总价：<b><?php echo ($totalFee); ?></b>　元<br>
-运费：<b><?php echo ($mailprice); ?></b>　元<br>
-<!-- 优惠金额：0元<br> -->
-您共需支付：<b id="totalmoney"><?php {echo ($totalFee + $mailprice);} ?></b>　元</p>
-<?php if(($setting['score'] > 0) AND ($fans['total_score'] > 0)): ?><p class="check">您的可用积分：<b><?php echo ($fans['total_score']); ?></b>　分<br/>
-使用积分兑换：<input type="text" name="score" style="border: 1px solid #cfcfcf;margin: 0 -1px;font-size: 16px;display: inline-block;text-align: center;height: 22px;width: 50px;border-radius: 0;background: -webkit-gradient(linear, 0 0, 0 100%, from(#e5e5e5),color-stop(0.3, #fff),to(#fff));-webkit-appearance: none;color: #999;" id="score"/>
-<span></span>
-</p><?php endif; ?>
-<div id="show_msg" class="tip_blue"></div>
-<p class="act"><a id="sub_order" href="javascript:;" class="checkout">确认，提交订单</a></p>
-</div>
-</form>
-</div>
-</form>
-<script>
-var scale = "<?php echo ($setting['score']); ?>";
-var totalscore = "<?php echo ($fans['total_score']); ?>";
-$(document).ready(function(){
-	var total = parseInt($("#totalmoney").html());
-	$("#score").keyup(function(){
-		var num = parseInt($(this).val());
-		if (isNaN(num)) {
-			num = 0;
-		}
-		if (num > totalscore) {
-			$(this).val(totalscore);
-			return floatNotify.simple('您填写的积分超过了您的可用积分');
-			return false;
-		}
-		var t = total - num/scale;
-		if (t <= 0) {
-			$(this).val(total * scale);
-			t = 0;
-		}
-		$("#totalmoney").html(t);
+	<script type="text/javascript" src="<?php echo RES;?>/js/jquery-1.11.1.min.js"></script>
+
+	<script src="<?php echo RES;?>/original/js/notification.js" type="text/javascript" charset="utf-8"></script>
+	<link type="text/css" rel="stylesheet" href="<?php echo RES;?>/css/store/css/style_touch11.css">
+	<script type="text/javascript">
+var w,h,className;
+function getSrceenWH(){
+	w = $(window).width();
+	h = $(window).height();
+	$('#dialogBg').width(w).height(h);
+}
+
+window.onresize = function(){  
+	getSrceenWH();
+}  
+$(window).resize();  
+
+$(function(){
+	getSrceenWH();
+	
+	//显示弹框
+	$('.box a').click(function(){
+		className = $(this).attr('class');
+		$('#dialogBg').fadeIn(300);
+		$('#dialog').removeAttr('class').addClass('animated '+className+'').fadeIn();
 	});
-	$("#sub_order").click(function(){
-		var userName=$('#truename').val();
-		if($.trim(userName) == ""){
-			return floatNotify.simple('请填写姓名');
-			return false;
-		}
-		var userPhone = $("#tel").val()
-		if ($.trim(userPhone) == "") {
-			return floatNotify.simple('请填写您的手机号码');
-			return false;
-		}
-		if (userPhone.length != 11) {
-			return floatNotify.simple('请填写11位手机号码');
-			return false;
-		}
-		/*var patrn = /^(1(([35][0-9])|(47)|(85)|[8][01256789]))\d{8}$/;
-		if (!patrn.exec($.trim(userPhone))) {
-			return floatNotify.simple('手机号格式错误');
-			return false;
-		}*/
-		/*var classid = $('#classid').val();
-		var flag = 0;
-		$('#typeSpan select').each(function(){
-			if($(this).val()==-1){
-				flag = 1;
-			}
+	
+	//关闭弹窗
+	$('.claseDialogBtn').click(function(){
+		$('#dialogBg').fadeOut(300,function(){
+			$('#dialog').addClass('bounceOutUp').fadeOut();
 		});
-		if(flag==1){
-			return floatNotify.simple('请选择所属地区');
-			return false;
-		}*/
-		var province = $("#province").val();
-		if ($.trim(province) == "") {
-			return floatNotify.simple('请填写省（直辖市）');
-			return false;
-		}
-		var city = $("#city").val();
-		if ($.trim(city) == "") {
-			return floatNotify.simple('请填写市');
-			return false;
-		}
-		var county = $("#county").val();
-		if ($.trim(county) == "") {
-			return floatNotify.simple('请填写县（区）');
-			return false;
-		}
-		var address = $("#address").val();
-		if ($.trim(address) == "") {
-			return floatNotify.simple('请填写您的详细地址');
-			return false;
-		}
-		var remark = $("#remark").val()
-		$("#FromID").submit();
-		return false;
-		var saveinfo = $("#saveinfo").attr('checked') == 'checked' ? 1 : 0;
-		var data = {
-				province:province,
-				city:city,
-				county:county,
-				truename:userName,
-				tel:userPhone,
-				address:address,
-				remark:remark,
-				saveinfo:saveinfo,
-				token:"<?php echo ($_GET['token']); ?>",
-				wecha_id:"<?php echo ($_GET['wecha_id']); ?>"
-		}
-		
-		$("#sub_order").html('提交中...').unbind();
-		$.get('index.php?g=Wap&m=Store&a=ordersave', data, function(response){
-			if (response.error_code == false) {
-				if (response.isopen == 1) {
-					location.href = "<?php echo U('Alipay/pay',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'success'=>1,'from'=> 'Store'));?>" + '&orderName=' + response.orderName + '&single_orderid=' + response.orderid + '&price=' + response.price;
-				} else {
-					location.href = "<?php echo U('Store/my',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'success'=>1));?>";
-				}
-			} else {
-				$("#sub_order").html('确认，提交订单').bind('click');
-				return floatNotify.simple(response.msg);
-			}
-			
-		}, 'json');
-		return true;
 	});
 });
 </script>
+</head>
+<body id="scnhtm5" style="position: relative;">
+	<div class="index_wrap">
+		<div id="shouhuo_add">
+			<a href="<?php echo U('Distribution/myAddress');?>" id="address_list_btn">
+				<div class="shouhuo_add1" id="myaddress"></div>
+			</a>
+		</div>
+
+		<div class="shouhuo_all">
+			<div class="line"></div>
+
+			<?php if(is_array($products)): $i = 0; $__LIST__ = $products;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p): $mod = ($i % 2 );++$i; if(empty($p['detail']) != true): ?><div class="shouhuo_all1">
+						<div class="shouhuo_img">
+							<img src="<?php echo ($p["logourl"]); ?>"/>
+						</div>
+						<div class="shouhuo_pro">
+							<div class="shouhuo_pro_name"><?php echo ($p["name"]); ?></div>
+							<?php if(is_array($p['detail'])): $i = 0; $__LIST__ = $p['detail'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$row): $mod = ($i % 2 );++$i; if(empty($p['formatTitle']) != true): ?><div class="shouhuo_pro_name"><?php echo ($p["formatTitle"]); ?>：<?php echo ($row["formatName"]); ?></div><?php endif; ?>
+								<?php if(empty($p['colorTitle']) != true): ?><div class="shouhuo_pro_name"><?php echo ($p["colorTitle"]); ?>：<?php echo ($row["colorName"]); ?></div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+						</div>
+						<div class="shouhuo_pro1">
+							<?php if(($p["price"]) != "0"): ?><div class="shouhuo_pro_price">￥<?php echo ($p["detail"]["0"]["price"]); ?></div><?php endif; ?>
+							<div class="shouhuo_pro_price">x<?php echo ($p["detail"]["0"]["count"]); ?></div>
+						</div>
+					</div>
+					<?php else: ?>
+					<div class="shouhuo_all1">
+						<div class="shouhuo_img">
+							<img src="<?php echo ($p["logourl"]); ?>"/>
+						</div>
+						<div class="shouhuo_pro">
+							<div class="shouhuo_pro_name"><?php echo ($p["name"]); ?></div>
+						</div>
+						<div class="shouhuo_pro1">
+							<div class="shouhuo_pro_price">￥<?php echo ($p["price"]); ?></div>
+							<div class="shouhuo_pro_price">x<?php echo ($p["count"]); ?></div>
+						</div>
+					</div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+
+			<div class="line"></div>
+			<div class="shouhuo_all1">
+				<div class="shouhuo_yunfei">运费</div>
+				<div class="shouhuo_yunfei1">
+					<?php if(($mailprice) == "0"): ?>包邮
+						<?php else: ?>
+						<?php echo ($mailprice); endif; ?>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="line"></div>
+			<div class="shouhuo_all1">
+				<div class="shouhuo_yunfei">合计</div>
+				<div class="shouhuo_yunfei1">￥<?php echo ($totalFee+$mailprice); ?></div>
+				<div class="clear"></div>
+			</div>
+			<div class="line"></div>
+		</div>
+		<input type="hidden" id="paymode" name="paymode" value="1">
+		<div class="pay">
+			<div class="weui_cells_title" style="padding-left: 2%;">支付方式</div>
+			<div class="weui_cells weui_cells_radio">
+			  <?php if(($account["lid"] > 3) OR ($account["lid"] == 0)): ?><label class="weui_cell weui_check_label choose_paymode" data-pay="1" for="x11">
+			    <div class="weui_cell_bd weui_cell_primary">
+			      <p><label class="payway">微信支付</label></p>
+			    </div>
+			    <div class="weui_cell_ft">
+			      <input type="radio" class="weui_check" name="radio1" id="x11"  checked="checked">
+			      <span class="weui_icon_checked"></span>
+			    </div>
+			  </label><?php endif; ?>
+			</div>
+		</div>
+
+		<div class="remark_wrap" style="margin-top: 12px;">
+			<textarea style="border: none; width: 100%;height: 100px;border-bottom: 1px solid #e6e4e4;padding: 2%;" name="remark" id="remark" placeholder="备注信息"></textarea>
+		</div>
+
+		<div class="go_pay">
+			<div class="pay_left">
+				<div class="pay_heji">
+					合计:
+					<span>￥<?php echo ($totalFee+$mailprice); ?></span>
+				</div>
+				<div class="pay_fangshi">微信支付</div>
+			</div>
+			<div class="pay_right" id="sub_order">去支付</div>
+		</div>
+	</div>
+	<?php if(empty($account)): ?><input type="hidden" id="noaccount" value="1"><?php endif; ?>
 </body>
+	<script>
+	//获取默认地址
+	var add_wrap = $("#myaddress");
+	var checkAdd = 0;
+	$.ajax({
+		url:"<?php echo U('Distribution/getMyAddress',array('token' => $token, 'wecha_id'=>$wecha_id));?>",
+		dataType:'json',
+		success:function(data){
+			if(data.status==1){
+				checkAdd=1;
+			}
+			add_wrap.html(data.data);
+		}
+	});
+	$("#sub_order").click(function(){
+		// if($('#noaccount').val() == 1){
+		// 	location.href = "<?php echo U('Distribution/login');?>";
+		// 	return;
+		// }
+		var paymode = $('#paymode').val();
+		if(checkAdd !=1){
+			return floatNotify.simple('请选择地址');
+			return false;
+		}
+		if(paymode != 1){
+			//判断金币余额
+			$.ajax({
+				url:"<?php echo U('Store/orderCartJudge');?>",
+				data:{money:<?php echo ($totalFee+$mailprice); ?>},
+				dataType:'json',
+				success:function(data){
+					if(data.status == 1){
+						confirm = floatNotify.confirm('确认使用金币支付吗？',"",
+							function(t,n){
+								if(n==true){
+						            var reamrk = $('#remark').val();
+									location.href = "<?php echo U('Store/ordersave',array('token' => $token, 'wecha_id'=>$wecha_id, 'orderid'=>$orderid,'lid'=>$lid,'normid'=>$normid,'remark'=>'"+reamrk+"','paymode'=>'"+paymode+"'));?>";
+								}
+							this.hide();
+						}),
+						confirm.show();
+					}else{
+						floatNotify.simple(data.info);
+					}
+				}
+			});
+		}else{
+			var reamrk = $('#remark').val();
+			location.href = "<?php echo U('Store/ordersave',array('token' => $token, 'wecha_id'=>$wecha_id, 'orderid'=>$orderid,'lid'=>$lid,'normid'=>$normid,'remark'=>'"+reamrk+"','paymode'=>'"+paymode+"'));?>";
+		}
+		// if(checkAdd == 1 && paymode!=1){
+		// 	//判断金币余额
+		// 	$.ajax({
+		// 		url:"<?php echo U('Store/orderCartJudge');?>",
+		// 		data:{money:<?php echo ($totalFee+$mailprice); ?>},
+		// 		dataType:'json',
+		// 		success:function(data){
+		// 			if(data.status == 1){
+		// 	            var reamrk = $('#remark').val();
+		// 				location.href = "<?php echo U('Store/ordersave',array('token' => $token, 'wecha_id'=>$wecha_id, 'orderid'=>$orderid,'lid'=>$lid,'remark'=>'"+reamrk+"'));?>";
+		// 			}else{
+		// 				floatNotify.simple(data.info);
+		// 			}
+		// 		}
+		// 	});
+		// }else{
+		// 	return floatNotify.simple('请选择地址');
+		// 	return false;
+		// }
+	});
+</script>
+
 <script>
 function onBridgeReady(){
  WeixinJSBridge.call('hideOptionMenu');
@@ -225,7 +224,7 @@ if (typeof WeixinJSBridge == "undefined"){
     onBridgeReady();
 }
 </script>
-<script type="text/javascript">
+	<script type="text/javascript">
 window.shareData = {  
             "moduleName":"Store",
             "moduleID":"0",
@@ -237,5 +236,13 @@ window.shareData = {
             "tContent": "<?php echo ($metaTitle); ?>"
         };
 </script>
-<?php echo ($shareScript); ?>
+	<?php echo ($shareScript); ?>
 </html>
+<!-- 加载信息框 -->
+<script type="text/javascript" src="<?php echo RES;?>/original/js/require.js" data-main="<?php echo RES;?>/original/js/main"></script>
+<script>
+    function getAction(module,action){
+    	var href= "http://<?php echo ($url_par); ?>?g=Wap&m="+module+"&a="+action;
+        return href;
+    }
+</script>

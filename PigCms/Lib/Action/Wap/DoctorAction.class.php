@@ -6,6 +6,8 @@
 			$doctor=D(MODULE_NAME)->where($where)->relation(true)->find();
 			if(!$doctor){
 				$this->error('请先登陆',U('Doctor/login'));
+			}else{
+				$this->assign('doctor',$doctor);
 			}
 				 // if($doctor['login']==0&&ACTION_NAME!='index'&&ACTION_NAME!='myqrcode'&&ACTION_NAME!='login'){
 					// $this->redirect(U('Doctor/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
@@ -27,7 +29,6 @@
 			// }
 			// $doctor=$db->where($where)->select();
 			// $this->assign('dnum',count($doctor));
-			// $this->assign('doctor',$doctor);
 			// $this->display();
 
 			//登陆页面
@@ -117,7 +118,6 @@
 	    	
 			$custom=$db2->where($where2)->relation(true)->limit($Page->firstRow.','.$Page->listRows)->select();
 			$this->assign('custom',$custom);
-			$this->assign('doctor',$doctor);
 			$this->display();
 			
 		}
@@ -162,7 +162,6 @@
 				$doctor=$db->where("id=".$did)->relation(true)->find();
 			}
 			
-		 	$this->assign('doctor',$doctor);
 		 	//今日咨询数
 		 	$t1=strtotime('today');
 		 	$t2=$t1+86400;
@@ -315,7 +314,6 @@
 
 				$consult=$db->where($where)->relation(true)->limit($Page->firstRow.','.$Page->listRows)->select();
 				$this->assign('consult',$consult);
-				$this->assign('doctor',$doctor);
 				$this->display();
 			}
 		}
@@ -360,7 +358,6 @@
 			$check=$this->check_custom_consult($doctor['id']);
 			$this->assign('check',$check);
 
-			$this->assign('doctor',$doctor);
 			$this->display();
 		}
 		//插入反馈
@@ -416,7 +413,6 @@
 			$check=$this->check_custom_consult($doctor['id']);
 			$this->assign('check',$check);
 			if($_POST==NULL){
-				$this->assign('doctor',$doctor);
 				$this->assign('click','yes');
 				$this->display();
 			}else{
@@ -440,13 +436,11 @@
 			$id=$this->_get('id','intval');
 			if($id){
 				$doctor=$db->relation(true)->find($id);
-				$this->assign('doctor',$doctor);
 			}else{
 				$this->error("跳转出错");
 				// $where['openid']=$this->wecha_id;
 				// $custom=D('Custom')->field('did')->where($where)->find();
 				// $doctor=$db->relation(true)->find($custom['did']);
-				// $this->assign('doctor',$doctor);
 			}
 			$this->assign('click',"no");
 			$this->display();

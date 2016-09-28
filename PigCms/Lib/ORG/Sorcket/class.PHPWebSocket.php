@@ -17,10 +17,10 @@
 class PHPWebSocket
 {
 	// maximum amount of clients that can be connected at one time
-	const WS_MAX_CLIENTS = 100;
+	const WS_MAX_CLIENTS = 1000;
 
 	// maximum amount of clients that can be connected at one time on the same IP v4 address
-	const WS_MAX_CLIENTS_PER_IP = 15;
+	const WS_MAX_CLIENTS_PER_IP = 1000;
 
 	// amount of seconds a client has to send data to the server, before a ping request is sent to the client,
 	// if the client has not completed the opening handshake, the ping request is skipped and the client connection is closed
@@ -159,6 +159,7 @@ class PHPWebSocket
 							$result = socket_getpeername($client, $clientIP);
 							$clientIP = ip2long($clientIP);
 
+
 							if ($result !== false && $this->wsClientCount < self::WS_MAX_CLIENTS && (!isset($this->wsClientIPCount[$clientIP]) || $this->wsClientIPCount[$clientIP] < self::WS_MAX_CLIENTS_PER_IP)) {
 								$this->wsAddClient($client, $clientIP);
 							}
@@ -248,6 +249,7 @@ class PHPWebSocket
 
 		// fetch next client ID
 		$clientID = $this->wsGetNextClientID();
+		// $clientID = $clientIP;
 
 		// store initial client data
 		$this->wsClients[$clientID] = array($socket, '', self::WS_READY_STATE_CONNECTING, time(), false, 0, $clientIP, false, 0, '', 0, 0);
@@ -739,7 +741,13 @@ class PHPWebSocket
 
 	function log( $message )
 	{
-		echo date('Y-m-d H:i:s: ') . $message . "\n";
+		if(is_string($message)){
+			$oldfile = file_get_contents('log.txt');
+			$myfile = fopen("log.txt", "w");
+			fwrite($myfile, $oldfile."\r\n".$message);
+			fclose($myfile);
+		}
+		// echo date('Y-m-d H:i:s: ') . $message . "\n";
 	}
 
 	function bind( $type, $func )

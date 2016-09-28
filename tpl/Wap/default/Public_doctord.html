@@ -1,13 +1,21 @@
 <div class="doctor_head">
-		<div class='hd1 dpic'><img src="{pigcms:$doctor.pic}" alt=""></div>
+		<div class='hd1 dpic'><img src="{wghd:
+$doctor.pic}" alt=""></div>
 		<div class='hd1 dinfo'>
-			<input type="hidden" id="did" value="{pigcms:$doctor.id}">
-			<div><span>{pigcms:$doctor.name}</span>&nbsp;<span>{pigcms:$doctor.persition}</span></div>
-			<div>{pigcms:$doctor.hospital.name}</div>
-			<!-- <div><a href="#">粉丝:{pigcms:$doctor.followers}</a>
-				 <a href="javascript:if(confirm('确定取消关注吗?'))location='{pigcms::U('User/cancel',array('id'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}'">取消关注</a>
+			<input type="hidden" id="did" value="{wghd:
+$doctor.id}">
+			<div><span>{wghd:
+$doctor.name}</span>&nbsp;<span>{wghd:
+$doctor.persition}</span></div>
+			<div>{wghd:
+$doctor.hospital.name}</div>
+			<!-- <div><a href="#">粉丝:{wghd:
+$doctor.followers}</a>
+				 <a href="javascript:if(confirm('确定取消关注吗?'))location='{wghd:
+:U('User/cancel',array('id'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}'">取消关注</a>
 			</div> -->
-			<div><a href="{pigcms::U('Consult/index',array('id'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">在线咨询</a></div>
+			<div><a href="{wghd:
+:U('Consult/index',array('id'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">在线咨询</a></div>
 		</div>
 		<div class="clear"></div>
 	</div>

@@ -1,5 +1,6 @@
 <include file="Public:head"/> 
-<link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/cymain.css" />
+<link rel="stylesheet" type="text/css" href="{wghd:
+:RES}/css/cymain.css" />
 <script src="/tpl/static/artDialog/jquery.artDialog.js?skin=default"></script>
 <script src="/tpl/static/artDialog/plugins/iframeTools.js"></script>
 <!--弹出层样式-->
@@ -11,7 +12,8 @@ body,h2{margin:0;padding:0;}
 #faqdiv h2 a{position:absolute;right:5px;font-size:12px;color:#FF0000;}
 #faqdiv .form{padding:10px;}
 </style>
-<script src="{pigcms::RES}/js/jquery.min.js"></script>
+<script src="{wghd:
+:RES}/js/jquery.min.js"></script>
 <script>
 //弹出层js start
 $(function(){
@@ -81,7 +83,8 @@ $(document).ready(function(){
             alert("你还未选择要操作的项！");
             return;
         }else{
-            //location.href="{pigcms::U('User/Reply/add',array('wecha_id'=>wecha_id,'checked'=>checked,'chk_value'=>chk_value))}";
+            //location.href="{wghd:
+:U('User/Reply/add',array('wecha_id'=>wecha_id,'checked'=>checked,'chk_value'=>chk_value))}";
             location.href="index.php?g=User&m=Reply&a=add&chk_value="+chk_value+"&token="+token+"&wecha_id="+wecha_id+"&checked="+checked;
             return;
         } 
@@ -127,7 +130,8 @@ $(document).on("click","#del",function(){
 
         <div class="content" <if condition="session('isQcloud') eq true">style="float:center;"</if>>
 <div class="cLineB">   
-<h4 class="left">留言表单  <input type="text" name="tokened" id="tokened" value="{pigcms:$token}" style="display:none;"></h4>
+<h4 class="left">留言表单  <input type="text" name="tokened" id="tokened" value="{wghd:
+$token}" style="display:none;"></h4>
 <div class="searchbar right">
 </div>
 <div class="clr"></div>
@@ -148,8 +152,10 @@ $(document).on("click","#del",function(){
 </div>
 <div class="msgWrap">
 <form method="post" action="" id="info">
-<input name="wecha_id" type="hidden" id="wecha_id" value="{pigcms:$wecha_id}">
-<input name="checked" type="hidden" id="needCheck" value="{pigcms:$needCheck}">
+<input name="wecha_id" type="hidden" id="wecha_id" value="{wghd:
+$wecha_id}">
+<input name="checked" type="hidden" id="needCheck" value="{wghd:
+$needCheck}">
 <table class="ListProduct" border="0" cellspacing="0" cellpadding="0" width="100%">
 <thead>
 <tr>
@@ -167,18 +173,28 @@ $(document).on("click","#del",function(){
 <volist name="res" id="item"> 
     
     <tr >
-<td id="playlist"><input type="checkbox" name="items" value="{pigcms:$item.id}"  class="checkitem"></td>
-<td>{pigcms:$item.name}</td>
-<td><a href="###" onclick="art.dialog({content: '{pigcms:$item.message}',width:300,height:200,yesText:'关闭',background: '#000',opacity: 0.45});">查看留言 <if condition="$item['checked'] neq 1"> <font style="color:red;font-size:12px;">(未审核)</font><else/>
+<td id="playlist"><input type="checkbox" name="items" value="{wghd:
+$item.id}"  class="checkitem"></td>
+<td>{wghd:
+$item.name}</td>
+<td><a href="###" onclick="art.dialog({content: '{wghd:
+$item.message}',width:300,height:200,yesText:'关闭',background: '#000',opacity: 0.45});">查看留言 <if condition="$item['checked'] neq 1"> <font style="color:red;font-size:12px;">(未审核)</font><else/>
             <font ></font>  </if>
         </a></td>
-<td><a href="{pigcms::U('User/Reply/reply',array('msgid'=>$item['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">查看回复<font color="#04AA00">(共<font color="red">{pigcms:$item.count}</font>条回复/<font style="color:red">{pigcms:$item.chkcount}</font>条新回复)</font></a></td>
-<td>{pigcms:$item.time|date="Y-m-d H:i:s",###}</td> 
+<td><a href="{wghd:
+:U('User/Reply/reply',array('msgid'=>$item['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">查看回复<font color="#04AA00">(共<font color="red">{wghd:
+$item.count}</font>条回复/<font style="color:red">{wghd:
+$item.chkcount}</font>条新回复)</font></a></td>
+<td>{wghd:
+$item.time|date="Y-m-d H:i:s",###}</td> 
 
 <td class="norightborder">
-    <if condition="$item['checked'] neq '1'"><a href="{pigcms::U('User/Reply/checkOne',array('chk_value'=>$item['id'],'token'=>$token))}">审核</a></if>
-<!--    &nbsp;&nbsp;<a href="#" messageid="{pigcms:$item.id}" class="replyeded">回复</a>-->
-    &nbsp;&nbsp;<a href="javascript:drop_confirm('您确定要删除吗?', '{pigcms::U('User/Reply/deled',array('chk_value'=>$item['id'],'token'=>$token))}');">删除</a></td>
+    <if condition="$item['checked'] neq '1'"><a href="{wghd:
+:U('User/Reply/checkOne',array('chk_value'=>$item['id'],'token'=>$token))}">审核</a></if>
+<!--    &nbsp;&nbsp;<a href="#" messageid="{wghd:
+$item.id}" class="replyeded">回复</a>-->
+    &nbsp;&nbsp;<a href="javascript:drop_confirm('您确定要删除吗?', '{wghd:
+:U('User/Reply/deled',array('chk_value'=>$item['id'],'token'=>$token))}');">删除</a></td>
 </tr>
 
 </volist>
@@ -190,7 +206,8 @@ $(document).on("click","#del",function(){
 
 <div class="cLine">
 <div class="pageNavigator right">
-<div class="pages">{pigcms:$page}</div>
+<div class="pages">{wghd:
+$page}</div>
 </div>
 <div class="clr"></div>
 </div>

@@ -6,15 +6,18 @@
   <a href="javascript:history.go(-1);"  class="right btnGrayS vm" style="margin-top:-27px" >返回</a>
 </div>
 <div class="msgWrap">
-  <form class="form" method="post" action="{pigcms::U('Doctor/upsave')}" enctype="multipart/form-data" >
+  <form class="form" method="post" action="{wghd:
+:U('Doctor/upsave')}" enctype="multipart/form-data" >
     <TABLE class="userinfoArea" style=" margin:20px 0 0 0;" border="0" cellSpacing="0" cellPadding="0" width="100%">
-      <input type="hidden" id="doctorid" name="id" value="{pigcms:$info.id}" />
+      <input type="hidden" id="doctorid" name="id" value="{wghd:
+$info.id}" />
         <TR>
           <TH valign="top">
             <span class="red">*</span><label for="keyword">医生名称：</label>
           </TH>
           <TD>
-            <input type="text" class="px" id="name" value="{pigcms:$info.name}" name="name" style="width:500px" >
+            <input type="text" class="px" id="name" value="{wghd:
+$info.name}" name="name" style="width:500px" >
           </TD>
         </TR>
         <TR>
@@ -22,11 +25,14 @@
             <span class="red">*</span><label for="keyword">所属医院：</label>
           </TH>
           <TD>
-            <input type="hidden" name="hid2" id="hid2" value="{pigcms:$info.hid}">
+            <input type="hidden" name="hid2" id="hid2" value="{wghd:
+$info.hid}">
             <select name="hid" id="hid" style="width:200px">
               <option value="">--请选择医院--</option>
               <volist id="list" name="hname">
-                <option value="{pigcms:$list.id}" <eq name="list.id" value="$info.hid">selected</eq> >{pigcms:$list.name}</option>
+                <option value="{wghd:
+$list.id}" <eq name="list.id" value="$info.hid">selected</eq> >{wghd:
+$list.name}</option>
               </volist>
             </select>
           </TD>
@@ -36,7 +42,8 @@
             <label for="keyword">科室：</label>
           </TH>
           <TD>
-            <input type="text" class="px" id="profession" value="{pigcms:$info.profession}" name="profession" style="width:500px" >
+            <input type="text" class="px" id="profession" value="{wghd:
+$info.profession}" name="profession" style="width:500px" >
           </TD>
         </TR>
         <TR>
@@ -45,7 +52,8 @@
             <span class="red">*</span><label for="keyword">职称：</label>
           </TH>
           <TD>
-            <input type="text" class="px" id="persition" value="{pigcms:$info.persition}" name="persition" style="width:500px" >
+            <input type="text" class="px" id="persition" value="{wghd:
+$info.persition}" name="persition" style="width:500px" >
           </TD>
         </TR>
           <TH valign="top">
@@ -62,7 +70,8 @@
             //红色专家门诊 绿色普通门诊
             $(function(){
               $.ajax({
-                url:'{pigcms::U('Doctor/showvisits')}',
+                url:'{wghd:
+:U('Doctor/showvisits')}',
                 async:'false',
                 data:{id:$("#doctorid").val()},
                 success:function(data){
@@ -108,7 +117,8 @@
                 var regular=week+","+day+",";//正则匹配用
                 //AJAX对长字符串进行修改 例 加入点击结果为1,1,0 字符串为1,1,1@2,2,2 即变为1,1,0@2,2,2
                 $.ajax({
-                  url:'{pigcms::U('Doctor/editvisits')}',
+                  url:'{wghd:
+:U('Doctor/editvisits')}',
                   data:{str:str,str1:str1,regular:regular},
                   success:function(data){
                     $("#chuzhen").val(data);
@@ -178,7 +188,8 @@
             <label for="text">医生简介：</label>
           </TH>
           <TD>
-            <textarea  class="px" id="info" name="info" style="width:500px; height:150px">{pigcms:$info.info}</textarea>
+            <textarea  class="px" id="info" name="info" style="width:500px; height:150px">{wghd:
+$info.info}</textarea>
           </TD>
         </TR>
         <TR>
@@ -196,15 +207,18 @@
       <h4>编辑登陆信息</h4>
     </div>
     <div>
-      <form action="{pigcms::U('Doctor/editlogin')}" method="post">
-        <input type="hidden" id="doctorid" name="id" value="{pigcms:$info.id}" />
+      <form action="{wghd:
+:U('Doctor/editlogin')}" method="post">
+        <input type="hidden" id="doctorid" name="id" value="{wghd:
+$info.id}" />
         <table class="userinfoArea" style=" margin:20px 0 0 0;" border="0" cellSpacing="0" cellPadding="0" width="100%">
           <TR>
             <TH valign="top">
               <span class="red">*</span><label for="keyword">账号：</label>
             </TH>
             <TD>
-              <input type="text" class="px" id="username" value="{pigcms:$info.username}" name="username" style="width:500px" >
+              <input type="text" class="px" id="username" value="{wghd:
+$info.username}" name="username" style="width:500px" >
             </TD>
           </TR>
           <TR>

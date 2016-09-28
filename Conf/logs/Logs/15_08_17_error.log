@@ -1,2 +1,0 @@
-[ 2015-08-17T08:47:58+08:00 ] ERR: (ThinkException) Table 'sq_blackoo00.pigcms_user_group' doesn't exist
- [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_user_group`

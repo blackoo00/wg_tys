@@ -1,0 +1,42 @@
+[ 2016-09-28T15:30:17+08:00 ] ERR: (ThinkException) La table 'tys_data.pigcms_product_guanggao' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_product_guanggao`
+[ 2016-09-28T16:10:22+08:00 ] ERR: (ThinkException) _ERROR_ACTION_:getMyAddress
+[ 2016-09-28T16:10:49+08:00 ] ERR: (ThinkException) _ERROR_ACTION_:getMyAddress
+[ 2016-09-28T16:12:08+08:00 ] ERR: (ThinkException) Action:statistical_METHOD_NOT_EXIST_
+[ 2016-09-28T16:21:16+08:00 ] ERR: (ThinkException) Action:statistical_METHOD_NOT_EXIST_
+[ 2016-09-28T16:24:03+08:00 ] ERR: (ThinkException) Action:statistical_METHOD_NOT_EXIST_
+[ 2016-09-28T16:49:48+08:00 ] ERR: (ThinkException) La table 'tys_data.pigcms_address' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_address`
+[ 2016-09-28T16:50:10+08:00 ] ERR: (ThinkException) La table 'tys_data.pigcms_address' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_address`
+[ 2016-09-28T16:50:16+08:00 ] ERR: (ThinkException) La table 'tys_data.pigcms_address' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_address`
+[ 2016-09-28T16:51:20+08:00 ] ERR: (ThinkException) La table 'tys_data.pigcms_address' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_address`
+[ 2016-09-28T16:51:26+08:00 ] ERR: (ThinkException) La table 'tys_data.pigcms_address' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_address`
+[ 2016-09-28T16:53:29+08:00 ] ERR: (ThinkException) La table 'tys_data.pigcms_address' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_address`
+[ 2016-09-28T16:53:44+08:00 ] ERR: (ThinkException) La table 'tys_data.pigcms_address' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_address`
+[ 2016-09-28T17:21:23+08:00 ] ERR: (ThinkException) Erreur de syntaxe près de 'WHERE ( `id` = 1409 )' à la ligne 1
+ [ SQL语句 ] : UPDATE `pigcms_distribution_member` SET  WHERE ( `id` = 1409 )
+[ 2016-09-28T17:21:37+08:00 ] ERR: (ThinkException) Erreur de syntaxe près de 'WHERE ( `id` = 1409 )' à la ligne 1
+ [ SQL语句 ] : UPDATE `pigcms_distribution_member` SET  WHERE ( `id` = 1409 )
+[ 2016-09-28T17:22:16+08:00 ] ERR: (ThinkException) Erreur de syntaxe près de 'WHERE ( `id` = 1409 )' à la ligne 1
+ [ SQL语句 ] : UPDATE `pigcms_distribution_member` SET  WHERE ( `id` = 1409 )
+[ 2016-09-28T17:23:29+08:00 ] ERR: (ThinkException) Erreur de syntaxe près de 'WHERE ( `id` = 1409 )' à la ligne 1
+ [ SQL语句 ] : UPDATE `pigcms_distribution_member` SET  WHERE ( `id` = 1409 )
+[ 2016-09-28T17:25:06+08:00 ] ERR: 发生错误：错误代码48001,微信返回错误信息：api unauthorized hint: [0847vr31!]openid=
+[ 2016-09-28T17:25:06+08:00 ] ERR: (ThinkException) La table 'tys_data.pigcms_account' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_account`
+[ 2016-09-28T17:27:31+08:00 ] ERR: 发生错误：错误代码48001,微信返回错误信息：api unauthorized hint: [MwxX1a0992vr34!]openid=
+[ 2016-09-28T17:27:31+08:00 ] ERR: (ThinkException) La table 'tys_data.pigcms_account' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_account`
+[ 2016-09-28T17:27:47+08:00 ] ERR: 发生错误：错误代码48001,微信返回错误信息：api unauthorized hint: [W4EUXa0008vr35!]openid=
+[ 2016-09-28T17:27:47+08:00 ] ERR: (ThinkException) La table 'tys_data.pigcms_account' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_account`
+[ 2016-09-28T17:28:22+08:00 ] ERR: 发生错误：错误代码48001,微信返回错误信息：api unauthorized hint: [E.Dq0043vr37!]openid=
+[ 2016-09-28T17:28:22+08:00 ] ERR: (ThinkException) La table 'tys_data.pigcms_account' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_account`
+[ 2016-09-28T17:28:56+08:00 ] ERR: 发生错误：错误代码48001,微信返回错误信息：api unauthorized hint: [IJZLQA0077vr33!]openid=

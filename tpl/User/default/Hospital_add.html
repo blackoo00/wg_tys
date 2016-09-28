@@ -6,7 +6,8 @@
   <a href="javascript:history.go(-1);"  class="right btnGrayS vm" style="margin-top:-27px" >返回</a>
 </div>
 <div class="msgWrap">
-  <form class="form" method="post" action="{pigcms::U('Hospital/insert')}" enctype="multipart/form-data" >
+  <form class="form" method="post" action="{wghd:
+:U('Hospital/insert')}" enctype="multipart/form-data" >
     <TABLE class="userinfoArea" style=" margin:20px 0 0 0;" border="0" cellSpacing="0" cellPadding="0" width="100%">
       <THEAD>
         <TR>
@@ -25,7 +26,9 @@
             <select name="sid" id="sid" style="width:200px">
               <option value="">--请选择销售人员--</option>
               <volist id="list" name="sname">
-                <option value="{pigcms:$list.id}">{pigcms:$list.name}</option>
+                <option value="{wghd:
+$list.id}">{wghd:
+$list.name}</option>
               </volist>
             </select>
           </TD>

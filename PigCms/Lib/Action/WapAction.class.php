@@ -17,7 +17,7 @@ class WapAction extends BaseAction
     protected function _initialize()
     {
         parent::_initialize();
-        $this->token = $this->_get('token');
+        $this->token = 'mhfcjx1421158741';
         $this->assign('token', $this->token);
         $this->wxuser = S('wxuser_' . $this->token);
         if (!$this->wxuser || 1) {
@@ -26,9 +26,11 @@ class WapAction extends BaseAction
         }
         $this->assign('wxuser', $this->wxuser);
         // session('newwecha_id','oaOmmt4UOtNFlfA5zGxKjj3i7ycY');
-        session('newwecha_id',$_GET['wecha_id']);
+        if($_GET['wecha_id']){
+            session('newwecha_id',$_GET['wecha_id']);
+        }
         $this->wecha_id=session('newwecha_id');
-        if (!$_GET['wecha_id'] && $this->wxuser['winxintype'] == 3 && !isset($_GET['code']) && $this->wxuser['oauth']) {
+        if (!session('newwecha_id') && $this->wxuser['winxintype'] == 3 && !isset($_GET['code']) && $this->wxuser['oauth']) {
             $customeUrl = 'http://'.$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
             $scope = 'snsapi_base';
             $oauth = 'base_oauth';

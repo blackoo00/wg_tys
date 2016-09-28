@@ -1,7 +1,10 @@
 <include file="Public:head"/>
-<script src="{pigcms::STATICS}/kindeditor/kindeditor.js" type="text/javascript"></script>
-<script src="{pigcms::STATICS}/kindeditor/lang/zh_CN.js" type="text/javascript"></script>
-<script src="{pigcms::STATICS}/kindeditor/plugins/code/prettify.js" type="text/javascript"></script>
+<script src="{wghd:
+:STATICS}/kindeditor/kindeditor.js" type="text/javascript"></script>
+<script src="{wghd:
+:STATICS}/kindeditor/lang/zh_CN.js" type="text/javascript"></script>
+<script src="{wghd:
+:STATICS}/kindeditor/plugins/code/prettify.js" type="text/javascript"></script>
 <script src="/tpl/static/artDialog/jquery.artDialog.js?skin=default"></script>
 <script src="/tpl/static/artDialog/plugins/iframeTools.js"></script>
 <div class="content" <if condition="session('isQcloud') eq true">style="float:center;"</if>
@@ -11,9 +14,11 @@
   <a href="javascript:history.go(-1);"  class="right btnGrayS vm" style="margin-top:-27px" >返回</a>
 </div>
 <div class="msgWrap">
-  <form class="form" method="post" action="{pigcms::U('Doctor/insert')}" enctype="multipart/form-data" >
+  <form class="form" method="post" action="{wghd:
+:U('Doctor/insert')}" enctype="multipart/form-data" >
     <TABLE class="userinfoArea" style=" margin:20px 0 0 0;" border="0" cellSpacing="0" cellPadding="0" width="100%">
-        <input type="hidden" id="doctorid" name="id" value="{pigcms:$info.id}" />
+        <input type="hidden" id="doctorid" name="id" value="{wghd:
+$info.id}" />
         <TR>
           <TH valign="top">
             <span class="red">*</span><label for="keyword">医生名称：</label>
@@ -28,8 +33,10 @@
           </TH>
           <TD>
             <input type="text" class="px"  name="pic" id="pic" value="" style="width:580px;"  />        
-            <script src="/tpl/static/upyun.js?{pigcms::date('YmdHis',time())}"></script>
-            <a href="###" onclick="upyunPicUpload('pic',700,420,'{pigcms:$token}')" class="a_upload">上传</a>
+            <script src="/tpl/static/upyun.js?{wghd:
+:date('YmdHis',time())}"></script>
+            <a href="###" onclick="upyunPicUpload('pic',700,420,'{wghd:
+$token}')" class="a_upload">上传</a>
             <a href="###" onclick="viewImg('pic')">预览</a>
           </TD>
         </TR>
@@ -41,7 +48,9 @@
             <select name="hid" id="hid" style="width:200px">
               <option value="">--请选择医院--</option>
               <volist id="list" name="hname">
-                <option value="{pigcms:$list.id}">{pigcms:$list.name}</option>
+                <option value="{wghd:
+$list.id}">{wghd:
+$list.name}</option>
               </volist>
             </select>
             <script>
@@ -113,7 +122,8 @@
                 var regular=week+","+day+",";//正则匹配用
                 //AJAX对长字符串进行修改 例 加入点击结果为1,1,0 字符串为1,1,1@2,2,2 即变为1,1,0@2,2,2
                 $.ajax({
-                  url:'{pigcms::U('Doctor/editvisits',array('token'=>$token,'wecha_id'=>$wecha_id))}',
+                  url:'{wghd:
+:U('Doctor/editvisits',array('token'=>$token,'wecha_id'=>$wecha_id))}',
                   data:{str:str,str1:str1,regular:regular},
                   success:function(data){
                     $("#chuzhen").val(data);

@@ -4,9 +4,13 @@
 	<div id="wrapper" class='comment_index'>
 		<section>
 			<div>医生评价：</div>
-			<script src="{pigcms::RES}/js/tys/require.js" data-main="{pigcms::RES}/js/tys/main" type="text/javascript"></script>
-				<form method="post" action="{pigcms::U('Comment/insert',array('token'=>$token,'wecha_id'=>$wecha_id))}">
-				<input type="hidden" name="did" value="{pigcms:$doctor.id}">
+			<script src="{wghd:
+:RES}/js/tys/require.js" data-main="{wghd:
+:RES}/js/tys/main" type="text/javascript"></script>
+				<form method="post" action="{wghd:
+:U('Comment/insert',array('token'=>$token,'wecha_id'=>$wecha_id))}">
+				<input type="hidden" name="did" value="{wghd:
+$doctor.id}">
 				<div id="stars">
 					<span data-star="1"></span>
 					<span data-star="1"></span>

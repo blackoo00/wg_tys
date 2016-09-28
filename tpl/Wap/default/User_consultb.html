@@ -6,27 +6,38 @@
 </head>
 <body>
 	<ul>
-		<li>咨询标题:{pigcms:$consultm.title}</li>
-		<li>咨询内容:{pigcms:$consultm.info}</li>
-		<li>姓名:{pigcms:$consultm.custom.name}</li>
+		<li>咨询标题:{wghd:
+$consultm.title}</li>
+		<li>咨询内容:{wghd:
+$consultm.info}</li>
+		<li>姓名:{wghd:
+$consultm.custom.name}</li>
 		<li>性别:<if condition="$consultm.sex eq 1">男<else/>女</if></li>
-		<li>出生年份:{pigcms:$consultm.born}</li>
+		<li>出生年份:{wghd:
+$consultm.born}</li>
 		<li>病情照片:
 			<volist id="list" name="consultm.spic">
-				<!-- <neq name="$list" value=""><li><img src="{pigcms:$list}"></li></neq> -->
-				<notempty name="list"><li><img src="{pigcms:$list}"></li></notempty>
+				<!-- <neq name="$list" value=""><li><img src="{wghd:
+$list}"></li></neq> -->
+				<notempty name="list"><li><img src="{wghd:
+$list}"></li></notempty>
 			</volist>
 		</li>
 	</ul>
 	<ul>
 		<volist id="list" name="consultb">
 			<li>
-				<if condition="$list.dtalk eq 1">{pigcms:$doctorname}:<else/>{pigcms:$customname}:</if>
-				{pigcms:$list.content}<br>{pigcms:$list.time|friendlyDate}
+				<if condition="$list.dtalk eq 1">{wghd:
+$doctorname}:<else/>{wghd:
+$customname}:</if>
+				{wghd:
+$list.content}<br>{wghd:
+$list.time|friendlyDate}
 			</li>
 		</volist>
 	</ul>
-	<form action="{pigcms::U('User/insert',array('id'=>$cmid,'token'=>$token,'wecha_id'=>$wecha_id))}" method="post">
+	<form action="{wghd:
+:U('User/insert',array('id'=>$cmid,'token'=>$token,'wecha_id'=>$wecha_id))}" method="post">
 		<textarea name="content"></textarea><br>
 		<input type="submit" value="发送">
 	</form>

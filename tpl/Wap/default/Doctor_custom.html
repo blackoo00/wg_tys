@@ -1,6 +1,7 @@
 <include file="Public:head"/>
 <body>
-	<script src="{pigcms::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="{wghd:
+:RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
 	<style>
         .refresh{
             display: inline-block;
@@ -15,7 +16,8 @@
 					<i class="icon-search"></i>
 					<input type="text" id="search" placeholder="输入患者姓名">
 				</div>
-				<a class="" href="{pigcms::U('Doctor/custom',array('token'=>$token,'wecha_id'=>$wecha_id))}">刷新</a>
+				<a class="" href="{wghd:
+:U('Doctor/custom',array('token'=>$token,'wecha_id'=>$wecha_id))}">刷新</a>
 			</div>
 			<script>
 				$(function(){
@@ -38,54 +40,63 @@
 				})
 			</script>
 			<div id="qunfa">
-				<!-- <a href="{pigcms::U('Doctor/custom',array('token'=>$token,'wecha_id'=>$wecha_id))}" class="refresh"><i class="icon-loop2"></i></a> -->
+				<!-- <a href="{wghd:
+:U('Doctor/custom',array('token'=>$token,'wecha_id'=>$wecha_id))}" class="refresh"><i class="icon-loop2"></i></a> -->
 				<span>患者列表</span>
-				<a style="float:right;" href="{pigcms::U('Consult/allsendpage',array('did'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}" class="button blue">群发</a>
+				<a style="float:right;" href="{wghd:
+:U('Consult/allsendpage',array('did'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}" class="button blue">群发</a>
 				<div class="clear"></div>
 			</div>
 			<div class="clear">	</div>
 			<volist id="list" name="custom">
-				<a href="{pigcms::U('Consult/consultb',array('did'=>$doctor['id'],'cid'=>$list['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">
+				<a href="{wghd:
+:U('Consult/consultb',array('did'=>$doctor['id'],'cid'=>$list['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">
 				<li>
 					<div class="prompt">
-						<img src="{pigcms:$list.pic}">
-						<eq name="list.consult.cnew" value="1"><font class="newmessage" style="color:red"><span></span></font></eq>
-						<p id="customname">{pigcms:$list.name}</p>
+						<img src="{wghd:
+$list.pic}">
+						<label class="has_newmessage" data-cid={wghd:
+$list.consult.cid}>
+							<eq name="list.consult.cnew" value="1"><font class="newmessage" style="color:red"><span></span></font></eq>
+						</label>
+
+						<p id="customname">{wghd:
+$list.name}</p>
 					</div>
 					<div class="clear"></div>
 				</li>
 				</a>
 			</volist>
-			<div class="wappages">{pigcms:$page}</div>
+			<div class="wappages">{wghd:
+$page}</div>
 		</ul>
 	</div>
 	<include file="Doctor:foot" />
+	<input type="hidden" id="did" value="{wghd:
+$doctor.id}">
 </body>
 </html>
-<script src="{pigcms::RES}/websorcket/fancywebsocket.js"></script>
+<script src="{wghd:
+:RES}/websorcket/fancywebsocket.js"></script>
+<script src="{wghd:
+:RES}/websorcket/sorcket.js"></script>
 <script>
-	var Server;
 	$(document).ready(function() {
-		console.log('Connecting...');
-		Server = new FancyWebSocket('ws://192.168.1.118:4000');
-		//Let the user know we're connected
-		Server.bind('open', function() {
-			console.log( "Connected." );
-		});
-
-		//OH NOES! Disconnection occurred.
-		Server.bind('close', function( data ) {
-			// $.get('http://localhost/wg_tys/PigCms/Lib/ORG/Sorcket/server.php',function(data){
-			// 	console.log(data);
-			// })
-			console.log( "Disconnected." );
-		});
-
+		var did = $('#did').val();
 		//Log any messages sent from server
 		Server.bind('message', function( payload ) {
+			var fromid = eval(payload)[2]['fromid'];
+			var toid = eval(payload)[3]['toid'];
+			if(did == toid){
+				$('.has_newmessage').each(function(index, el) {
+					var cid = $(this).data('cid');
+					var str = '<font class="newmessage" style="color:red"><span></span></font>';
+					if(cid == fromid){
+						$(this).append(str);
+					}
+				});
+			}
 			console.log( payload );
 		});
-
-		Server.connect();
 	});
 </script>

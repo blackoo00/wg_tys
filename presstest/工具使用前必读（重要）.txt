@@ -1,0 +1,16 @@
+该工具由作者【煌】本人所开发的websocket压力测试工具，使用底层的socket来进行连接您的服务端。
+或许有些安全防护软件会报毒，本人承诺【绝无恶意代码】【绝无后门】请信任并添加白名单。
+如遇websocket开发上有何困难时，可以联系作者，知无不言。
+
+作者QQ：114687576
+作者微信：yaohuang46
+
+websocket示例站点：
+
+在线websocket测试工具:http://www.blue-zero.com/websocket/ （官网）
+在线websocket聊天室:http://www.blue-zero.com/chat/
+
+
+tips1:该工具[连接]到服务端后，会首先发送字符串“1”；
+tips2:该工具[收到]服务端的消息后，会自动回复字符串“2”；
+tips3:理论上单台电脑能开50000个连接，如要超过此数目，可以在多台电脑运行。

@@ -1,13 +1,19 @@
 <include file="Product:header"/>
 <div class="main">
 	<div class="banner" id="banner">
-		<a href="{pigcms::U('Product/product',array('token'=>$_GET['token'],'id'=>$product['id'],'wecha_id'=>$_GET['wecha_id']))}">
-			<img src="{pigcms:$product.logourl}" alt="{pigcms:$product.name}"/>
-			<h1 class="p_title">{pigcms:$product.name}</h1>
+		<a href="{wghd:
+:U('Product/product',array('token'=>$_GET['token'],'id'=>$product['id'],'wecha_id'=>$_GET['wecha_id']))}">
+			<img src="{wghd:
+$product.logourl}" alt="{wghd:
+$product.name}"/>
+			<h1 class="p_title">{wghd:
+$product.name}</h1>
 		</a>
 	</div>
 	<div class="f_list_car p_buy clearfix">
-		<span class="all_price all_price_this">价格：<font>￥{pigcms:$product.price}</font> <span style="text-decoration:line-through">原价：{pigcms:$product.oprice}元</span></span>
+		<span class="all_price all_price_this">价格：<font>￥{wghd:
+$product.price}</font> <span style="text-decoration:line-through">原价：{wghd:
+$product.oprice}元</span></span>
 
 		<!--检查库存-->
 				<a href="javascript:;" class="p_btn_buy">
@@ -43,13 +49,15 @@
   } 
  } 
 </script> 
-<div id="remainSeconds" style="display:none">{pigcms:$leftSeconds}</div> 
+<div id="remainSeconds" style="display:none">{wghd:
+$leftSeconds}</div> 
 </if>
         <script type="text/javascript">
     //点击加入购物车
     function add_cart() {
     	$.ajax({
-    		url: "{pigcms::U('Product/addProductToCart',array('token'=>$token,'id'=>$product['id'],'price'=>$product['price'],'count'=>1,'wecha_id'=>$_GET['wecha_id']))}",
+    		url: "{wghd:
+:U('Product/addProductToCart',array('token'=>$token,'id'=>$product['id'],'price'=>$product['price'],'count'=>1,'wecha_id'=>$_GET['wecha_id']))}",
     		success: function( data ) {
     			if(data){
     				var datas=data.split('|');
@@ -64,8 +72,10 @@
     <div class="p_mod p_short_desc">
 		<h2 class="p_mod_title">团购信息</h2>
 		<div class="p_con">
-			<p>已售数量：<span style="color:#f60;font-size:16px;font-weight:bold">{pigcms:$product['salecount']+$product['fakemembercount']}</span></p>
-			<p>截止日期：{pigcms:$product.endtime|date="Y-m-d",###}</p>
+			<p>已售数量：<span style="color:#f60;font-size:16px;font-weight:bold">{wghd:
+$product['salecount']+$product['fakemembercount']}</span></p>
+			<p>截止日期：{wghd:
+$product.endtime|date="Y-m-d",###}</p>
 		</div>
 		
 	</div>
@@ -73,17 +83,21 @@
 	<div class="p_mod p_short_desc">
 		<h2 class="p_mod_title">商品简介</h2>
 		<div class="p_con">
-			<p>{pigcms:$intro}</p>
+			<p>{wghd:
+$intro}</p>
 		</div>
-		<a href="{pigcms::U('Product/productDetail',array('token'=>$_GET['token'],'id'=>$product['id'],'wecha_id'=>$_GET['wecha_id']))}" class="p_to_desc">
+		<a href="{wghd:
+:U('Product/productDetail',array('token'=>$_GET['token'],'id'=>$product['id'],'wecha_id'=>$_GET['wecha_id']))}" class="p_to_desc">
 			查看图文详情
 			<span class="gt"></span>
 		</a>
 	</div>
 	<div class="p_mod p_seller_info">
-		<a href="{pigcms::U('Product/company',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'id'=>$product['id']))}">
+		<a href="{wghd:
+:U('Product/company',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'id'=>$product['id']))}">
 			查看商家信息
-			<font>共{pigcms:$branchStoreCount}家分店</font>
+			<font>共{wghd:
+$branchStoreCount}家分店</font>
 			<span class="gt"></span>
 		</a>
 	</div>
@@ -96,10 +110,14 @@
 	    	<volist name="products" id="hostlist"> 
 	    			 <li>
 			<div class="f_list_l">
-				<a href="{pigcms::U('Product/product',array('token'=>$_GET['token'],'id'=>$hostlist['id'],'wecha_id'=>$_GET['wecha_id']))}">
-					<img src="{pigcms:$hostlist.logourl}" />
-					<h3>{pigcms:$hostlist.name}</h3>
-					<p class="tui_price ts2" style="font-weight:normal;font-size:14px;color:#666;text-decoration:line-through">原价：{pigcms:$hostlist.oprice}&nbsp;元</p>
+				<a href="{wghd:
+:U('Product/product',array('token'=>$_GET['token'],'id'=>$hostlist['id'],'wecha_id'=>$_GET['wecha_id']))}">
+					<img src="{wghd:
+$hostlist.logourl}" />
+					<h3>{wghd:
+$hostlist.name}</h3>
+					<p class="tui_price ts2" style="font-weight:normal;font-size:14px;color:#666;text-decoration:line-through">原价：{wghd:
+$hostlist.oprice}&nbsp;元</p>
 										<div class="hot">
 						<strong style="display:none">热卖</strong>
 					</div>
@@ -107,9 +125,11 @@
 			</div>
 			<div class="f_list_r">
 				<p class="tui_price ts2">
-					<strong>￥{pigcms:$hostlist.price}</strong>
+					<strong>￥{wghd:
+$hostlist.price}</strong>
 				</p>
-				<a href="{pigcms::U('Product/product',array('token'=>$_GET['token'],'id'=>$hostlist['id'],'wecha_id'=>$_GET['wecha_id']))}" class="u_order_return ts1" id="in_car">去购买</a>
+				<a href="{wghd:
+:U('Product/product',array('token'=>$_GET['token'],'id'=>$hostlist['id'],'wecha_id'=>$_GET['wecha_id']))}" class="u_order_return ts1" id="in_car">去购买</a>
 			</div>
 		</li></volist>
 	            	   

@@ -3,14 +3,17 @@
 >
 <div class="cLine">
   <div class="pageNavigator left">
-    <a href='{pigcms::U("Doctor/add")}' title='新增医生' class='btnGrayS vm bigbtn'>
-      <img src="{pigcms::RES}/images/text.png" class="vm" />
+    <a href='{wghd:
+:U("Doctor/add")}' title='新增医生' class='btnGrayS vm bigbtn'>
+      <img src="{wghd:
+:RES}/images/text.png" class="vm" />
       新增医生
     </a>
   </div>
   <div style="float:right;line-height:30px;">
     <form action="#" method="post">
-      <input type="text" placeholder="请输入医生姓名" value="{pigcms:$_POST['search']}" class="px" name="search" />    
+      <input type="text" placeholder="请输入医生姓名" value="{wghd:
+$_POST['search']}" class="px" name="search" />    
       <button class="btnGrayS" style="height: 29px;">搜索</button>
     </form>
   </div>
@@ -36,17 +39,28 @@
         <TR></TR>
         <volist id="list" name="doctor">
           <tr>
-            <td>{pigcms:$list.name}</td>
-            <td><input id="hid" name="hid" type="hidden" value="{pigcms:$list.hospital.id}">{pigcms:$list.hospital.name}</td>
-            <td>{pigcms:$list.persition}</td>
-            <td>{pigcms:$list.followers}</td>
-            <td><img style="width:120px; height='auto';" src="{pigcms:$list.qrcode}"></td>
+            <td>{wghd:
+$list.name}</td>
+            <td><input id="hid" name="hid" type="hidden" value="{wghd:
+$list.hospital.id}">{wghd:
+$list.hospital.name}</td>
+            <td>{wghd:
+$list.persition}</td>
+            <td>{wghd:
+$list.followers}</td>
+            <td><img style="width:120px; height='auto';" src="{wghd:
+$list.qrcode}"></td>
             <!--  -->
-			<td>{pigcms:$list.orderNums}（<a href="{pigcms::U('Store/orders',array('did'=>$list['id']))}" style="color:blue">明细</a>）</td>
+			<td>{wghd:
+$list.orderNums}（<a href="{wghd:
+:U('Store/orders',array('did'=>$list['id']))}" style="color:blue">明细</a>）</td>
             <td class="norightborder"> 
-              <a href="{pigcms::U('Doctor/details',array('id'=>$list['id']))}" title="查看详细">查看详细</a>
-              <a href="{pigcms::U('Doctor/edit',array('id'=>$list['id']))}" title="编辑文本">编辑</a>
-              <a onclick="return confirm('确定要删除么？');" href="{pigcms::U('Doctor/del',array('id'=>$list['id'],'hid'=>$list['hospital']['id']))}">删除</a>
+              <a href="{wghd:
+:U('Doctor/details',array('id'=>$list['id']))}" title="查看详细">查看详细</a>
+              <a href="{wghd:
+:U('Doctor/edit',array('id'=>$list['id']))}" title="编辑文本">编辑</a>
+              <a onclick="return confirm('确定要删除么？');" href="{wghd:
+:U('Doctor/del',array('id'=>$list['id'],'hid'=>$list['hospital']['id']))}">删除</a>
             </td>
           </tr>
         </volist>
@@ -57,7 +71,8 @@
 </div>
 <div class="cLine">
   <div class="pageNavigator right">
-    <div class="pages">{pigcms:$page}</div>
+    <div class="pages">{wghd:
+$page}</div>
   </div>
   <div class="clr"></div>
 </div>

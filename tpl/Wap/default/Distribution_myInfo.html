@@ -1,148 +1,201 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>用户中心-我的资料</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="{pigcms::RES}/distri/css/jquery.mobile-1.3.2.min.css">
-<script src="{pigcms::RES}/distri/js/jquery-1.8.3.min.js"></script>
-<script src="{pigcms::RES}/distri/js/jquery.mobile-1.3.2.min.js"></script>
-<script src="{pigcms::STATICS}/vote/wap/jquery.icheck.min.js?v=0.9.1"></script>
-<style>
-.ui-content{padding:0}
-.ui-btn{text-align:left}
-.header{display:-webkit-box;-webkit-box-align:center;}
-.header img{width:25%;display:block}
-.header div{padding-left:5%;font-size:16px;line-height:30px;font-weight:bold}
-.middleShow{display:-webkit-box;text-align:center;height:50px;line-height:50px;color:#fff;}
-.middleShow span{display:block;background:url(http://www.xiaomiguzi.com/bg2014.jpg) repeat;width:50%;}
-.middleShow span.leftInfo{border-right:1px #fff solid;border-top:1px #fff solid}
-.middleShow span.rightInfo{border-top:1px #fff solid}
-input{text-align:center}
-.deploy_ctype_tip{z-index:1001;width:100%;text-align:center;position:fixed;top:50%;margin-top:-23px;left:0;}.deploy_ctype_tip p{display:inline-block;padding:13px 24px;border:solid #d6d482 1px;background:#f5f4c5;font-size:16px;color:#8f772f;line-height:18px;border-radius:3px;}
-</style>
-</head>
-<body >
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ID=edge, chorome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="{wghd::RES}/original/css/weui.min.css">
+  <link rel="stylesheet" href="{wghd::RES}/original/css/notification.css"></head>
+<body id="scnhtm5" style="background-color: #ececec;">
+  <div class="container">
+    <div class="info_edit_wrap_title">
+      <div class="info_edit_wrap_title_item info_edit_wrap_title_left close_edit_wrap">返回</div>
+      <div class="info_edit_wrap_title_item info_edit_wrap_title_center">个人设置</div>
+      <div class="info_edit_wrap_title_item info_edit_wrap_title_right"></div>
+    </div>
+    <div class="bd">
+      <div class="weui_cells weui_cells_access" style="margin-top: 5px;">
+        <a class="weui_cell" href="javascript:;">
+          <div class="weui_cell_bd weui_cell_primary">
+            <p class="editinfo_title">头像</p>
+          </div>
+          <div class="">
+            <img id="headimg" style="width: 40px; height: 40px; border-radius: 50%;" src="{wghd:$my.headimgurl}"></div>
+          <input type="file" name="shoplogo" id="shoplogo">
+          <div id="img_upload_loading">
+            <img src="{wghd::RES}/original/images/loading.gif" alt=""></div>
 
-<div data-role="page" id="pageone" style="background:#fff4a7">
-  <div data-role="content" data-theme="e">
-   <div style="padding:10px 20px;text-align:center">
-		<div data-role="fieldcontain" style="line-height:60px;border:1px #f4c63f solid;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;padding:5px;background:#fff">
-			<label for="name" style="line-height:60px;">真实姓名：</label>
-			<input type="text" name="name" value="{pigcms:$my.name}" id="name" placeholder="请输入您的真实姓名..">
-			<!--fieldset data-role="controlgroup" style="text-align:right">
-				<label for="male" style="line-height:15px;">男性</label>
-				<input type="radio" name="sex"  id="male" value="男" <eq name="my.sex" value="男">checked</eq>>
-				<label for="female" style="line-height:15px;">女性</label>
-				<input type="radio" name="sex" id="female" value="女" <eq name="my.sex" value="女">checked</eq>>	
-			  </fieldset-->
-			<label for="tele" style="line-height:60px;">手机号码：</label>
-			<input type="text" name="tele" id="tele" value="{pigcms:$my.tele}" placeholder="请输入您的手机号码..">
-			<label for="tele" style="line-height:60px;">QQ号码：</label>
-			<input type="email" name="email" id="email" value="{pigcms:$my.email}" placeholder="请输入您的QQ号码..">
-		</div>
-		<br/>
-		<a href="javascript:void(0)" data-role="button" id="pxbtn" style="text-align:center;width:60%;margin:0 auto;">保存</a>
-		<br/>
-		<a href="{pigcms::U('Distribution/myBank',array('token'=>$token,'wecha_id'=>$wecha_id))}" data-role="button" data-icon="arrow-r" rel="external" data-iconpos="right">我的银行卡</a>
-   </div>
+        </a>
+        <a class="weui_cell editinfo_btn" href="javascript:;">
+          <div class="weui_cell_bd weui_cell_primary">
+            <p class="editinfo_title">真实姓名</p>
+          </div>
+          <div class="weui_cell_ft editinfo_con" data-name="name">{wghd:$my.name}</div>
+        </a>
+        <a class="weui_cell editinfo_btn" href="javascript:;">
+          <div class="weui_cell_bd weui_cell_primary">
+            <p class="editinfo_title">手机号</p>
+          </div>
+          <div class="weui_cell_ft editinfo_con" data-name="tele">{wghd:$my.tele}</div>
+        </a>
+        <a class="weui_cell editinfo_btn" href="javascript:;">
+          <div class="weui_cell_bd weui_cell_primary">
+            <p class="editinfo_title">微信名</p>
+          </div>
+          <div class="weui_cell_ft editinfo_con" data-name="nickname">{wghd:$my.nickname}</div>
+        </a>
+        <!-- <a class="weui_cell" href="javascript:;">
+          <div class="weui_cell_bd weui_cell_primary">
+            <p class="editinfo_title">当前账号</p>
+          </div>
+          <div class=" editinfo_con">{wghd:$my.username}</div>
+        </a>
+        <a class="weui_cell editinfo_btn" href="javascript:;">
+          <div class="weui_cell_bd weui_cell_primary">
+            <p class="editinfo_title">设置新密码</p>
+          </div>
+          <div class="weui_cell_ft editinfo_con" data-name="password"></div>
+        </a> -->
+
+      </div>
+
+    </div>
+    <!-- 修改页面 -->
+    <div id="info_edit_wrap">
+      <div class="info_edit_wrap_title">
+        <div class="info_edit_wrap_title_item info_edit_wrap_title_left" id="close_info_edit">返回</div>
+        <div class="info_edit_wrap_title_item info_edit_wrap_title_center" id="eidt_info_title"></div>
+        <div class="info_edit_wrap_title_item info_edit_wrap_title_right"></div>
+      </div>
+      <div class="weui_cells_form" style="padding-top: 10px;">
+        <div class="weui_cell info_edit_old_password" style="display: none;">
+          <div class="weui_cell_bd weui_cell_primary weui_cell_infoedit" style="box-shadow: 0 0 5px #D6D6D6;">
+            <input id="info_edit_old_password" class="weui_input weui_input_infoedit" type="password" placeholder="输入原密码" value="">
+            <span class="weui_infoedit_delete">×</span>
+          </div>
+        </div>
+        <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary weui_cell_infoedit" style="box-shadow: 0 0 5px #D6D6D6;">
+            <input id="info_edit_item" class="weui_input weui_input_infoedit" type="text" placeholder="输入信息" value="2222">
+            <span class="weui_infoedit_delete">×</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="weui_cells" style="padding: 0 10px; background-color: rgba(255,255,255,0);">
+        <a href="javascript:;" class="weui_btn weui_btn_primary" id="save_info">保存</a>
+      </div>
+    </div>
+    <!-- 修改页面 -->
   </div>
-</div> 
-<script>
-function onBridgeReady(){
- WeixinJSBridge.call('hideOptionMenu');
-}
-
-if (typeof WeixinJSBridge == "undefined"){
-    if( document.addEventListener ){
-        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
-    }else if (document.attachEvent){
-        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
-        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
-    }
-}else{
-    onBridgeReady();
-}
-</script>
-	<script>
-                    $(document).ready(function() {
-
-					 $("#pxbtn").bind("click",
-                        function() {
-
-                            var self = $(this);
-							var wecha_id = "{pigcms:$wecha_id}";
-                            var name = $('#name').val();
-                            //var sex=$("input[name='sex']:checked").val();
-                            var tele = $('#tele').val();
-                            var email = $('#email').val();
-
-                            if (wecha_id == '') {
-
-                                showTip("异常的访问链接");
-
-                                return;
-
-                            }
-							if(name==''){
-								showTip("姓名不能为空");
-
-                                return;
-							}
-							/*if(sex==''){
-								showTip("请选择性别");
-
-                                return;
-							}*/
-							if(tele==''){
-								showTip("手机号码不能为空");
-
-                                return;
-							}
-							if(email==''){
-								showTip("QQ号码不能为空");
-
-                                return;
-							}
-							var submitData = {
-								name: name,
-								//sex: sex,
-								tele: tele,
-								email: email
-							};
-
-							$.post("{pigcms::U('Distribution/myInfo',array('token'=>$token,'wecha_id'=>$wecha_id))}", submitData,
-							function(bakcdata) {
-								var obj = eval('(' + bakcdata + ')');
-
-								if (obj.success == 1) {
-
-									showTip(obj.info);
-									setTimeout("window.location.href='{pigcms::U('Distribution/myInfo',array('token'=>$token,'wecha_id'=>$wecha_id))}'", 2000);
-
-									return
-
-								} else {
-
-									showTip(obj.info);
-
-									return
-
-								}
-
-							});
-
-                        });
-                    });
-					function showTip(tipTxt) {
-					  var div = document.createElement('div');
-					  div.innerHTML = '<div class="deploy_ctype_tip"><p>' + tipTxt + '</p></div>';
-					  var tipNode = div.firstChild;
-					  $("#pageone").after(tipNode);
-					  setTimeout(function () {
-						$(tipNode).remove();
-					  }, 1500);
-					}
-                </script>
 </body>
 </html>
+<script src="{wghd::RES}/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{wghd::RES}/original/js/notification.js" type="text/javascript" charset="utf-8"></script>
+<script src="{wghd::RES}/original/js/ajaxfileupload.js" type="text/javascript"></script>
+<!-- input控件操作 -->
+<script>
+  (function($){
+    var edit_input = $('.weui_input_infoedit');
+    var delete_btn = $('.weui_infoedit_delete');
+    var input_info = edit_input.val();
+    //起始判断
+    if(input_info){
+      delete_btn.css('opacity',1);
+    }
+    //输入
+    edit_input.on('keyup',function(){
+      input_info = edit_input.val();
+      if(input_info){
+        delete_btn.css('opacity',1);
+      }else{
+        delete_btn.css('opacity',0);
+      }
+    })
+    //删除
+    delete_btn.on('click',function(){
+      edit_input.val('');
+      delete_btn.css('opacity',0);
+    })
+  })($)
+</script>
+<!-- input控件操作 -->
+
+<script>
+  (function(){
+    //修改信息
+    var info_edit_item = $("#info_edit_item");//修改信息内容
+    var save = $("#save_info");//保存按钮
+    var info_edit_wrap = $("#info_edit_wrap");//修改框
+    var close_info_edit = $('#close_info_edit');//关闭修改弹出框
+    var edit_btn = $(".editinfo_btn");//需要修改的按钮
+    var name,data,info_item,title;
+    var title_item = $('#eidt_info_title');//修改框显示的内容
+
+    //弹出编辑框
+    edit_btn.on("click",function(){
+      info_item = $(this).find('.editinfo_con');
+      name = info_item.data('name');
+      data = info_item.text();
+      title = $(this).find('.editinfo_title').text();
+      title_item.text(title);
+      info_edit_item.val(data);
+      info_edit_wrap.animate({'left':0},300);
+    })
+    //关闭编辑框
+    close_info_edit.bind('click',function(){
+      info_edit_wrap.animate({'left':'100%'},300);
+      $('.weui_infoedit_delete').css('opacity',1);
+    })
+    //保存信息按钮
+    save.on("click",function(){
+      var new_info = info_edit_item.val();
+      if(new_info){
+        info_item.text(new_info);
+        close_info_edit.click();
+        // $.ajax({
+        //   data:{name:name,info:new_info},
+        //   type:'post',
+        //   dataType:'json',
+        //   success:function(data){
+        //     console.log(data);
+        //     info_item.text(new_info);
+        //     close_info_edit.click();
+        //   }
+        // })
+        floatNotify.simple('修改成功');
+      }else{
+        floatNotify.simple('内容不能为空');
+        return false;
+      }
+    })
+    //修改店铺头像
+    $(document).on('change',"#shoplogo",function(){
+      var loading=$("#img_upload_loading");
+      loading.show();
+      $.ajaxFileUpload ({
+     url: "{wghd::U('Distribution/headpic')}",
+     type: 'post',
+     secureuri:false,
+     fileElementId:'shoplogo',
+     dataType: 'json',
+         success: function (data){
+          console.log(data);
+          loading.hide();
+          if(data.status==1){
+            $("#headimg").attr("src",data.data);
+          }else if(data.status==2){
+            floatNotify.simple("上传失败，只支持JPG图片");
+            return;
+          }else if(data.status==3){
+            floatNotify.simple("只能三天更新一次!");
+            return;
+          }
+         }
+      })
+      return false;
+    })
+  })($)
+</script>

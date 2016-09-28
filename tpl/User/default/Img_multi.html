@@ -32,7 +32,8 @@
 		  
 		  
 		  
-		  <form method="post" action="{pigcms::U('Img/multiSave')}">
+		  <form method="post" action="{wghd:
+:U('Img/multiSave')}">
             <table class="userinfoArea" border="0" cellspacing="0" cellpadding="0" width="100%">
               <tbody>
 
@@ -648,23 +649,29 @@ a {
 			</thead>
 		<volist name="list" id="list">
 			<tr valign="top">
-				<td>{pigcms:$list.id}</td>
-				<td>{pigcms:$list.keywords}</td>
+				<td>{wghd:
+$list.id}</td>
+				<td>{wghd:
+$list.keywords}</td>
 				<td>
 					<ul class="title_list">
 						<assign name="title" value="$list['title']" />
 						<foreach name="title" item="tit" key="key">
-							<li>{pigcms:$tit} &nbsp; <a href="{pigcms::U('Img/edit',array('id'=>$key))}" style="color:rgb(30, 137, 253)">编辑</a></li>
+							<li>{wghd:
+$tit} &nbsp; <a href="{wghd:
+:U('Img/edit',array('id'=>$key))}" style="color:rgb(30, 137, 253)">编辑</a></li>
 						</foreach>
 					</ul>
 					
 				</td>
-				<td><a href="javascript:drop_confirm('您确定要删除吗?', '{pigcms::U('Img/multiImgDel',array('id'=>$list['id']))}')">删除</a></td>
+				<td><a href="javascript:drop_confirm('您确定要删除吗?', '{wghd:
+:U('Img/multiImgDel',array('id'=>$list['id']))}')">删除</a></td>
 			</tr>
 		</volist> 
 		</table>	  
 		  
-	{pigcms:$page}	  
+	{wghd:
+$page}	  
 		  
 </if>
 		</div>

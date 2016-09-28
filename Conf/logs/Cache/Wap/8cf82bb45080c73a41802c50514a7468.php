@@ -1,106 +1,146 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" /><meta charset="utf-8" />
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<meta name="format-detection" content="telephone=no"/>
-<title><?php echo ($metaTitle); ?></title>
-<script src="<?php echo RES;?>/css/store/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="<?php echo RES;?>/css/store/js/jquery.lazyload.js" type="text/javascript"></script>
-<script src="<?php echo RES;?>/css/store/js/notification.js" type="text/javascript"></script>
-<script src="<?php echo RES;?>/css/store/js/swiper.min.js" type="text/javascript"></script>
-<script src="<?php echo RES;?>/css/store/js/main.js" type="text/javascript"></script>
-<link type="text/css" rel="stylesheet" href="<?php echo RES;?>/css/store/css/style_touch11.css">
-</head>
-<body>
-<div id="top"></div>
-<div id="scnhtm5" class="m-body">
-<div class="m-detail-mainout">
-<div style="width:100%;height:50px;line-height:50px;background:#fff;text-align:center"><span style="float:right;padding-right:10px;"><a href="<?php echo U('Store/index',array('token' => $_GET['token'], 'catid' => $hostlist['id'],'mid'=>$my['id']));?>"><img src="<?php echo RES;?>/css/store/css/img/home1.jpg"></a></span><span style="padding-left:10px;float:left"><a href="javascript:history.go(-1)"><img src="<?php echo RES;?>/css/store/css/img/return1.jpg" ></a></span><span style="font-size:16px"><?php echo (msubstr($metaTitle,0,10)); ?></span></div>
-<ul class="sub-menu-list">
-<li><a href="<?php echo U('Store/cats',array('token' => $_GET['token'], 'catid' => $hostlist['id'],'mid'=>$my['id']));?>">首页</a></li>
-<?php if(is_array($cats)): $i = 0; $__LIST__ = $cats;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$hostlist): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Store/products',array('token' => $_GET['token'], 'catid' => $hostlist['id'],'mid'=>$my['id']));?>"><?php echo ($hostlist["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-</ul>
-
-<?php if($ordersCount != 0): if(is_array($orders)): $i = 0; $__LIST__ = $orders;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$o): $mod = ($i % 2 );++$i;?><ul class="m-uc-order-li">
-			<span info_link="<?php echo U('Store/myDetail',array('token'=>$token,'cartid'=>$o['id'],'wecha_id'=>$wecha_id));?>" onclick="order_jump($(this))">
-				<li class="p-li">
-					<?php if(is_array($o['productInfo'])): $i = 0; $__LIST__ = $o['productInfo'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$row): $mod = ($i % 2 );++$i;?><a href="<?php echo U('Store/product',array('token'=>$token,'id'=>$row['id'],'wecha_id'=>$wecha_id));?>">
-						<img title="<?php echo ($row["name"]); ?>" src="<?php echo ($row["logourl"]); ?>" width="45" height="45">
-						</a><?php endforeach; endif; else: echo "" ;endif; ?>
-				</li>
-				<!-- <li>订单编号：<a href="<?php echo U('Store/product',array('token'=>$token,'id'=>$row['id'],'wecha_id'=>$wecha_id));?>"><?php echo ($o["orderid"]); ?></a></li> -->
-				<li>支付状态：<?php if($o['paid']){echo '<span style="color:green">已付款</span>';}else{echo '<span style="color:red">待付款</span>';} ?><i class="t"><?php echo (date("Y-m-d H:i:s",$o["time"])); ?></i></li>
-				<li>发货状态：<?php if($o['sent']){echo '<span style="color:green">已发货</span>';}else{echo '<span style="color:red">待发货</span>';} ?><i class="t"><?php echo (date("Y-m-d H:i:s",$o["time"])); ?></i></li>
-				<li>收货状态：<?php if($o['receive']){echo '<span style="color:green">已收货</span>';}else{echo '<span style="color:red">待收货</span>';} ?><i class="t"><?php echo (date("Y-m-d H:i:s",$o["time"])); ?></i></li>
-				<li>订单总额：￥<?php echo ($o["price"]); ?>
-					<?php if(($o['returnMoney'] == 0)): if(($o['paid'] == 0) AND ($alipayConfig['open'] == 1)): ?><a href="<?php echo U('Alipay/pay', array('token' => $token, 'wecha_id' => $wecha_id,'success'=>1,'from'=>'Store', 'price' => $o['price'], 'orderName' => $o['orderid'], 'orderid' => $o['orderid']));?>" class="pay-btn">立即付款</a><?php endif; ?>
-						<?php if(($o["paid"]) == "1"): if(($o["sent"]) == "1"): if(($o["receive"]) == "0"): ?><a href="javascript:void(0)" onclick="getProduct(<?php echo ($o["id"]); ?>)" class="pay-btn">确认收货</a>
-								<?php else: ?>
-									<a href="#" class="pay-btn" style="background:#cccccc;border:1px #cccccc solid;color:red">已完成</a><?php endif; ?>
-							<?php else: ?>
-								<a href="#" class="pay-btn" style="background:#cccccc;border:1px #cccccc solid;color:red">待发货</a><?php endif; endif; ?>
-					<?php else: ?>
-						<?php if(($o['returnMoney'] == 1)): ?><a href="#" class="pay-btn" style="background:#cccccc;border:1px #cccccc solid;color:red">退款中</a><?php endif; ?>
-						<?php if(($o['returnMoney'] == 2)): ?><a href="#" class="pay-btn" style="background:#cccccc;border:1px #cccccc solid">已退款</a><?php endif; endif; ?>
-				</li>
-			</span>
-		</ul><?php endforeach; endif; else: echo "" ;endif; ?>
-	<?php if($totalpage > 1) { ?>
-		<div class="m-page uc-orderlist">
-			<?php if($page == 1): ?><div class="pg-pre pg-grey"><a href="javascript:void(0);">上一页<i><em></em></i></a></div>
-			<?php else: ?>
-				<div class="pg-pre"><a href="<?php echo U('Store/my',array('token'=>$token,'page'=>intval($page - 1),'wecha_id'=>$wecha_id));?>">上一页<i><em></em></i></a></div><?php endif; ?>
-			<div class="pg-num"><?php echo ($page); ?>/<?php echo ($totalpage); ?></div>
-			<?php if($page == $totalpage): ?><div class="pg-next pg-grey"><a href="javascript:void(0);">下一页<i><em></em></i></a></div>
-			<?php else: ?>
-				<div class="pg-next"><a href="<?php echo U('Store/my',array('token'=>$token,'page'=>intval($page + 1),'wecha_id'=>$wecha_id));?>">上一页<i><em></em></i></a></div><?php endif; ?>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="ID=edge, chorome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>我的订单</title>
+	<script src="<?php echo RES;?>/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="<?php echo RES;?>/original/js/notification.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="<?php echo RES;?>/original/css/notification.css">
+	<link rel="stylesheet" href="<?php echo RES;?>/original/css/weui.min.css">
+	<link rel="stylesheet" href="<?php echo RES;?>/original/css/style.css">
+	<link rel="stylesheet" href="<?php echo RES;?>/original/css/jquery-weui.min.css"></head>
+    <link rel="stylesheet" href="<?php echo RES;?>/original/others2/main.css">
+<body style="position: relative;" id="scnhtm5">
+	<style>
+		html,body{
+			height: 100%;
+			background-color: #eeeeee;
+		}
+	</style>
+	<div class="container">
+		<div class="weui-row weui-no-gutter" style="background-color: #fff;" id="orders_head">
+			<div class="weui-col-20 store_my_col_20 store_my_col_20_extend <?php if(($_REQUEST['status']== -1) OR ($_REQUEST['status']== '')): ?>store_my_col_choose<?php endif; ?>">全部</div>
+			<div class="weui-col-20 store_my_col_20 store_my_col_20_extend <?php if(($_REQUEST['status']) == "0"): ?>store_my_col_choose<?php endif; ?>">待付款</div>
+			<div class="weui-col-20 store_my_col_20 store_my_col_20_extend <?php if(($_REQUEST['status']) == "1"): ?>store_my_col_choose<?php endif; ?>">待发货</div>
+			<div class="weui-col-20 store_my_col_20 store_my_col_20_extend <?php if(($_REQUEST['status']) == "2"): ?>store_my_col_choose<?php endif; ?>">待收货</div>
+			<div class="weui-col-20 store_my_col_20 store_my_col_20_extend <?php if(($_REQUEST['status']) == "3"): ?>store_my_col_choose<?php endif; ?>">已完成</div>
 		</div>
-	<?php }else{} ?>
-<?php else: ?>
-	<ul style="margin: 15px 10px;border-radius: 4px;line-height: 1.4em;font-size: 16px;border: 1px solid #ddd;background: #f5f5f5;padding: 10px 10px 6px;">
-		<span><li class="p-li" style="padding:10px; text-align:center;">没有订单</li></span>
-	</ul><?php endif; ?>
-<script type="text/javascript">
-function order_jump(obj) {
-	location.href = $(obj).attr('info_link');
-}
-</script>
-<script type="text/javascript">
-function getProduct(id){
-	event.cancelBubble=true;
-    confirm =floatNotify.confirm("确定该商品收货了吗？", "",
-        function(t, n) {
-            if(n==true){
-				var dataJson = {
-					productid:id
-				}
-                $.ajax({
-                	type:"POST",
-                	url: "<?php echo U('Store/getProduct',array('token' => $token,'wecha_id' => $_GET['wecha_id']));?>",
-					data:dataJson,
-                    dataType:"json",
-                    success:function(data){
-                        if(data.error_code == false){
-                            floatNotify.simple('确认收货成功');
-                            setTimeout("location.href='<?php echo U('Store/my',array('token' => $token, 'wecha_id' => $_GET['wecha_id']));?>'",1200);  
-                        }else{
-                           return floatNotify.simple(data.msg);  
-                        }
-                    },
-                    error:function(){
-                       return floatNotify.simple("收货失败");
-                    }
-                });
-            }
-    	this.hide();
-      }),
-    confirm.show();
-}
-</script>
-</body>
+		<div id="my_orders_content">
+			<?php if(is_array($orders)): $i = 0; $__LIST__ = $orders;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$o): $mod = ($i % 2 );++$i;?><div class="weui_cells" style="margin-top: 0; margin-bottom: 10px;">
+					<?php if(is_array($o['productInfo'])): $i = 0; $__LIST__ = $o['productInfo'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$row): $mod = ($i % 2 );++$i; if(!empty($row['detail'])): if(is_array($row['detail'])): $i = 0; $__LIST__ = $row['detail'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$d): $mod = ($i % 2 );++$i;?><div class="weui_cell" style="padding: 5px;">
+									<div class="weui_cell_hd">
+										<img style="width: 70px; display: block;" src="<?php echo ($row["logourl"]); ?>" alt="" style="width:20px;margin-right:5px;display:block"></div>
+									<div class="weui_cell_bd weui_cell_primary">
+										<p style="font-size: 16px; line-height: 25px; text-indent: 5px;"><?php echo ($row["name"]); ?></p>
+										<p style="font-size: 16px; line-height: 25px; text-indent: 5px;">
+											<?php echo ($row["formatTitle"]); ?>：<?php echo ($d['formatName']); ?>
+										</p>
+										<p style="font-size: 16px; line-height: 25px; text-indent: 5px;"><?php echo ($row["colorTitle"]); ?>：<?php echo ($d['colorName']); ?></p>
+											
+									</div>
+									<div class="weui_cell_ft">
+										<p>
+				                            <?php echo sprintf("%.2f",$row['detail'][0]['showprice']);?>
+										</p>
+										<p>×
+				                            <?php echo ($row['detail'][0]['count']); ?>
+										</p>
+									</div>
+								</div><?php endforeach; endif; else: echo "" ;endif; ?>
+							<?php else: ?>
+								<div class="weui_cell" style="padding: 5px;">
+								<div class="weui_cell_hd">
+									<img style="width: 70px; display: block;" src="<?php echo ($row["logourl"]); ?>" alt="" style="width:20px;margin-right:5px;display:block"></div>
+								<div class="weui_cell_bd weui_cell_primary">
+									<p style="font-size: 16px; line-height: 25px; text-indent: 5px;"><?php echo ($row["name"]); ?></p>
+									<p style="font-size: 16px; line-height: 25px; text-indent: 5px;">默认属性</p>
+								</div>
+								<div class="weui_cell_ft">
+									<p>
+										<?php echo sprintf("%.2f",$row['showprice']);?>
+									</p>
+									<p>×
+										<?php echo ($row['count']); ?>
+									</p>
+								</div>
+							</div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+					<div class="weui_cell" style="padding: 10px;">
+						<div class="weui_cell_bd weui_cell_primary">
+							<p style="font-size: 14px;">
+								共
+								<label><?php echo ($o['total']); ?></label>
+								件商品
+							</p>
+						</div>
+						<div class="weui_cell_ft" style="font-size: 14px;">
+							合计：￥
+							<lable><?php if(($o["price"]) == "0"): echo ($o['gold']); else: echo ($o['price']); endif; ?></lable>
+						</div>
+					</div>
+					<div class="weui_cell">
+						<div class="weui_cell_bd weui_cell_primary"></div>
+						<div class="weui_cell_ft">
+							<?php if(($o["paid"]) == "0"): ?><a href="<?php echo U('Store/payNow',array('id'=>$o['id']));?>" data-id="<?php echo ($o["id"]); ?>" class="weui_btn weui_btn_mini weui_btn_primary cancel_order" style="font-size: 16px; background: #EF4F4F;">取消订单</a><?php endif; ?>
+							<?php if(($o["paid"] == 0) AND ($o["returnMoney"] == 0)): ?><a href="<?php echo U('Store/payNow',array('id'=>$o['id']));?>" data-id="<?php echo ($o["id"]); ?>" class="weui_btn weui_btn_mini weui_btn_primary place_order" style="font-size: 16px;">立即支付</a><?php endif; ?>
+							<?php if(($o["sent"] == 1) AND ($o["receive"] == 0)): ?><a href="javascript:;" data-id="<?php echo ($o["id"]); ?>" class="weui_btn weui_btn_mini weui_btn_primary get_product" style="font-size: 16px;">确认收货</a><?php endif; ?>
+							<a href="<?php echo U('Store/orderDetails',array('id'=>$o['orderid']));?>" class="weui_btn weui_btn_mini weui_btn_primary coad_bnfo_lage" style="font-size: 16px;">订单详情</a>
+						</div>
+					</div>
+				</div><?php endforeach; endif; else: echo "" ;endif; ?>
+		</div>
+	</div>
+	<!--foot开始-->
+<div style="height: 60px;"></div>
+<div class="public_foot">
+  <div class="weui-row weui-no-gutter">
+    <div class="weui-col-25">
+      <a href="<?php echo U('Store/index');?>" class="public_footer_index">
+        <p class="iconfont">&#xe60d;</p>
+        <p>首页</p>
+      </a>
+    </div>
+    <div class="weui-col-25">
+      <a href="<?php echo U('Store/cats');?>" class="public_footer_products">
+        <p class="iconfont">&#xe60c;</p>
+        <p>分类</p>
+      </a>
+    </div>
+    <div class="weui-col-25">
+      <a href="<?php echo U('Store/cart');?>" class="public_footer_shopcat">
+        <p class="iconfont">&#xe60e;</p>
+        <p>购物车</p>
+      </a>
+    </div>
+    <div class="weui-col-25">
+      <a href="<?php echo U('Distribution/index');?>" class="public_my">
+        <p class="iconfont">&#xe6ca;</p>
+        <p>我的</p>
+      </a>
+    </div>
+</div>
+
+<script>
+    var module = "<?php echo MODULE_NAME;?>";
+      var action = "<?php echo ACTION_NAME;?>";
+      if(module == "Store" && action == "index"){
+        $('.public_footer_index').addClass('public_footer_choose');
+      }
+      if(module == "Store" && action == "cats"){
+        $('.public_footer_products').addClass('public_footer_choose');
+      }
+      if(module == "Store" && action == "cart"){
+        $('.public_footer_shopcat').addClass('public_footer_choose');
+      }
+      if(module == "Distribution" && action == "index"){
+        $('.public_my').addClass('public_footer_choose');
+      }
+  </script>
+<!--foot结束-->
+
 <script>
 function onBridgeReady(){
  WeixinJSBridge.call('hideOptionMenu');
@@ -117,17 +157,13 @@ if (typeof WeixinJSBridge == "undefined"){
     onBridgeReady();
 }
 </script>
-<script type="text/javascript">
-window.shareData = {  
-            "moduleName":"Store",
-            "moduleID":"",
-            "imgUrl": "", 
-            "timeLineLink": "<?php echo C('site_url') . U('Store/my',array('token' => $_GET['token']));?>",
-            "sendFriendLink": "<?php echo C('site_url') . U('Store/my',array('token' => $_GET['token']));?>",
-            "weiboLink": "<?php echo C('site_url') . U('Store/my',array('token' => $_GET['token']));?>",
-            "tTitle": "<?php echo ($metaTitle); ?>",
-            "tContent": "<?php echo ($metaTitle); ?>"
-        };
-</script>
-<?php echo ($shareScript); ?>
+<div class="clear"></div>
+<?php if((ACTION_NAME) != "herolist"): ?><section class="foot"></section><?php endif; ?>
+</body>
 </html>
+<script type="text/javascript" src="<?php echo RES;?>/original/js/require.js" data-main="<?php echo RES;?>/original/js/main"></script>
+<script>
+    function getAction(module,action){
+        return "http://<?php echo ($url_par); ?>?g=Wap&m="+module+"&a="+action;
+    }
+</script>

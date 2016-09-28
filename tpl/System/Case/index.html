@@ -16,20 +16,27 @@
 	  </tr>
 	    <volist name="info" id="vo">
 			<tr>
-				<td align='center'>{pigcms:$vo.id}</td>
-				<td >{pigcms:$vo.name}</td>
-				<td >{pigcms:$vo.url}</td>
-				<td ><img src="{pigcms:$vo.img}"/></td>
+				<td align='center'>{wghd:
+$vo.id}</td>
+				<td >{wghd:
+$vo.name}</td>
+				<td >{wghd:
+$vo.url}</td>
+				<td ><img src="{wghd:
+$vo.img}"/></td>
 				<td align='center'><eq name="vo.status" value="1"><font color="red">√</font><else/><font color="blue">×</font></eq> 
 				</td>
 				<td align='center'>
-					<a href="{pigcms::U('Case/edit/',array('id'=>$vo['id']))}">修改</a>
-					| <a href="{pigcms::U('Case/del/',array('id'=>$vo['id']))}" >删除</a>
+					<a href="{wghd:
+:U('Case/edit/',array('id'=>$vo['id']))}">修改</a>
+					| <a href="{wghd:
+:U('Case/del/',array('id'=>$vo['id']))}" >删除</a>
 				</td>
 			</tr>
 	    </volist>
      <tr bgcolor="#FFFFFF"> 
-      <td colspan="8"><div class="listpage">{pigcms:$page}</div></td>
+      <td colspan="8"><div class="listpage">{wghd:
+$page}</div></td>
     </tr>
    
 </table>

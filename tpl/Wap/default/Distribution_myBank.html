@@ -4,10 +4,10 @@
 <title>用户中心-我的银行卡</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="{pigcms::RES}/distri/css/jquery.mobile-1.3.2.min.css">
-<script src="{pigcms::RES}/distri/js/jquery-1.8.3.min.js"></script>
-<script src="{pigcms::RES}/distri/js/jquery.mobile-1.3.2.min.js"></script>
-<script src="{pigcms::STATICS}/vote/wap/jquery.icheck.min.js?v=0.9.1"></script>
+<link rel="stylesheet" href="{wghd::RES}/distri/css/jquery.mobile-1.3.2.min.css">
+<script src="{wghd::RES}/distri/js/jquery-1.8.3.min.js"></script>
+<script src="{wghd::RES}/distri/js/jquery.mobile-1.3.2.min.js"></script>
+<script src="{wghd::STATICS}/vote/wap/jquery.icheck.min.js?v=0.9.1"></script>
 <style>
 .ui-content{padding:0}
 .ui-btn{text-align:left}
@@ -70,20 +70,20 @@ function setTypeNum(){
    <div style="padding:10px 20px;text-align:center">
 		<div data-role="fieldcontain" style="line-height:60px;border:1px #000 solid;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;padding:5px;background:#fff">
 			<label for="name" style="line-height:60px;">真实姓名：</label>
-			<input type="text" name="name" value="{pigcms:$bank.name}" id="name" placeholder="请输入您的真实姓名..">
+			<input type="text" name="name" value="{wghd:$bank.name}" id="name" placeholder="请输入您的真实姓名..">
 			<label for="name" style="line-height:60px;">开户行地区：</label>
-			<input id="classid" name="classid" value="{pigcms:$bank.classid}" type="hidden" /><input id="typeNum" name="typeNum" type="hidden" /><span id="typeSpan"><if condition="$typeNumArr">
+			<input id="classid" name="classid" value="{wghd:$bank.classid}" type="hidden" /><input id="typeNum" name="typeNum" type="hidden" /><span id="typeSpan"><if condition="$typeNumArr">
 					<volist name="typeNumArr" id="vo" ><notempty name="typeNumArr[$i]">
-						<script type="text/javascript">addNextType({pigcms:$vo},{pigcms:$key},{pigcms:$typeNumArr[$i]},'off');</script>
+						<script type="text/javascript">addNextType({wghd:$vo},{wghd:$key},{wghd:$typeNumArr[$i]},'off');</script>
 					</notempty></volist>
 				<else/><script type="text/javascript">addNextType(0,0,null,'off');</script>
 				</if></span>
 			<label for="bankName" style="line-height:60px;">开户行名称：</label>
-			<input type="text" name="bankName" id="bankName" value="{pigcms:$bank.bankName}" placeholder="请输入您的开户行名称..">
+			<input type="text" name="bankName" id="bankName" value="{wghd:$bank.bankName}" placeholder="请输入您的开户行名称..">
 			<label for="bankNumber" style="line-height:60px;">银行卡：</label>
-			<input type="text" name="bankNumber" id="bankNumber" value="{pigcms:$bank.bankNumber}" placeholder="请输入您的银行卡..">
+			<input type="text" name="bankNumber" id="bankNumber" value="{wghd:$bank.bankNumber}" placeholder="请输入您的银行卡..">
 			<label for="tele" style="line-height:60px;">手机号码：</label>
-			<input type="text" name="tele" id="tele" value="{pigcms:$bank.tele}" placeholder="请输入您的手机号码..">
+			<input type="text" name="tele" id="tele" value="{wghd:$bank.tele}" placeholder="请输入您的手机号码..">
 		</div><br/>
 		<a href="#" data-role="button" id="pxbtn" style="text-align:center;width:60%;margin:0 auto;">保存</a>
    </div>
@@ -112,7 +112,7 @@ if (typeof WeixinJSBridge == "undefined"){
                         function() {
 
                             var self = $(this);
-							var wecha_id = "{pigcms:$wecha_id}";
+							var wecha_id = "{wghd:$wecha_id}";
                             var name = $('#name').val();
                             var bankName = $('#bankName').val();
                             var bankNumber = $('#bankNumber').val();
@@ -164,14 +164,14 @@ if (typeof WeixinJSBridge == "undefined"){
 								classid: classid
 							};
 
-							$.post("{pigcms::U('Distribution/myBank',array('token'=>$token,'wecha_id'=>$wecha_id))}", submitData,
+							$.post("{wghd::U('Distribution/myBank',array('token'=>$token))}", submitData,
 							function(bakcdata) {
 								var obj = eval('(' + bakcdata + ')');
 
 								if (obj.success == 1) {
 
 									showTip(obj.info);
-									setTimeout("window.location.href='{pigcms::U('Distribution/myBank',array('token'=>$token,'wecha_id'=>$wecha_id))}'", 2000);
+									setTimeout("window.location.href='{wghd::U('Distribution/myBank',array('token'=>$token))}'", 2000);
 
 									return
 

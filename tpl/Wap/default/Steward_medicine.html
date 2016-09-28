@@ -5,11 +5,16 @@
 	<title>用药记录</title>
 </head>
 <body>
-	<a href="{pigcms::U('Steward/minsert',array('token'=>$token))}">添加</a>
+	<a href="{wghd:
+:U('Steward/minsert',array('token'=>$token))}">添加</a>
 	<ul>
 		<volist id="list" name="medicine">
-			<a href="{pigcms::U('Steward/mupdate',array('id'=>$list['id'],'token'=>$token))}">
-				<li>开始时间:{pigcms:$list.starttime}结束时间:{pigcms:$list.endtime}药物:{pigcms:$list.oralmedicine}</li>
+			<a href="{wghd:
+:U('Steward/mupdate',array('id'=>$list['id'],'token'=>$token))}">
+				<li>开始时间:{wghd:
+$list.starttime}结束时间:{wghd:
+$list.endtime}药物:{wghd:
+$list.oralmedicine}</li>
 			</a>
 		</volist>
 	</ul>

@@ -1,9 +1,0 @@
-[ 2015-09-06T08:38:59+08:00 ] ERR: (ThinkException) Access denied for user 'root'@'localhost' (using password: YES)
-[ 2015-09-06T08:39:31+08:00 ] ERR: (ThinkException) Access denied for user 'root'@'localhost' (using password: YES)
-[ 2015-09-06T08:39:33+08:00 ] ERR: (ThinkException) Access denied for user 'root'@'localhost' (using password: YES)
-[ 2015-09-06T08:54:11+08:00 ] ERR: (ThinkException) Table 'tys.pigcms_bprotein_list' doesn't exist
- [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_bprotein_list`
-[ 2015-09-06T08:56:50+08:00 ] ERR: (ThinkException) Table 'tys.pigcms_bprotein_list' doesn't exist
- [ SQL语句 ] : SHOW COLUMNS FROM `pigcms_bprotein_list`
-[ 2015-09-06T09:05:47+08:00 ] ERR: (ThinkException) _TEMPLATE_NOT_EXIST_[./tpl/Wap/default/Steward_Steward_bprotein.html]
-[ 2015-09-06T09:08:26+08:00 ] ERR: (ThinkException) _ERROR_ACTION_:test

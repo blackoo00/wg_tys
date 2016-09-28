@@ -4,9 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>微信公众平台源码,微信机器人源码,微信自动回复源码 PigCms多用户微信营销系统</title>
 <meta http-equiv="MSThemeCompatible" content="Yes" />
-<link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/style_2_common.css?BPm" />
- <script src="{pigcms::STATICS}/jquery-1.4.2.min.js" type="text/javascript"></script>
-<link href="{pigcms::RES}/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{wghd:
+:RES}/css/style_2_common.css?BPm" />
+ <script src="{wghd:
+:STATICS}/jquery-1.4.2.min.js" type="text/javascript"></script>
+<link href="{wghd:
+:RES}/css/style.css" rel="stylesheet" type="text/css" />
 <script src="/tpl/static/upyun.js?2013"></script>
  <script src="/tpl/static/artDialog/jquery.artDialog.js?skin=default"></script>
 <script src="/tpl/static/artDialog/plugins/iframeTools.js"></script>
@@ -31,7 +34,13 @@ ul.modules li div.mright{float:right;width:55%;text-align:right;}
 </tr>
 </thead>
 <volist name="class" id="c">
-<tr><td>{pigcms:$c.name}</td><td class="norightborder"><if condition="$c['sub'] eq NULL"><a href="###" onclick="returnHomepage({pigcms:$c.id},'{pigcms:$c.name}')">选中</a><else /><a href="###" onclick="returnHomepage({pigcms:$c.id},'{pigcms:$c.name}')">选中</a> &nbsp; <a href="?g=User&m=Img&a=editClass&id={pigcms:$c.id}">详情</a></if></td></tr>
+<tr><td>{wghd:
+$c.name}</td><td class="norightborder"><if condition="$c['sub'] eq NULL"><a href="###" onclick="returnHomepage({wghd:
+$c.id},'{wghd:
+$c.name}')">选中</a><else /><a href="###" onclick="returnHomepage({wghd:
+$c.id},'{wghd:
+$c.name}')">选中</a> &nbsp; <a href="?g=User&m=Img&a=editClass&id={wghd:
+$c.id}">详情</a></if></td></tr>
 </volist>
 </table>
 

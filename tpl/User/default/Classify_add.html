@@ -4,13 +4,16 @@
  <div class="content" <if condition="session('isQcloud') eq true">style="float:center;"</if>>
           <div class="cLineB"><h4>添加文章分类</h4><a href="javascript:history.go(-1);"  class="right btnGrayS vm" style="margin-top:-27px" >返回</a></div> 
 <div class="msgWrap">
-  <form class="form" method="post" name="addform" action="{pigcms::U('Classify/insert')}" enctype="multipart/form-data" >
+  <form class="form" method="post" name="addform" action="{wghd:
+:U('Classify/insert')}" enctype="multipart/form-data" >
 <TABLE class="userinfoArea" style=" margin:20px 0 0 0;" border="0" cellSpacing="0" cellPadding="0" width="100%">
   <THEAD>
   <if condition="$fid neq 0">
   <TR>
   <TH valign="top"><label for="keyword">上级分类名称：</label></TH>
-  <TD>{pigcms:$thisClassify.name}<input type="hidden" name="fid" value="{pigcms:$fid}" /></TD>
+  <TD>{wghd:
+$thisClassify.name}<input type="hidden" name="fid" value="{wghd:
+$fid}" /></TD>
   <TD>&nbsp;</TD>
 </TR>
 </if>
@@ -34,7 +37,9 @@
 </TR>
 <TR>
   <TH valign="top"><label for="keyword">分类图片：</label></TH>
-  <TD><input type="text" class="px" id="img" value="" name="img" id="img" style="width:500px" >  <script src="/tpl/static/upyun.js?{pigcms::date('YmdHis',time())}"></script><a href="###" onclick="chooseFile('img','icon')" class="a_upload">选择</a> <a href="###" onclick="upyunPicUpload('img',700,420,'{pigcms:$token}')" class="a_upload">上传</a> <a href="###" onclick="viewImg('img')">预览</a></TD>
+  <TD><input type="text" class="px" id="img" value="" name="img" id="img" style="width:500px" >  <script src="/tpl/static/upyun.js?{wghd:
+:date('YmdHis',time())}"></script><a href="###" onclick="chooseFile('img','icon')" class="a_upload">选择</a> <a href="###" onclick="upyunPicUpload('img',700,420,'{wghd:
+$token}')" class="a_upload">上传</a> <a href="###" onclick="viewImg('img')">预览</a></TD>
   <TD>&nbsp;</TD>
 </TR>
 <TR>

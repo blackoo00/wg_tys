@@ -27,7 +27,8 @@
 </div>
 
           <div class="ftip" style="margin:25px auto 5px auto;height:73px;">多媒体上传限制：图片最大128K，支持JPG格式；语音最大256K，播放长度不超过60s，支持AMR\MP3格式；视频（video）最大1MB，支持MP4格式；媒体文件在后台保存时间为3天，3天后将失效。 </div>
-          <form method="post" action="{pigcms::U('Message/index')}">
+          <form method="post" action="{wghd:
+:U('Message/index')}">
           <div class="msgWrap form">
             <table class="userinfoArea" border="0" cellspacing="0" cellpadding="0" width="100%">
               <tbody>
@@ -46,11 +47,13 @@
               		</tr>
               		<tr> 
         <th>标题</th> 
-        <td><input type="text" id="title" name="title" value="{pigcms:$info.title}" class="px require" style="width:200px;" /> 仅发送视频的时候填写</td> 
+        <td><input type="text" id="title" name="title" value="{wghd:
+$info.title}" class="px require" style="width:200px;" /> 仅发送视频的时候填写</td> 
        </tr> 
               		<TR>
   <TH>媒体文件</TH>
-  <TD><input type="input" class="px" id="media" name="mediasrc" style="width:250px"> <script src="/tpl/static/upyun.js"></script><a href="###" onclick="chooseFile('media','background')" class="a_upload">选择</a>&nbsp;&nbsp;&nbsp;<a href="###" onclick="upyunPicUpload('media',1500,1000,'{pigcms:$token}')" class="a_upload">上传</a> 仅发送图片消息、语音消息或视频消息的时候填写</TD>
+  <TD><input type="input" class="px" id="media" name="mediasrc" style="width:250px"> <script src="/tpl/static/upyun.js"></script><a href="###" onclick="chooseFile('media','background')" class="a_upload">选择</a>&nbsp;&nbsp;&nbsp;<a href="###" onclick="upyunPicUpload('media',1500,1000,'{wghd:
+$token}')" class="a_upload">上传</a> 仅发送图片消息、语音消息或视频消息的时候填写</TD>
 </TR>
 <tr> 
         <th><span class="red"></span>文本消息/简介</th> 

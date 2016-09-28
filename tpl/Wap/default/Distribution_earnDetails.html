@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ID=edge, chorome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>{wghd:$title}</title>
+	<link rel="stylesheet" href="{wghd::RES}/original/css/weui.min.css">
+	<link rel="stylesheet" href="{wghd::RES}/original/css/jquery-weui.css"></head>
+<body>
+	<div class="container">
+		<style>
+			.weui_cells_myBill{margin-top: 0;background-color: #f66060;}
+			.weui_cell_myBill{color: #fff;padding: 15px 5px;}
+			.weui-row-myBill{background-color: #BDBDBD;}
+			.weui-row-myBill div{text-align: center;line-height: 35px;}
+			.weui-row-myBill_list div{text-align: center;line-height: 35px; font-size: 0.7rem;}
+		</style>
+		<div class="weui_cells weui_cells_myBill">
+			<div class="weui_cell weui_cell_myBill">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>现金余额(元)</p>
+				</div>
+				<div class="weui_cell_ft" style="color: #fff">{wghd::sprintf('%.2f',$red)}</div>
+			</div>
+		</div>
+		<div class="weui-row weui-no-gutter weui-row-myBill">
+			<div class="weui-col-25">现金</div>
+			<div class="weui-col-25">金币</div>
+			<div class="weui-col-25">状态</div>
+			<div class="weui-col-25">时间</div>
+		</div>
+		<volist id="list" name="list">
+			<div class="weui-row weui-no-gutter weui-row-myBill_list">
+				<div class="weui-col-25">{wghd:$list.earn|default=0}</div>
+				<div class="weui-col-25">{wghd:$list.gold|default=0}</div>
+				<div class="weui-col-25">
+					<switch name="list.status">
+						<case value="1">下级购物</case>
+						<case value="2">下级升级</case>
+						<case value="3">下级充值</case>
+						<case value="4">自己充值</case>
+						<case value="5">自己购物</case>
+						<case value="6">自己升级</case>
+						<case value="7">购物退款</case>
+						<case value="8">管理员充值</case>
+						<case value="9">充值退款</case>
+						<case value="10">提现</case>
+						<case value="11">升级退款</case>
+						<case value="12">提交订单</case>
+						<case value="13">下级提交</case>
+					</switch>
+				</div>
+				<div class="weui-col-25">{wghd:$list.addtime|date='Y-m-d',###}</div>
+			</div>
+		</volist>
+	</div>
+</body>
+</html>

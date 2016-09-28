@@ -1,4 +1,0 @@
-[ 2015-08-30T09:19:36+08:00 ] ERR: (ThinkException) Unknown column 'pic' in 'field list'
- [ SQL语句 ] : SELECT `did`,`name`,`pic` FROM `pigcms_custom_list` LIMIT 1  
-[ 2015-08-30T10:01:19+08:00 ] ERR: (ThinkException) Unknown column 'pic' in 'field list'
- [ SQL语句 ] : SELECT `did`,`name`,`pic` FROM `pigcms_custom_list` LIMIT 1  

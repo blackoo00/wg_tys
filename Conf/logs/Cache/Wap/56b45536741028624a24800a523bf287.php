@@ -5,16 +5,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="msapplication-tap-highlight" content="no">
 	<title>医生登陆</title>
-	<link href="<?php echo RES;?>/css/tys/login.css" rel="stylesheet">
-	<script src="<?php echo RES;?>/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
-	<script src="<?php echo RES;?>/js/tys/notification.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="<?php echo RES;?>/css/tys/css/notification.css">
+	<link href="{wghd:
+:RES}/css/tys/login.css" rel="stylesheet">
+	<script src="{wghd:
+:RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="{wghd:
+:RES}/js/tys/notification.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="{wghd:
+:RES}/css/tys/css/notification.css">
 </head>
 <body id="scnhtm5">
 	<div class="per_login">
 		<section class="inner_content">
 			<p class="logo">
-				<img src="<?php echo RES;?>/css/tys/images/login_logo.png" alt="">
+				<img src="{wghd:
+:RES}/css/tys/images/login_logo.png" alt="">
 			</p>
 			<form id="loginform" name="loginform" method="post" action="#">
 				<p class="username form_item"><input type="text" name="username" id="username" value="" /></p>

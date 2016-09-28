@@ -4,7 +4,8 @@
 <div class="cLine">
   <div style="float:right;line-height:30px;">
     <form action="#" method="post">
-      <input type="text" placeholder="请输入医生姓名" value="{pigcms:$_POST['search']}" class="px" name="search" />    
+      <input type="text" placeholder="请输入医生姓名" value="{wghd:
+$_POST['search']}" class="px" name="search" />    
       <button class="btnGrayS" style="height: 29px;">搜索</button>
     </form>
   </div>
@@ -22,7 +23,10 @@
     </style>
 <!--     <volist id="list" name="doctor">
     <span class='doctor' <eq name="list.id" value="$did">style="background-color: #ECF5E5;"</eq>>
-        <a href="{pigcms::U('Comment/index',array('did'=>$list['id']))}" title="{pigcms:$list.name}">{pigcms:$list.name}</a>
+        <a href="{wghd:
+:U('Comment/index',array('did'=>$list['id']))}" title="{wghd:
+$list.name}">{wghd:
+$list.name}</a>
       </span>
     </volist> -->
     <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%">
@@ -43,8 +47,10 @@
         <TR></TR>
         <volist id="list" name="comment">
           <tr>
-            <td>{pigcms:$list.doctor.name}</td>
-            <td>{pigcms:$list.custom.name}</td>
+            <td>{wghd:
+$list.doctor.name}</td>
+            <td>{wghd:
+$list.custom.name}</td>
             <td>
               <div id="stars">
                 <for start="0" end="$list.stars">
@@ -52,7 +58,8 @@
                 </for>
               </div>
             </td>
-            <td>{pigcms:$list.info}</td>
+            <td>{wghd:
+$list.info}</td>
           </tr>
         </volist>
 
@@ -62,7 +69,8 @@
 </div>
 <div class="cLine">
   <div class="pageNavigator right">
-    <div class="pages">{pigcms:$page}</div>
+    <div class="pages">{wghd:
+$page}</div>
   </div>
   <div class="clr"></div>
 </div>

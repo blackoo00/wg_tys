@@ -8,9 +8,12 @@
           </div>
           <div class="cLine">
             <div class="pageNavigator left">
-			  <a href="{pigcms::U('Ordering/set',array('token'=>session('token')))}" title="微信回复配置" class="btnGrayS vm bigbtn">订餐配置</a>　
-			  <a href="{pigcms::U('Ordering/class_list',array('token'=>session('token')))}" title="分类管理" class="btnGrayS vm bigbtn">分类管理</a>　
-			  <a href="{pigcms::U('Ordering/add',array('token'=>session('token')))}" title="发布菜单" class="btnGrayS vm bigbtn">发布菜单</a>              
+			  <a href="{wghd:
+:U('Ordering/set',array('token'=>session('token')))}" title="微信回复配置" class="btnGrayS vm bigbtn">订餐配置</a>　
+			  <a href="{wghd:
+:U('Ordering/class_list',array('token'=>session('token')))}" title="分类管理" class="btnGrayS vm bigbtn">分类管理</a>　
+			  <a href="{wghd:
+:U('Ordering/add',array('token'=>session('token')))}" title="发布菜单" class="btnGrayS vm bigbtn">发布菜单</a>              
             </div>
           
             <div class="clr"></div>
@@ -44,10 +47,14 @@
                     <td>2013-07-30</td>
                      <td>暂无</td>
                    <td onclick="alert('内测中,暂时未放出');return false;" class="norightborder">
-				   <a href="{pigcms::U('Vote/list',array('type'=>'text','id'=>$vote['id']))}" title="投票结果">订单管理</a> 
-				   <a href="{pigcms::U('Vote/edit',array('type'=>'text','id'=>$vote['id']))}" title="编辑">编辑</a> 
-				   <a href="javascript:drop_confirm('您确定要删除吗?', '{pigcms::U('Vote/del',array('type'=>'text','id'=>$vote['id']))}');">删除</a> 
-				   <a href="javascript:drop_confirm('开始投票活动将预先扣除1000金币，折合RMB 1元 ', '{pigcms::U('Vote/start',array('type'=>'text','id'=>$vote['id']))}');">开始</a>   </td>
+				   <a href="{wghd:
+:U('Vote/list',array('type'=>'text','id'=>$vote['id']))}" title="投票结果">订单管理</a> 
+				   <a href="{wghd:
+:U('Vote/edit',array('type'=>'text','id'=>$vote['id']))}" title="编辑">编辑</a> 
+				   <a href="javascript:drop_confirm('您确定要删除吗?', '{wghd:
+:U('Vote/del',array('type'=>'text','id'=>$vote['id']))}');">删除</a> 
+				   <a href="javascript:drop_confirm('开始投票活动将预先扣除1000金币，折合RMB 1元 ', '{wghd:
+:U('Vote/start',array('type'=>'text','id'=>$vote['id']))}');">开始</a>   </td>
           
                 </tr>
       			                 <tr>

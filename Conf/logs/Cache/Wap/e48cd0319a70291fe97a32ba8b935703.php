@@ -12,6 +12,13 @@
 <script src="<?php echo RES;?>/css/store/js/notification.js" type="text/javascript"></script>
 <script src="<?php echo RES;?>/css/store/js/swiper.min.js" type="text/javascript"></script>
 <script src="<?php echo RES;?>/css/store/js/main.js" type="text/javascript"></script>
+<script>
+	function hideFrom(){
+		$('#show_from').hide();
+	}
+</script>
+<link rel="stylesheet" href="<?php echo RES;?>/original/css/jquery-weui.min.css">
+<link rel="stylesheet" href="<?php echo RES;?>/original/css/style.css">
 <link type="text/css" rel="stylesheet" href="<?php echo RES;?>/css/store/css/style_touch11.css">
 </head>
 <body>
@@ -24,14 +31,13 @@
 <?php if(is_array($cats)): $i = 0; $__LIST__ = $cats;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$hostlist): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('Store/products',array('token' => $_GET['token'], 'catid' => $hostlist['id'],'mid'=>$my['id']));?>"><?php echo ($hostlist["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 </ul>
 
-<!--form id="search_form" name="search_form" action="" method="post">
+<link href="<?php echo RES;?>/distri/css/head.css" rel="stylesheet" type="text/css" />
+<form id="search_form" name="search_form" action="" method="post">
 	<div class="m-l-search">
-		<input type="hidden" name="wecha_id" value="<?php echo ($wecha_id); ?>">
-		<input type="hidden" name="token" value="<?php echo ($token); ?>">
-		<input id="search_name" class="inp-search" name="search_name" type="search" value="" placeholder="输入关键字搜索">
+		<input id="search_name" class="inp-search" name="search_name" type="search" value="<?php echo ($_REQUEST['keyword']); ?>" placeholder="输入关键字搜索">
 		<input class="btn-search" name="search-btn" type="submit" value="">
 	</div>
-</form-->
+</form>
 
 <!--div class="m-select c666 order_control">
 <span><a href="javascript:" order="time" class="arrow-down">时间<i><em></em></i></a></span>
@@ -45,24 +51,25 @@
 <?php if(is_array($products)): $i = 0; $__LIST__ = $products;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$hostlist): $mod = ($i % 2 );++$i;?><li>
 		<div style="width:95%;margin:0 auto;background:#fff;">
 		<span class="pic">
-			<a href="<?php echo U('Store/product',array('token' => $_GET['token'], 'id' => $hostlist['id'],'mid'=>$my['id']));?>">
-			<img src="<?php echo ($hostlist["logourl"]); ?>" data-original="<?php echo ($hostlist["logourl"]); ?>" style="width:100%;height:120px;">
+			<a href="<?php echo U('Store/product',array('token' => $token, 'id' => $hostlist['id'],'mid'=>$my['id']));?>">
+			<img src="<?php echo ($hostlist["logourl"]); ?>" data-original="<?php echo ($hostlist["logourl"]); ?>" style="width:100%;">
 			</a>
-			<a class="t" href="<?php echo U('Store/product',array('token' => $_GET['token'], 'id' => $hostlist['id'],'mid'=>$my['id']));?>"><?php echo (msubstr($hostlist["name"],0,15)); ?></a><br/>
-			<b>￥<?php echo ($hostlist["vprice"]); ?></b><del>￥<?php echo ($hostlist["oprice"]); ?></del>
+			<a class="t" href="<?php echo U('Store/product',array('token' => $token, 'id' => $hostlist['id'],'mid'=>$my['id']));?>"><?php echo (htmlspecialchars_decode($hostlist["name"])); ?></a>
+			<b>￥<?php echo ($hostlist["price"]); ?></b><br/>
+			<span style="font-size:12px;color:#585656">已售：<?php echo ($hostlist["fakemembercount"]); ?></span>
 		</span>
 		</div>
 	</li><?php endforeach; endif; else: echo "" ;endif; ?>
 </ul>
-<div style="background:#4B514F;position:fixed;left:10px;bottom:10px;border-radius:5px;padding:5px 10px;background-color:rgba(0,0,0,0.7);font-size:16px;z-index:9999">
-	<a href="<?php echo U('Store/cart',array('token'=>$_GET['token'],'mid'=>$my['id']));?>" style="color:#fff">
+<!-- <div style="background:#4B514F;position:fixed;left:10px;bottom:10px;border-radius:5px;padding:5px 10px;background-color:rgba(0,0,0,0.7);font-size:16px;z-index:9999">
+	<a href="<?php echo U('Store/cart',array('token'=>$token,'mid'=>$my['id']));?>" style="color:#fff">
 	购物车(<i class="cart_com" style="font-size:16px;"><?php echo ($totalProductCount); ?></i>)
 	</a>
-	<a href="<?php echo U('Store/my',array('token'=>$_GET['token'],'mid'=>$my['id']));?>"style="color:#fff">
+	<a href="<?php echo U('Store/my',array('token'=>$token,'mid'=>$my['id']));?>"style="color:#fff">
 	<span style="border-left:1px solid #fff;padding-left:5px;">我的订单</span>
 	</a>
-</div>
-<div class="more" style="width:100%;text-align:center;line-height:40px;overflow:hidden;display:none;" id="show_more" page="2" href="javascript:void(0);">加载中...请稍候</div>
+</div> -->
+<div class="more" style="width:100%;text-align:center;line-height:20px;overflow:hidden;display:none;" id="show_more" page="2" href="javascript:void(0);">加载中...请稍候</div>
 <input type="hidden" value="1" id="pageid" />
 <input type="hidden" id="canScroll" value="1" />
 <script type="text/javascript">
@@ -75,8 +82,8 @@ $(function() {
 	});
 
 	//点击排序
-	var base_url = '<?php echo U('Store/products',array('token'=>$_GET['token'],'catid'=>$thisCat['id'],'wecha_id'=>$_GET['wecha_id']));?>';
-	var b_url = '<?php if($isSearch != 1): echo U('Store/ajaxProducts',array('token'=>$_GET['token'],'catid'=>$thisCat['id'],'wecha_id'=>$_GET['wecha_id'])); else: echo U('Store/ajaxProducts',array('token'=>$_GET['token'],'keyword'=>$_GET['keyword'],'wecha_id'=>$_GET['wecha_id'])); endif; ?>'
+	var base_url = '<?php echo U('Store/products',array('token'=>$token,'catid'=>$thisCat['id']));?>';
+	var b_url = '<?php if($isSearch != 1): echo U('Store/ajaxProducts',array('token'=>$token,'catid'=>$thisCat['id'],'ms'=>$_GET['ms'],'tj'=>$_GET['tj'])); else: echo U('Store/ajaxProducts',array('token'=>$token,'keyword'=>$_GET['keyword'],'ms'=>$_GET['ms'],'tj'=>$_GET['tj'])); endif; ?>'
 		method = 'DESC',
 		_get_method = '<?php echo ($method); ?>',
 		order = '<?php echo ($order); ?>',
@@ -101,8 +108,8 @@ $(function() {
 	var total = <?php echo ($count); ?>,
 		pagesize = 8,
 		pages = Math.ceil(total / pagesize);
-	var mid = <?php echo ($my["id"]); ?>;
-	var com_link = '<?php echo U('Store/product',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']));?>';
+	var mid = <?php echo (($my["id"])?($my["id"]):0); ?>;
+	var com_link = '<?php echo U('Store/product',array('token'=>$token));?>';
 	var label_arr = ["\u8bf7\u9009\u62e9\u6807\u7b7e","\u70ed\u5356","\u7206\u6b3e"];
 	if (pages > 1) {
 		var _page = $('#show_more').attr('page');
@@ -134,8 +141,10 @@ $(function() {
 						$.each(data, function(x, y) {
 							_tmp_html +=    '<li><div style="width:95%;margin:0 auto;background:#fff;"><span class="pic">' +
 							'<a href="' + com_link + '&id=' + y.id + '&mid=' + mid + '">' +
-							'<img src="' +y.logourl + '" style="width:100%;height:120px"/>' +
-							'</a><a class="t" href="' + com_link + '&id=' + y.id + '">' + y.name + '</a><br/><b>￥'+ y.vprice +'&nbsp;元</b><del>￥' + y.oprice + '</del></span></div></li>';
+							'<img src="' +y.logourl + '" style="width:100%;"/>' +
+							'</a><a class="t" href="' + com_link + '&id=' + y.id + '">' + y.name + '</a>';
+							_tmp_html += '<b>￥'+ y.price +'&nbsp;元</b>';
+							_tmp_html += '<br/><br/><span style="font-size:12px;color:#585656">已售：'+ y.fakemembercount +'</span></span></div></li>';
 						});
 						$('#m_list').append(_tmp_html);
 					}
@@ -145,15 +154,97 @@ $(function() {
 	}
 });
 </script>
+<!--foot开始-->
+<div style="height: 60px;"></div>
+<div class="public_foot">
+  <div class="weui-row weui-no-gutter">
+    <div class="weui-col-25">
+      <a href="<?php echo U('Store/index');?>" class="public_footer_index">
+        <p class="iconfont">&#xe60d;</p>
+        <p>首页</p>
+      </a>
+    </div>
+    <div class="weui-col-25">
+      <a href="<?php echo U('Store/cats');?>" class="public_footer_products">
+        <p class="iconfont">&#xe60c;</p>
+        <p>分类</p>
+      </a>
+    </div>
+    <div class="weui-col-25">
+      <a href="<?php echo U('Store/cart');?>" class="public_footer_shopcat">
+        <p class="iconfont">&#xe60e;</p>
+        <p>购物车</p>
+      </a>
+    </div>
+    <div class="weui-col-25">
+      <a href="<?php echo U('Distribution/index');?>" class="public_my">
+        <p class="iconfont">&#xe6ca;</p>
+        <p>我的</p>
+      </a>
+    </div>
+</div>
+
+<script>
+    var module = "<?php echo MODULE_NAME;?>";
+      var action = "<?php echo ACTION_NAME;?>";
+      if(module == "Store" && action == "index"){
+        $('.public_footer_index').addClass('public_footer_choose');
+      }
+      if(module == "Store" && action == "cats"){
+        $('.public_footer_products').addClass('public_footer_choose');
+      }
+      if(module == "Store" && action == "cart"){
+        $('.public_footer_shopcat').addClass('public_footer_choose');
+      }
+      if(module == "Distribution" && action == "index"){
+        $('.public_my').addClass('public_footer_choose');
+      }
+  </script>
+<!--foot结束-->
+
+<script>
+function onBridgeReady(){
+ WeixinJSBridge.call('hideOptionMenu');
+}
+
+if (typeof WeixinJSBridge == "undefined"){
+    if( document.addEventListener ){
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    }else if (document.attachEvent){
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+}else{
+    onBridgeReady();
+}
+</script>
+<div class="clear"></div>
+<?php if((ACTION_NAME) != "herolist"): ?><section class="foot"></section><?php endif; ?>
 </body>
+<script>
+function onBridgeReady(){
+ WeixinJSBridge.call('showOptionMenu');
+}
+
+if (typeof WeixinJSBridge == "undefined"){
+    if( document.addEventListener ){
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    }else if (document.attachEvent){
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+}else{
+    onBridgeReady();
+}
+</script>
 <script type="text/javascript">
 window.shareData = {  
             "moduleName":"Store",
             "moduleID":"<?php echo ($products[0]['id']); ?>",
             "imgUrl": "<?php echo ($products[0]['logourl']); ?>", 
-            "timeLineLink": "<?php echo C('site_url') . U('Store/products',array('token' => $_GET['token'],'mid'=>$my['id']));?>",
-            "sendFriendLink": "<?php echo C('site_url') . U('Store/products',array('token' => $_GET['token'],'mid'=>$my['id']));?>",
-            "weiboLink": "<?php echo C('site_url') . U('Store/products',array('token' => $_GET['token'],'mid'=>$my['id']));?>",
+            "timeLineLink": "<?php echo C('site_url') . U('Store/products',array('token' => $token,'catid'=>$_GET['catid'],'mid'=>$my['id']));?>",
+            "sendFriendLink": "<?php echo C('site_url') . U('Store/products',array('token' => $token,'catid'=>$_GET['catid'],'mid'=>$my['id']));?>",
+            "weiboLink": "<?php echo C('site_url') . U('Store/products',array('token' => $token,'catid'=>$_GET['catid'],'mid'=>$my['id']));?>",
             "tTitle": "<?php echo ($metaTitle); ?>",
             "tContent": "<?php echo ($metaTitle); ?>"
         };

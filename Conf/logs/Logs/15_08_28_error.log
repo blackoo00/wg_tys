@@ -1,6 +1,0 @@
-[ 2015-08-28T09:01:16+08:00 ] ERR: (ThinkException) Access denied for user 'root'@'localhost' (using password: YES)
-[ 2015-08-28T09:01:55+08:00 ] ERR: (ThinkException) ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
-
-[ 2015-08-28T09:02:43+08:00 ] ERR: (ThinkException) Host '123.158.165.240' is not allowed to connect to this MySQL server
-[ 2015-08-28T09:53:56+08:00 ] ERR: (ThinkException) Unknown column '__hash__' in 'field list'
- [ SQLËØ≠Âè• ] : INSERT INTO `pigcms_consult_master` (`did`,`title`,`info`,`born`,`__hash__`,`cid`,`time`) VALUES ('','','','1965Âπ\¥','ba0f91ae77ce2a8a0016f4bf6668b256_091bef60330587d23beadb17bb1fd7fb','1','1440726836')

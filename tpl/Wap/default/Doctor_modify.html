@@ -1,9 +1,12 @@
 <include file="Public:head"/>
 <body>
-	<script src="{pigcms::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="{wghd:
+:RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
 	<!-- <div id='custom_head'>
-		<img src="{pigcms:$doctor.pic}">
-		<div class="custom_name">{pigcms:$doctor.name}</div>
+		<img src="{wghd:
+$doctor.pic}">
+		<div class="custom_name">{wghd:
+$doctor.name}</div>
 		<div class="clear"></div>
 	</div> -->
 	<style>
@@ -16,24 +19,35 @@
 			<div id="fankuiboxwrap">
 				<div id="fankuibox">
 					<div>如需修改，请在反馈建议提交</div>
-					<div><span class="button grey" id="fankui_cancel">取消</span><span><a class="button blue" href="{pigcms::U('Doctor/feedback',array('token'=>$token,'wecha__id'=>$wecha_id))}">反馈建议</a></span></div>
+					<div><span class="button grey" id="fankui_cancel">取消</span><span><a class="button blue" href="{wghd:
+:U('Doctor/feedback',array('token'=>$token,'wecha__id'=>$wecha_id))}">反馈建议</a></span></div>
 				</div>
 			</div>
-			<script src="{pigcms::RES}/js/tys/require.js" data-main="{pigcms::RES}/js/tys/main" type="text/javascript"></script>
+			<script src="{wghd:
+:RES}/js/tys/require.js" data-main="{wghd:
+:RES}/js/tys/main" type="text/javascript"></script>
 			<section id="dpic">
-				<div class="cflow">{pigcms:$doctor.name}</div>
+				<div class="cflow">{wghd:
+$doctor.name}</div>
 				<div id="loading">
-					<img src="{pigcms::RES}/css/tys/photoswipe-loader.gif">
+					<img src="{wghd:
+:RES}/css/tys/photoswipe-loader.gif">
 				</div>
-					<img id="doctorpic" src="{pigcms:$doctor.pic}"/>
-				<input id="pic" name="pic" type="file" title="医生头像" onchange="return headpic('{pigcms::U('Doctor/headpic',array('token'=>$token,'wecha_id'=>$wecha_id))}',{pigcms:$doctor.id})">
+					<img id="doctorpic" src="{wghd:
+$doctor.pic}"/>
+				<input id="pic" name="pic" type="file" title="医生头像" onchange="return headpic('{wghd:
+:U('Doctor/headpic',array('token'=>$token,'wecha_id'=>$wecha_id))}',{wghd:
+$doctor.id})">
 				<div class="clear"></div>
 			</section>
 			<section>
 			<ul id="fankui">
-				<li><span>医院</span><span>{pigcms:$doctor.hname}&nbsp;<i class="icon-circle-right"></i></span></li><div class="clear"></div>
-				<li><span>科室</span><span>{pigcms:$doctor.profession}&nbsp;<i class="icon-circle-right"></i></span></li><div class="clear"></div>
-				<li><span>职称</span><span>{pigcms:$doctor.persition}&nbsp;<i class="icon-circle-right"></i></span></li><div class="clear"></div>
+				<li><span>医院</span><span>{wghd:
+$doctor.hname}&nbsp;<i class="icon-circle-right"></i></span></li><div class="clear"></div>
+				<li><span>科室</span><span>{wghd:
+$doctor.profession}&nbsp;<i class="icon-circle-right"></i></span></li><div class="clear"></div>
+				<li><span>职称</span><span>{wghd:
+$doctor.persition}&nbsp;<i class="icon-circle-right"></i></span></li><div class="clear"></div>
 			</ul>
 			<script>
 				$(function(){
@@ -45,14 +59,19 @@
 					})
 				})
 			</script>
-		<form action="{pigcms::U('Doctor/modify',array('token'=>$token,'wecha_id'=>$wecha_id))}" method="post" enctype="multipart/form-data">
-			<input type="hidden" name="id" value="{pigcms:$doctor.id}">
-			<input type="hidden" value="{pigcms:$doctor.info}" id="checktext">
+		<form action="{wghd:
+:U('Doctor/modify',array('token'=>$token,'wecha_id'=>$wecha_id))}" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="id" value="{wghd:
+$doctor.id}">
+			<input type="hidden" value="{wghd:
+$doctor.info}" id="checktext">
 			<div style="padding-left:2%; font-size:1.2em;">个人简介</div>
-			<textarea name="info" id="info" placeholder="请介绍您的执业经历，学术成就、擅长等信息，让患者更好地了解您。">{pigcms:$doctor.info}</textarea></section>
+			<textarea name="info" id="info" placeholder="请介绍您的执业经历，学术成就、擅长等信息，让患者更好地了解您。">{wghd:
+$doctor.info}</textarea></section>
 			<section><include file="Public:week"/></section>
 			<section>
-				<input class="newinput" name="note" id="note" type="text" placeholder="备注" value="{pigcms:$doctor.note}">
+				<input class="newinput" name="note" id="note" type="text" placeholder="备注" value="{wghd:
+$doctor.note}">
 			</section>
 			<input class="greenbtn" id="send" type="submit" value="保存">
 		</form>

@@ -3,8 +3,10 @@
 >
 <div class="cLine">
   <div class="pageNavigator left">
-    <a href='{pigcms::U("Hospital/add")}' title='新增医院' class='btnGrayS vm bigbtn'>
-      <img src="{pigcms::RES}/images/text.png" class="vm" />
+    <a href='{wghd:
+:U("Hospital/add")}' title='新增医院' class='btnGrayS vm bigbtn'>
+      <img src="{wghd:
+:RES}/images/text.png" class="vm" />
       新增医院
     </a>
   </div>
@@ -29,11 +31,18 @@
         <TR></TR>
         <volist id="list" name="hospital">
           <tr>
-            <td>{pigcms:$list.name}</td>
-            <td>{pigcms:$list.doctornum}</td>
-            <td>{pigcms:$list.info}</td>
-			<td>{pigcms:$list.orderNums}（<a href="{pigcms::U('Store/orders',array('hid'=>$list['id']))}" style="color:blue">明细</a>）</td>
-            <td class="norightborder"> <a href="{pigcms::U('Hospital/edit',array('id'=>$list['id']))}" title="编辑文本">编辑</a> <a onclick="return confirm('确定要删除么？');" href="{pigcms::U('Hospital/del',array('id'=>$list['id']))}">删除</a></td>
+            <td>{wghd:
+$list.name}</td>
+            <td>{wghd:
+$list.doctornum}</td>
+            <td>{wghd:
+$list.info}</td>
+			<td>{wghd:
+$list.orderNums}（<a href="{wghd:
+:U('Store/orders',array('hid'=>$list['id']))}" style="color:blue">明细</a>）</td>
+            <td class="norightborder"> <a href="{wghd:
+:U('Hospital/edit',array('id'=>$list['id']))}" title="编辑文本">编辑</a> <a onclick="return confirm('确定要删除么？');" href="{wghd:
+:U('Hospital/del',array('id'=>$list['id']))}">删除</a></td>
           </tr>
         </volist>
 
@@ -43,7 +52,8 @@
 </div>
 <div class="cLine">
   <div class="pageNavigator right">
-    <div class="pages">{pigcms:$page}</div>
+    <div class="pages">{wghd:
+$page}</div>
   </div>
   <div class="clr"></div>
 </div>

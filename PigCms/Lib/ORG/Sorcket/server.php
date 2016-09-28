@@ -1,6 +1,6 @@
 <?php
 // prevent the server from timing out
-set_time_limit(1);
+set_time_limit(0);
 
 // include the web sockets server script (the server is started at the far bottom of this file)
 require 'class.PHPWebSocket.php';
@@ -29,16 +29,25 @@ function wsOnMessage($clientID, $message, $messageLength, $binary) {
 	if ( sizeof($Server->wsClients) == 1 ){
 		$Server->wsSend($clientID, $mes2);
 	}
-	else
-		//Send the message to everyone but the person who said it
-		foreach ( $Server->wsClients as $id => $client ){
-			if ( $id == $client_object['ip'] ){
-				// $Server->wsSend($id, "Visitor $clientID ($ip) said \"$message\"");
-				$Server->wsSend($id, $message);
+	else{
+		if($client_object['ip'] == 'all'){
+			foreach ( $Server->wsClients as $id => $client ){
+				if ( $id != $clientID ){
+					$Server->wsSend($id, $message);
+				}
 			}
+		}else{
+			//Send the message to everyone but the person who said it
+			foreach ( $Server->wsClients as $id => $client ){
+				if ( $id == $client_object['ip'] ){
+					// $Server->wsSend($id, "Visitor $clientID ($ip) said \"$message\"");
+					$Server->wsSend($id, $message);
+				}
+			}
+				// if ( $id != $clientID )
+				// 	$Server->wsSend($id, "Visitor $clientID ($ip) said \"$message\"");
 		}
-			// if ( $id != $clientID )
-			// 	$Server->wsSend($id, "Visitor $clientID ($ip) said \"$message\"");
+	}
 }
 
 // when a client connects
@@ -87,10 +96,9 @@ $Server->bind('open', 'wsOnOpen');
 $Server->bind('close', 'wsOnClose');
 // for other computers to connect, you will probably need to change this to your LAN IP or external IP,
 // alternatively use: gethostbyaddr(gethostbyname($_SERVER['SERVER_NAME']))
-// $result = $Server->wsStartServer('192.168.1.118', 4000);
-$result = $Server->wsStopServer();
-echo 'aa';
-print_r($Server->wsRead);
+$result = $Server->wsStartServer('192.168.1.120', 4000);
+// $result = $Server->wsStartServer('120.26.64.122', 4000);
+// $result = $Server->wsStopServer();
 return $result;
 
 ?>

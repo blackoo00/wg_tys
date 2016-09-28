@@ -1,8 +1,10 @@
 <include file="Public:head"/> 
-<link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/cymain.css" />
+<link rel="stylesheet" type="text/css" href="{wghd:
+:RES}/css/cymain.css" />
         <div class="content">
 <div class="cLineB">
-<h4 class="left"><if condition="$isDining neq 1">商品管理<else/>菜品管理</if> ({pigcms:$page}) </h4>
+<h4 class="left"><if condition="$isDining neq 1">商品管理<else/>菜品管理</if> ({wghd:
+$page}) </h4>
 <div class="searchbar right">
 <form method="post" action="">
 <input type="text" id="msgSearchInput" class="txt left" placeholder="输入关键词搜索" name="searchkey" value="">
@@ -17,20 +19,28 @@
 <!--tab start-->
 <div class="tab">
 <ul>
-<li class="current tabli" id="tab0"><a href="{pigcms::U('Product/index',array('token'=>$token,'dining'=>$isDining))}"><if condition="$isDining neq 1">商品<else/>菜品</if>管理</a></li>
-<li class="tabli" id="tab2"><a href="{pigcms::U('Product/cats',array('token'=>$token,'dining'=>$isDining))}"><if condition="$isDining neq 1">商品分类<else/>菜品分类</if>管理</a></li>
-<li class="tabli" id="tab2"><a href="{pigcms::U('Product/orders',array('token'=>$token,'dining'=>$isDining))}">订单管理</a></li>
-<if condition="$isDining eq 1"><li class="tabli" id="tab2"><a href="{pigcms::U('Product/tables',array('token'=>$token,'dining'=>1))}">桌台管理</a></li></if>
+<li class="current tabli" id="tab0"><a href="{wghd:
+:U('Product/index',array('token'=>$token,'dining'=>$isDining))}"><if condition="$isDining neq 1">商品<else/>菜品</if>管理</a></li>
+<li class="tabli" id="tab2"><a href="{wghd:
+:U('Product/cats',array('token'=>$token,'dining'=>$isDining))}"><if condition="$isDining neq 1">商品分类<else/>菜品分类</if>管理</a></li>
+<li class="tabli" id="tab2"><a href="{wghd:
+:U('Product/orders',array('token'=>$token,'dining'=>$isDining))}">订单管理</a></li>
+<if condition="$isDining eq 1"><li class="tabli" id="tab2"><a href="{wghd:
+:U('Product/tables',array('token'=>$token,'dining'=>1))}">桌台管理</a></li></if>
 <if condition="$isDining neq 1">
-<li class="tabli" id="tab5"><a href="{pigcms::U('Reply_info/set',array('token'=>$token,'infotype'=>'Shop'))}">商城回复配置</a></li>
+<li class="tabli" id="tab5"><a href="{wghd:
+:U('Reply_info/set',array('token'=>$token,'infotype'=>'Shop'))}">商城回复配置</a></li>
 <else/>
-<li class="tabli" id="tab5"><a href="{pigcms::U('Reply_info/set',array('token'=>$token,'infotype'=>'Dining'))}">订餐回复配置</a></li>
+<li class="tabli" id="tab5"><a href="{wghd:
+:U('Reply_info/set',array('token'=>$token,'infotype'=>'Dining'))}">订餐回复配置</a></li>
 </if>
 </ul>
 </div>
 <!--tab end-->
 <div class="cLine">
-<div class="pageNavigator left"> <a href="{pigcms::U('Product/add',array('token'=>$token,'dining'=>$isDining))}" title="添加" class="btnGrayS vm bigbtn"><img src="{pigcms::RES}/images/product/add.png" width="16" class="vm">添加<if condition="$isDining neq 1">商品<else/>菜品</if></a></div>
+<div class="pageNavigator left"> <a href="{wghd:
+:U('Product/add',array('token'=>$token,'dining'=>$isDining))}" title="添加" class="btnGrayS vm bigbtn"><img src="{wghd:
+:RES}/images/product/add.png" width="16" class="vm">添加<if condition="$isDining neq 1">商品<else/>菜品</if></a></div>
 <div class="clr"></div>
 </div>
 <div class="msgWrap">
@@ -53,13 +63,20 @@
 <tr></tr>
 <volist name="list" id="hostlist"> 
 <tr>
-<td><input type="checkbox" name="del_id[{pigcms:$i}]" value="285" class="checkitem"></td>
-<td>{pigcms:$hostlist.name}</td>
-<td>{pigcms:$hostlist.price}元</td>
-<td>{pigcms:$hostlist.keyword}</td>
-<td>{pigcms:$hostlist.time|date="Y-m-d H:i:s",###}</td> 
+<td><input type="checkbox" name="del_id[{wghd:
+$i}]" value="285" class="checkitem"></td>
+<td>{wghd:
+$hostlist.name}</td>
+<td>{wghd:
+$hostlist.price}元</td>
+<td>{wghd:
+$hostlist.keyword}</td>
+<td>{wghd:
+$hostlist.time|date="Y-m-d H:i:s",###}</td> 
 
-<td class="norightborder"><a href="{pigcms::U('Product/set',array('id'=>$hostlist['id'],'token'=>$token,'dining'=>$isDining))}">修改</a> <a href="javascript:drop_confirm('您确定要删除吗?', '{pigcms::U('Product/del',array('id'=>$hostlist['id'],'token'=>$token,'dining'=>$isDining))}');">删除</a></td>
+<td class="norightborder"><a href="{wghd:
+:U('Product/set',array('id'=>$hostlist['id'],'token'=>$token,'dining'=>$isDining))}">修改</a> <a href="javascript:drop_confirm('您确定要删除吗?', '{wghd:
+:U('Product/del',array('id'=>$hostlist['id'],'token'=>$token,'dining'=>$isDining))}');">删除</a></td>
 </tr>
 </volist>
 </tbody>
@@ -86,7 +103,8 @@ alert('未选中任何文章或回复！')
 </div>
 <div class="cLine">
 <div class="pageNavigator right">
-<div class="pages">{pigcms:$page}</div>
+<div class="pages">{wghd:
+$page}</div>
 </div>
 <div class="clr"></div>
 </div>

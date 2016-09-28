@@ -2,7 +2,8 @@
 <div class="content">
 
 <div class="cLineB">
-  <h4>商品分类管理</h4><a href="{pigcms::U('Ordering/index',array('token'=>session('token')))}" class="right btnGrayS vm" style="margin-top:-27px">返回</a>
+  <h4>商品分类管理</h4><a href="{wghd:
+:U('Ordering/index',array('token'=>session('token')))}" class="right btnGrayS vm" style="margin-top:-27px">返回</a>
   
  </div>
  
@@ -57,20 +58,26 @@
 </tr>
 </thead> 
 <volist name="list" id="list">
- <form method="post" action="{pigcms::U('Ordering/class_edit',array('token'=>session('token')))}">              
+ <form method="post" action="{wghd:
+:U('Ordering/class_edit',array('token'=>session('token')))}">              
 <tr>
-	<td><input type="text" name="name" value="{pigcms:$list.name}"  class="px"    /></td>
-	<td><input type="text" name="sort" value="{pigcms:$list.sort}"  class="px" style="width:50px;" /></td>
+	<td><input type="text" name="name" value="{wghd:
+$list.name}"  class="px"    /></td>
+	<td><input type="text" name="sort" value="{wghd:
+$list.sort}"  class="px" style="width:50px;" /></td>
 	
-	<td><input class="px" type="text"  style="width:250px;"  name="info" value="{pigcms:$list.info}"  /></td>
+	<td><input class="px" type="text"  style="width:250px;"  name="info" value="{wghd:
+$list.info}"  /></td>
 	<td>
 		<input class="checkbox" type="checkbox" name="status" value="1"  <if condition="$list['status'] eq 1">checked</if>>
-		<input type="hidden"   name="id" value="{pigcms:$list.id}"  /></td>
+		<input type="hidden"   name="id" value="{wghd:
+$list.id}"  /></td>
 	<td class="norightborder">
 		<button type="submit" name="edit" value="true" class="btnGreen vm" style="height:20px;font-size:12px;line-height:10px;">
 			<strong>修改</strong>
 		</button>
-	<a href="{pigcms::U('Ordering/class_del',array('id'=>$list['id'],'token'=>session('token')))}">删除</a>
+	<a href="{wghd:
+:U('Ordering/class_del',array('id'=>$list['id'],'token'=>session('token')))}">删除</a>
 	</td>
 </tr>
 </form>
@@ -79,7 +86,8 @@
 </div>
 </div>
 <div class="footactions" style="padding-left:10px">
-  <div class="pages">{pigcms:$page}</div>
+  <div class="pages">{wghd:
+$page}</div>
 </div>
  </div>
   

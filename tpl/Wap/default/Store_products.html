@@ -1,12 +1,11 @@
 <include file="Store:header"/>
-<!--form id="search_form" name="search_form" action="" method="post">
+<link href="{wghd::RES}/distri/css/head.css" rel="stylesheet" type="text/css" />
+<form id="search_form" name="search_form" action="" method="post">
 	<div class="m-l-search">
-		<input type="hidden" name="wecha_id" value="{pigcms:$wecha_id}">
-		<input type="hidden" name="token" value="{pigcms:$token}">
-		<input id="search_name" class="inp-search" name="search_name" type="search" value="" placeholder="输入关键字搜索">
+		<input id="search_name" class="inp-search" name="search_name" type="search" value="{wghd:$Think.request.keyword}" placeholder="输入关键字搜索">
 		<input class="btn-search" name="search-btn" type="submit" value="">
 	</div>
-</form-->
+</form>
 
 <!--div class="m-select c666 order_control">
 <span><a href="javascript:" order="time" class="arrow-down">时间<i><em></em></i></a></span>
@@ -21,25 +20,26 @@
 	<li>
 		<div style="width:95%;margin:0 auto;background:#fff;">
 		<span class="pic">
-			<a href="{pigcms::U('Store/product',array('token' => $_GET['token'], 'id' => $hostlist['id'],'mid'=>$my['id']))}">
-			<img src="{pigcms:$hostlist.logourl}" data-original="{pigcms:$hostlist.logourl}" style="width:100%;height:120px;">
+			<a href="{wghd::U('Store/product',array('token' => $token, 'id' => $hostlist['id'],'mid'=>$my['id']))}">
+			<img src="{wghd:$hostlist.logourl}" data-original="{wghd:$hostlist.logourl}" style="width:100%;">
 			</a>
-			<a class="t" href="{pigcms::U('Store/product',array('token' => $_GET['token'], 'id' => $hostlist['id'],'mid'=>$my['id']))}">{pigcms:$hostlist.name|msubstr=0,15}</a><br/>
-			<b>￥{pigcms:$hostlist.vprice}</b><del>￥{pigcms:$hostlist.oprice}</del>
+			<a class="t" href="{wghd::U('Store/product',array('token' => $token, 'id' => $hostlist['id'],'mid'=>$my['id']))}">{wghd:$hostlist.name|htmlspecialchars_decode}</a>
+			<b>￥{wghd:$hostlist.price}</b><br/>
+			<span style="font-size:12px;color:#585656">已售：{wghd:$hostlist.fakemembercount}</span>
 		</span>
 		</div>
 	</li>
 </volist>
 </ul>
-<div style="background:#4B514F;position:fixed;left:10px;bottom:10px;border-radius:5px;padding:5px 10px;background-color:rgba(0,0,0,0.7);font-size:16px;z-index:9999">
-	<a href="{pigcms::U('Store/cart',array('token'=>$_GET['token'],'mid'=>$my['id']))}" style="color:#fff">
-	购物车(<i class="cart_com" style="font-size:16px;">{pigcms:$totalProductCount}</i>)
+<!-- <div style="background:#4B514F;position:fixed;left:10px;bottom:10px;border-radius:5px;padding:5px 10px;background-color:rgba(0,0,0,0.7);font-size:16px;z-index:9999">
+	<a href="{wghd::U('Store/cart',array('token'=>$token,'mid'=>$my['id']))}" style="color:#fff">
+	购物车(<i class="cart_com" style="font-size:16px;">{wghd:$totalProductCount}</i>)
 	</a>
-	<a href="{pigcms::U('Store/my',array('token'=>$_GET['token'],'mid'=>$my['id']))}"style="color:#fff">
+	<a href="{wghd::U('Store/my',array('token'=>$token,'mid'=>$my['id']))}"style="color:#fff">
 	<span style="border-left:1px solid #fff;padding-left:5px;">我的订单</span>
 	</a>
-</div>
-<div class="more" style="width:100%;text-align:center;line-height:40px;overflow:hidden;display:none;" id="show_more" page="2" href="javascript:void(0);">加载中...请稍候</div>
+</div> -->
+<div class="more" style="width:100%;text-align:center;line-height:20px;overflow:hidden;display:none;" id="show_more" page="2" href="javascript:void(0);">加载中...请稍候</div>
 <input type="hidden" value="1" id="pageid" />
 <input type="hidden" id="canScroll" value="1" />
 <script type="text/javascript">
@@ -52,11 +52,11 @@ $(function() {
 	});
 
 	//点击排序
-	var base_url = '{pigcms::U('Store/products',array('token'=>$_GET['token'],'catid'=>$thisCat['id'],'wecha_id'=>$_GET['wecha_id']))}';
-	var b_url = '<if condition="$isSearch neq 1">{pigcms::U('Store/ajaxProducts',array('token'=>$_GET['token'],'catid'=>$thisCat['id'],'wecha_id'=>$_GET['wecha_id']))}<else/>{pigcms::U('Store/ajaxProducts',array('token'=>$_GET['token'],'keyword'=>$_GET['keyword'],'wecha_id'=>$_GET['wecha_id']))}</if>'
+	var base_url = '{wghd::U('Store/products',array('token'=>$token,'catid'=>$thisCat['id']))}';
+	var b_url = '<if condition="$isSearch neq 1">{wghd::U('Store/ajaxProducts',array('token'=>$token,'catid'=>$thisCat['id'],'ms'=>$_GET['ms'],'tj'=>$_GET['tj']))}<else/>{wghd::U('Store/ajaxProducts',array('token'=>$token,'keyword'=>$_GET['keyword'],'ms'=>$_GET['ms'],'tj'=>$_GET['tj']))}</if>'
 		method = 'DESC',
-		_get_method = '{pigcms:$method}',
-		order = '{pigcms:$order}',
+		_get_method = '{wghd:$method}',
+		order = '{wghd:$order}',
 		_get_order  = '';
 	if (_get_order != '') {
 		order = _get_order;
@@ -75,11 +75,11 @@ $(function() {
 	});
 
 	/*---------------------加载更多--------------------*/
-	var total = {pigcms:$count},
+	var total = {wghd:$count},
 		pagesize = 8,
 		pages = Math.ceil(total / pagesize);
-	var mid = {pigcms:$my.id};
-	var com_link = '{pigcms::U('Store/product',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}';
+	var mid = {wghd:$my.id|default=0};
+	var com_link = '{wghd::U('Store/product',array('token'=>$token))}';
 	var label_arr = ["\u8bf7\u9009\u62e9\u6807\u7b7e","\u70ed\u5356","\u7206\u6b3e"];
 	if (pages > 1) {
 		var _page = $('#show_more').attr('page');
@@ -111,8 +111,10 @@ $(function() {
 						$.each(data, function(x, y) {
 							_tmp_html +=    '<li><div style="width:95%;margin:0 auto;background:#fff;"><span class="pic">' +
 							'<a href="' + com_link + '&id=' + y.id + '&mid=' + mid + '">' +
-							'<img src="' +y.logourl + '" style="width:100%;height:120px"/>' +
-							'</a><a class="t" href="' + com_link + '&id=' + y.id + '">' + y.name + '</a><br/><b>￥'+ y.vprice +'&nbsp;元</b><del>￥' + y.oprice + '</del></span></div></li>';
+							'<img src="' +y.logourl + '" style="width:100%;"/>' +
+							'</a><a class="t" href="' + com_link + '&id=' + y.id + '">' + y.name + '</a>';
+							_tmp_html += '<b>￥'+ y.price +'&nbsp;元</b>';
+							_tmp_html += '<br/><br/><span style="font-size:12px;color:#585656">已售：'+ y.fakemembercount +'</span></span></div></li>';
 						});
 						$('#m_list').append(_tmp_html);
 					}
@@ -122,18 +124,35 @@ $(function() {
 	}
 });
 </script>
+<include file="Public:footer"/>
 </body>
+<script>
+function onBridgeReady(){
+ WeixinJSBridge.call('showOptionMenu');
+}
+
+if (typeof WeixinJSBridge == "undefined"){
+    if( document.addEventListener ){
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    }else if (document.attachEvent){
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+}else{
+    onBridgeReady();
+}
+</script>
 <script type="text/javascript">
 window.shareData = {  
             "moduleName":"Store",
-            "moduleID":"{pigcms:$products[0]['id']}",
-            "imgUrl": "{pigcms:$products[0]['logourl']}", 
-            "timeLineLink": "{pigcms::C('site_url') .  U('Store/products',array('token' => $_GET['token'],'mid'=>$my['id']))}",
-            "sendFriendLink": "{pigcms::C('site_url') .  U('Store/products',array('token' => $_GET['token'],'mid'=>$my['id']))}",
-            "weiboLink": "{pigcms::C('site_url') .  U('Store/products',array('token' => $_GET['token'],'mid'=>$my['id']))}",
-            "tTitle": "{pigcms:$metaTitle}",
-            "tContent": "{pigcms:$metaTitle}"
+            "moduleID":"{wghd:$products[0]['id']}",
+            "imgUrl": "{wghd:$products[0]['logourl']}", 
+            "timeLineLink": "{wghd::C('site_url') .  U('Store/products',array('token' => $token,'catid'=>$_GET['catid'],'mid'=>$my['id']))}",
+            "sendFriendLink": "{wghd::C('site_url') .  U('Store/products',array('token' => $token,'catid'=>$_GET['catid'],'mid'=>$my['id']))}",
+            "weiboLink": "{wghd::C('site_url') .  U('Store/products',array('token' => $token,'catid'=>$_GET['catid'],'mid'=>$my['id']))}",
+            "tTitle": "{wghd:$metaTitle}",
+            "tContent": "{wghd:$metaTitle}"
         };
 </script>
-{pigcms:$shareScript}
+{wghd:$shareScript}
 </html>

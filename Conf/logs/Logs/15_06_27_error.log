@@ -1,3 +1,0 @@
-[ 2015-06-27T10:36:09+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1
- [ SQL语句 ] : SELECT * FROM `pigcms_distribution_member` WHERE id= LIMIT 1  
-[ 2015-06-27T16:58:01+08:00 ] ERR: (ThinkException) _TEMPLATE_NOT_EXIST_[./tpl/Wap/default/Index_index.html]

@@ -13,7 +13,8 @@ return array(
 	'COOKIE_PATH'           => '/',     		// Cookie路径
     'COOKIE_PREFIX'         => '',      		// Cookie前缀 避免冲突
 	/*定义模版标签*/
-	'TMPL_L_DELIM'   		=>'{pigcms:',			//模板引擎普通标签开始标记
+	'TMPL_L_DELIM'   		=>'{wghd:
+',			//模板引擎普通标签开始标记
 	'TMPL_R_DELIM'			=>'}',				//模板引擎普通标签结束标记
 );
 ?>

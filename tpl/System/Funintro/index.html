@@ -14,12 +14,16 @@
 	  </tr>
 	    <volist name="list" id="vo">
 			<tr>
-				<td align='center'>{pigcms:$vo.id}</td>
-				<td >{pigcms:$vo.title}</td>
+				<td align='center'>{wghd:
+$vo.id}</td>
+				<td >{wghd:
+$vo.title}</td>
 				
 				<td align='center'>
-					<a href="{pigcms::U('Funintro/edit/',array('id'=>$vo['id']))}">修改</a>
-					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{pigcms::U('Funintro/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
+					<a href="{wghd:
+:U('Funintro/edit/',array('id'=>$vo['id']))}">修改</a>
+					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{wghd:
+:U('Funintro/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
 				</td>
 			</tr>
 	    </volist>
@@ -28,7 +32,8 @@
 		</style>
      <tr bgcolor="#FFFFFF"> 
 	 
-      <td colspan="8"><div class="listpage">{pigcms:$page}</div></td>
+      <td colspan="8"><div class="listpage">{wghd:
+$page}</div></td>
      
     </tr>
    

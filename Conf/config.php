@@ -15,7 +15,7 @@ return array(
 	'COOKIE_EXPIRE' => 3600,
 	'COOKIE_DOMAIN' => '.chiduobao.cn',
 	/*定义模版标签*/
-	'TMPL_L_DELIM'   		=>'{pigcms:',			//模板引擎普通标签开始标记
+	'TMPL_L_DELIM'   		=>'{wghd:',			//模板引擎普通标签开始标记
 	'TMPL_R_DELIM'			=>'}',				//模板引擎普通标签结束标记
 	'HOOMI_KEY'			    =>'d3ea1174edc5025852764e901fbb3c97', 			 //厚米加密key
 );

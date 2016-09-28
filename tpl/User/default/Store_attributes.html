@@ -1,5 +1,6 @@
 <include file="Public:head"/>
-<link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/cymain.css" />  
+<link rel="stylesheet" type="text/css" href="{wghd:
+:RES}/css/cymain.css" />  
 <div class="content">
 <div class="cLineB">
 <div class="clr"></div>
@@ -7,20 +8,28 @@
 <!--tab start-->
 <div class="tab">
 <ul>
-<li class="current tabli" id="tab2"><a href="{pigcms::U('Store/index',array('token'=>$token))}">商品分类管理</a></li>
-<li class="tabli" id="tab0"><a href="{pigcms::U('Store/product',array('token'=>$token,'catid'=>$catid))}">商品管理</a></li>
-<li class="tabli" id="tab2"><a href="{pigcms::U('Store/orders',array('token'=>$token))}">订单管理</a></li>
-<li class="tabli" id="tab5"><a href="{pigcms::U('Reply_info/set',array('token'=>$token,'infotype'=>'Shop'))}">商城回复配置</a></li>
+<li class="current tabli" id="tab2"><a href="{wghd:
+:U('Store/index',array('token'=>$token))}">商品分类管理</a></li>
+<li class="tabli" id="tab0"><a href="{wghd:
+:U('Store/product',array('token'=>$token,'catid'=>$catid))}">商品管理</a></li>
+<li class="tabli" id="tab2"><a href="{wghd:
+:U('Store/orders',array('token'=>$token))}">订单管理</a></li>
+<li class="tabli" id="tab5"><a href="{wghd:
+:U('Reply_info/set',array('token'=>$token,'infotype'=>'Shop'))}">商城回复配置</a></li>
 </ul>
 </div>
 <!--tab end-->
 <div class="cLine">
 <div class="pageNavigator left">
-	<a href="{pigcms::U('Store/attributeAdd',array('token'=>$token,'catid'=>$catid))}" title="新增属性" class="btnGrayS vm bigbtn">
-	<img src="{pigcms::RES}/images/product/add.png" class="vm">新增<span class="red">{pigcms:$catData.name}</span>分类的属性</a>
+	<a href="{wghd:
+:U('Store/attributeAdd',array('token'=>$token,'catid'=>$catid))}" title="新增属性" class="btnGrayS vm bigbtn">
+	<img src="{wghd:
+:RES}/images/product/add.png" class="vm">新增<span class="red">{wghd:
+$catData.name}</span>分类的属性</a>
 </div>
 <div class="pageNavigator right">
-	<a href="{pigcms::U('Store/index',array('token'=>$token,'catid'=>$catid))}" class="btnGrayS vm bigbtn">返回</a>
+	<a href="{wghd:
+:U('Store/index',array('token'=>$token,'catid'=>$catid))}" class="btnGrayS vm bigbtn">返回</a>
 </div>
 <div class="clr"></div>
 </div>
@@ -40,9 +49,13 @@
 <volist name="list" id="attributeData"> 
 <tr>
 <td><input type="checkbox" name="del_id[]" value="285" class="checkitem"></td>
-<td>{pigcms:$attributeData.name}</td>
-<td>{pigcms:$attributeData.value}</td>
-<td class="norightborder"><a href="{pigcms::U('Store/attributeAdd',array('token' => $token, 'id' => $attributeData['id'], 'catid' => $attributeData['catid']))}">修改</a> <a href="javascript:drop_confirm('您确定要删除吗?', '{pigcms::U('Store/attributeDel',array('id' => $attributeData['id'], 'token'=> $token, 'catid' => $attributeData['catid']))}');">删除</a></td>
+<td>{wghd:
+$attributeData.name}</td>
+<td>{wghd:
+$attributeData.value}</td>
+<td class="norightborder"><a href="{wghd:
+:U('Store/attributeAdd',array('token' => $token, 'id' => $attributeData['id'], 'catid' => $attributeData['catid']))}">修改</a> <a href="javascript:drop_confirm('您确定要删除吗?', '{wghd:
+:U('Store/attributeDel',array('id' => $attributeData['id'], 'token'=> $token, 'catid' => $attributeData['catid']))}');">删除</a></td>
 </tr>
 </volist>
 </tbody>
@@ -51,7 +64,8 @@
 </div>
 <div class="cLine">
 <div class="pageNavigator right">
-<div class="pages">{pigcms:$page}</div>
+<div class="pages">{wghd:
+$page}</div>
 </div>
 <div class="clr"></div>
 </div>

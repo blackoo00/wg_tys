@@ -1,7 +1,8 @@
 <include file="Public:head"/>
 <script src="/tpl/static/artDialog/jquery.artDialog.js?skin=default"></script>
 <script src="/tpl/static/artDialog/plugins/iframeTools.js"></script>
-<link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/cymain.css" />
+<link rel="stylesheet" type="text/css" href="{wghd:
+:RES}/css/cymain.css" />
 <div class="content" <if condition="session('isQcloud') eq true">style="float:center;"</if>>
 
 <div class="cLineB">
@@ -19,15 +20,19 @@
 				</tr>
 				<tr>
 					<th width="120"><span class="red">*</span>图文回复标题：</th>
-					<td><input type="text" name="title" value="{pigcms:$set.title}" class="px" style="width:550px;"></td>
+					<td><input type="text" name="title" value="{wghd:
+$set.title}" class="px" style="width:550px;"></td>
 				</tr>
 				<tr>
 					<th width="120">图文回复介绍：</th>
-					<td><textarea style="width:560px;height:75px" name="info" id="info" class="px">{pigcms:$set.info}</textarea><br/>最多填写120个字</td>
+					<td><textarea style="width:560px;height:75px" name="info" id="info" class="px">{wghd:
+$set.info}</textarea><br/>最多填写120个字</td>
 				</tr>
 				<tr>
 					<th>图文回复图片：</th>
-					<td><input type="text" name="picurl" value="{pigcms:$set.picurl}" id="pic" class="px" style="width:550px;"> <script src="/tpl/static/upyun.js"></script><a href="###" onclick="upyunPicUpload('pic',700,420,'{pigcms:$token}')" class="a_upload">上传</a> <a href="###" onclick="viewImg('pic')">预览</a>   &nbsp; 大小为720x400</td>
+					<td><input type="text" name="picurl" value="{wghd:
+$set.picurl}" id="pic" class="px" style="width:550px;"> <script src="/tpl/static/upyun.js"></script><a href="###" onclick="upyunPicUpload('pic',700,420,'{wghd:
+$token}')" class="a_upload">上传</a> <a href="###" onclick="viewImg('pic')">预览</a>   &nbsp; 大小为720x400</td>
 				</tr>
 
 				<tr>

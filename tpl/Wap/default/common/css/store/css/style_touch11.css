@@ -482,7 +482,11 @@ a{color:#333;text-decoration:none}
 #scnhtm5 .c-float-modePop button {border: 0 none;border-radius: 2px 2px 2px 2px;color: #949494;padding: 6px 9px;}
 #scnhtm5 .c-float-shade {background-color: #000000;display: block;left: 0;opacity: 0.5;position: absolute;top: 0;width: 100%;z-index: 99;}
 #scnhtm5 .c-float-shade.hide {display: none;}
-#scnhtm5 .c-float-popWrap { border-radius: 2px 2px 2px 2px;overflow: hidden;position: absolute;width: 220px;z-index: 9999;}
+#scnhtm5 .c-float-popWrap {    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+     border-radius: 2px 2px 2px 2px;overflow: hidden;position: absolute;width: 220px;z-index: 9999;}
 #scnhtm5 .c-float-popWrap .c-float-modePop {background-color: rgba(51, 51, 51, 0.9); border-radius: 2px 2px 2px 2px;padding: 15px;}
 #scnhtm5 .c-float-popWrap .c-float-modePop .warnMsg {font-size: 14px;padding: 0;}
 #scnhtm5 .c-float-popWrap .c-float-modePop .content {margin-top: 10px;}

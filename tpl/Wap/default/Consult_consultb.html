@@ -1,22 +1,30 @@
 <include file="Public:head"/>
 <body>
-    <link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/tys/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/tys/default.css">
-    <link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/tys/styles.css">
-    <link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/tys/css/jquery-weui.min.css">
-    <script src="{pigcms::RES}/js/tys/jquery-1.11.1.min.js"></script>
-    <script src="{pigcms::RES}/websorcket/fancywebsocket.js"></script>
+    <link rel="stylesheet" type="text/css" href="{wghd:
+:RES}/css/tys/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="{wghd:
+:RES}/css/tys/default.css">
+    <link rel="stylesheet" type="text/css" href="{wghd:
+:RES}/css/tys/styles.css">
+    <link rel="stylesheet" type="text/css" href="{wghd:
+:RES}/css/tys/css/jquery-weui.min.css">
+    <script src="{wghd:
+:RES}/js/tys/jquery-1.11.1.min.js"></script>
     <div class="htmleaf-container" style="max-width:640px; margin:0 auto; width:100%;">
             <div class="htmleaf-content bgcolor-3">
                 <div id="chatbox">
 
                     <div id="chatview" class="p1" style="display: block;">      
                         <div id="profile" class="animate">
-                            <img style="vertical-align:middle; width: 80px; height:80px;" src="{pigcms:$custom.pic}" class="floatingImg"> 
-                            <p style="display:block; float:left;">{pigcms:$custom.name}</p>
-                            <a href="{pigcms::U('Doctor/cdetails',array('id'=>$custom['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">患者<br>详情</a>
+                            <img style="vertical-align:middle; width: 80px; height:80px;" src="{wghd:
+$custom.pic}" class="floatingImg"> 
+                            <p style="display:block; float:left;">{wghd:
+$custom.name}</p>
+                            <a href="{wghd:
+:U('Doctor/cdetails',array('id'=>$custom['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">患者<br>详情</a>
                         </div>
-                        <input type="hidden" id="cmid" value="{pigcms:$cmid}">
+                        <input type="hidden" id="cmid" value="{wghd:
+$cmid}">
                         <input type="hidden" id="noconsult" value="1">
                         <div id="twrapper" style="overflow: hidden;">
                             <div id="chat-messages" class="animate">
@@ -30,11 +38,15 @@
                                 <div class="message_list">
                                     <volist id="list" name="consultb">
                                        <div class="message <eq name='list.dtalk' value='1'>right<else/>left</eq>">
-                                           <span>{pigcms:$list.time|friendlyDate}</span>
-                                           <input type="hidden" id="time" value="{pigcms:$list.time}">
-                                           <img src="{pigcms:$list.pic}" />
+                                           <span>{wghd:
+$list.time|friendlyDate}</span>
+                                           <input type="hidden" id="time" value="{wghd:
+$list.time}">
+                                           <img src="{wghd:
+$list.pic}" />
                                             <div class="bubble">
-                                                {pigcms:$list.content}
+                                                {wghd:
+$list.content}
                                             </div>
                                             <div class="clear"></div>
                                         </div>
@@ -44,11 +56,15 @@
                             <div id="here"></div>
                         </div>
                         <div id="sendmessage">
-                            <input type="hidden" id="cid" value="{pigcms:$custom.id}">
-                            <input type="hidden" id="did" value="{pigcms:$did}">
+                            <input type="hidden" id="cid" value="{wghd:
+$custom.id}">
+                            <input type="hidden" id="did" value="{wghd:
+$did}">
                             <input type="hidden" id="checkcm" value="1">
-                            <input type="hidden" id="dip" value="{pigcms:$consultm.dip}">
-                            <input type="hidden" id="cip" value="{pigcms:$consultm.cip}">
+                            <input type="hidden" id="dip" value="{wghd:
+$consultm.dip}">
+                            <input type="hidden" id="cip" value="{wghd:
+$consultm.cip}">
                             <input type="text" id="consultcon" value="" placeholder="发送信息" />
                             <!-- <button id="message_send">发送</button> -->
                         </div>
@@ -59,20 +75,21 @@
         </div>
 </body>
 </html>
-<script src="{pigcms::RES}/js/tys/jquery-weui.js"></script>
+<script src="{wghd:
+:RES}/js/tys/jquery-weui.js"></script>
+<script src="{wghd:
+:RES}/websorcket/fancywebsocket.js"></script>
+<script src="{wghd:
+:RES}/websorcket/sorcket.js"></script>
 <script>
-    var Server;
     $(document).ready(function() {
       //设置聊天框高度
-      
       var top_h = $('#profile').height();
       var bot_h = $('#sendmessage').height();
       var w_h = $(window).height();
       var log_h = w_h-top_h-bot_h+18;
       $('#chat-messages').height(log_h);
 
-      console.log('Connecting...');
-      Server = new FancyWebSocket('ws://192.168.1.118:8080');
       var cmid=$("#cmid").val();
       var cid=$("#cid").val();
       //发送
@@ -83,23 +100,24 @@
           var ccm=$("#checkcm").val();
           var cip = $('#cip').val();
 
-          var messgae_data = [{'con':con},{'ip':cip},{'fromid':did}];
+          var messgae_data = [{'con':con},{'ip':cip},{'fromid':did},{'toid':cid}];
           send_con = JSON.stringify(messgae_data);
 
-          log( con );
-
-          //判断患者是否在聊天框
-          if(cip){
+          //判断患者是否在聊天框和是否连接上
+          if(cip && connect == 1){
             send( send_con );
           }
 
 
           $('#consultcon').val('');
 
-          //保存聊天记录
+          //当链接上的时候保存聊天记录
           if(con){
+            if(connect == 1){
+              log( con );
               $.ajax({
-                  url:"{pigcms::U('Consult/sendconsult2',array('token'=>$token,'wecha_id'=>$wecha_id))}",
+                  url:"{wghd:
+:U('Consult/sendconsult2',array('token'=>$token,'wecha_id'=>$wecha_id))}",
                   data:{cid:cid,did:did,cmid:cmid,con:con,ccm:ccm},
                   async:false,
                   success:function(data){
@@ -112,22 +130,16 @@
                       }
                   }
               })
+            }else{
+              log( con ,'error');
+            }
           }
         }
       });
 
-      //Let the user know we're connected
-      Server.bind('open', function(payload) {
-        console.log( "Connected." );
-      });
-
-      //OH NOES! Disconnection occurred.
-      Server.bind('close', function( data ) {
-        console.log( "Disconnected." );
-      });
-
       //Log any messages sent from server
       Server.bind('message', function( payload ) {
+        console.log(payload);
         if (payload.match("^\{(.+:.+,*){1,}\}$"))
         {
             var cip = jQuery.parseJSON(payload).clientID;
@@ -138,14 +150,16 @@
             if(myip && myip != dip){
               $('#dip').val(myip);
               $.ajax({
-                  url:"{pigcms::U('Consult/updateDip')}",
+                  url:"{wghd:
+:U('Consult/updateDip')}",
                   data:{cmid:cmid,dip:myip},
               })
             }
             //判断新加入的是否是自己的患者
             if(cip && cip != old_cip){
               $.ajax({
-                  url:"{pigcms::U('Consult/judgeCustom')}",
+                  url:"{wghd:
+:U('Consult/judgeCustom')}",
                   data:{cmid:cmid,cip:cip},
                   async:false,
                   success:function(data){
@@ -169,13 +183,7 @@
         //     log( payload, '' ,'left');
         // }
       });
-
-      Server.connect();
     });
-
-    function send( text ) {
-      Server.send( 'message', text );
-    }
 
     var messages = $('#chat-messages');
     var messageslist = messages.find('.message_list');
@@ -190,21 +198,23 @@
         str += "right'>";
       }
       if(direction == 'left'){
-        str +=   "<img src='{pigcms:$custom.pic}' />";
+        str +=   "<img src='{wghd:
+$custom.pic}' />";
       }else{
-        str +=   "<img src='{pigcms:$doctor.pic}' />";
+        str +=   "<img src='{wghd:
+$doctor.pic}' />";
       }
       str +=     "<div class='bubble'>";
       str +=       text;
       str +=     "</div>";
+      if(type == 'error'){
+        str += '<div class="send_error iconfont">&#xe604;</div>';
+      }
       str +=     "<div class='clear'></div>";
       str += "</div>";
 
-      if(type == 'pre'){
-        messageslist.prepend(str);
-      }else{
-        messageslist.append(str);
-      }
+      messageslist.append(str);
+
       chat_nums = messages.find('.message ').length;
       messages.animate({
           scrollTop: 71*chat_nums
@@ -216,7 +226,8 @@
         var cid=$("#cid").val();
         var did=$("#did").val();
         $.ajax({
-            url:"{pigcms::U('Consult/refreshconsult2',array('token'=>$token,'wecha_id'=>$wecha_id))}",
+            url:"{wghd:
+:U('Consult/refreshconsult2',array('token'=>$token,'wecha_id'=>$wecha_id))}",
             data:{cid:cid,did:did,time:time},
             async:false,
             success:function(data){
@@ -251,7 +262,8 @@
          var noconsult=$("#noconsult").val();
          if(noconsult==1){
              $.ajax({
-                 url:"{pigcms::U('Consult/loadmore',array('token'=>$token,'wecha_id'=>$wecha_id))}",
+                 url:"{wghd:
+:U('Consult/loadmore',array('token'=>$token,'wecha_id'=>$wecha_id))}",
                  data:{cmid:cmid,cnums:cnums},
                  async:false,
                  success:function(data){

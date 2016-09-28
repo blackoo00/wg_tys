@@ -1,9 +1,0 @@
-[ 2016-09-24T10:34:54+08:00 ] ERR: (ThinkException) _TEMPLATE_NOT_EXIST_[./tpl/Wap/default/Doctor_index.html]
-[ 2016-09-24T10:35:42+08:00 ] ERR: (ThinkException) _TEMPLATE_NOT_EXIST_[./tpl/Wap/default/Doctor_index.html]
-[ 2016-09-24T10:57:38+08:00 ] ERR: (ThinkException) _TEMPLATE_NOT_EXIST_[./tpl/Wap/default/Doctor_index.html]
-[ 2016-09-24T11:17:58+08:00 ] ERR: (ThinkException) _TEMPLATE_NOT_EXIST_[./tpl/Wap/default/Doctor_index.html]
-[ 2016-09-24T13:44:28+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Custom
-[ 2016-09-24T13:44:32+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Custom
-[ 2016-09-24T13:44:51+08:00 ] ERR: (ThinkException) _MODULE_NOT_EXIST_:Custom
-[ 2016-09-24T13:45:15+08:00 ] ERR: (ThinkException) _ERROR_ACTION_:index
-[ 2016-09-24T13:45:17+08:00 ] ERR: (ThinkException) _ERROR_ACTION_:login

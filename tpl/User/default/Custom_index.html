@@ -3,7 +3,8 @@
 <div class="cLine">
   <div style="float:right;line-height:30px;">
     <form action="#" method="post">
-      <input type="text" placeholder="请输入患者姓名" value="{pigcms:$_POST['search']}" class="px" name="search" />    
+      <input type="text" placeholder="请输入患者姓名" value="{wghd:
+$_POST['search']}" class="px" name="search" />    
       <button class="btnGrayS" style="height: 29px;">搜索</button>
     </form>
   </div>
@@ -28,14 +29,22 @@
         <TR></TR>
         <volist id="list" name="custom">
           <tr>
-            <td>{pigcms:$list.name}</td>
+            <td>{wghd:
+$list.name}</td>
             <td><eq name="list.sex" value="1">男<else/>女</eq></td>
-            <td>{pigcms:$list.doctor.name}</td>
-            <td>{pigcms:$list.tel}</td>
-			      <td>{pigcms:$list.orderNums}（<a href="{pigcms::U('Store/orders',array('cid'=>$list['id']))}" style="color:blue">明细</a>）</td>
+            <td>{wghd:
+$list.doctor.name}</td>
+            <td>{wghd:
+$list.tel}</td>
+			      <td>{wghd:
+$list.orderNums}（<a href="{wghd:
+:U('Store/orders',array('cid'=>$list['id']))}" style="color:blue">明细</a>）</td>
             <td class="norightborder">
-               <a href="{pigcms::U('Custom/details',array('id'=>$list['id']))}" title="详细信息">详细信息</a>
-               <!-- <a href="{pigcms::U('Consult/index',array('id'=>$list['id']))}" title="咨询信息">咨询信息({pigcms:$list.consultnum})</a> -->
+               <a href="{wghd:
+:U('Custom/details',array('id'=>$list['id']))}" title="详细信息">详细信息</a>
+               <!-- <a href="{wghd:
+:U('Consult/index',array('id'=>$list['id']))}" title="咨询信息">咨询信息({wghd:
+$list.consultnum})</a> -->
             </td>
           </tr>
           </tr>
@@ -47,7 +56,8 @@
 </div>
 <div class="cLine">
   <div class="pageNavigator right">
-    <div class="pages">{pigcms:$page}</div>
+    <div class="pages">{wghd:
+$page}</div>
   </div>
   <div class="clr"></div>
 </div>

@@ -6,13 +6,20 @@
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <meta name="format-detection" content="telephone=no"/>
-<title>{pigcms:$company.name}</title>
-<script src="{pigcms::RES}/css/store/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="{pigcms::RES}/css/store/js/jquery.lazyload.js" type="text/javascript"></script>
-<script src="{pigcms::RES}/css/store/js/notification.js" type="text/javascript"></script>
-<script src="{pigcms::RES}/css/store/js/swiper.min.js" type="text/javascript"></script>
-<script src="{pigcms::RES}/css/store/js/main.js" type="text/javascript"></script>
-<link type="text/css" rel="stylesheet" href="{pigcms::RES}/css/store/css/style_touch11.css">
+<title>{wghd:
+$company.name}</title>
+<script src="{wghd:
+:RES}/css/store/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="{wghd:
+:RES}/css/store/js/jquery.lazyload.js" type="text/javascript"></script>
+<script src="{wghd:
+:RES}/css/store/js/notification.js" type="text/javascript"></script>
+<script src="{wghd:
+:RES}/css/store/js/swiper.min.js" type="text/javascript"></script>
+<script src="{wghd:
+:RES}/css/store/js/main.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="{wghd:
+:RES}/css/store/css/style_touch11.css">
 </head>
 <body>
 <div id="top"></div>
@@ -24,13 +31,16 @@
 	<div class="views">
 		<ul class="warp" id="fd">
 			<volist name="banner" id="vo">
-			<li class="li"><a href="{pigcms:$vo.url}"><img src="{pigcms:$vo.picurl}"></a></li>
+			<li class="li"><a href="{wghd:
+$vo.url}"><img src="{wghd:
+$vo.picurl}"></a></li>
 			</volist>
 		</ul>
 	</div>
 		<ul class="tabs" style="display:none">
 			<volist name="banner" id="vo">
-			<li class="li">{pigcms:$i}</li>
+			<li class="li">{wghd:
+$i}</li>
 			</volist>
 		</ul>
 </div>
@@ -38,19 +48,29 @@
 var focusPic = new Swiper('.focusPic .views',{pagination: '.focusPic .tabs',autoplay:2000})
 </script>
 <div class="m-hd" style="position:relative">
-<div style="position:absolute;top:-44px;left:10px;"><img src="{pigcms:$company.logourl}" style="width:80px;border-radius:8px;border:1px solid #C9C9C9"></div>
-<div style="position:absolute;top:-34px;left:100px;font-size:20px;color:#fff; font-family:Microsoft YaHei;text-shadow:#000 5px 5px 5px;">{pigcms:$company.name}</div>
+<div style="position:absolute;top:-44px;left:10px;"><img src="{wghd:
+$company.logourl}" style="width:80px;border-radius:8px;border:1px solid #C9C9C9"></div>
+<div style="position:absolute;top:-34px;left:100px;font-size:20px;color:#fff; font-family:Microsoft YaHei;text-shadow:#000 5px 5px 5px;">{wghd:
+$company.name}</div>
 <!--div><a href="javascript:history.go(-1);" class="back">返回</a></div-->
 <div class="tit"></div>
-<div><a href="{pigcms::U('Store/products',array('token'=>$_GET['token'],'mid'=>$my['id']))}" class="all"><span style="display:block;padding-top:40px;text-align:center">全部宝贝</span></a></div>
-<div><a href="{pigcms::U('Store/cart',array('token'=>$_GET['token'],'mid'=>$my['id']))}" class="cart"><span style="display:block;padding-top:40px;text-align:center">购物车</span><i class="cart_com"><if condition="$totalProductCount neq 0" >{pigcms:$totalProductCount}</if></i></a></div>
-<div><a href="{pigcms::U('Store/my',array('token'=>$_GET['token'],'mid'=>$my['id']))}" class="uc"><span style="display:block;padding-top:40px;text-align:center">我的订单</span></a></div>
-<div><a href="{pigcms::U('Store/cats',array('token'=>$_GET['token'],'mid'=>$my['id']))}" class="cat"><span style="display:block;padding-top:40px;text-align:center">商品分类</span></a></div>
+<div><a href="{wghd:
+:U('Store/products',array('token'=>$_GET['token'],'mid'=>$my['id']))}" class="all"><span style="display:block;padding-top:40px;text-align:center">全部宝贝</span></a></div>
+<div><a href="{wghd:
+:U('Store/cart',array('token'=>$_GET['token'],'mid'=>$my['id']))}" class="cart"><span style="display:block;padding-top:40px;text-align:center">购物车</span><i class="cart_com"><if condition="$totalProductCount neq 0" >{wghd:
+$totalProductCount}</if></i></a></div>
+<div><a href="{wghd:
+:U('Store/my',array('token'=>$_GET['token'],'mid'=>$my['id']))}" class="uc"><span style="display:block;padding-top:40px;text-align:center">我的订单</span></a></div>
+<div><a href="{wghd:
+:U('Store/cats',array('token'=>$_GET['token'],'mid'=>$my['id']))}" class="cat"><span style="display:block;padding-top:40px;text-align:center">商品分类</span></a></div>
 <span style="width:10px;display:block"></span>
 </div>
 <ul class="sub-menu-list">
-<li><a href="{pigcms::U('Store/cats',array('token' => $_GET['token'], 'catid' => $hostlist['id'],'mid'=>$my['id']))}">首页</a></li>
+<li><a href="{wghd:
+:U('Store/cats',array('token' => $_GET['token'], 'catid' => $hostlist['id'],'mid'=>$my['id']))}">首页</a></li>
 <volist name="cats" id="hostlist" key="i"> 
-<li><a href="{pigcms::U('Store/products',array('token' => $_GET['token'], 'catid' => $hostlist['id'],'mid'=>$my['id']))}">{pigcms:$hostlist.name}</a></li>
+<li><a href="{wghd:
+:U('Store/products',array('token' => $_GET['token'], 'catid' => $hostlist['id'],'mid'=>$my['id']))}">{wghd:
+$hostlist.name}</a></li>
 </volist>
 </ul>

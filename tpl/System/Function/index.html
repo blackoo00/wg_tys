@@ -19,17 +19,25 @@
 	  </tr>
 	    <volist name="list" id="vo">
 			<tr>
-				<td align='center'>{pigcms:$vo.id}</td>
-				<td >{pigcms:$vo.name}</td>
-				<td >{pigcms:$vo.funname}</td>
-				<td >{pigcms:$vo.gid}</td>
-				<td >{pigcms:$vo.info}</td>
-				<td align='center'>{pigcms:$vo.usenum}</td>
+				<td align='center'>{wghd:
+$vo.id}</td>
+				<td >{wghd:
+$vo.name}</td>
+				<td >{wghd:
+$vo.funname}</td>
+				<td >{wghd:
+$vo.gid}</td>
+				<td >{wghd:
+$vo.info}</td>
+				<td align='center'>{wghd:
+$vo.usenum}</td>
 				<td align='center'><eq name="vo.status" value="1"><font color="red">√</font><else/><font color="blue">×</font></eq> 
 				</td>
 				<td align='center'>
-					<a href="{pigcms::U('Function/edit/',array('id'=>$vo['id']))}">修改</a>
-					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{pigcms::U('Function/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
+					<a href="{wghd:
+:U('Function/edit/',array('id'=>$vo['id']))}">修改</a>
+					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{wghd:
+:U('Function/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
 				</td>
 			</tr>
 	    </volist>
@@ -38,7 +46,8 @@
 		</style>
      <tr bgcolor="#FFFFFF"> 
 	 
-      <td colspan="8"><div class="listpage">{pigcms:$page}</div></td>
+      <td colspan="8"><div class="listpage">{wghd:
+$page}</div></td>
      
     </tr>
    

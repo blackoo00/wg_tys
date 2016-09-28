@@ -1,7 +1,9 @@
 <include file="Public:head"/>
 <body>
-	<link href="{pigcms::RES}/bsuger/Content/comm/css/weixin.css" rel="stylesheet" />
-	<link href="{pigcms::RES}/bsuger/Content/css/diabetes.css" rel="stylesheet" />
+	<link href="{wghd:
+:RES}/bsuger/Content/comm/css/weixin.css" rel="stylesheet" />
+	<link href="{wghd:
+:RES}/bsuger/Content/css/diabetes.css" rel="stylesheet" />
 	<style>
 	a.button{    display: inline-block;
     width: 30%;
@@ -16,11 +18,17 @@
 	.infoshow{width:80%;margin:0 auto;border:1px solid #eee;border-radius:15px;text-align:center;position:fixed;top:20%;left:10%;background:#00C07B;padding:20px 0;display:none}
 	#login_btn{border-radius:2px; width:100%; background:#289ED7; border:0; height:38px; line-height:38px; font-size:16px; color:#FFF;}
 	</style>
-    <script src="{pigcms::RES}/js/tys/require.js" data-main="{pigcms::RES}/js/tys/main" type="text/javascript"></script>
-    <script src="{pigcms::RES}/js/tys/jquery-1.11.1.min.js"></script>
-    <script src="{pigcms::RES}/js/tys/iscroll.js"></script>
-    <script src="{pigcms::RES}/js/tys/date.js"></script>
-    <link href="{pigcms::RES}/css/tys/common.css" rel="stylesheet" />
+    <script src="{wghd:
+:RES}/js/tys/require.js" data-main="{wghd:
+:RES}/js/tys/main" type="text/javascript"></script>
+    <script src="{wghd:
+:RES}/js/tys/jquery-1.11.1.min.js"></script>
+    <script src="{wghd:
+:RES}/js/tys/iscroll.js"></script>
+    <script src="{wghd:
+:RES}/js/tys/date.js"></script>
+    <link href="{wghd:
+:RES}/css/tys/common.css" rel="stylesheet" />
     <script type="text/javascript">
       $(function(){
         $('#bmibutton').date({
@@ -59,10 +67,13 @@
             重要指标
         </div>
         <section style="padding:4%">
-            <form action="{pigcms::U('Steward/bprotein', array('token'=>$token,'wecha_id'=>$wecha_id))}" method="post">
-                <input type="hidden" name="id" value="{pigcms:$info.id}">
+            <form action="{wghd:
+:U('Steward/bprotein', array('token'=>$token,'wecha_id'=>$wecha_id))}" method="post">
+                <input type="hidden" name="id" value="{wghd:
+$info.id}">
                 <ul>
-                    <li><span>用药情况：</span><textarea name="note" id="" rows="5" placeholder="用药情况" style="font-size:1em">{pigcms:$info.note}</textarea></li>
+                    <li><span>用药情况：</span><textarea name="note" id="" rows="5" placeholder="用药情况" style="font-size:1em">{wghd:
+$info.note}</textarea></li>
                 </ul>
 				<article class="f1  bc1">
                 <section class="record " style="padding-top: 10px;">
@@ -78,30 +89,38 @@
                         <dt class="ul">
                           <div class="title front">糖化血红蛋白(HbA1c):</div>
                           <div class="f1 title2 sel_f">
-                            <input type="hidden" class="medicine" name="hbaic" id="hbaic" value="{pigcms:$info.hbaic}">                        
-                            <span id="hbaic1"><empty name="info.hbaic">请选择<else/>{pigcms:$info.hbaic}</empty></span>
+                            <input type="hidden" class="medicine" name="hbaic" id="hbaic" value="{wghd:
+$info.hbaic}">                        
+                            <span id="hbaic1"><empty name="info.hbaic">请选择<else/>{wghd:
+$info.hbaic}</empty></span>
                             <select onchange="medicine2()" name="hbaic1" id="medicine"></select>
                           </div>
                         </dt>
                         <dt class="ul">
                           <div class="title front">BMI:</div>
                           <div class="f1 title2 sel_f">
-                            <input type="hidden" class="bmi" name="bmi" id="bmi" value="{pigcms:$info.bmi}">                        
-                            <span id="bmibutton"><empty name="info.bmi">请选择<else/>{pigcms:$info.bmi}</empty></span>
+                            <input type="hidden" class="bmi" name="bmi" id="bmi" value="{wghd:
+$info.bmi}">                        
+                            <span id="bmibutton"><empty name="info.bmi">请选择<else/>{wghd:
+$info.bmi}</empty></span>
                           </div>
                         </dt>
                         <dt class="ul">
                           <div class="title front">血压(mmHg):</div>
                           <div class="f1 title2 sel_f">
-                            <input type="hidden" class="presure" name="presure" id="presure" value="{pigcms:$info.presure}">                        
-                            <span id="bpressure"><empty name="info.presure">请选择<else/>{pigcms:$info.presure}</empty></span>
+                            <input type="hidden" class="presure" name="presure" id="presure" value="{wghd:
+$info.presure}">                        
+                            <span id="bpressure"><empty name="info.presure">请选择<else/>{wghd:
+$info.presure}</empty></span>
                           </div>
                         </dt>
                         <dt class="ul">
                           <div class="title front">甘油三脂(mmol/L):</div>
                           <div class="f1 title2 sel_f">
-                            <input type="hidden" class="xiezhi" name="xiezhi" id="xiezhi" value="{pigcms:$info.xiezhi}">                        
-                            <span id="xiezhi1"><empty name="info.xiezhi">请选择<else/>{pigcms:$info.xiezhi}</empty></span>
+                            <input type="hidden" class="xiezhi" name="xiezhi" id="xiezhi" value="{wghd:
+$info.xiezhi}">                        
+                            <span id="xiezhi1"><empty name="info.xiezhi">请选择<else/>{wghd:
+$info.xiezhi}</empty></span>
                             <select onchange="xiezhi2()" name="xiezhi1" id="xiezhiselect"></select>
                           </div>
                         </dt>

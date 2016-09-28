@@ -4,9 +4,12 @@
 	<div id="wrapper" class="consult_index">
 		<section>
 			<div>医患问题提问</div>
-			<form class="form" method="post" action="{pigcms::U('Consult/insert',array('wecha_id'=>$wecha_id,'token'=>$token))}" enctype="multipart/form-data" >
-				<input type="hidden" name="did" value="{pigcms:$doctor.id}">
-				<div id="loading" style="display:none"><img src="{pigcms::RES}/css/tys/photoswipe-loader.gif"></div>
+			<form class="form" method="post" action="{wghd:
+:U('Consult/insert',array('wecha_id'=>$wecha_id,'token'=>$token))}" enctype="multipart/form-data" >
+				<input type="hidden" name="did" value="{wghd:
+$doctor.id}">
+				<div id="loading" style="display:none"><img src="{wghd:
+:RES}/css/tys/photoswipe-loader.gif"></div>
 				<table>
 					<tr>
 						<td><input name="title" type="text" placeholder="标题"></td>
@@ -41,10 +44,13 @@
 						<td>上传图片:</td>
 					</tr>
 					<tr>
-						<script src="{pigcms::RES}/js/tys/require.js" data-main="{pigcms::RES}/js/tys/main" type="text/javascript"></script>
+						<script src="{wghd:
+:RES}/js/tys/require.js" data-main="{wghd:
+:RES}/js/tys/main" type="text/javascript"></script>
 						<td>
 							<span>
-								<input id="pic" name="pic" type="file" title="病情图片" onchange="return ajaxFileUpload('{pigcms::U('Consult/picupsave')}')">
+								<input id="pic" name="pic" type="file" title="病情图片" onchange="return ajaxFileUpload('{wghd:
+:U('Consult/picupsave')}')">
 								<input id="uppic" name="uppic" type="hidden" value="">
 							</span>
 							<span style="display:block; float:left; width:75%;">上传疾病相关照片或医院诊断图片有利于医生给您更准确的建议</span>

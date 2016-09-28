@@ -1,10 +1,14 @@
 <include file="Public:head"/>
 <body>
-	<link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/tys/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/tys/default.css">
-	<link rel="stylesheet" type="text/css" href="{pigcms::RES}/css/tys/styles.css">
+	<link rel="stylesheet" type="text/css" href="{wghd:
+:RES}/css/tys/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="{wghd:
+:RES}/css/tys/default.css">
+	<link rel="stylesheet" type="text/css" href="{wghd:
+:RES}/css/tys/styles.css">
 	<link href='http://fonts.useso.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-    <script src="{pigcms::RES}/js/tys/jquery-1.11.1.min.js"></script>
+    <script src="{wghd:
+:RES}/js/tys/jquery-1.11.1.min.js"></script>
 	<!--[if IE]>
 		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
 	<![endif]-->
@@ -26,13 +30,18 @@
                             </div>
                             <a href="javascript:location.reload()" class="refresh"><i class="icon-loop2"></i></a>
                             <volist id="list" name="consult1">
-                                <a href="{pigcms::U('Consult/consultb',array('did'=>$list[doctor][id],'cid'=>$list[custom][id],'cmid'=>$list[id],'token'=>$token,'wecha_id'=>$wecha_id))}">
+                                <a href="{wghd:
+:U('Consult/consultb',array('did'=>$list[doctor][id],'cid'=>$list[custom][id],'cmid'=>$list[id],'token'=>$token,'wecha_id'=>$wecha_id))}">
             			        	<div class="friend" style="background-color:#fff;border-top:1px solid #c3c3c5;border-bottom:1px solid #c3c3c5;">
-                			            	<img src="{pigcms:$list.custom.pic}" />
-                			            	<input type="hidden" id="cid" value="{pigcms:$list.custom.id}">
+                			            	<img src="{wghd:
+$list.custom.pic}" />
+                			            	<input type="hidden" id="cid" value="{wghd:
+$list.custom.id}">
                 			                <p>
-                			                	<strong class="customname">{pigcms:$list.custom.name}&nbsp;<eq name="list.new" value="1"><font class="newmessage" style="color:red">(有新的消息)</font></eq></strong>
-                				                <!-- <span>{pigcms:$list.title}</span> -->
+                			                	<strong class="customname">{wghd:
+$list.custom.name}&nbsp;<eq name="list.new" value="1"><font class="newmessage" style="color:red">(有新的消息)</font></eq></strong>
+                				                <!-- <span>{wghd:
+$list.title}</span> -->
                 			                </p>
                 			                <!-- <div class="status available"></div> -->
                                             <div class="clear"></div>
@@ -40,13 +49,18 @@
                                 </a>
                             </volist>
                             <volist id="list" name="consult2">
-                                <a href="{pigcms::U('Consult/consultb',array('did'=>$list[doctor][id],'cid'=>$list[custom][id],'cmid'=>$list[id],'token'=>$token,'wecha_id'=>$wecha_id))}">
+                                <a href="{wghd:
+:U('Consult/consultb',array('did'=>$list[doctor][id],'cid'=>$list[custom][id],'cmid'=>$list[id],'token'=>$token,'wecha_id'=>$wecha_id))}">
                                     <div class="friend" style="background-color:#fff;border-top:1px solid #c3c3c5;border-bottom:1px solid #c3c3c5;">
-                                            <img src="{pigcms:$list.custom.pic}" />
-                                            <input type="hidden" id="cid" value="{pigcms:$list.custom.id}">
+                                            <img src="{wghd:
+$list.custom.pic}" />
+                                            <input type="hidden" id="cid" value="{wghd:
+$list.custom.id}">
                                             <p>
-                                                <strong class="customname">{pigcms:$list.custom.name}&nbsp;<eq name="list.new" value="1"><font class="newmessage" style="color:red">(有新的消息)</font></eq></strong>
-                                                <!-- <span>{pigcms:$list.title}</span> -->
+                                                <strong class="customname">{wghd:
+$list.custom.name}&nbsp;<eq name="list.new" value="1"><font class="newmessage" style="color:red">(有新的消息)</font></eq></strong>
+                                                <!-- <span>{wghd:
+$list.title}</span> -->
                                             </p>
                                             <!-- <div class="status available"></div> -->
                                             <div class="clear"></div>
@@ -77,7 +91,8 @@
                             var did=$(obj).attr("data-did");
                             // console.log(cid+"@"+did);
                             $.ajax({
-                                url:"{pigcms::U('Consult/ajaxconsultb',array('token'=>$token,'wecha_id'=>$wecha_id))}",
+                                url:"{wghd:
+:U('Consult/ajaxconsultb',array('token'=>$token,'wecha_id'=>$wecha_id))}",
                                 data:{cid:cid,did:did},
                                 async: false,
                                 success:function(data){

@@ -13,114 +13,145 @@
 <table class="userinfoArea" style=" margin:0;float:left" border="0" cellspacing="0" cellpadding="0" width="50%"><tbody>
 <tr>
 <th width="120">微信名：</th>
-<td>{pigcms:$member.nickname}</td>
+<td>{wghd:
+$member.nickname}</td>
 </tr>
                             <tr>
 <th width="120">微信头像：</th>
-<td><img src="{pigcms:$member.headimgurl}" width="80"></td>
+<td><img src="{wghd:
+$member.headimgurl}" width="80"></td>
 </tr>
 <tr>
 <th width="120">关注时间：</th>
-<td>{pigcms:$member.createtime|date='Y-m-d',###}</td>
+<td>{wghd:
+$member.createtime|date='Y-m-d',###}</td>
 </tr>
 <tr>
 <th width="120">来自好友：</th>
-<td><eq name="from_user" value="">红日化妆品<else/>(会员ID：{pigcms:$from_user.id}){pigcms:$from_user.nickname}</eq></td>
+<td><eq name="from_user" value="">红日化妆品<else/>(会员ID：{wghd:
+$from_user.id}){wghd:
+$from_user.nickname}</eq></td>
 </tr>
 <tr>
 <th width="120">姓名：</th>
-<td>{pigcms:$member.name}</td>
+<td>{wghd:
+$member.name}</td>
 </tr>
 <tr>
 <th width="120">联系电话：</th>
-<td>{pigcms:$member.tele}</td>
+<td>{wghd:
+$member.tele}</td>
 </tr>
 <tr>
 <th width="120">QQ：</th>
-<td>{pigcms:$member.email}</td>
+<td>{wghd:
+$member.email}</td>
 </tr>
 <tr>
 <th width="120">地址：</th>
-<td>{pigcms:$member.province}{pigcms:$member.city}{pigcms:$member.county}{pigcms:$member.address}</td>
+<td>{wghd:
+$member.province}{wghd:
+$member.city}{wghd:
+$member.county}{wghd:
+$member.address}</td>
 </tr>
 </tbody>
 </table>
 <table class="userinfoArea" style=" margin:0;float:left" border="0" cellspacing="0" cellpadding="0" width="50%"><tbody>
 <tr>
 <th width="120">会员积分：</th>
-<td>{pigcms::intval($totalScore)}&nbsp;分</td>
+<td>{wghd:
+:intval($totalScore)}&nbsp;分</td>
 </tr>
 <tr>
 <th width="120">累计销售：</th>
-<td>{pigcms::sprintf("%.2f",$totalMoney/100)}&nbsp;元</td>
+<td>{wghd:
+:sprintf("%.2f",$totalMoney/100)}&nbsp;元</td>
 </tr>
 <tr>
 <th width="120">累计佣金：</th>
-<td>{pigcms::sprintf("%.2f",$totalOfferMoney/100)}&nbsp;元</td>
+<td>{wghd:
+:sprintf("%.2f",$totalOfferMoney/100)}&nbsp;元</td>
 </tr>
 <tr>
 <th width="120">分店总人数：</th>
-<td>{pigcms::$member[firstNums]+$member[secondNums]+$member[thirdNums]}&nbsp;人</td>
+<td>{wghd:
+:$member[firstNums]+$member[secondNums]+$member[thirdNums]}&nbsp;人</td>
 </tr>
 <tr>
 <th width="120">A分店个数：</th>
-<td>{pigcms:$member.firstNums}&nbsp;人</td>
+<td>{wghd:
+$member.firstNums}&nbsp;人</td>
 </tr>
                             <tr>
 <th width="120">B分店个数：</th>
-<td>{pigcms:$member.secondNums}&nbsp;人</td>
+<td>{wghd:
+$member.secondNums}&nbsp;人</td>
 </tr>
 <tr>
 <th width="120">C分店个数：</th>
-<td>{pigcms:$member.thirdNums}&nbsp;人</td>
+<td>{wghd:
+$member.thirdNums}&nbsp;人</td>
 </tr>
 <tr>
 <th width="120">点击链接人数：</th>
-<td>{pigcms:$member.clickNums}&nbsp;人</td>
+<td>{wghd:
+$member.clickNums}&nbsp;人</td>
 </tr>
 <tr>
 <th width="120">成功关注人数：</th>
-<td>{pigcms:$member.followNums}&nbsp;人</td>
+<td>{wghd:
+$member.followNums}&nbsp;人</td>
 </tr>
 <tr>
 <th width="120">分店下单购买：</th>
-<td>{pigcms:$orderNums}&nbsp;单</td>
+<td>{wghd:
+$orderNums}&nbsp;单</td>
 </tr>
 <tr>
 <th width="120">正式A分店：</th>
-<td>{pigcms:$distriCount}&nbsp;人</td>
+<td>{wghd:
+$distriCount}&nbsp;人</td>
 </tr>
 <!--tr>
 <th width="120">未付款订单佣金：</th>
-<td>{pigcms::sprintf("%.2f",$order['status_0']/100)}&nbsp;元</td>
+<td>{wghd:
+:sprintf("%.2f",$order['status_0']/100)}&nbsp;元</td>
 </tr-->
 <tr>
 <th width="120">已付款订单佣金：</th>
-<td>{pigcms::sprintf("%.2f",$order['status_1']/100)}&nbsp;元</td>
+<td>{wghd:
+:sprintf("%.2f",$order['status_1']/100)}&nbsp;元</td>
 </tr>
 <tr>
 <th width="120">未收货订单佣金：</th>
-<td>{pigcms::sprintf("%.2f",$order['status_2']/100)}&nbsp;元</td>
+<td>{wghd:
+:sprintf("%.2f",$order['status_2']/100)}&nbsp;元</td>
 </tr>
 <tr>
 <th width="120">已收货订单佣金：</th>
-<td>{pigcms::sprintf("%.2f",$order['status_3']/100)}&nbsp;元</td>
+<td>{wghd:
+:sprintf("%.2f",$order['status_3']/100)}&nbsp;元</td>
 </tr>
 <!--tr>
 <th width="120">已审核订单佣金：</th>
-<td>{pigcms::sprintf("%.2f",$order['status_4']/100)}&nbsp;元</td>
+<td>{wghd:
+:sprintf("%.2f",$order['status_4']/100)}&nbsp;元</td>
 </tr-->
 <tr>
 <th width="120">可提现订单佣金：</th>
-<td>{pigcms::sprintf("%.2f",($order['status_4']-$member['alreadyGetMoney'])/100)}&nbsp;元</td>
+<td>{wghd:
+:sprintf("%.2f",($order['status_4']-$member['alreadyGetMoney'])/100)}&nbsp;元</td>
 </tr>
 <tr>
 <th width="120">已提现订单佣金：</th>
-<td>{pigcms::sprintf("%.2f",$member['alreadyGetMoney']/100)}&nbsp;元</td>
+<td>{wghd:
+:sprintf("%.2f",$member['alreadyGetMoney']/100)}&nbsp;元</td>
 </tr>
 <tr>
 <th width="120">已退款订单佣金：</th>
-<td>{pigcms::sprintf("%.2f",$order['status_-1']/100)}&nbsp;元</td>
+<td>{wghd:
+:sprintf("%.2f",$order['status_-1']/100)}&nbsp;元</td>
 </tr>
 </tbody>
 </table>
@@ -141,8 +172,10 @@
                 <tr></tr>
                   <volist id="list" name="childmember">
                 <tr>
-                  <td>{pigcms:$list.nickname}</td>
-                  <td><img src="{pigcms:$list.headimgurl}" width="50"></td>
+                  <td>{wghd:
+$list.nickname}</td>
+                  <td><img src="{wghd:
+$list.headimgurl}" width="50"></td>
                   <td><eq name="list.fid" value="$member.id">A分店</eq><eq name="list.sid" value="$member.id">B分店</eq><eq name="list.tid" value="$member.id">C分店</eq></td>
 				  <td><eq name="list.distritime" value="0">否<else/><span style="color:red">是</span></eq></td>
                 </tr>
