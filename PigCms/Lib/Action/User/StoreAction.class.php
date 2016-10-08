@@ -14,17 +14,18 @@ class StoreAction extends UserAction{
 	 * 分类列表
 	 */
 	public function index() {
+		$parentid = isset($_GET['parentid']) ? intval($_GET['parentid']) : 0;
 		$data = M('Product_cat');
-		$where = array('token' => session('token'));
+		$where = array('token' => session('token'), 'cid' => $this->_cid, 'parentid' => $parentid);
         if (IS_POST) {
             $key = $this->_post('searchkey');
             if(empty($key)){
                 $this->error("关键词不能为空");
             }
-			
-            $map['token'] = $this->_get('token'); 
+
+            $map['token'] = $this->get('token'); 
             $map['name|des'] = array('like',"%$key%"); 
-            $list = $data->where($map)->select(); 
+            $list = $data->where($map)->order("sort ASC, id DESC")->select(); 
             $count      = $data->where($map)->count();       
             $Page       = new Page($count,20);
         	$show       = $Page->show();
@@ -32,7 +33,7 @@ class StoreAction extends UserAction{
         	$count      = $data->where($where)->count();
         	$Page       = new Page($count,20);
         	$show       = $Page->show();
-        	$list = $data->where($where)->limit($Page->firstRow.','.$Page->listRows)->order('sort asc,id asc')->select();
+        	$list = $data->where($where)->order("sort DESC, id ASC")->limit($Page->firstRow.','.$Page->listRows)->select();
         }
 		$this->assign('page',$show);		
 		$this->assign('list',$list);
@@ -41,7 +42,7 @@ class StoreAction extends UserAction{
 		}
 		$this->assign('parentCat',$parentCat);
 		$this->assign('parentid',$parentid);
-		$this->display();		
+		$this->display();
 	}
 	/**
 	 * 轮播图列表
@@ -55,7 +56,7 @@ class StoreAction extends UserAction{
                 $this->error("关键词不能为空");
             }
 
-            $map['token'] = $this->_get('token'); 
+            $map['token'] = $this->get('token'); 
             $map['name|des'] = array('like',"%$key%"); 
             $list = $data->where($map)->select(); 
             $count      = $data->where($map)->count();       
@@ -97,7 +98,7 @@ class StoreAction extends UserAction{
         $id = $this->_get('id'); 
 		$checkdata = M('Product_banner')->where(array('id'=>$id))->find();
 		if(empty($checkdata)){
-            $this->error("没有相应记录.您现在可以添加.",U('Store/catAdd'));
+            $this->error("没有相应记录.您现在可以添加.",U('Store/bannerAdd'));
         }
 		if (IS_POST) {
             $data = D('Product_banner');
@@ -142,15 +143,144 @@ class StoreAction extends UserAction{
         }        
 	}
 	/**
+	 * 广告位列表
+	 */
+	public function guanggao() {
+		$data = M('Product_guanggao');
+		$where = array('token' => session('token'));
+        if (IS_POST) {
+            $key = $this->_post('searchkey');
+            if(empty($key)){
+                $this->error("关键词不能为空");
+            }
+
+            $map['token'] = $this->get('token'); 
+            $map['name|des'] = array('like',"%$key%"); 
+            $list = $data->where($map)->select(); 
+            $count      = $data->where($map)->count();       
+            $Page       = new Page($count,20);
+        	$show       = $Page->show();
+        } else {
+        	$count      = $data->where($where)->count();
+        	$Page       = new Page($count,20);
+        	$show       = $Page->show();
+        	$list = $data->where($where)->limit($Page->firstRow.','.$Page->listRows)->order('sort desc,id asc')->select();
+        }
+		$this->assign('page',$show);		
+		$this->assign('list',$list);
+		if ($parentid){
+			$parentCat = $data->where(array('id'=>$parentid))->find();
+		}
+		$this->assign('parentCat',$parentCat);
+		$this->assign('parentid',$parentid);
+		$this->display();		
+	}
+		/**
 	 * 创建分类
 	 */
-	public function catAdd(){
+	public function guanggaoAdd(){
 		if(IS_POST){
-			$this->insert('Product_cat','/index');
+			$this->insert('Product_guanggao','/guanggao');
 		}else{
 			$parentid=intval($_GET['parentid']);
 			$parentid=$parentid==''?0:$parentid;
 			$this->assign('parentid',$parentid);
+			$this->display('guanggaoSet');
+		}
+	}
+	
+	/**
+	 * 分类修改
+	 */
+	public function guanggaoSet(){
+        $id = $this->_get('id'); 
+		$checkdata = M('Product_guanggao')->where(array('id'=>$id))->find();
+		if(empty($checkdata)){
+            $this->error("没有相应记录.您现在可以添加.",U('Store/guanggaoAdd'));
+        }
+		if (IS_POST) {
+            $data = D('Product_guanggao');
+            $where=array('id'=>$this->_post('id'),'token'=>session('token'));
+			$check=$data->where($where)->find();
+			if($check==false)$this->error('非法操作');
+			if($data->create()){
+				if($data->where($where)->save($_POST)){
+					$this->success('修改成功',U('Store/guanggao',array('token'=>session('token'),'parentid'=>$this->_post('parentid'))));
+					
+				}else{
+					$this->error('操作失败');
+				}
+			}else{
+				$this->error($data->getError());
+			}
+		}else{ 
+			$this->assign('parentid',$checkdata['parentid']);
+			$this->assign('set',$checkdata);
+			$this->display();	
+		
+		}
+	}
+	
+	/**
+	 * 删除分类
+	 */
+	public function guanggaoDel() {
+		if($this->_get('token')!=session('token')){$this->error('非法操作');}
+        $id = $this->_get('id');
+        if(IS_GET){                              
+            $where=array('id'=>$id,'token'=>session('token'));
+            $data=M('Product_guanggao');
+            $check=$data->where($where)->find();
+            if($check==false)   $this->error('非法操作');
+            $back=$data->where($where)->delete();
+            if($back==true){
+                $this->success('操作成功',U('Store/guanggao',array('token'=>session('token'),'parentid'=>$check['parentid'])));
+            }else{
+                 $this->error('服务器繁忙,请稍后再试',U('Store/guanggao',array('token'=>session('token'))));
+            }
+        }        
+	}
+	/**
+	 * 创建分类
+	 */
+	public function catAdd(){
+		$parentid = isset($_REQUEST['parentid']) ? intval($_REQUEST['parentid']) : 0;
+		if ($parentid) {
+			$checkdata = M('Product_cat')->where(array('id' => $parentid, 'cid' => $this->_cid))->find();
+			$this->assign('parentname', $checkdata['name']);
+		}else{
+			$list = M('Product_cat')->where(array('parentid' => 0, 'cid' => $this->_cid))->select();
+			$this->assign('list', $list);
+		}
+		if (IS_POST) {
+			if($_POST['pc_show']){
+				$database_pc_product_category = D('Pc_product_category');
+				$data_pc_product_category['cat_name'] = $_POST['name'];
+				$data_pc_product_category['token'] = session('token');
+				$_POST['pc_cat_id'] = $database_pc_product_category->data($data_pc_product_category)->add();
+			}
+			
+			$_POST['isfinal'] = 0;
+			$_POST['time'] = time();
+			$_POST['token'] = session('token');
+			if (D('Product_cat')->add($_POST)) {
+				D('Product_cat')->where(array('id' => $_POST['parentid']))->save(array('isfinal' => 2));
+				$this->success('修改成功', U('Store/index', array('token' => session('token'), 'cid' => $this->_cid, 'parentid' => $parentid)));
+			}
+		} else {
+			$parentid = isset($_GET['parentid']) ? intval($_GET['parentid']) : 0;
+			if ($parentid) {
+				$checkdata = M('Product_cat')->where(array('id' => $parentid, 'cid' => $this->_cid))->find();
+				$this->assign('parentname', $checkdata['name']);
+			}
+			$this->assign('parentid', $parentid);
+			
+			
+			$queryname=M('token_open')->where(array('token'=>$this->token))->getField('queryname');
+			if(strpos(strtolower($queryname),strtolower('website')) !== false){
+				$this->assign('has_website',true);
+			}
+			
 			$this->display('catSet');
 		}
 	}
@@ -433,6 +563,41 @@ class StoreAction extends UserAction{
 		$this->assign('catid', $catid);
 		$this->display();		
 	}
+	/**
+	 * 搜索商品
+	 */
+	public function search() {		
+		$catid = intval($_GET['catid']);
+		$product_model = M('Product');
+		$product_cat_model = M('Product_cat');
+		$where = array('token' => session('token'), 'groupon' => 0, 'dining' => 0);
+		if ($catid){
+			$where['catid'] = $catid;
+		}
+        if(IS_POST){
+            $key = $this->_post('searchkey');
+            if(empty($key)){
+                $this->error("关键词不能为空");
+            }
+
+            $map['token'] = $this->get('token'); 
+            $map['name|intro|keyword'] = array('like',"%$key%"); 
+            $list = $product_model->where($map)->select(); 
+            $count      = $product_model->where($map)->count();       
+            $Page       = new Page($count,20);
+        	$show       = $Page->show();
+        } else {
+        	$count      = $product_model->where($where)->count();
+        	$Page       = new Page($count,20);
+        	$show       = $Page->show();
+        	$list = $product_model->where($where)->order('sort asc,id asc')->limit($Page->firstRow.','.$Page->listRows)->select();
+        }
+		$this->assign('page',$show);		
+		$this->assign('list',$list);
+		$this->assign('isProductPage',1);
+		$this->assign('catid', $catid);
+		$this->display();		
+	}
 	
 	/**
 	 * 添加商品
@@ -530,6 +695,9 @@ class StoreAction extends UserAction{
 		$catid = isset($_POST['catid']) ? intval($_POST['catid']) : 0;
 		$num = isset($_POST['num']) ? intval($_POST['num']) : 0;
 		$salecount = isset($_POST['salecount']) ? intval($_POST['salecount']) : 0;
+		$isopen = isset($_POST['isopen']) ? intval($_POST['isopen']) : 0;
+		$limit = isset($_POST['limit']) ? intval($_POST['limit']) : 0;
+		$fakemembercount = isset($_POST['fakemembercount']) ? intval($_POST['fakemembercount']) : 0;
 		$pid = isset($_POST['pid']) ? intval($_POST['pid']) : 0;
 		$name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
 		$keyword = isset($_POST['keyword']) ? htmlspecialchars($_POST['keyword']) : '';
@@ -539,6 +707,7 @@ class StoreAction extends UserAction{
 		$oprice = isset($_POST['oprice']) ? htmlspecialchars($_POST['oprice']) : '';
 		$offerprice = isset($_POST['offerprice']) ? htmlspecialchars($_POST['offerprice']) : '';
 		$mailprice = isset($_POST['mailprice']) ? htmlspecialchars($_POST['mailprice']) : '';
+		$des = isset($_POST['des']) ? $_POST['des'] : '';
 		$intro = isset($_POST['intro']) ? $_POST['intro'] : '';
 		$attribute = isset($_POST['attribute']) ? htmlspecialchars_decode($_POST['attribute']) : '';
 		$norms = isset($_POST['norms']) ? htmlspecialchars_decode($_POST['norms']) : '';
@@ -553,7 +722,7 @@ class StoreAction extends UserAction{
 		if (empty($catid)) {
 			exit(json_encode(array('error_code' => true, 'msg' => '商品分类不能为空')));
 		}
-		$data = array('token' => $token, 'num' => $num, 'salecount' => $salecount, 'sort' => $sort, 'catid' => $catid, 'name' => $name, 'price' => $price, 'mailprice' => $mailprice, 'vprice' => $vprice, 'oprice' => $oprice, 'offerprice' => $offerprice, 'intro' => $intro, 'logourl' => $pic, 'keyword' => $keyword, 'time' => time());
+		$data = array('token' => $token, 'num' => $num, 'salecount' => $salecount, 'sort' => $sort, 'catid' => $catid, 'name' => $name, 'price' => $price, 'isopen' => $isopen, 'limit' => $limit, 'fakemembercount' => $fakemembercount, 'mailprice' => $mailprice, 'vprice' => $vprice, 'oprice' => $oprice, 'offerprice' => $offerprice,'des' => $des, 'intro' => $intro, 'logourl' => $pic, 'keyword' => $keyword, 'time' => time());
 		$data['discount'] = number_format($price / $oprice, 2, '.', '') * 10;
 		$product = M('Product');
 		if ($pid && $obj = $product->where(array('id' => $pid, 'token' => $token))->find()) {
@@ -564,11 +733,11 @@ class StoreAction extends UserAction{
 		if (empty($pid)) {
 			exit(json_encode(array('error_code' => false, 'msg' => '商品添加出错了')));
 		}
-		if ($keys = M('Keyword')->where(array('pid' => $pid, 'token' => $token, 'module' => 'Product'))->find()) {
+		/*if ($keys = M('Keyword')->where(array('pid' => $pid, 'token' => $token, 'module' => 'Product'))->find()) {
 			M('Keyword')->where(array('pid' => $pid, 'token' => $token, 'id' => $keys['id']))->save(array('keyword' => $keyword));
 		} else {
 			M('Keyword')->add(array('token' => $token, 'pid' => $pid, 'keyword' => $keyword, 'module' => 'Product'));
-		}
+		}*/
 		if (!empty($attribute)) {
 			$product_attribute = M('Product_attribute');
 			$attribute = json_decode($attribute, true);
@@ -591,7 +760,7 @@ class StoreAction extends UserAction{
 				$oldDetailId[$val['id']] = $val['id'];
 			}
 			foreach ($norms as $row) {
-				$data_d = array('pid' => $pid, 'format' => $row['format'], 'color' => $row['color'], 'num' => $row['num'], 'price' => $row['price'], 'vprice' => $row['vprice']);
+				$data_d = array('pid' => $pid, 'format' => $row['format'], 'color' => $row['color'], 'num' => $row['num'], 'price' => $row['price']);
 				if ($row['id']) {
 					unset($oldDetailId[$row['id']]);
 					$product_detail->where(array('id' => $row['id'], 'pid' => $pid))->save($data_d);
@@ -664,7 +833,7 @@ class StoreAction extends UserAction{
 			$handleOrder = $this->_post('handleOrder');
 			if (!$handleOrder) {
 				$key = $this->_post('searchkey');
-				$where['truename|address'] = array('like', "%$key%");
+				$where['truename|address|orderid'] = array('like', "%$key%");
 				if($this->_post('paid')!=''){
 					$where['paid'] = $this->_post('paid');
 				}
@@ -674,6 +843,9 @@ class StoreAction extends UserAction{
 				if($this->_post('receive')!=''){
 					$where['receive'] = $this->_post('receive');
 				}
+				if($this->_post('handled')!=''){
+					$where['handled'] = $this->_post('handled');
+				}
 			} else {
 				for ($i=0;$i<40;$i++){
 					if (isset($_POST['id_'.$i])){
@@ -682,6 +854,7 @@ class StoreAction extends UserAction{
 							$product_cart_model->where(array('id'=>intval($_POST['id_'.$i])))->save(array('handled'=>0));
 						} else {
 							$product_cart_model->where(array('id'=>intval($_POST['id_'.$i])))->save(array('handled'=>1));
+							$this->distriOrderStatus($this->_session('token'),$thiCartInfo['id'],4);
 						}
 					}
 				}
@@ -692,28 +865,11 @@ class StoreAction extends UserAction{
 		if (isset($_GET['handled'])) {
 			$where['handled'] = intval($_GET['handled']);
 		}
-		if($this->_get('hid')!=''){//医院
-			$where['hid'] = $this->_get('hid');
-			$title = M('hospital_list')->where(array('token'=>session('token'),'id'=>$this->_get('hid')))->getField('name');
-		}
-		if($this->_get('did')!=''){//医生
-			$where['did'] = $this->_get('did');
-			$title = M('doctor_list')->where(array('token'=>session('token'),'id'=>$this->_get('did')))->getField('name');
-		}
-		if($this->_get('cid')!=''){//患者
-			$where['cid'] = $this->_get('cid');
-			$title = M('custom_list')->where(array('token'=>session('token'),'id'=>$this->_get('cid')))->getField('name');
-		}
-		if($title==''){
-			$title = '全部';
-		}
-		$this->assign('title',$title);
 		$count      = $product_cart_model->where($where)->count();
 		$Page       = new Page($count,20);
 		$show       = $Page->show();
 		$orders		= $product_cart_model->where($where)->order('time DESC')->limit($Page->firstRow . ',' . $Page->listRows)->select();
-		$where['handled'] = 0;
-		$unHandledCount = $product_cart_model->where($where)->count();
+		$unHandledCount = $product_cart_model->where(array('token' => $this->_session('token'), 'handled' => 0))->count();
 		$this->assign('unhandledCount', $unHandledCount);
 		$this->assign('orders', $orders);
 		$this->assign('page', $show);
@@ -1070,6 +1226,7 @@ class StoreAction extends UserAction{
 				}
 				$product_model->where(array('id' => $pid))->setInc('num', $total);
 				$product_model->where(array('id' => $pid))->setDec('salecount', $total);
+				$product_model->where(array('id' => $pid))->setDec('fakemembercount', $total);
 			}
 //			foreach ($carts as $k => $c){
 //				if (is_array($c)){
@@ -1094,6 +1251,17 @@ class StoreAction extends UserAction{
 			if($order->where(array('id'=>$id,'token'=>$token,'returnMoney'=>1))->find()){
 				$data['returnMoney'] = 2;
 				if($order->where(array('id'=>$id,'token'=>$token,'returnMoney'=>1))->save($data)){
+					$product_cart = $order->where('id='.$id)->find();
+					if($product_cart['beDistri']==1){//退款后取消分销
+						$productData['distritime'] = 0;
+						M('Distribution_member')->where(array('token'=>$token,'wecha_id'=>$product_cart['wecha_id']))->save($productData);
+					}
+					$moneyData['status'] = -1;
+					M('Distribution_ordermoney')->where('order_id='.$id)->save($moneyData);//佣金退回
+					/*$ordermoney = M('Distribution_ordermoney')->where('order_id='.$id)->select();//订单数返还
+					foreach($ordermoney as $key=>$value){
+						M('Distribution_member')->where('id='.$value['mid'])->setDec('orderNums');
+					}*/
 					$this->success('退款完成成功');
 				}else{
 					$this->error('退款完成失败');

@@ -1,6 +1,5 @@
 <include file="Public:head"/>
-<link rel="stylesheet" type="text/css" href="{wghd:
-:RES}/css/cymain.css" />  
+<link rel="stylesheet" type="text/css" href="{wghd::RES}/css/cymain.css" />  
 
 <div class="content">
          
@@ -13,8 +12,7 @@
   　　      <span>
               <form action="" method="post">
               关键词：
-              <input type="text" name="name" class="px" value="{wghd:
-$Think.request.name}">
+              <input type="text" name="name" class="px" value="{wghd:$Think.request.name}">
               <input type="submit" class="btnGrayS" value="搜索">
                </form>
             </span>
@@ -47,31 +45,18 @@ $Think.request.name}">
                 <tr></tr>
                   <volist id="list" name="list">
                 <tr>
-				  <td>{wghd:
-$list.memberid}</td>
-                  <td>{wghd:
-$list.nickname}</td>
-                  <td><a href="{wghd:
-:U('Distribution/memberDetail',array('id'=>$list['memberid']))}"><img src="{wghd:
-$list.headimgurl}" width="50"></a></td>
-                  <td>{wghd:
-$list.name}</td>
-                  <td><volist name="list.typeNumArr" id="vo">{wghd:
-$vo}</volist>{wghd:
-$list.bankName}</td>
-                  <td>{wghd:
-$list.bankNumber}</td>
-				  <td>{wghd:
-$list.tele}</td>
-				  <td>{wghd:
-:sprintf("%.2f",$list[money]/100)}</td>
-				  <td>{wghd:
-$list.applytime|date='Y-m-d',###}</td>
+				  <td>{wghd:$list.memberid}</td>
+                  <td>{wghd:$list.nickname}</td>
+                  <td><a href="{wghd::U('Distribution/memberDetail',array('id'=>$list['memberid']))}"><img src="{wghd:$list.headimgurl}" width="50"></a></td>
+                  <td>{wghd:$list.name}</td>
+                  <td><volist name="list.typeNumArr" id="vo">{wghd:$vo}</volist>{wghd:$list.bankName}</td>
+                  <td>{wghd:$list.bankNumber}</td>
+				  <td>{wghd:$list.tele}</td>
+				  <td>{wghd::sprintf("%.2f",$list[money]/100)}</td>
+				  <td>{wghd:$list.applytime|date='Y-m-d',###}</td>
 				  <td><eq name="list.status" value="0">未审核</eq><eq name="list.status" value="1">已审核</eq><eq name="list.status" value="2">已打款</eq></td>
                    <td class="norightborder">
-                    <eq name="list.status" value="0"><a href="{wghd:
-:U('Distribution/changeStatus',array('id'=>$list['id'],'status'=>1))}" onclick="return confirm('确定通过审核么？');" style="color:blue" title="审核通过">审核通过</a>&nbsp;&nbsp;</eq><eq name="list.status" value="1"><a href="{wghd:
-:U('Distribution/changeStatus',array('id'=>$list['id'],status=>2))}" style="color:blue" onclick="return confirm('确定已经打款了么？');" title="打款完成">打款完成</a></eq>
+                    <eq name="list.status" value="0"><a href="{wghd::U('Distribution/changeStatus',array('id'=>$list['id'],'status'=>1))}" onclick="return confirm('确定通过审核么？');" style="color:blue" title="审核通过">审核通过</a>&nbsp;&nbsp;</eq><eq name="list.status" value="1"><a href="{wghd::U('Distribution/changeStatus',array('id'=>$list['id'],status=>2))}" style="color:blue" onclick="return confirm('确定已经打款了么？');" title="打款完成">打款完成</a></eq>
                    </td>
           
                 </tr>
@@ -100,8 +85,7 @@ alert('未选中内容！')
    </div> 
           <div class="cLine">
             <div class="pageNavigator right">
-                 <div class="pages">{wghd:
-$page}</div>
+                 <div class="pages">{wghd:$page}</div>
               </div>
             <div class="clr"></div>
           </div>

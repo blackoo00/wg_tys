@@ -1,14 +1,10 @@
 <include file="Public:head"/>
 <body>
-    <link rel="stylesheet" type="text/css" href="{wghd:
-:RES}/css/tys/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="{wghd:
-:RES}/css/tys/default.css">
-    <link rel="stylesheet" type="text/css" href="{wghd:
-:RES}/css/tys/styles.css">
+    <link rel="stylesheet" type="text/css" href="{wghd::RES}/css/tys/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="{wghd::RES}/css/tys/default.css">
+    <link rel="stylesheet" type="text/css" href="{wghd::RES}/css/tys/styles.css">
     <!-- <link href='http://fonts.useso.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'> -->
-    <script src="{wghd:
-:RES}/js/tys/jquery-1.11.1.min.js"></script>
+    <script src="{wghd::RES}/js/tys/jquery-1.11.1.min.js"></script>
     <!--[if IE]>
         <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
     <![endif]-->
@@ -18,17 +14,12 @@
 
                     <div id="chatview" class="p1" style="display: block;">      
                         <div id="profile" class="animate">
-                            <img style="vertical-align:middle; width: 80px; height:80px;" src="{wghd:
-$custom.pic}" class="floatingImg"> 
-                            <p style="display:block; float:left;">{wghd:
-$custom.name}</p>
-                            <a href="{wghd:
-:U('Doctor/cdetails',array('id'=>$custom['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">患者<br>详情</a>
+                            <img style="vertical-align:middle; width: 80px; height:80px;" src="{wghd:$custom.pic}" class="floatingImg"> 
+                            <p style="display:block; float:left;">{wghd:$custom.name}</p>
+                            <a href="{wghd::U('Doctor/cdetails',array('id'=>$custom['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">孕妈<br>详情</a>
                         </div>
-                        <div id="loading" style="text-align:center;display:none;"><img src="{wghd:
-:RES}/css/tys/loading_more.gif"></div>
-                        <input type="hidden" id="cmid" value="{wghd:
-$cmid}">
+                        <div id="loading" style="text-align:center;display:none;"><img src="{wghd::RES}/css/tys/loading_more.gif"></div>
+                        <input type="hidden" id="cmid" value="{wghd:$cmid}">
                         <input type="hidden" id="noconsult" value="1">
                         <div id="twrapper">
                             <div id="chat-messages" class="animate">
@@ -36,15 +27,11 @@ $cmid}">
                                  <volist id="list" name="consultb">
                                     
                                     <div class="message <eq name='list.dtalk' value='1'>right<else/>left</eq>">
-                                        <span>{wghd:
-$list.time|friendlyDate}</span>
-                                        <input type="hidden" id="time" value="{wghd:
-$list.time}">
-                                        <img src="{wghd:
-$list.pic}" />
+                                        <span>{wghd:$list.time|friendlyDate}</span>
+                                        <input type="hidden" id="time" value="{wghd:$list.time}">
+                                        <img src="{wghd:$list.pic}" />
                                          <div class="bubble">
-                                             {wghd:
-$list.content}
+                                             {wghd:$list.content}
                                              <!-- <div class="corner"></div> -->
                                          </div>
                                          <div class="clear"></div>
@@ -54,8 +41,7 @@ $list.content}
             
                             </div>
                         </div>
-                        <script src="{wghd:
-:RES}/js/tys/iscroll.js" type="text/javascript" charset="utf-8"></script>
+                        <script src="{wghd::RES}/js/tys/iscroll.js" type="text/javascript" charset="utf-8"></script>
                         <script>
                             $(function(){
                                 var th=$("#profile").height();
@@ -95,8 +81,7 @@ $list.content}
                                 setTimeout(function () {
                                 if(noconsult==1){
                                     $.ajax({
-                                        url:"{wghd:
-:U('Consult/loadmore',array('token'=>$token,'wecha_id'=>$wecha_id))}",
+                                        url:"{wghd::U('Consult/loadmore',array('token'=>$token,'wecha_id'=>$wecha_id))}",
                                         data:{cmid:cmid,cnums:cnums},
                                         success:function(data){
                                             if(data=="none"){
@@ -114,10 +99,8 @@ $list.content}
                            }
                         </script>
                         <div id="sendmessage">
-                            <input type="hidden" id="cid" value="{wghd:
-$custom.id}">
-                            <input type="hidden" id="did" value="{wghd:
-$did}">
+                            <input type="hidden" id="cid" value="{wghd:$custom.id}">
+                            <input type="hidden" id="did" value="{wghd:$did}">
                             <input type="hidden" id="checkcm" value="1">
                             <input type="text" id="consultcon" value="" palceholder="发送信息" />
                             <button onclick="send()" id="send">发送</button>
@@ -137,8 +120,7 @@ $did}">
                 var ccm=$("#checkcm").val();
                 if(con){
                     $.ajax({
-                        url:"{wghd:
-:U('Consult/sendconsult2',array('token'=>$token,'wecha_id'=>$wecha_id))}",
+                        url:"{wghd::U('Consult/sendconsult2',array('token'=>$token,'wecha_id'=>$wecha_id))}",
                         data:{cid:cid,did:did,cmid:cmid,con:con,ccm:ccm},
                         success:function(data){
                             if(data!='error'){
@@ -162,8 +144,7 @@ $did}">
                 var cid=$("#cid").val();
                 var did=$("#did").val();
                 $.ajax({
-                    url:"{wghd:
-:U('Consult/refreshconsult2',array('token'=>$token,'wecha_id'=>$wecha_id))}",
+                    url:"{wghd::U('Consult/refreshconsult2',array('token'=>$token,'wecha_id'=>$wecha_id))}",
                     data:{cid:cid,did:did,time:time},
                     success:function(data){
                         if(data!="none"){

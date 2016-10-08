@@ -2,23 +2,17 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="utf-8" />
-	<title>{wghd:
-:$thisCompany['name']}_{wghd:
-$metaTitle}</title>
+	<title>{wghd::$thisCompany['name']}_{wghd:$metaTitle}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
 	<meta name="format-detection" content="telephone=no" />
-	<link type="text/css" rel="stylesheet" href="{wghd:
-:$staticFilePath}/css/style.css" />
-	<script src="{wghd:
-:$staticFilePath}/js/jquery.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="{wghd:
-:$staticFilePath}/js/main.js"></script>
+	<link type="text/css" rel="stylesheet" href="{wghd::$staticFilePath}/css/style.css" />
+	<script src="{wghd::$staticFilePath}/js/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="{wghd::$staticFilePath}/js/main.js"></script>
 </head>
 
 <body>
 	
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak={wghd:
-:$apikey}"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak={wghd::$apikey}"></script>
 <div class="main">
 	<div class="p_map">
     <div id="container"></div>
@@ -40,21 +34,7 @@ $metaTitle}</title>
         		"" +
         		"</div>";
         	}
-        	var storeList = [{"id":"{wghd:
-:$thisCompany['id']}","name":"{wghd:
-:$thisCompany['name']}","logourl":"{wghd:
-:$thisCompany['logourl']}","address":"{wghd:
-:$thisCompany['address']}","tel":"{wghd:
-:$thisCompany['tel']}","longitude":"{wghd:
-:$thisCompany['longitude']}","latitude":"{wghd:
-:$thisCompany['latitude']}"}<volist name="branchStores" id="c">,{"id":"{wghd:
-:$c['id']}","name":"{wghd:
-:$c['name']}","logourl":"{wghd:
-:$c['logourl']}","address":"{wghd:
-:$c['address']}","tel":"{wghd:
-:$c['tel']}","longitude":"{wghd:
-:$c['longitude']}","latitude":"{wghd:
-:$c['latitude']}"}</volist>];
+        	var storeList = [{"id":"{wghd::$thisCompany['id']}","name":"{wghd::$thisCompany['name']}","logourl":"{wghd::$thisCompany['logourl']}","address":"{wghd::$thisCompany['address']}","tel":"{wghd::$thisCompany['tel']}","longitude":"{wghd::$thisCompany['longitude']}","latitude":"{wghd::$thisCompany['latitude']}"}<volist name="branchStores" id="c">,{"id":"{wghd::$c['id']}","name":"{wghd::$c['name']}","logourl":"{wghd::$c['logourl']}","address":"{wghd::$c['address']}","tel":"{wghd::$c['tel']}","longitude":"{wghd::$c['longitude']}","latitude":"{wghd::$c['latitude']}"}</volist>];
         	// 编写自定义函数,创建标注
         	function addMarker(point, content){
         	  var marker = new BMap.Marker(point);  // 创建标注
@@ -70,9 +50,7 @@ $metaTitle}</title>
         		});
         	}
         	var map = new BMap.Map("container");
-        	var point = new BMap.Point({wghd:
-:$thisCompany['longitude']}, {wghd:
-:$thisCompany['latitude']});
+        	var point = new BMap.Point({wghd::$thisCompany['longitude']}, {wghd::$thisCompany['latitude']});
         	map.centerAndZoom(point, 13);
         	var user_marker = new BMap.Marker(point);  // 创建标注
         	map.addOverlay(user_marker);
@@ -90,20 +68,13 @@ $metaTitle}</title>
  <script type="text/javascript">
 window.shareData = {  
             "moduleName":"Company",
-            "moduleID":"{wghd:
-$thisCompany.id}",
-            "imgUrl": "{wghd:
-$thisCompany.logourl}", 
-            "sendFriendLink": "{wghd:
-$f_siteUrl}{wghd:
-:U('Company/map',array('token'=>$token,'latitude'=>$_GET['latitude'],'longitude'=>$_GET['longitude'],'companyid'=>$thisCompany['id']))}",
-            "tTitle": "{wghd:
-$thisCompany.name}",
-            "tContent": "{wghd:
-$thisCompany.address}"
+            "moduleID":"{wghd:$thisCompany.id}",
+            "imgUrl": "{wghd:$thisCompany.logourl}", 
+            "sendFriendLink": "{wghd:$f_siteUrl}{wghd::U('Company/map',array('token'=>$token,'latitude'=>$_GET['latitude'],'longitude'=>$_GET['longitude'],'companyid'=>$thisCompany['id']))}",
+            "tTitle": "{wghd:$thisCompany.name}",
+            "tContent": "{wghd:$thisCompany.address}"
 };
 </script>
-{wghd:
-$shareScript}
+{wghd:$shareScript}
 </body>
 </html>

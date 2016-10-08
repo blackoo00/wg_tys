@@ -1,6 +1,6 @@
 <?php 
 	class DoctorAction extends UserAction{
-		//医生列表
+		//孕育师列表
 		public function index(){
 		$db=D(MODULE_NAME);
 		if($_POST){
@@ -22,7 +22,7 @@
 		}
 		//查看详细信息
 		public function details(){
-			$id=$this->_get('id','intval');//获取医生ID
+			$id=$this->_get('id','intval');//获取孕育师ID
 			$db=D(MODULE_NAME);
 			$doctor=$db->relation(true)->where('id='.$id)->find();
 			$dailyconsult=$doctor['consult'];
@@ -38,14 +38,14 @@
 			$this->assign('info',$doctor);
 			$this->display();
 		}
-		//新增医生页面
+		//新增孕育师页面
 		public function add(){
 			$db=D('Hospital');
 			$hname=$db->field('name,id')->select();
 			$this->assign('hname',$hname);
 			$this->display();
 		}
-		//新增医生
+		//新增孕育师
 		public function insert(){
 			$db=D(MODULE_NAME);
 			$where['username']=$_POST['username'];
@@ -62,31 +62,31 @@
 				$where ['id'] = $_POST['hid'];
 				$r=$h->where($where)->setInc('doctornum'); 
 				if(!$r){
-					Log::write("医院医生数量自增失败!",'ERR');
+					Log::write("医院孕育师数量自增失败!",'ERR');
 				}else{
 					$this->success('添加成功',U('Doctor/index'));
 				}
 			}else{
-				Log::write("新增医生失败,错误信息!",'ERR');
+				Log::write("新增孕育师失败,错误信息!",'ERR');
 			}
 		}
-		//删除医生
+		//删除孕育师
 		public function del(){
 			$where['id']=$this->_get('id','intval');
 			if(D(MODULE_NAME)->where($where)->delete()){
 				$this->success('操作成功',U(MODULE_NAME.'/index'));
-				//删除医院中相对应的医生
+				//删除医院中相对应的孕育师
 				$h=D('Hospital');
 				$where ['id'] = $this->_get('hid','intval');
 				$r=$h->where($where)->setDec('doctornum'); 
 				if(!$r){
-					Log::write("医院医生数量自减失败!",'ERR');
+					Log::write("医院孕育师数量自减失败!",'ERR');
 				}
 			}else{
 				$this->error('操作失败',U(MODULE_NAME.'/index'));
 			}
 		}
-		//编辑医生
+		//编辑孕育师
 		public function edit(){
 			$where['id']=$this->_get('id','intval');
 			$res=D(MODULE_NAME)->where($where)->find();
@@ -137,21 +137,21 @@
 			}
 			echo $newstr;
 		}
-		//更新医生信息
+		//更新孕育师信息
 		public function upsave(){
 			$r=$this->all_save();
 			if($r){
 				$h=D('Hospital');
-				//判断所属医院有没有修改如果不相等就对医院医生数操作
+				//判断所属医院有没有修改如果不相等就对医院孕育师数操作
 				if($_POST['hid']!= $_POST['hid2']){
-					//增加医生数
+					//增加孕育师数
 					$where['id'] = $_POST['hid'];
 					$r=$h->where($where)->setInc('doctornum'); 
-					//减少医生数
+					//减少孕育师数
 					$where2['id'] = $_POST['hid2'];
 					$r2=$h->where($where2)->setDec('doctornum'); 
 					if(!$r&&!$r2){
-						Log::write("医院医生数量操作失败!",'ERR');
+						Log::write("医院孕育师数量操作失败!",'ERR');
 					}
 				}
 			}

@@ -36,7 +36,7 @@ requirejs(['jquery','fileup'],function($,fileup){
 // 		 }) 
 // 		 return false;
 // }
-//上传医生头像
+//上传孕育师头像
 function headpic(url,did){
 	$("#loading").show();
 	$.ajaxFileUpload ({

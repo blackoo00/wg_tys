@@ -45,7 +45,7 @@ class HospitalAction extends UserAction{
 		$where['id']=$this->_get('id','intval');
 		if(D(MODULE_NAME)->where($where)->delete()){
 			$this->success('操作成功',U(MODULE_NAME.'/index'));
-			//删除医院中相对应的医生
+			//删除医院中相对应的孕育师
 			$h=D('Salesman');
 			$where ['id'] = $this->_get('sid','intval');
 			$r=$h->where($where)->setDec('hospitalnum'); 
@@ -71,12 +71,12 @@ class HospitalAction extends UserAction{
 		$r=$this->all_save();
 		if($r){
 			$h=D('Salesman');
-			//判断所属医院有没有修改如果不相等就对医院医生数操作
+			//判断所属医院有没有修改如果不相等就对医院孕育师数操作
 			if($_POST['sid']!= $_POST['sid2']){
-				//增加医生数
+				//增加孕育师数
 				$where['id'] = $_POST['sid'];
 				$r=$h->where($where)->setInc('hospitalnum'); 
-				//减少医生数
+				//减少孕育师数
 				$where2['id'] = $_POST['sid2'];
 				$r2=$h->where($where2)->setDec('hospitalnum'); 
 				if(!$r&&!$r2){

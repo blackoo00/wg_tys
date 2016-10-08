@@ -33,8 +33,7 @@ padding-left:10px;
 input{border: 1px solid #DDDDDD;height:30px;width:200px;margin-left:10px;}
 .new-btn-login{
     background-color: transparent;
-    background-image: url("{wghd:
-:RES}/images/img/new-btn-fixed.png");
+    background-image: url("{wghd::RES}/images/img/new-btn-fixed.png");
     border: medium none;
 	border:1px solid red;
 	
@@ -75,14 +74,12 @@ $(function(){
 </script>
 <div class="usercontent">
 <ul>
-<form action="{wghd:
-:U('Sms/buy_post')}" method="post" onsubmit="return checkcz()">
+<form action="{wghd::U('Sms/buy_post')}" method="post" onsubmit="return checkcz()">
 	<li> 
 		<b>短信价格: </b>
 		<?php echo C('sms_price');?>分/条
     </li>
-	<li> <b>账户余额: </b><input type="text" style="border:none;width:30px;" name="moneybalance" value="{wghd:
-$thisUser.moneybalance}" id="needmoneybalanceprice" size="10" disabled> 元<b></b></li>
+	<li> <b>账户余额: </b><input type="text" style="border:none;width:30px;" name="moneybalance" value="{wghd:$thisUser.moneybalance}" id="needmoneybalanceprice" size="10" disabled> 元<b></b></li>
 	<li> <b>购买条数: </b><input type="text" style="width:50px;" name="count" value="100" id="count" size="10"> 条（100条起订）<b></b></li>
 	<li> <b>价格合计: </b><input type="text" name="price" style="border:none;width:50px;" value="<?php echo intval(C('sms_price'));?>" id="price" size="10" disabled> 元</li>
 

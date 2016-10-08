@@ -5,16 +5,11 @@
 	<title>胰岛素记录</title>
 </head>
 <body>
-	<a href="{wghd:
-:U('Steward/iinsert',array('token'=>$token))}">添加</a>
+	<a href="{wghd::U('Steward/iinsert',array('token'=>$token))}">添加</a>
 	<ul>
 		<volist id="list" name="insulin">
-			<a href="{wghd:
-:U('Steward/iupdate',array('id'=>$list['id'],'token'=>$token))}">
-				<li>开始时间:{wghd:
-$list.starttime}结束时间:{wghd:
-$list.endtime}药物:{wghd:
-$list.oralmedicine}</li>
+			<a href="{wghd::U('Steward/iupdate',array('id'=>$list['id'],'token'=>$token))}">
+				<li>开始时间:{wghd:$list.starttime}结束时间:{wghd:$list.endtime}药物:{wghd:$list.oralmedicine}</li>
 			</a>
 		</volist>
 	</ul>

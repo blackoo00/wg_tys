@@ -96,8 +96,8 @@ $Server->bind('open', 'wsOnOpen');
 $Server->bind('close', 'wsOnClose');
 // for other computers to connect, you will probably need to change this to your LAN IP or external IP,
 // alternatively use: gethostbyaddr(gethostbyname($_SERVER['SERVER_NAME']))
-$result = $Server->wsStartServer('192.168.1.120', 4000);
-// $result = $Server->wsStartServer('120.26.64.122', 4000);
+// $result = $Server->wsStartServer('192.168.1.123', 4000);
+$result = $Server->wsStartServer('121.40.231.46', 4000);
 // $result = $Server->wsStopServer();
 return $result;
 

@@ -160,32 +160,35 @@ $(function(){
 			return floatNotify.simple('请选择地址');
 			return false;
 		}
-		if(paymode != 1){
-			//判断金币余额
-			$.ajax({
-				url:"<?php echo U('Store/orderCartJudge');?>",
-				data:{money:<?php echo ($totalFee+$mailprice); ?>},
-				dataType:'json',
-				success:function(data){
-					if(data.status == 1){
-						confirm = floatNotify.confirm('确认使用金币支付吗？',"",
-							function(t,n){
-								if(n==true){
-						            var reamrk = $('#remark').val();
-									location.href = "<?php echo U('Store/ordersave',array('token' => $token, 'wecha_id'=>$wecha_id, 'orderid'=>$orderid,'lid'=>$lid,'normid'=>$normid,'remark'=>'"+reamrk+"','paymode'=>'"+paymode+"'));?>";
-								}
-							this.hide();
-						}),
-						confirm.show();
-					}else{
-						floatNotify.simple(data.info);
-					}
-				}
-			});
-		}else{
-			var reamrk = $('#remark').val();
-			location.href = "<?php echo U('Store/ordersave',array('token' => $token, 'wecha_id'=>$wecha_id, 'orderid'=>$orderid,'lid'=>$lid,'normid'=>$normid,'remark'=>'"+reamrk+"','paymode'=>'"+paymode+"'));?>";
-		}
+		var reamrk = $('#remark').val();
+		location.href = "<?php echo U('Store/ordersave',array('token' => $token, 'wecha_id'=>$wecha_id, 'orderid'=>$orderid,'lid'=>$lid,'normid'=>$normid,'remark'=>'"+reamrk+"','paymode'=>'"+paymode+"'));?>";
+		
+		// if(paymode != 1){
+		// 	//判断金币余额
+		// 	$.ajax({
+		// 		url:"<?php echo U('Store/orderCartJudge');?>",
+		// 		data:{money:<?php echo ($totalFee+$mailprice); ?>},
+		// 		dataType:'json',
+		// 		success:function(data){
+		// 			if(data.status == 1){
+		// 				confirm = floatNotify.confirm('确认使用金币支付吗？',"",
+		// 					function(t,n){
+		// 						if(n==true){
+		// 				            var reamrk = $('#remark').val();
+		// 							location.href = "<?php echo U('Store/ordersave',array('token' => $token, 'wecha_id'=>$wecha_id, 'orderid'=>$orderid,'lid'=>$lid,'normid'=>$normid,'remark'=>'"+reamrk+"','paymode'=>'"+paymode+"'));?>";
+		// 						}
+		// 					this.hide();
+		// 				}),
+		// 				confirm.show();
+		// 			}else{
+		// 				floatNotify.simple(data.info);
+		// 			}
+		// 		}
+		// 	});
+		// }else{
+		// 	var reamrk = $('#remark').val();
+		// 	location.href = "<?php echo U('Store/ordersave',array('token' => $token, 'wecha_id'=>$wecha_id, 'orderid'=>$orderid,'lid'=>$lid,'normid'=>$normid,'remark'=>'"+reamrk+"','paymode'=>'"+paymode+"'));?>";
+		// }
 		// if(checkAdd == 1 && paymode!=1){
 		// 	//判断金币余额
 		// 	$.ajax({

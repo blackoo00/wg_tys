@@ -41,8 +41,7 @@ FCAPP.HOUSE.List = {
 //        });
         // $.ajax({
         //     //url: '/Webestate/Housedata/pid/'+PID+'/wechatid/'+WECHATID,
-        //     url:"{wghd:
-:U('Estate/housetype',array('token'=>$token,id=>"+PID+",wecha_id=>"+WECHATID+"))}",
+        //     url:"{wghd::U('Estate/housetype',array('token'=>$token,id=>"+PID+",wecha_id=>"+WECHATID+"))}",
         //     dataType: 'jsonp',
         //     error: function() {
         //         FCAPP.Common.msg(true, {
@@ -123,8 +122,7 @@ FCAPP.HOUSE.List = {
     },//3D户型图
     show3D: function(houseid) {
         var t = new Date();
-        FCAPP.Common.jumpTo("{wghd:
-:U('Estate/3dalbum',array('token'=>$token))}", {
+        FCAPP.Common.jumpTo("{wghd::U('Estate/3dalbum',array('token'=>$token))}", {
             houseid: houseid
         });
     },

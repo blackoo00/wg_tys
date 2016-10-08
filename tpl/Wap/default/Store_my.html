@@ -48,7 +48,7 @@
 									</div>
 									<div class="weui_cell_ft">
 										<p>
-				                            {wghd::sprintf("%.2f",$row['detail'][0]['showprice'])}
+				                            {wghd::sprintf("%.2f",$row['detail'][0]['price'])}
 										</p>
 										<p>×
 				                            {wghd:$row['detail'][0]['count']}
@@ -66,7 +66,7 @@
 								</div>
 								<div class="weui_cell_ft">
 									<p>
-										{wghd::sprintf("%.2f",$row['showprice'])}
+										{wghd::sprintf("%.2f",$row['price'])}
 									</p>
 									<p>×
 										{wghd:$row['count']}
@@ -100,7 +100,7 @@
 							<if condition="($o.sent eq 1) AND ($o.receive eq 0)">
 								<a href="javascript:;" data-id="{wghd:$o.id}" class="weui_btn weui_btn_mini weui_btn_primary get_product" style="font-size: 16px;">确认收货</a>
 							</if>
-							<a href="{wghd::U('Store/orderDetails',array('id'=>$o['orderid']))}" class="weui_btn weui_btn_mini weui_btn_primary coad_bnfo_lage" style="font-size: 16px;">订单详情</a>
+							<a href="{wghd::U('Store/orderDetails',array('id'=>$o['orderid']))}" class="weui_btn weui_btn_mini weui_btn_primary coad_lnfo_bage" style="font-size: 16px;">订单详情</a>
 						</div>
 					</div>
 				</div>

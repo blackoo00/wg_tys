@@ -19,32 +19,23 @@
 	  </tr>
 	    <volist name="list" id="vo">
 			<tr>
-				<td align='center'>{wghd:
-$vo.id}</td>
-				<td >{wghd:
-$vo.name}</td>
-				<td >{wghd:
-$vo['price']}</td>
-				<td >{wghd:
-$vo.diynum}</td>
-				<td align='center'>{wghd:
-$vo.connectnum}</td>
+				<td align='center'>{wghd:$vo.id}</td>
+				<td >{wghd:$vo.name}</td>
+				<td >{wghd:$vo['price']}</td>
+				<td >{wghd:$vo.diynum}</td>
+				<td align='center'>{wghd:$vo.connectnum}</td>
 				<td align='center'><if condition="$vo['iscopyright'] eq 1">是<else/>否</if></td>
-				<td align='center'>{wghd:
-$vo.activitynum}</td>
+				<td align='center'>{wghd:$vo.activitynum}</td>
 				<td align='center'><eq name="vo.status" value="1"><font color="red">√</font><else/><font color="blue">×</font></eq> 
 				</td>
 				<td align='center'>
-					<a href="{wghd:
-:U('User_group/edit/',array('id'=>$vo['id']))}">修改</a>
-					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{wghd:
-:U('User_group/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
+					<a href="{wghd::U('User_group/edit/',array('id'=>$vo['id']))}">修改</a>
+					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{wghd::U('User_group/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
 				</td>
 			</tr>
 	    </volist>
      <tr bgcolor="#FFFFFF"> 
-      <td colspan="8"><div class="listpage">{wghd:
-$page}</div></td>
+      <td colspan="8"><div class="listpage">{wghd:$page}</div></td>
 	  <td></td>
     </tr>
    

@@ -3,10 +3,8 @@
 >
 <div class="cLine">
   <div class="pageNavigator left">
-    <a href='{wghd:
-:U("Hospital/add")}' title='新增医院' class='btnGrayS vm bigbtn'>
-      <img src="{wghd:
-:RES}/images/text.png" class="vm" />
+    <a href='{wghd::U("Hospital/add")}' title='新增医院' class='btnGrayS vm bigbtn'>
+      <img src="{wghd::RES}/images/text.png" class="vm" />
       新增医院
     </a>
   </div>
@@ -21,7 +19,7 @@
       <THEAD>
         <TR>
           <th>医院名称</th>
-          <th>医生数量</th>
+          <th>孕育师数量</th>
           <th>医院简介</th>
 		  <th>订单数量</th>
           <th>操作</th>
@@ -31,18 +29,11 @@
         <TR></TR>
         <volist id="list" name="hospital">
           <tr>
-            <td>{wghd:
-$list.name}</td>
-            <td>{wghd:
-$list.doctornum}</td>
-            <td>{wghd:
-$list.info}</td>
-			<td>{wghd:
-$list.orderNums}（<a href="{wghd:
-:U('Store/orders',array('hid'=>$list['id']))}" style="color:blue">明细</a>）</td>
-            <td class="norightborder"> <a href="{wghd:
-:U('Hospital/edit',array('id'=>$list['id']))}" title="编辑文本">编辑</a> <a onclick="return confirm('确定要删除么？');" href="{wghd:
-:U('Hospital/del',array('id'=>$list['id']))}">删除</a></td>
+            <td>{wghd:$list.name}</td>
+            <td>{wghd:$list.doctornum}</td>
+            <td>{wghd:$list.info}</td>
+			<td>{wghd:$list.orderNums}（<a href="{wghd::U('Store/orders',array('hid'=>$list['id']))}" style="color:blue">明细</a>）</td>
+            <td class="norightborder"> <a href="{wghd::U('Hospital/edit',array('id'=>$list['id']))}" title="编辑文本">编辑</a> <a onclick="return confirm('确定要删除么？');" href="{wghd::U('Hospital/del',array('id'=>$list['id']))}">删除</a></td>
           </tr>
         </volist>
 
@@ -52,8 +43,7 @@ $list.orderNums}（<a href="{wghd:
 </div>
 <div class="cLine">
   <div class="pageNavigator right">
-    <div class="pages">{wghd:
-$page}</div>
+    <div class="pages">{wghd:$page}</div>
   </div>
   <div class="clr"></div>
 </div>

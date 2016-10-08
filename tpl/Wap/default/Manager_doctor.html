@@ -1,12 +1,10 @@
 <include file="Public:head"/>
 <body>
-<script src="{wghd:
-:RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="{wghd::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
   <div id="wrapper" class="manager_doctor">
       <section>
         <TABLE class="userinfoArea" style=" margin:20px 0 0 0;" border="0" cellSpacing="0" cellPadding="0" width="100%">
-          <input type="hidden" id="doctorid" name="id" value="{wghd:
-$info.id}" />     
+          <input type="hidden" id="doctorid" name="id" value="{wghd:$info.id}" />     
           <colgroup>
             <col width="25%">
             <col width="25%">
@@ -16,51 +14,41 @@ $info.id}" />
           <tr>
             <td colspan="4" style="text-align:center">
               <empty name="info['pic']">
-                <img style="width: 100px;" src="{wghd:
-:STATICS}/images/doctor.jpg" alt="{wghd:
-$info.name}">      
+                <img style="width: 100px;" src="{wghd::STATICS}/images/doctor.jpg" alt="{wghd:$info.name}">      
                 <else/>      
-                <img style="width: 100px;" src="{wghd:
-$info.pic}" alt="{wghd:
-$info.name}"></empty>
+                <img style="width: 100px;" src="{wghd:$info.pic}" alt="{wghd:$info.name}"></empty>
             </td>
           </tr>
           <tr>
             <td>
-              <label for="keyword">医生姓名：</label>
+              <label for="keyword">孕育师姓名：</label>
             </td>
-            <td>{wghd:
-$info.name}</td>
+            <td>{wghd:$info.name}</td>
             <td>
               <label for="keyword">职称：</label>
             </td>
-            <td>{wghd:
-$info.persition}</td>
+            <td>{wghd:$info.persition}</td>
           </tr>
           <tr>
             <td>
-              <label for="keyword">患者数：</label>
+              <label for="keyword">孕妈数：</label>
             </td>
-            <td>{wghd:
-$info.followers}</td>
+            <td>{wghd:$info.followers}</td>
             <td>
               <label for="keyword">科室：</label>
             </td>
-            <td>{wghd:
-$info.profession}</td>
+            <td>{wghd:$info.profession}</td>
           </tr>
           <tr>
             <td>
               <label for="keyword">咨询量：</label>
             </td>
-            <td>{wghd:
-$info.consultnums}</td>
+            <td>{wghd:$info.consultnums}</td>
             <td>
               <label for="keyword">二维码：</label>
             </td>
             <td>
-              <img style="width:120px; height:auto;" src="{wghd:
-$info.qrcode}">
+              <img style="width:120px; height:auto;" src="{wghd:$info.qrcode}">
             </td>
           </tr>
           <tr>
@@ -69,8 +57,7 @@ $info.qrcode}">
             </td>
           </tr>
           <tr>
-            <td colspan="4" style="padding:2%;">{wghd:
-$info.info}</td>
+            <td colspan="4" style="padding:2%;">{wghd:$info.info}</td>
           </tr>
         </TABLE>
         <include file="Public:support"/>      

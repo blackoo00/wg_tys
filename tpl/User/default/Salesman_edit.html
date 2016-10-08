@@ -6,19 +6,16 @@
   <a href="javascript:history.go(-1);"  class="right btnGrayS vm" style="margin-top:-27px" >返回</a>
 </div>
 <div class="msgWrap">
-  <form class="form" method="post" action="{wghd:
-:U('Salesman/upsave')}" enctype="multipart/form-data" >
+  <form class="form" method="post" action="{wghd::U('Salesman/upsave')}" enctype="multipart/form-data" >
     <TABLE class="userinfoArea" style=" margin:20px 0 0 0;" border="0" cellSpacing="0" cellPadding="0" width="100%">
-     <input type="hidden" name="id" value="{wghd:
-$info.id}" />
+     <input type="hidden" name="id" value="{wghd:$info.id}" />
       <THEAD>
         <TR>
           <TH valign="top">
             <span class="red">*</span><label for="keyword">销售姓名：</label>
           </TH>
           <TD>
-            <input type="text" class="px" id="name" value="{wghd:
-$info.name}" name="name" style="width:500px" >
+            <input type="text" class="px" id="name" value="{wghd:$info.name}" name="name" style="width:500px" >
           </TD>
         </TR>
       </THEAD>
@@ -28,8 +25,7 @@ $info.name}" name="name" style="width:500px" >
             <label for="text">销售简介：</label>
           </TH>
           <TD>
-            <textarea  class="px" id="info" name="info" style="width:500px; height:150px">{wghd:
-$info.info}</textarea>
+            <textarea  class="px" id="info" name="info" style="width:500px; height:150px">{wghd:$info.info}</textarea>
           </TD>
 
           <TR>

@@ -22,6 +22,14 @@ class DistributionAction extends WapAction{
 		$this->assign('set',$set);
         $this->assign('my',$my);
 
+        $totalMoney = M('Distribution_ordermoney')->where(array('token'=>$token,'mid'=>$my['id'],'status'=>array('gt',0)))->sum('orderMoney');//累计销售
+        		$totalOfferMoney = M('Distribution_ordermoney')->where(array('token'=>$token,'mid'=>$my['id'],'status'=>array('neq',0)))->sum('offerMoney');//累计佣金
+        $this->assign('totalMoney',$totalMoney);
+        		$this->assign('totalOfferMoney',$totalOfferMoney);
+        
+        $totalOfferMoney2 = M('Distribution_ordermoney')->where(array('token'=>$token,'mid'=>$my['id'],'status'=>array('eq',4)))->sum('offerMoney');//累计佣金
+        $this->assign('totalOfferMoney2',$totalOfferMoney2);
+
 		//判断是否登陆
 		// if(!$_COOKIE['login_user'] && ACTION_NAME !='register' && ACTION_NAME !='login' && ACTION_NAME !='test'){
 		// 	if(ACTION_NAME == 'generateQrcode' && $_GET['aid'] != ''){
@@ -397,6 +405,7 @@ class DistributionAction extends WapAction{
 				$_POST['choose'] = 1;
 			}
 			$_POST['addtime'] = time();
+			$_POST['mid'] = $this->my['id'];
 			if ($db->create() === false) {
 			    $this->ajaxReturn('操作失败',$token,2);
 			} else {
@@ -441,9 +450,9 @@ class DistributionAction extends WapAction{
 	public function chooseAdd(){
 		$id=$_GET["id"];
 		$db = M("address_list");
-		$db->where(array("aid"=>$this->account['id'],'choose'=>1))->setField("choose",0);
-		$result=$db->where(array("aid=".$this->account['id'],'id'=>$id))->setField("choose",1);
-		$data = $db->where(array("aid=".$this->account['id'],'id'=>$id))->find();
+		$db->where(array("mid"=>$this->account['id'],'choose'=>1))->setField("choose",0);
+		$result=$db->where(array("mid=".$this->account['id'],'id'=>$id))->setField("choose",1);
+		$data = $db->where(array("mid=".$this->account['id'],'id'=>$id))->find();
 		if($result){
 			$this->ajaxReturn(json_encode($data),"设置成功",1);
 		}else{
@@ -744,6 +753,9 @@ class DistributionAction extends WapAction{
 		$id = $this->my['id'];
 		$order['status_4'] = M('Distribution_ordermoney')->where(array('token'=>$token,'mid'=>$id,'status'=>4))->sum('offerMoney');//已审核
 		$this->assign('order',$order);
+
+		$getmoney=sprintf("%.2f",($order['status_4']-$this->my['alreadyGetMoney'])/100);
+		$this->assign('getmoney',$getmoney);
 		if(IS_POST){
 			$name = $this->_post('name');
 			$tele = $this->_post('tele');
@@ -776,7 +788,7 @@ class DistributionAction extends WapAction{
 				$data['money'] = $money*100;
 				$data['token'] = $this->token;
 				$data['applytime'] = time();
-				if(($order['status_4']-$this->my['alreadyGetMoney'])<$money*100){
+				if((($order['status_4']-$this->my['alreadyGetMoney'])/100)<$money){
 					$arr = array('success'=>-1,'info'=>'提现金额超出可提现值');
 					echo json_encode($arr);
 					exit;

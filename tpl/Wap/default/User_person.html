@@ -1,23 +1,17 @@
 <include file="Public:head"/>
 <body>
 	<div id='custom_head'>
-		<img src="{wghd:
-$custom.pic}">
-		<div class="custom_name">{wghd:
-$custom.name}</div>
+		<img src="{wghd:$custom.pic}">
+		<div class="custom_name">{wghd:$custom.name}</div>
 		<div class="clear"></div>
 	</div>
 	<div id="wrapper" class="user_person">
 		<section>
-			<form action="{wghd:
-:U('User/pinsert',array('token'=>$token,'wecha_id'=>$wecha_id))}" method="post">
+			<form action="{wghd::U('User/pinsert',array('token'=>$token,'wecha_id'=>$wecha_id))}" method="post">
 			<ul>
-				<li><input name="name" type="text" placeholder="姓名" value="{wghd:
-$custom.name}"></li>
-				<li><input name="tel" type="text" placeholder="电话" value="{wghd:
-$custom.tel}"></li>
-				<li><input name="card" type="text" placeholder="身份证号" value="{wghd:
-$custom.card}"></li>
+				<li><input name="name" type="text" placeholder="姓名" value="{wghd:$custom.name}"></li>
+				<li><input name="tel" type="text" placeholder="电话" value="{wghd:$custom.tel}"></li>
+				<li><input name="card" type="text" placeholder="身份证号" value="{wghd:$custom.card}"></li>
 				<li><input type="submit" value="提交"></li>
 			</ul>
 			</form>

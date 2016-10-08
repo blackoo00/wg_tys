@@ -1,8 +1,7 @@
 <include file="Index:header"/>
 <div class="content">
           <div class="cLineB"><h4>添加微信公众号</h4></div>
-          <form method="post" action="{wghd:
-:U('User/Index/insert')}" enctype="multipart/form-data">
+          <form method="post" action="{wghd::U('User/Index/insert')}" enctype="multipart/form-data">
           <div class="msgWrap">
             <table class="userinfoArea" border="0" cellspacing="0" cellpadding="0" width="100%">
               <thead>
@@ -40,14 +39,11 @@
                 </tr>
                   <tr style="display:none">
                   <th><span class="red">*</span>头像地址（url）:</th>
-                  <td><input class="px" name="headerpic" value="{wghd:
-:RES}/images/portrait.jpg" size="60">请填写图片外链地址 <a onclick="alert('请填写以jpg,png,gif,bmp等后缀的图文')" target="_blank"><img src="{wghd:
-:RES}/images/help.png" class="vm helpimg" title="帮助"></a></td>
+                  <td><input class="px" name="headerpic" value="{wghd::RES}/images/portrait.jpg" size="60">请填写图片外链地址 <a onclick="alert('请填写以jpg,png,gif,bmp等后缀的图文')" target="_blank"><img src="{wghd::RES}/images/help.png" class="vm helpimg" title="帮助"></a></td>
                 </tr>
                  <tr style="display:none">
                   <th><span class="red">*</span>TOKEN</th>
-                  <td><input type="text" name="token" value="{wghd:
-$tokenvalue}" class="px" tabindex="1" size="40">(填写你的公众号)例：pigcmsweixin,请勿填写文,或者其它特殊字符，此处token和腾讯平台必须一致!</td>
+                  <td><input type="text" name="token" value="{wghd:$tokenvalue}" class="px" tabindex="1" size="40">(填写你的公众号)例：pigcmsweixin,请勿填写文,或者其它特殊字符，此处token和腾讯平台必须一致!</td>
                 </tr>
                 
                 <tr style="display:none">
@@ -59,8 +55,7 @@ $tokenvalue}" class="px" tabindex="1" size="40">(填写你的公众号)例：pig
                 </tr>
                 <tr style="display:none">
                   <th><span class="red">*</span>公众号邮箱：</th>
-                  <td><input type="text" required="" class="px" tabindex="1" value="{wghd:
-$email}" name="qq" size="25"></td>
+                  <td><input type="text" required="" class="px" tabindex="1" value="{wghd:$email}" name="qq" size="25"></td>
                 </tr>
                  <tr style="display:none">
                   <th><span class="red">*</span>粉丝数：</th>

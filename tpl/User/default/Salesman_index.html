@@ -3,10 +3,8 @@
 >
 <div class="cLine">
   <div class="pageNavigator left">
-    <a href='{wghd:
-:U("Salesman/add")}' title='新增销售' class='btnGrayS vm bigbtn'>
-      <img src="{wghd:
-:RES}/images/text.png" class="vm" />
+    <a href='{wghd::U("Salesman/add")}' title='新增销售' class='btnGrayS vm bigbtn'>
+      <img src="{wghd::RES}/images/text.png" class="vm" />
       新增销售
     </a>
   </div>
@@ -30,15 +28,10 @@
         <TR></TR>
         <volist id="list" name="list">
           <tr>
-            <td>{wghd:
-$list.name}</td>
-            <td>{wghd:
-$list.hospitalnum}</td>
-            <td>{wghd:
-$list.info}</td>
-            <td class="norightborder"> <a href="{wghd:
-:U('Salesman/edit',array('id'=>$list['id']))}" title="编辑文本">编辑</a> <a onclick="return confirm('确定要删除么？');" href="{wghd:
-:U('Salesman/del',array('id'=>$list['id']))}">删除</a></td>
+            <td>{wghd:$list.name}</td>
+            <td>{wghd:$list.hospitalnum}</td>
+            <td>{wghd:$list.info}</td>
+            <td class="norightborder"> <a href="{wghd::U('Salesman/edit',array('id'=>$list['id']))}" title="编辑文本">编辑</a> <a onclick="return confirm('确定要删除么？');" href="{wghd::U('Salesman/del',array('id'=>$list['id']))}">删除</a></td>
           </tr>
         </volist>
 
@@ -48,8 +41,7 @@ $list.info}</td>
 </div>
 <div class="cLine">
   <div class="pageNavigator right">
-    <div class="pages">{wghd:
-$page}</div>
+    <div class="pages">{wghd:$page}</div>
   </div>
   <div class="clr"></div>
 </div>

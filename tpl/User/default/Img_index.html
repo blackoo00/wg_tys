@@ -7,18 +7,13 @@
           </div>
           <div class="cLine">
               <div class="pageNavigator left">
-  <a href='{wghd:
-:U("Text/add")}' title='新增文本自定义回复' class='btnGrayS vm bigbtn'><img src="{wghd:
-:RES}/images/text.png" class="vm" />新增文本自定义回复</a>　
-  <a href='{wghd:
-:U("Img/add")}' title='新增图文自定义回复' class='btnGrayS vm bigbtn'><img src="{wghd:
-:RES}/images/pic.png" class="vm" />新增图文自定义回复</a>　
+  <a href='{wghd::U("Text/add")}' title='新增文本自定义回复' class='btnGrayS vm bigbtn'><img src="{wghd::RES}/images/text.png" class="vm" />新增文本自定义回复</a>　
+  <a href='{wghd::U("Img/add")}' title='新增图文自定义回复' class='btnGrayS vm bigbtn'><img src="{wghd::RES}/images/pic.png" class="vm" />新增图文自定义回复</a>　
           
             </div>
   <div style="float:right;line-height:30px;">
 	<form action="#" method="post">
-	<input type="text" placeholder="请输入标题搜索词" value="{wghd:
-$_POST['search']}" class="px" name="search" />
+	<input type="text" placeholder="请输入标题搜索词" value="{wghd:$_POST['search']}" class="px" name="search" />
 	<button class="btnGrayS" style="height: 29px;">搜索</button>
 	</form>
    </div>
@@ -41,40 +36,28 @@ $_POST['search']}" class="px" name="search" />
               </THEAD>
               <TBODY>
                 <TR></TR>
-				<form action="{wghd:
-:U("Img/editUsort")}" method="post" id="sortform">
+				<form action="{wghd::U("Img/editUsort")}" method="post" id="sortform">
 				<volist name="info" id="vo" empty="没有找到数据">
 				<tr>
-                  <td><div class="answer_text"><img src="{wghd:
-:RES}/images/pic.png" class="vm" title="图文自定义内容">{wghd:
-$vo.title}</div></td>
-                  <td>{wghd:
-$vo.keyword}</td>
+                  <td><div class="answer_text"><img src="{wghd::RES}/images/pic.png" class="vm" title="图文自定义内容">{wghd:$vo.title}</div></td>
+                  <td>{wghd:$vo.keyword}</td>
                   
-                  <td>{wghd:
-$vo.classname}</td>
+                  <td>{wghd:$vo.classname}</td>
                   <td>
-					<input type="number" style="border:1px solid #c9c9c9;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;" class="usort" name="usort{wghd:
-$vo.id}" value="{wghd:
-$vo.usort}" />
+					<input type="number" style="border:1px solid #c9c9c9;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;" class="usort" name="usort{wghd:$vo.id}" value="{wghd:$vo.usort}" />
 					
 				  </td>
-                  <td>{wghd:
-$vo.click}</td>
+                  <td>{wghd:$vo.click}</td>
                     <td><php>echo date('Y-m-d',$vo['uptatetime']);</php></td>
                    
                    <td class="norightborder">
-				   <!--a target="ddd" href="{wghd:
-:U('Wap/Index/content',array('token'=>$_SESSION['token'],'id'=>$vo['id']))}">查看</a--> 
-				   <a href="{wghd:
-:U('Img/edit',array('id'=>$vo['id']))}" title="编辑图文自定义回复">编辑</a>
-				   <a href="{wghd:
-:U('Img/del',array('id'=>$vo['id']))}">删除</a></td>
+				   <!--a target="ddd" href="{wghd::U('Wap/Index/content',array('token'=>$_SESSION['token'],'id'=>$vo['id']))}">查看</a--> 
+				   <a href="{wghd::U('Img/edit',array('id'=>$vo['id']))}" title="编辑图文自定义回复">编辑</a>
+				   <a href="{wghd::U('Img/del',array('id'=>$vo['id']))}">删除</a></td>
           
                 </tr>
 				</volist>
-					<input type="hidden" name="token" value="{wghd:
-$_SESSION['token']}" />
+					<input type="hidden" name="token" value="{wghd:$_SESSION['token']}" />
                 </form>       
               </TBODY>
             </TABLE>
@@ -115,10 +98,8 @@ alert('未选中任何文章或回复！')
 					
 					function upUsort(id,b){
 						$.ajax({
-							url:'{wghd:
-:U("Img/editUsort")}',
-							data:{"id":id,"v":b,"token":"{wghd:
-$Think.session.token}"},
+							url:'{wghd::U("Img/editUsort")}',
+							data:{"id":id,"v":b,"token":"{wghd:$Think.session.token}"},
 							type:'POST',
 							dataType:'text',
 							success:function(obj){
@@ -137,8 +118,7 @@ $Think.session.token}"},
           </div>
           <div class="cLine">
             <div class="pageNavigator right">
-                 <div class="pages">{wghd:
-$page}</div>
+                 <div class="pages">{wghd:$page}</div>
               </div>
             <div class="clr"></div>
           </div>

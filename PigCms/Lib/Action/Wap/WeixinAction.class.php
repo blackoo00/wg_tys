@@ -191,32 +191,34 @@ body{padding: 0;margin:0;background-color:#eeeeee;font-family: "黑体";}
 			$payHandel=new payHandle($_GET['token'],$_GET['from'],'weixin');//0:token,1:from
 			$orderInfo=$payHandel->afterPay($out_trade_no,$_GET['transaction_id'],$_GET['transaction_id']);
 			Log::write('out_trade_no='.$out_trade_no,'DEBUG');
+
 			//订单处理
 			$order = M('product_cart')->where(array('orderid'=>$out_trade_no))->find();
 			if($order['setInc']==0){
-				$custom = M('custom_list')->where(array('openid' => $order['wecha_id']))->find();//患者
+				$custom = M('custom_list')->where(array('openid' => $order['wecha_id']))->find();//孕妈
 				if($custom&&$custom['did']!=0){
-					M('doctor_list')->where('id='.$custom['id'])->setInc('orderNums',1);//患者订单加1
-					$doctor = M('doctor_list')->where('id='.$custom['did'])->find();//医生
+					M('doctor_list')->where('id='.$custom['did'])->setInc('orderNums',1);//孕妈订单加1
+					$doctor = M('doctor_list')->where('id='.$custom['did'])->find();//孕育师
 					if($doctor&&$doctor['hid']!=0){
-						M('doctor_list')->where('id='.$custom['did'])->setInc('orderNums',1);//医生订单加1
+						M('doctor_list')->where('id='.$custom['did'])->setInc('orderNums',1);//孕育师订单加1
 						M('hospital_list')->where('id='.$doctor['hid'])->setInc('orderNums',1);//医院订单加1
 					}
 				}
 				M('product_cart')->where(array('orderid'=>$out_trade_no))->setField('setInc',1);
 			}
-			/*$order = M('product_cart')->where(array('orderid'=>$out_trade_no))->find();
+			//三级分销
+			$order = M('product_cart')->where(array('orderid'=>$out_trade_no))->find();
 			if($order['setInc']==0){
 				$userInfo = M('Distribution_member')->where(array('token' => $_GET['token'], 'wecha_id' => $order['wecha_id']))->find();
 				$this->distriOrderStatus($_GET['token'],$order['id'],1);
 				if($userInfo['fid']!=0){
-					M('Distribution_member')->where(array('token' => $attacharray[0], 'id' => $userInfo['fid']))->setInc('orderNums');//一级订单累加
+					M('Distribution_member')->where(array('token' => $_GET['token'], 'id' => $userInfo['fid']))->setInc('orderNums');//一级订单累加
 				}
 				if($userInfo['sid']!=0){
-					M('Distribution_member')->where(array('token' => $attacharray[0], 'id' => $userInfo['sid']))->setInc('orderNums');//二级订单累加
+					M('Distribution_member')->where(array('token' => $_GET['token'], 'id' => $userInfo['sid']))->setInc('orderNums');//二级订单累加
 				}
 				if($userInfo['tid']!=0){
-					M('Distribution_member')->where(array('token' => $attacharray[0], 'id' => $userInfo['tid']))->setInc('orderNums');//三级订单累加
+					M('Distribution_member')->where(array('token' => $_GET['token'], 'id' => $userInfo['tid']))->setInc('orderNums');//三级订单累加
 				}
 				$orderNums = M('product_cart')->where(array('wecha_id'=>$order['wecha_id'],'token'=>$_GET['token'],'paid'=>1))->count();
 				if($orderNums==1){
@@ -232,9 +234,10 @@ body{padding: 0;margin:0;background-color:#eeeeee;font-family: "黑体";}
 				$data = '{"touser":"'.$order['wecha_id'].'","msgtype":"text","text":{"content":"亲：您已成功付款，等候签收宝贝吧！"}}';
 				$result = $this->api_notice_increment('https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token='.$access_token,$data);
 				//上级消息推送
-				$this->infoSend($attacharray[0],$order['id'],$out_trade_no,$access_token);
+				$this->infoSend($_GET['token'],$order['id'],$out_trade_no,$access_token);
 				M('product_cart')->where(array('orderid'=>$out_trade_no))->setField('setInc',1);
-			}*/
+			}
+
 			$log_name = LOG_PATH."weixin_notify.log";//log文件路径
 			Log::write("执行日期：".strftime("%Y-%m-%d-%H：%M：%S",time())."【支付成功】:\n".$xml."\n",'INFO','',$log_name);
 			exit('SUCCESS');

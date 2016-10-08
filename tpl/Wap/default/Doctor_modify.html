@@ -1,12 +1,9 @@
 <include file="Public:head"/>
 <body>
-	<script src="{wghd:
-:RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="{wghd::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
 	<!-- <div id='custom_head'>
-		<img src="{wghd:
-$doctor.pic}">
-		<div class="custom_name">{wghd:
-$doctor.name}</div>
+		<img src="{wghd:$doctor.pic}">
+		<div class="custom_name">{wghd:$doctor.name}</div>
 		<div class="clear"></div>
 	</div> -->
 	<style>
@@ -19,36 +16,25 @@ $doctor.name}</div>
 			<div id="fankuiboxwrap">
 				<div id="fankuibox">
 					<div>如需修改，请在反馈建议提交</div>
-					<div><span class="button grey" id="fankui_cancel">取消</span><span><a class="button blue" href="{wghd:
-:U('Doctor/feedback',array('token'=>$token,'wecha__id'=>$wecha_id))}">反馈建议</a></span></div>
+					<div><span class="button grey" id="fankui_cancel">取消</span><span><a class="button blue" href="{wghd::U('Doctor/feedback',array('token'=>$token,'wecha__id'=>$wecha_id))}">反馈建议</a></span></div>
 				</div>
 			</div>
-			<script src="{wghd:
-:RES}/js/tys/require.js" data-main="{wghd:
-:RES}/js/tys/main" type="text/javascript"></script>
+			<script src="{wghd::RES}/js/tys/require.js" data-main="{wghd::RES}/js/tys/main" type="text/javascript"></script>
 			<section id="dpic">
-				<div class="cflow">{wghd:
-$doctor.name}</div>
+				<div class="cflow">{wghd:$doctor.name}</div>
 				<div id="loading">
-					<img src="{wghd:
-:RES}/css/tys/photoswipe-loader.gif">
+					<img src="{wghd::RES}/css/tys/photoswipe-loader.gif">
 				</div>
-					<img id="doctorpic" src="{wghd:
-$doctor.pic}"/>
-				<input id="pic" name="pic" type="file" title="医生头像" onchange="return headpic('{wghd:
-:U('Doctor/headpic',array('token'=>$token,'wecha_id'=>$wecha_id))}',{wghd:
-$doctor.id})">
+					<img id="doctorpic" src="{wghd:$doctor.pic}"/>
+				<input id="pic" name="pic" type="file" title="孕育师头像" onchange="return headpic('{wghd::U('Doctor/headpic',array('token'=>$token,'wecha_id'=>$wecha_id))}',{wghd:$doctor.id})">
 				<div class="clear"></div>
 			</section>
 			<section>
-			<ul id="fankui">
-				<li><span>医院</span><span>{wghd:
-$doctor.hname}&nbsp;<i class="icon-circle-right"></i></span></li><div class="clear"></div>
-				<li><span>科室</span><span>{wghd:
-$doctor.profession}&nbsp;<i class="icon-circle-right"></i></span></li><div class="clear"></div>
-				<li><span>职称</span><span>{wghd:
-$doctor.persition}&nbsp;<i class="icon-circle-right"></i></span></li><div class="clear"></div>
-			</ul>
+			<!-- <ul id="fankui">
+				<li><span>医院</span><span>{wghd:$doctor.hname}&nbsp;<i class="icon-circle-right"></i></span></li><div class="clear"></div>
+				<li><span>科室</span><span>{wghd:$doctor.profession}&nbsp;<i class="icon-circle-right"></i></span></li><div class="clear"></div>
+				<li><span>职称</span><span>{wghd:$doctor.persition}&nbsp;<i class="icon-circle-right"></i></span></li><div class="clear"></div>
+			</ul> -->
 			<script>
 				$(function(){
 					$("#fankui li").bind("click",function(){
@@ -59,19 +45,14 @@ $doctor.persition}&nbsp;<i class="icon-circle-right"></i></span></li><div class=
 					})
 				})
 			</script>
-		<form action="{wghd:
-:U('Doctor/modify',array('token'=>$token,'wecha_id'=>$wecha_id))}" method="post" enctype="multipart/form-data">
-			<input type="hidden" name="id" value="{wghd:
-$doctor.id}">
-			<input type="hidden" value="{wghd:
-$doctor.info}" id="checktext">
-			<div style="padding-left:2%; font-size:1.2em;">个人简介</div>
-			<textarea name="info" id="info" placeholder="请介绍您的执业经历，学术成就、擅长等信息，让患者更好地了解您。">{wghd:
-$doctor.info}</textarea></section>
-			<section><include file="Public:week"/></section>
+		<form action="{wghd::U('Doctor/modify',array('token'=>$token,'wecha_id'=>$wecha_id))}" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="id" value="{wghd:$doctor.id}">
+			<input type="hidden" value="{wghd:$doctor.info}" id="checktext">
+			<div style="padding-left:2%; font-size:1.2em; margin-top: 5px;">个人简介</div>
+			<textarea name="info" id="info" placeholder="请介绍您的执业经历，学术成就、擅长等信息，让孕妈更好地了解您。">{wghd:$doctor.info}</textarea></section>
+			<!-- <section><include file="Public:week"/></section> -->
 			<section>
-				<input class="newinput" name="note" id="note" type="text" placeholder="备注" value="{wghd:
-$doctor.note}">
+				<input class="newinput" name="note" id="note" type="text" placeholder="备注" value="{wghd:$doctor.note}">
 			</section>
 			<input class="greenbtn" id="send" type="submit" value="保存">
 		</form>
@@ -79,7 +60,7 @@ $doctor.note}">
 			$(function(){
 				$("#send").bind("click",function(){
 					if($("#info").val()==""){
-						alert("医生简历不能为空");
+						alert("孕育师简历不能为空");
 						return false;
 					}else if($("#info").val().length<10){
 						alert("内容不得少于10个字");

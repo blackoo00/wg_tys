@@ -4,8 +4,7 @@
 <div class="cLine">
   <div style="float:right;line-height:30px;">
     <form action="#" method="post">
-      <input type="text" placeholder="请输入医生姓名" value="{wghd:
-$_POST['search']}" class="px" name="search" />    
+      <input type="text" placeholder="请输入孕育师姓名" value="{wghd:$_POST['search']}" class="px" name="search" />    
       <button class="btnGrayS" style="height: 29px;">搜索</button>
     </form>
   </div>
@@ -18,7 +17,7 @@ $_POST['search']}" class="px" name="search" />
     <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%">
       <THEAD>
         <TR>
-          <th>咨询医生</th>
+          <th>咨询孕育师</th>
           <th>咨询人</th>
           <th>性别</th>
           <th>操作</th>
@@ -28,13 +27,10 @@ $_POST['search']}" class="px" name="search" />
         <TR></TR>
         <volist id="list" name="consult">
           <tr>
-            <td>{wghd:
-$list.doctor.name}</td>
-            <td>{wghd:
-$list.custom.name}</td>
+            <td>{wghd:$list.doctor.name}</td>
+            <td>{wghd:$list.custom.name}</td>
             <td><if condition="$list.sex eq 1">男<else/>女</if></td>
-            <td class="norightborder"> <a href="{wghd:
-:U('Consult/detail',array('id'=>$list['id']))}" title="查看详细">查看详细</a></td>
+            <td class="norightborder"> <a href="{wghd::U('Consult/detail',array('id'=>$list['id']))}" title="查看详细">查看详细</a></td>
           </tr>
         </volist>
 
@@ -44,8 +40,7 @@ $list.custom.name}</td>
 </div>
 <div class="cLine">
   <div class="pageNavigator right">
-    <div class="pages">{wghd:
-$page}</div>
+    <div class="pages">{wghd:$page}</div>
   </div>
   <div class="clr"></div>
 </div>

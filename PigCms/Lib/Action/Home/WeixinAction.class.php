@@ -65,7 +65,7 @@ class WeixinAction extends Action
         }
         Log::write("关注11".$data['EventKey'],'DEBUG');
 
-        //医生二维码扫描
+        //孕育师二维码扫描
         if('subscribe' == $data['Event']){
             if (!(strpos($data['EventKey'], 'qrscene_') === FALSE)) {
                 $sceneid = str_replace('qrscene_', '', $data['EventKey']);
@@ -75,7 +75,7 @@ class WeixinAction extends Action
             $sceneid = $data['EventKey'];
         }
         if($sceneid){
-            //判断ID是否是医生ID
+            //判断ID是否是孕育师ID
             $doctor=D('Doctor')->where('id='.$sceneid)->find();
             if($doctor){
                 $db=D('Custom');
@@ -84,13 +84,13 @@ class WeixinAction extends Action
                 }
                 $where['openid']=$this->data['FromUserName'];
                 $custom=$db->where($where)->find();
-                if($custom){//判断患者是否存在
-                    if($custom['did']==0){//判断是否已经关注医生 只有在没有关注的情况下才能进行关注
+                if($custom){//判断孕妈是否存在
+                    if($custom['did']==0){//判断是否已经关注孕育师 只有在没有关注的情况下才能进行关注
                         $qrcode['did']=$sceneid;
                         $db->where($where)->save($qrcode);
                         D('Doctor')->where('id='.$sceneid)->setInc('followers');
                     }else{
-                        return array("请先取消关注才可以关注其他医生", 'text');
+                        return array("请先取消关注才可以关注其他孕育师", 'text');
                     }
                 }else{
                     $user=$this->get_user_info();
@@ -677,12 +677,12 @@ class WeixinAction extends Action
     private function keyword($key)
     {
         switch ($key) {
-            case '我的医生':
+            case '我的孕育师':
                 $db=D('Custom');
                 $where['openid']=$this->data['FromUserName'];
                 $custom=$db->relation(true)->where($where)->find();
                 if($custom['did']==0){
-                    return array("您还没有关注医生", 'text');
+                    return array("您还没有关注孕育师", 'text');
                 }else{
                     $url=U('Wap/Doctor/details',array('id'=>$custom['did'],'token'=>$this->token));
                     return array("<a href='http://tys.tzwg.net".$url."'>".$custom['doctor']['name']."</a>", 'text');

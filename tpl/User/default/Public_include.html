@@ -2,8 +2,7 @@
 <div class="top">
 <div class="toplink">
 <style>
-.topbg{background:url({wghd:
-:RES}/images/top.gif) repeat-x; height:30px; /*box-shadow:0 0 10px #000;-moz-box-shadow:0 0 10px #000;-webkit-box-shadow:0 0 10px #000;*/}
+.topbg{background:url({wghd::RES}/images/top.gif) repeat-x; height:30px; /*box-shadow:0 0 10px #000;-moz-box-shadow:0 0 10px #000;-webkit-box-shadow:0 0 10px #000;*/}
 .top {
     margin: 0px auto; width: 988px; height: 30px;
 }
@@ -35,17 +34,11 @@
 <div class="welcome">欢迎使用多用户微信营销服务平台!</div>
     <div class="memberinfo"  id="destoon_member">	
 		<if condition="$_SESSION[uid]==false">
-			<a href="{wghd:
-:U('Index/login')}">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href="{wghd:
-:U('Index/login')}">注册</a>
+			<a href="{wghd::U('Index/login')}">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="{wghd::U('Index/login')}">注册</a>
 			<else/>
-			<a href="{wghd:
-:U('Index/index')}">>>我的公众号</a>&nbsp;你好,<a href="/#" hidefocus="true"  ><span style="color:red">{wghd:
-$Think.session.uname}</span></a>（uid:{wghd:
-$Think.session.uid}）
-			<a href="{wghd:
-:U('System/Admin/logout')}" >退出</a>
+			<a href="{wghd::U('Index/index')}">>>我的公众号</a>&nbsp;你好,<a href="/#" hidefocus="true"  ><span style="color:red">{wghd:$Think.session.uname}</span></a>（uid:{wghd:$Think.session.uid}）
+			<a href="{wghd::U('System/Admin/logout')}" >退出</a>
 	</if>	
 	</div>
 	</div>

@@ -1,6 +1,5 @@
 <include file="Public:head"/>
-<link rel="stylesheet" type="text/css" href="{wghd:
-:RES}/css/cymain.css" />
+<link rel="stylesheet" type="text/css" href="{wghd::RES}/css/cymain.css" />
 <div class="content">
 
 <div class="cLineB">
@@ -38,18 +37,15 @@ function ccolumns(value){
 				
 				<tr class="alipay" <pigcmsif where="$config.paytype neq 'alipay'">style="display:none"</pigcmsif>>
 					<th width="120">帐号：</th>
-					<td><input type="text" name="name" value="{wghd:
-$config.name}" class="px" style="width:550px;"></td>
+					<td><input type="text" name="name" value="{wghd:$config.name}" class="px" style="width:550px;"></td>
 				</tr>
 				<tr class="alipay" <pigcmsif where="$config.paytype neq 'alipay'">style="display:none"</pigcmsif>>
 					<th width="120">PID：</th>
-					<td><input type="text" name="pid" value="{wghd:
-$config.pid}" class="px" style="width:550px;"></td>
+					<td><input type="text" name="pid" value="{wghd:$config.pid}" class="px" style="width:550px;"></td>
 				</tr>
 				<tr class="alipay" <pigcmsif where="$config.paytype neq 'alipay'">style="display:none"</pigcmsif>>
 					<th>KEY：</th>
-					<td><input type="text" name="key" value="{wghd:
-$config.key}" class="px" style="width:550px;"></td>
+					<td><input type="text" name="key" value="{wghd:$config.key}" class="px" style="width:550px;"></td>
 				</tr>
 
 				<tr class="tenpay" <pigcmsif where="$config.paytype eq 'alipay'">style="display:none"</pigcmsif>>
@@ -58,33 +54,27 @@ $config.key}" class="px" style="width:550px;"></td>
 				</tr>
 				<tr class="tenpay" <pigcmsif where="$config.paytype eq 'alipay'">style="display:none"</pigcmsif>>
 					<th>商户号：</th>
-					<td><input type="text" name="mchid" value="{wghd:
-$config.mchid}" class="px" style="width:350px;"></td>
+					<td><input type="text" name="mchid" value="{wghd:$config.mchid}" class="px" style="width:350px;"></td>
 				</tr>
 				<tr class="tenpay" <pigcmsif where="$config.paytype eq 'alipay'">style="display:none"</pigcmsif>>
 					<th>appId：</th>
-					<td><input type="text" name="appid" value="{wghd:
-$config.appid}" class="px" style="width:350px;"> 公众号身份的唯一标识（使用财付通接口不用填写）</td>
+					<td><input type="text" name="appid" value="{wghd:$config.appid}" class="px" style="width:350px;"> 公众号身份的唯一标识（使用财付通接口不用填写）</td>
 				</tr>
 				<tr class="tenpay" <pigcmsif where="$config.paytype eq 'alipay'">style="display:none"</pigcmsif>>
 					<th>paySignKey：</th>
-					<td><input type="text" name="paysignkey" value="{wghd:
-$config.paysignkey}" class="px" style="width:350px;"> 公众号支付请求中用于加密的密钥Key（使用财付通接口不用填写）</td>
+					<td><input type="text" name="paysignkey" value="{wghd:$config.paysignkey}" class="px" style="width:350px;"> 公众号支付请求中用于加密的密钥Key（使用财付通接口不用填写）</td>
 				</tr>
 				<tr class="tenpay" <pigcmsif where="$config.paytype eq 'alipay'">style="display:none"</pigcmsif>>
 					<th>AppSecret：</th>
-					<td><input type="text" name="appsecret" value="{wghd:
-$config.appsecret}" class="px" style="width:350px;"> （使用财付通接口不用填写）</td>
+					<td><input type="text" name="appsecret" value="{wghd:$config.appsecret}" class="px" style="width:350px;"> （使用财付通接口不用填写）</td>
 				</tr>
 				<tr class="tenpay" <pigcmsif where="$config.paytype eq 'alipay'">style="display:none"</pigcmsif>>
 					<th>partnerId：</th>
-					<td><input type="text" name="partnerid" value="{wghd:
-$config.partnerid}" class="px" style="width:350px;"> 财付通商户身份的标识</td>
+					<td><input type="text" name="partnerid" value="{wghd:$config.partnerid}" class="px" style="width:350px;"> 财付通商户身份的标识</td>
 				</tr>
 				<tr class="tenpay" <pigcmsif where="$config.paytype eq 'alipay'">style="display:none"</pigcmsif>>
 					<th>partnerKey：</th>
-					<td><input type="text" name="partnerkey" value="{wghd:
-$config.partnerkey}" class="px" style="width:350px;"> 财付通商户权限密钥Key</td>
+					<td><input type="text" name="partnerkey" value="{wghd:$config.partnerkey}" class="px" style="width:350px;"> 财付通商户权限密钥Key</td>
 				</tr>
 				</pigcmsif>
 				<th>&nbsp;</th>

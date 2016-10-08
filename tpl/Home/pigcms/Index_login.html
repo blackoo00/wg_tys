@@ -3,19 +3,12 @@
 <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		
-		<title>{wghd:
-:C('site_title')} {wghd:
-:C('site_name')}</title>
-		<meta name="keywords" content="{wghd:
-:C('keyword')}" />
-        <meta name="description" content="{wghd:
-:C('content')}" />
-		<link rel="stylesheet" href="{wghd:
-:RES}/css/reset.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="{wghd:
-:RES}/css/login.css" type="text/css" media="screen" />
-		<script type="text/javascript" src="{wghd:
-:RES}/js/jquery.js"></script>
+		<title>{wghd::C('site_title')} {wghd::C('site_name')}</title>
+		<meta name="keywords" content="{wghd::C('keyword')}" />
+        <meta name="description" content="{wghd::C('content')}" />
+		<link rel="stylesheet" href="{wghd::RES}/css/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="{wghd::RES}/css/login.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="{wghd::RES}/js/jquery.js"></script>
 		
 	</head>
 	<body id="login">
@@ -25,14 +18,12 @@
 			
 				<h1>微信公众管理平台</h1>
 				<!-- Logo (221px width) -->
-				<img id="logo" src="{wghd:
-:RES}/images/login_logo.png" alt="Simpla Admin logo" />
+				<img id="logo" src="{wghd::RES}/images/login_logo.png" alt="Simpla Admin logo" />
 			</div> <!-- End #logn-top -->
 			
 			<div id="login-content">
 				
-				<form action="{wghd:
-:U('Users/checklogin')}" enctype="multipart/form-data" id="registerform" name="register" autocomplete="off" method="post">
+				<form action="{wghd::U('Users/checklogin')}" enctype="multipart/form-data" id="registerform" name="register" autocomplete="off" method="post">
 					
 					<p>
 						<label>用户名：</label>

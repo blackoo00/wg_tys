@@ -1,10 +1,8 @@
 <include file="Public:head"/>
 <body>
     <!-- <div id='custom_head'>
-        <img src="{wghd:
-$custom.doctor.pic}">
-        <div class="custom_name">{wghd:
-$custom.doctor.name}</div>
+        <img src="{wghd:$custom.doctor.pic}">
+        <div class="custom_name">{wghd:$custom.doctor.name}</div>
         <div class="clear"></div>
     </div> -->
     <style>
@@ -33,23 +31,17 @@ $custom.doctor.name}</div>
         <section>
             <div class="title">基本信息</div>
             <ul>
-                <li>患者姓名：{wghd:
-$custom.name}</li>
-                <li>患者性别:<eq name='custom.sex' value='1'>男<else/>女</eq></li>
-                <li>年龄:{wghd:
-$custom.age}</li>
-                <li>电话/手机:{wghd:
-$custom.tel}</li>
-                <li>地址:{wghd:
-$custom.address}
-                    <!-- <textarea readonly="true" class="textare">{wghd:
-$custom.address}</textarea> -->
+                <li>孕妈姓名：{wghd:$custom.name}</li>
+                <li>孕妈性别:<eq name='custom.sex' value='1'>男<else/>女</eq></li>
+                <li>年龄:{wghd:$custom.age}</li>
+                <li>电话/手机:{wghd:$custom.tel}</li>
+                <li>地址:{wghd:$custom.address}
+                    <!-- <textarea readonly="true" class="textare">{wghd:$custom.address}</textarea> -->
                 </li>
-                <li>糖尿病类型:{wghd:
-$custom.diabetes}</li>
+                <!-- <li>糖尿病类型:{wghd:$custom.diabetes}</li> -->
             </ul>
         </section>
-        <section>
+       <!--  <section>
             <div class="title">血糖详情</div>
             <table class="bloodsuger">
                 <tr>
@@ -72,42 +64,28 @@ $custom.diabetes}</li>
                 </tr>
                 <volist id="list" name="bsuger">
                     <tr>
-                        <td class="xtjl">{wghd:
-$list.recordtime|friendlyDate=###,md,false}</td>
-                        <td class="xtjl">{wghd:
-$list.lctxs}</td>
-                        <td class="xtjl">{wghd:
-$list.kf}</td>
-                        <td class="xtjl">{wghd:
-$list.zchtxs}</td>
-                        <td class="xtjl">{wghd:
-$list.acq}</td>
-                        <td class="xtjl">{wghd:
-$list.achtxs}</td>
-                        <td class="xtjl">{wghd:
-$list.wcq}</td>
-                        <td class="xtjl">{wghd:
-$list.wchtxs}</td>
-                        <td class="xtjl">{wghd:
-$list.sq}</td>
+                        <td class="xtjl">{wghd:$list.recordtime|friendlyDate=###,md,false}</td>
+                        <td class="xtjl">{wghd:$list.lctxs}</td>
+                        <td class="xtjl">{wghd:$list.kf}</td>
+                        <td class="xtjl">{wghd:$list.zchtxs}</td>
+                        <td class="xtjl">{wghd:$list.acq}</td>
+                        <td class="xtjl">{wghd:$list.achtxs}</td>
+                        <td class="xtjl">{wghd:$list.wcq}</td>
+                        <td class="xtjl">{wghd:$list.wchtxs}</td>
+                        <td class="xtjl">{wghd:$list.sq}</td>
                     </tr>
                 </volist>
             </table>
-        </section>
-        <section>
+        </section> -->
+        <!-- <section>
             <div class="title">重要指标</div>
             <ul>
-                <li><span>糖化血红蛋白(HbA1c):<font class="xtjl">{wghd:
-$bprotein.hbaic}</font></span><span></span></li>
-                <li><span>BMI:<font class="xtjl">{wghd:
-$bprotein.bmi}</font></span><span></span></li>
-                <li><span>血压(mmHg):<font class="xtjl">{wghd:
-$bprotein.presure}</font></span><span></span></li>
-                <li><span>甘油三脂(mmol/L):<font class="xtjl">{wghd:
-$bprotein.xiezhi}</font></span><span></span></li>
+                <li><span>糖化血红蛋白(HbA1c):<font class="xtjl">{wghd:$bprotein.hbaic}</font></span><span></span></li>
+                <li><span>BMI:<font class="xtjl">{wghd:$bprotein.bmi}</font></span><span></span></li>
+                <li><span>血压(mmHg):<font class="xtjl">{wghd:$bprotein.presure}</font></span><span></span></li>
+                <li><span>甘油三脂(mmol/L):<font class="xtjl">{wghd:$bprotein.xiezhi}</font></span><span></span></li>
                 <li><span>用药情况:</span>
-                    <textarea readonly="true" class="textare" style="color:red">{wghd:
-$bprotein.note}</textarea>
+                    <textarea readonly="true" class="textare" style="color:red">{wghd:$bprotein.note}</textarea>
                 </li>
             </ul>
         </section>
@@ -115,12 +93,10 @@ $bprotein.note}</textarea>
             <div class="title">化验单</div>
             <ul>
                 <volist id="list" name="laboratory">
-                <li><a href="{wghd:
-:U('Doctor/bigpic',array('src'=>$list['pic'],'token'=>$token,'wecha_id'=>$wecha_id))}"><img style="width: 100%;" src="{wghd:
-$list.pic}"></a></li>
+                <li><a href="{wghd::U('Doctor/bigpic',array('src'=>$list['pic'],'token'=>$token,'wecha_id'=>$wecha_id))}"><img style="width: 100%;" src="{wghd:$list.pic}"></a></li>
                 </volist>
             </ul>
-        </section>
+        </section> -->
     </div>
     <include file="Doctor:foot" />
 </body>

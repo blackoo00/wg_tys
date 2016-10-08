@@ -8,7 +8,7 @@
         	$show       = $Page->show();
         	$this->assign('page',$show);
         	
-        	//判断是显示全部还是指定医生
+        	//判断是显示全部还是指定孕育师
         	// $did=$this->_get('did','intval');
         	// if($did){
         	// 	$where['did']=$did;
@@ -33,7 +33,7 @@
                 $comment = $db->relation(true)->limit($Page->firstRow.','.$Page->listRows)->select();
             }
             $this->assign('comment',$comment);
-        	//医生列表
+        	//孕育师列表
         	$db=D('Doctor');
         	$doctor=$db->select();
         	$this->assign('did',$did);

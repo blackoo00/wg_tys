@@ -3,15 +3,9 @@
          
           <div class="cLine">
             <div class="pageNavigator left">
-  <a href='{wghd:
-:U("Text/add")}' title='新增文本自定义回复' class='btnGrayS vm bigbtn'><img src="{wghd:
-:RES}/images/text.png" class="vm" />新增文本自定义回复</a>　
-  <a href='{wghd:
-:U("Img/add")}' title='新增图文自定义回复' class='btnGrayS vm bigbtn'><img src="{wghd:
-:RES}/images/pic.png" class="vm" />新增图文自定义回复</a>　
-  <!--<a class="btnGrayS vm bigbtn" onclick="location.href='index.php?ac=csv&id=9379';" ><img src="{wghd:
-:RES}/images/import.png" class="vm" />批量导入文本</a>　<a class="btnGrayS vm bigbtn" onclick="location.href='index.php?ac=outtxt&page=1&type=0&classid=0&wxid=gh_858dwjkeww5';" ><img src="{wghd:
-:RES}/images/export.png" class="vm" />批量导出本页文本结果</a>-->
+  <a href='{wghd::U("Text/add")}' title='新增文本自定义回复' class='btnGrayS vm bigbtn'><img src="{wghd::RES}/images/text.png" class="vm" />新增文本自定义回复</a>　
+  <a href='{wghd::U("Img/add")}' title='新增图文自定义回复' class='btnGrayS vm bigbtn'><img src="{wghd::RES}/images/pic.png" class="vm" />新增图文自定义回复</a>　
+  <!--<a class="btnGrayS vm bigbtn" onclick="location.href='index.php?ac=csv&id=9379';" ><img src="{wghd::RES}/images/import.png" class="vm" />批量导入文本</a>　<a class="btnGrayS vm bigbtn" onclick="location.href='index.php?ac=outtxt&page=1&type=0&classid=0&wxid=gh_858dwjkeww5';" ><img src="{wghd::RES}/images/export.png" class="vm" />批量导出本页文本结果</a>-->
               
             </div>
           
@@ -39,19 +33,13 @@
 				</TR>
 				<volist name="info" id="vo">
 				<tr>
-                  <td>  {wghd:
-$i}</td>
-                  <td>{wghd:
-$vo.keyword}</td>
-                  <td><div class="answer_text">{wghd:
-$vo.text}</div></td>
+                  <td>  {wghd:$i}</td>
+                  <td>{wghd:$vo.keyword}</td>
+                  <td><div class="answer_text">{wghd:$vo.text}</div></td>
                   <td><eq name="vo.type" value="1">完全匹配<else/>模糊匹配</eq></td>
-                  <td>{wghd:
-$vo.click}</td>
+                  <td>{wghd:$vo.click}</td>
                     <td><php>echo date('Y-m-d',$vo['updatetime']);</php></td>
-                   <td class="norightborder"> <a href="{wghd:
-:U('Text/edit',array('id'=>$vo['id']))}" title="编辑文本">编辑</a> <a href="{wghd:
-:U('Text/del',array('id'=>$vo['id']))}">删除</a></td>
+                   <td class="norightborder"> <a href="{wghd::U('Text/edit',array('id'=>$vo['id']))}" title="编辑文本">编辑</a> <a href="{wghd::U('Text/del',array('id'=>$vo['id']))}">删除</a></td>
           
                 </tr>
 				</volist>
@@ -80,8 +68,7 @@ alert('未选中任何文章或回复！')
           </div>
           <div class="cLine">
             <div class="pageNavigator right">
-                 <div class="pages">{wghd:
-$page}</div>
+                 <div class="pages">{wghd:$page}</div>
               </div>
             <div class="clr"></div>
           </div>

@@ -3,8 +3,7 @@
  <div class="contentmanage">
     <div class="developer">
        <div class="appTitle normalTitle" style="padding: 20px;">
-        <h2>短信管理（剩余{wghd:
-$smscount}条）</h2>
+        <h2>短信管理（剩余{wghd:$smscount}条）</h2>
         <div class="accountInfo">
         
         </div>
@@ -34,8 +33,7 @@ padding-left:10px;
 input{border: 1px solid #DDDDDD;height:30px;width:200px;margin-left:10px;}
 .new-btn-login{
     background-color: transparent;
-    background-image: url("{wghd:
-:RES}/images/img/new-btn-fixed.png");
+    background-image: url("{wghd::RES}/images/img/new-btn-fixed.png");
     border: medium none;
 	border:1px solid red;
 	
@@ -70,9 +68,7 @@ display: inline-block;
 $(function(){
 	var price=new Array();
 	<volist id="p" name="group">
-	price[{wghd:
-$p.id}]={wghd:
-$p.price};
+	price[{wghd:$p.id}]={wghd:$p.price};
 	</volist>
 	$('#group').change(function(){
 		$('#price').val(price[$('#group').val()]*$('#num').val());
@@ -109,14 +105,10 @@ function checkcz(){
 				</TR>
 				<volist name="list" id="vo">
 				<tr>
-				 <td><pigcmsif where="$vo['status'] eq '0'">成功<else/>不成功({wghd:
-$vo.status})</pigcmsif></td>
-                  <td>{wghd:
-$vo.token}</td>
-                  <td><div class="answer_text">{wghd:
-$vo.text}</div></td>
-                  <td>{wghd:
-$vo.mp}</td>
+				 <td><pigcmsif where="$vo['status'] eq '0'">成功<else/>不成功({wghd:$vo.status})</pigcmsif></td>
+                  <td>{wghd:$vo.token}</td>
+                  <td><div class="answer_text">{wghd:$vo.text}</div></td>
+                  <td>{wghd:$vo.mp}</td>
                     <td><php>echo date('Y-m-d',$vo['time']);</php></td>
                 </tr>
 				</volist>
@@ -127,8 +119,7 @@ $vo.mp}</td>
       </div>
           <div class="cLine">
             <div class="pageNavigator right">
-              <div class="pages">{wghd:
-$page}</div>
+              <div class="pages">{wghd:$page}</div>
             </div>
             <div class="clr"></div>
           </div>

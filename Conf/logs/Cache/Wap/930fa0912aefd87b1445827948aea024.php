@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="<?php echo RES;?>/original/css/weui.min.css">
     <link rel="stylesheet" href="<?php echo RES;?>/original/css/jquery-weui.min.css">
     <link rel="stylesheet" href="<?php echo RES;?>/original/css/style.css">
-
+    <link rel="stylesheet" href="<?php echo RES;?>/original/others2/main.css">
     <link rel="stylesheet" href="<?php echo RES;?>/original/css/notification.css">
 
     <script src="<?php echo RES;?>/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
@@ -67,7 +67,7 @@
                     </a>
                 </div>
             </div>
-            <a class="weui_cell weui_cell_extend" href="<?php echo U('Distribution/myShop');?>">
+            <a class="weui_cell weui_cell_extend" href="<?php echo U('Distribution/myDistribution');?>">
                 <div class="weui_cell_hd weui_cell_hd_extend iconfont">&#xe620;</div>
                 <div class="weui_cell_bd weui_cell_primary">
                     <p>分店管理</p>

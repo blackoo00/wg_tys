@@ -1,33 +1,27 @@
 <include file="Public:head"/>
-<script src="{wghd:
-:RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="{wghd::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
 	<body>
 		<div id="wrapper" style="padding:0" class="steward_showbigpic">
 			<div class="showbigpic">
-				<input type="hidden" id="picid" value="{wghd:
-$id}">
-		        <img style="width:100%" src="{wghd:
-$src}">
+				<input type="hidden" id="picid" value="{wghd:$id}">
+		        <img style="width:100%" src="{wghd:$src}">
 		        <a onclick="return closepic()" href="#">返回</a>
 		        <a onclick="return delpic()" class="delpic" data-id="" href="#">删除</a>
 			</div>
 		</div>
 		<script>
 			function closepic(){
-			    location.href="{wghd:
-:U('Steward/laboratory',array('src'=>$list['pic'],'token'=>$token,'wecha_id'=>$wecha_id))}";
+			    location.href="{wghd::U('Steward/laboratory',array('src'=>$list['pic'],'token'=>$token,'wecha_id'=>$wecha_id))}";
 			}
 			function delpic(){
 			    if(window.confirm('确定删除吗')){
 			        $.ajax({
-			            url:'{wghd:
-:U('Steward/dellaboratorypic',array('token'=>$token,'wecha_id'=>$wecha_id))}',
+			            url:'{wghd::U('Steward/dellaboratorypic',array('token'=>$token,'wecha_id'=>$wecha_id))}',
 			            data:{id:$('#picid').val()},
 			            success:function(data){
 			                if(data==1);
 			                alert("删除成功！");
-			                location.href="{wghd:
-:U('Steward/laboratory',array('src'=>$list['pic'],'token'=>$token,'wecha_id'=>$wecha_id))}";
+			                location.href="{wghd::U('Steward/laboratory',array('src'=>$list['pic'],'token'=>$token,'wecha_id'=>$wecha_id))}";
 			            }
 			        })
 			    }

@@ -10,8 +10,7 @@ width: 100px;
 clear:both;
 }
 .yulan {
-    background: url({wghd:
-:RES}/images/adma/erweimabg.png) repeat scroll 0 0 #4E5359;
+    background: url({wghd::RES}/images/adma/erweimabg.png) repeat scroll 0 0 #4E5359;
     color: #666666;
     font:14px/1.5  Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
     margin: 0;
@@ -33,22 +32,19 @@ border-radius:6px;
     width: 100%;}
 .yulan .beizhu{ margin:15px auto 5px;text-align: center;}
 .yulan .beizhu p{ line-height: 48px;}
-.yulan .beizhubg{color: #B4B7BC;background: url({wghd:
-:RES}/images/adma/erweima_bg2.png) repeat-x scroll 0 0 transparent;
+.yulan .beizhubg{color: #B4B7BC;background: url({wghd::RES}/images/adma/erweima_bg2.png) repeat-x scroll 0 0 transparent;
     font-size: 12px;
     height: 48px;
     margin: 10px auto;
     width: 230px;text-shadow: 0 -1px 0 #111112;
 line-height: 48px;display: inline-block;position: relative;}
-.yulan .beizhuleft{background: url({wghd:
-:RES}/images/adma/erweima_bg2_left.png) no-repeat scroll 0 0 transparent;
+.yulan .beizhuleft{background: url({wghd::RES}/images/adma/erweima_bg2_left.png) no-repeat scroll 0 0 transparent;
     display: block;
     float: left;
     height: 48px;
     margin-left: -26px;
     width: 26px;}
-.yulan .beizhuright{ background: url({wghd:
-:RES}/images/adma/erweima_bg2_right.png) no-repeat scroll 0 0 transparent;
+.yulan .beizhuright{ background: url({wghd::RES}/images/adma/erweima_bg2_right.png) no-repeat scroll 0 0 transparent;
     display: block;
     float: right;
     height: 48px;
@@ -58,8 +54,7 @@ line-height: 48px;display: inline-block;position: relative;}
 float:none; background-color:transparent;min-height:40px;border:0;
 }
 .yulan .footer {
-background: url({wghd:
-:RES}/images/adma/erweimabg.png) repeat scroll 0 0  transparent;
+background: url({wghd::RES}/images/adma/erweimabg.png) repeat scroll 0 0  transparent;
     color: #AAAAAA;
     margin:20px auto 0;
     text-shadow: 0 -1px 0 #111111;
@@ -69,8 +64,7 @@ width: 100%;
 padding:0;
 }
 .yulan .footer p{
-    background: url({wghd:
-:RES}/images/adma/erweima_footer.png) no-repeat scroll center top transparent;
+    background: url({wghd::RES}/images/adma/erweima_footer.png) no-repeat scroll center top transparent;
 font-size:12px;line-height: 48px;
 }
 </style>
@@ -88,17 +82,11 @@ font-size:12px;line-height: 48px;
 <table class="userinfoArea" style=" margin:0;" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody>
 <tr>
 <th width="120">推广页地址：</th>
-<td width="430"><a href="{wghd:
-$f_siteUrl}{wghd:
-:U('Home/Adma/index',array('token'=>$token))}" target="ddd" title="点击查看推广页" class="green" target="_blank">{wghd:
-$f_siteUrl}{wghd:
-:U('Home/Adma/index',array('token'=>$token))}</a></td>
+<td width="430"><a href="{wghd:$f_siteUrl}{wghd::U('Home/Adma/index',array('token'=>$token))}" target="ddd" title="点击查看推广页" class="green" target="_blank">{wghd:$f_siteUrl}{wghd::U('Home/Adma/index',array('token'=>$token))}</a></td>
 <td rowspan="6" valign="top" class="yulan">
 <div class="main">
-<h1 id="adtitle">{wghd:
-$adma.title}</h1>
-<div class="erweima"><img id="gzhewm" src="{wghd:
-$adma.url}"></div>
+<h1 id="adtitle">{wghd:$adma.title}</h1>
+<div class="erweima"><img id="gzhewm" src="{wghd:$adma.url}"></div>
 <div class="beizhu">
 <div class="beizhubg">
 <div class="beizhuleft"></div>
@@ -107,27 +95,22 @@ $adma.url}"></div>
 </div>
 </div>
 <div class="content" id="gzhinfo">
-        {wghd:
-$adma.info}
+        {wghd:$adma.info}
 </div>
 <div class="clr"></div>
-<div class="footer"><p id="gzhcopyright">{wghd:
-$adma.copyright}</p></div>
+<div class="footer"><p id="gzhcopyright">{wghd:$adma.copyright}</p></div>
 </div>
 </td>
 </tr>
  <tr>
 <th valign="">宣传页标题名：</th>
-<td><input type="text" name="title" value="{wghd:
-$adma.title}" class="px" style="width:400px;" id="etitle" onblur="document.getElementById('adtitle').innerHTML=document.getElementById('etitle').value;">
+<td><input type="text" name="title" value="{wghd:$adma.title}" class="px" style="width:400px;" id="etitle" onblur="document.getElementById('adtitle').innerHTML=document.getElementById('etitle').value;">
 
 </td>
 </tr>	
  <tr>
 <th valign="">二维码地址：</th>
-<td><input type="text" name="url" value="{wghd:
-$adma.url}" class="px" style="width:400px;" id="ewm" onblur="document.getElementById('gzhewm').src=document.getElementById('ewm').value;"> <p style="line-height:25px;"><script src="/tpl/static/upyun.js"></script><a href="###" onclick="upyunPicUpload('ewm',344,344,'{wghd:
-$token}')" class="a_upload">上传</a> <a href="###" onclick="viewImg('ewm')">预览</a></p>
+<td><input type="text" name="url" value="{wghd:$adma.url}" class="px" style="width:400px;" id="ewm" onblur="document.getElementById('gzhewm').src=document.getElementById('ewm').value;"> <p style="line-height:25px;"><script src="/tpl/static/upyun.js"></script><a href="###" onclick="upyunPicUpload('ewm',344,344,'{wghd:$token}')" class="a_upload">上传</a> <a href="###" onclick="viewImg('ewm')">预览</a></p>
 
 <p><span class="red">二维码边长为12CM，大小为344×344PX</span>.</p>
 
@@ -136,8 +119,7 @@ $token}')" class="a_upload">上传</a> <a href="###" onclick="viewImg('ewm')">�
                             <tr>
 <th valign="top"><br>
 功能介绍：</th>
-<td valign="top"><textarea class="px" id="info" name="info" style="width:400px; height:120px" onkeyup="DivFollowingText2()">{wghd:
-$adma.info}</textarea> 
+<td valign="top"><textarea class="px" id="info" name="info" style="width:400px; height:120px" onkeyup="DivFollowingText2()">{wghd:$adma.info}</textarea> 
 <script type="text/javascript">
 function DivFollowingText2()
 {
@@ -151,8 +133,7 @@ document.getElementById("gzhinfo").innerHTML=document.getElementById("info").val
 <tr>
 	<th width="120" valign="top">版权信息:</th>
 	<td>
-	<input type="text" name="copyright" value="{wghd:
-$adma.copyright}" class="px" style="width:400px;text-align:left;color:rgb(0, 0, 0);float:none"" id="copyright" onclick="document.getElementById('gzhcopyright').innerHTML=this.value;" onkeyup="DivFollowingText3()"/>
+	<input type="text" name="copyright" value="{wghd:$adma.copyright}" class="px" style="width:400px;text-align:left;color:rgb(0, 0, 0);float:none"" id="copyright" onclick="document.getElementById('gzhcopyright').innerHTML=this.value;" onkeyup="DivFollowingText3()"/>
 	<script type="text/javascript">
 	function DivFollowingText3()
 	{
@@ -160,17 +141,14 @@ $adma.copyright}" class="px" style="width:400px;text-align:left;color:rgb(0, 0, 
 	}
 	</script> 
 		<br/>
-		<span>例如：© 2001-2013 {wghd:
-$f_siteName}版权所有</span>
+		<span>例如：© 2001-2013 {wghd:$f_siteName}版权所有</span>
 		</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
 <td><button type="submit" name="button" class="btnGreen">保存</button>
 <a href="index.php?ac=erweima-edit&amp;id=9878" class="btnGray vm">取消</a>
-<a href="{wghd:
-$f_siteUrl}/index.php/show/{wghd:
-$Think.session.token}" class="right btnGray vm" target="ddd" style=" margin-right:20px" target="_blank">查看推广页</a>
+<a href="{wghd:$f_siteUrl}/index.php/show/{wghd:$Think.session.token}" class="right btnGray vm" target="ddd" style=" margin-right:20px" target="_blank">查看推广页</a>
 </td>
 </tr>
 

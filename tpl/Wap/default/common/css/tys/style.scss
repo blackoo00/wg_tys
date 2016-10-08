@@ -734,7 +734,7 @@ input,textarea{-webkit-appearance:none;resize: none;outline: none;}
 		>li{
 			display: block;
 			float: left;
-			width: 33.33333333333333333333333333333333333333%;
+			width: 50%;
 			text-align: center;
 			height: 65px;
 			line-height: 40px;
@@ -761,7 +761,7 @@ input,textarea{-webkit-appearance:none;resize: none;outline: none;}
 			}
 			&:nth-of-type(2){
 				>a:after{
-					content: "\e602";
+					content: "\e600";
 				}
 			}
 			&:nth-of-type(3){
@@ -838,15 +838,15 @@ input,textarea{-webkit-appearance:none;resize: none;outline: none;}
 			border-bottom: 1px solid #DDD;
 			.prompt{
 				position: relative;
-				float: left;
-				>img{
+				img{
 					width: 40px;
 					height: 40px;
 					display: inline-block;
 					vertical-align: middle;
 				}
-				p{
+				.customname{
 					display: inline-block;
+					width: 66%;
 				}
 				span{
 					position: absolute;
@@ -856,6 +856,11 @@ input,textarea{-webkit-appearance:none;resize: none;outline: none;}
 					background-color: red;
 					left:32px;
 					top: -6px;
+				}
+				.custom_detail{
+					float: right;
+					line-height: 40px;
+					margin-right: 5px;
 				}
 			}
 			.doctor_custom_details{

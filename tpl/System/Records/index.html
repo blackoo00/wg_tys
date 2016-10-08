@@ -9,8 +9,7 @@
 
 	 <div class="ksearch">
     	<div class="fl">
-			<form action="{wghd:
-:U('Users/search')}" method="post">
+			<form action="{wghd::U('Users/search')}" method="post">
 			<b class="kserico">快速搜索：</b>搜索类型：
 			<select name="type">
 				<option value="1">用户名</option>
@@ -50,27 +49,19 @@
 	  </tr>
 	    <volist name="info" id="vo">
 			<tr>
-				<td align='center'>{wghd:
-$vo.id}</td>
-				<td align='center'>{wghd:
-$vo.title}</td>
-				<td align='center'>{wghd:
-$vo.uname}</td>
-				<td align='center'>{wghd:
-$vo.indent_id}</td>
-				<td align='center'>{wghd:
-$vo.price}</td>
-				<td align='center'>{wghd:
-$vo.create_time|date='Y-m-d H:i:s',###}</td>
+				<td align='center'>{wghd:$vo.id}</td>
+				<td align='center'>{wghd:$vo.title}</td>
+				<td align='center'>{wghd:$vo.uname}</td>
+				<td align='center'>{wghd:$vo.indent_id}</td>
+				<td align='center'>{wghd:$vo.price}</td>
+				<td align='center'>{wghd:$vo.create_time|date='Y-m-d H:i:s',###}</td>
 				<td align='center'><if condition="$vo['status'] eq 1">已付款(未确认)<elseif condition="$vo['status'] eq 2"/>完成<else/>未付款</if></td>
-				<td align='center'><a href="{wghd:
-:U('Records/send',array('price'=>$vo['price'],'uid'=>$vo['uid'],'iid'=>$vo['id']))}">入金</a></td>
+				<td align='center'><a href="{wghd::U('Records/send',array('price'=>$vo['price'],'uid'=>$vo['uid'],'iid'=>$vo['id']))}">入金</a></td>
 
 			</tr>
 	    </volist>
      <tr bgcolor="#FFFFFF"> 
-      <td colspan="8"><div class="listpage">{wghd:
-$page}</div></td>
+      <td colspan="8"><div class="listpage">{wghd:$page}</div></td>
     </tr>
 </table>
 </body>

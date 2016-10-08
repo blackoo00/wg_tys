@@ -2,49 +2,40 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="{wghd:
-:RES}/images/main.css" type="text/css" rel="stylesheet">
-<script src="{wghd:
-:STATICS}/jquery-1.4.2.min.js" type="text/javascript"></script>
+<link href="{wghd::RES}/images/main.css" type="text/css" rel="stylesheet">
+<script src="{wghd::STATICS}/jquery-1.4.2.min.js" type="text/javascript"></script>
 <script src="./tpl/User/default/common/js/date/WdatePicker.js"></script>
 <meta http-equiv="x-ua-compatible" content="ie=7" />
 </head>
 <body class="warp">
 <div id="artlist" class="addn">
 <gt name="info.id" value="0">
-			<form action="{wghd:
-:U('Users/edit')}" method="post" name="form" id="myform">
-			<input type="hidden" name="id" value="{wghd:
-$info.id}">
+			<form action="{wghd::U('Users/edit')}" method="post" name="form" id="myform">
+			<input type="hidden" name="id" value="{wghd:$info.id}">
 		<else />
-			<form action="{wghd:
-:U('Users/add')}" method="post" name="form" id="myform">
+			<form action="{wghd::U('Users/add')}" method="post" name="form" id="myform">
 		</gt>
 			<table width="100%" border="0" cellspacing="0" cellpadding="0" id="addn">
 
 				 <tr>
-					<th colspan="4">{wghd:
-$title}</th>
+					<th colspan="4">{wghd:$title}</th>
 				</tr>
 				<tr>
 					<td height="48" align="right"><strong>用户名称：</strong></td>
 					<td colspan="3" class="lt">
-						<input type="text" name="username" class="ipt" size="45" value="{wghd:
-$info.username}" <eq name="info.username" value="admin">readonly="readonly"</eq>>
+						<input type="text" name="username" class="ipt" size="45" value="{wghd:$info.username}" <eq name="info.username" value="admin">readonly="readonly"</eq>>
 					</td>
 				</tr>
 				<tr>
 					<td height="48" align="right"><strong>手机号：</strong></td>
 					<td colspan="3" class="lt">
-						<input type="text" name="mp" class="ipt" size="45" value="{wghd:
-$info.mp}" />
+						<input type="text" name="mp" class="ipt" size="45" value="{wghd:$info.mp}" />
 					</td>
 				</tr>
 				<tr>
 					<td height="48" align="right"><strong>邮箱：</strong></td>
 					<td colspan="3" class="lt">
-						<input type="text" name="email" class="ipt" size="45" value="{wghd:
-$info.email}" />
+						<input type="text" name="email" class="ipt" size="45" value="{wghd:$info.email}" />
 					</td>
 				</tr>
 				<tr>
@@ -64,9 +55,7 @@ $info.email}" />
 					<td colspan="3" class="lt">
 						<select name="gid" style="width:136px">
 							<volist name="role" id="vo">
-								<option value="{wghd:
-$vo.id}" <eq name="vo.id" value="$info.gid">selected=""</eq> >{wghd:
-$vo.name}</option>
+								<option value="{wghd:$vo.id}" <eq name="vo.id" value="$info.gid">selected=""</eq> >{wghd:$vo.name}</option>
 							</volist>
 						</select>
 					</td>
@@ -83,29 +72,25 @@ $vo.name}</option>
 				<tr>
 					<td height="48" align="right"><strong>公众号已创建数：</strong></td>
 					<td colspan="3" class="lt">
-						<input type="text" name="wechat_card_num" class="ipt" size="45" value="{wghd:
-$info.wechat_card_num}">
+						<input type="text" name="wechat_card_num" class="ipt" size="45" value="{wghd:$info.wechat_card_num}">
 					</td>
 				</tr>
 				<tr>
 					<td height="48" align="right"><strong>会员卡数量：</strong></td>
 					<td colspan="3" class="lt">
-						<input type="text" name="card_num" class="ipt" size="45" value="{wghd:
-$info.card_num}">
+						<input type="text" name="card_num" class="ipt" size="45" value="{wghd:$info.card_num}">
 					</td>
 				</tr>
 				<tr>
 					<td height="48" align="right"><strong>活动创建数：</strong></td>
 					<td colspan="3" class="lt">
-						<input type="text" name="activitynum" class="ipt" size="45" value="{wghd:
-$info.activitynum}">
+						<input type="text" name="activitynum" class="ipt" size="45" value="{wghd:$info.activitynum}">
 					</td>
 				</tr>
 				<tr>
 					<td height="48" align="right"><strong>资金余额：</strong></td>
 					<td colspan="3" class="lt">
-						<input type="text" name="moneybalance" class="ipt" size="45" value="{wghd:
-$info.moneybalance}">
+						<input type="text" name="moneybalance" class="ipt" size="45" value="{wghd:$info.moneybalance}">
 					</td>
 				</tr>
 				<tr>
@@ -123,24 +108,20 @@ $info.moneybalance}">
 				<tr>
 					<td height="48" align="right"><strong>到期时间：</strong></td>
 					<td colspan="3" class="lt">
-						<input type="text" name="viptime" onClick="WdatePicker()" class="ipt" size="45" <neq name="info.viptime" value="">value="{wghd:
-$info.viptime|date="Y-m-d",###}"</neq>>
+						<input type="text" name="viptime" onClick="WdatePicker()" class="ipt" size="45" <neq name="info.viptime" value="">value="{wghd:$info.viptime|date="Y-m-d",###}"</neq>>
 					</td>
 				</tr>
 				<tr>
 					<td height="48" align="right"><strong>备注说明：</strong></td>
 					<td colspan="3" class="lt">
-						<input type="text" name="remark" class="ipt" size="45" value="{wghd:
-$info.remark}"/>
+						<input type="text" name="remark" class="ipt" size="45" value="{wghd:$info.remark}"/>
 					</td>
 				</tr>
 				
 				<tr>
 					<td height="48" align="right"><strong>邀请列表：</strong></td>
 					<td colspan="3" class="lt">
-					<a href="?g=System&m=Users&a=index&inviter={wghd:
-$info.id}">点击查看邀请列表（共{wghd:
-$inviteCount}人）</a>
+					<a href="?g=System&m=Users&a=index&inviter={wghd:$info.id}">点击查看邀请列表（共{wghd:$inviteCount}人）</a>
 					</td>
 				</tr>
 	<tr>

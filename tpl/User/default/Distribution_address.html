@@ -1,6 +1,5 @@
 <include file="Public:head"/>
-<link rel="stylesheet" type="text/css" href="{wghd:
-:RES}/css/cymain.css" />  
+<link rel="stylesheet" type="text/css" href="{wghd::RES}/css/cymain.css" />  
 
 <div class="content">
          
@@ -13,8 +12,7 @@
   　　      <span>
               <form action="" method="post">
               关键词：
-              <input type="text" name="name" class="px" value="{wghd:
-$Think.request.name}">
+              <input type="text" name="name" class="px" value="{wghd:$Think.request.name}">
               <input type="submit" class="btnGrayS" value="搜索">
                </form>
             </span>
@@ -42,18 +40,12 @@ $Think.request.name}">
                 <tr></tr>
                   <volist id="list" name="list">
                 <tr>
-                  <td>{wghd:
-$list.id}</td>
-                  <td>{wghd:
-$list.nickname}</td>
-                  <td><img src="{wghd:
-$list.headimgurl}" width="50"></td>
-                  <td>{wghd:
-$list.name}</td>
-                  <td>{wghd:
-$list.tele}</td>
-				  <td>{wghd:
-$list.address}</td>
+                  <td>{wghd:$list.id}</td>
+                  <td>{wghd:$list.nickname}</td>
+                  <td><img src="{wghd:$list.headimgurl}" width="50"></td>
+                  <td>{wghd:$list.name}</td>
+                  <td>{wghd:$list.tele}</td>
+				  <td>{wghd:$list.address}</td>
                 </tr>
                   </volist>
       			                
@@ -80,8 +72,7 @@ alert('未选中内容！')
    </div> 
           <div class="cLine">
             <div class="pageNavigator right">
-                 <div class="pages">{wghd:
-$page}</div>
+                 <div class="pages">{wghd:$page}</div>
               </div>
             <div class="clr"></div>
           </div>

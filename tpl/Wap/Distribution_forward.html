@@ -9,8 +9,7 @@
     <meta content="telephone=no" name="format-detection">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>{wghd:
-$wxuser.wxname}</title>
+    <title>{wghd:$wxuser.wxname}</title>
 
     <link type="text/css" rel="stylesheet" href="./tpl/static/tpl/cont/com/css/comstyle.css"/>
     <link type="text/css" rel="stylesheet" href="./tpl/static/tpl/cont/com/css/font-awesome.css"/>
@@ -33,22 +32,14 @@ $wxuser.wxname}</title>
 <div class="article ckeditor_content" id="article">
    
 <div class="text" id="content">
-<eq name="res.follow" value="1"><a href="{wghd:
-:U('Store/products',array('token'=>$_GET['token']))}">{wghd:
-$res.info|htmlspecialchars_decode}</a><else/>{wghd:
-$res.info|htmlspecialchars_decode}</eq>
+<eq name="res.follow" value="1"><a href="{wghd::U('Store/products',array('token'=>$_GET['token']))}">{wghd:$res.info|htmlspecialchars_decode}</a><else/>{wghd:$res.info|htmlspecialchars_decode}</eq>
 </div>
   </div>
 
 
 </div>
 <neq name="res.follow" value="1">
-<div style="position:fixed;bottom:0;left:0;background:#a5570c;width:100%;display:-webkit-box;-webkit-box-align:center;padding:10px;color:#fff"><img <eq name="from_member" value="">src="{wghd:
-$wxuser['headerpic']}"<else/>src="{wghd:
-$from_member['headimgurl']}"</eq> style="width:15%;display:block"><div style="line-height:20px;padding-left:10px;width:50%">来自好友<span style="color:#0bf848"> <eq name="from_member" value="">{wghd:
-$wxuser['wxname']|msubstr=0,8,'utf-8',true}<else/>{wghd:
-$from_member['nickname']|msubstr=0,8,'utf-8',true}</eq> </span>的推荐，立即关注，为你的朋友投票！</div><div style="-webkit-box-flex:1;"><a href="{wghd:
-$set.followUrl}"><span style="border:1px #eb790a solid;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;padding:5px 10px;color:#fff">点击关注</span></a></div></div>
+<div style="position:fixed;bottom:0;left:0;background:#a5570c;width:100%;display:-webkit-box;-webkit-box-align:center;padding:10px;color:#fff"><img <eq name="from_member" value="">src="{wghd:$wxuser['headerpic']}"<else/>src="{wghd:$from_member['headimgurl']}"</eq> style="width:15%;display:block"><div style="line-height:20px;padding-left:10px;width:50%">来自好友<span style="color:#0bf848"> <eq name="from_member" value="">{wghd:$wxuser['wxname']|msubstr=0,8,'utf-8',true}<else/>{wghd:$from_member['nickname']|msubstr=0,8,'utf-8',true}</eq> </span>的推荐，立即关注，为你的朋友投票！</div><div style="-webkit-box-flex:1;"><a href="{wghd:$set.followUrl}"><span style="border:1px #eb790a solid;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;padding:5px 10px;color:#fff">点击关注</span></a></div></div>
 </neq>
 <script>
 $(function(){
@@ -83,16 +74,13 @@ if (typeof WeixinJSBridge == "undefined"){
 
 
     <div class="mod-pop" id="pop-share" onclick="hidePop('#pop-share')"><span class="text-share"></span></div>
- <div style="display:none">{wghd:
-$res.tongji|htmlspecialchars_decode}</div>
+ <div style="display:none">{wghd:$res.tongji|htmlspecialchars_decode}</div>
 
   <div class="copyright">
 <if condition="$iscopyright eq 1">
-{wghd:
-$homeInfo.copyright}
+{wghd:$homeInfo.copyright}
 <else/>
-{wghd:
-$siteCopyright}
+{wghd:$siteCopyright}
 </if>
 </div> 
 <include file="Index:styleInclude"/><include file="$cateMenuFileName"/>

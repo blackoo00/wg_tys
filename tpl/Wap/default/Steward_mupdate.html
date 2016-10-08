@@ -8,21 +8,14 @@
     <meta content="telephone=no, address=no" name="format-detection">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <link href="{wghd:
-:RES}/bsuger/Content/comm/css/weixin.css" rel="stylesheet" />
-    <script src="{wghd:
-:RES}/bsuger/Content/comm/js/jquery-1.7.1.min.js"></script>
-    <script src="{wghd:
-:RES}/bsuger/Areas/LWeChat/Scripts/jquery.unobtrusive-ajax.js"></script>
-<script src="{wghd:
-:RES}/bsuger/Areas/LWeChat/Scripts/jquery.validate.js"></script>
-<script src="{wghd:
-:RES}/bsuger/Areas/LWeChat/Scripts/jquery.validate.unobtrusive.js"></script>
+    <link href="{wghd::RES}/bsuger/Content/comm/css/weixin.css" rel="stylesheet" />
+    <script src="{wghd::RES}/bsuger/Content/comm/js/jquery-1.7.1.min.js"></script>
+    <script src="{wghd::RES}/bsuger/Areas/LWeChat/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script src="{wghd::RES}/bsuger/Areas/LWeChat/Scripts/jquery.validate.js"></script>
+<script src="{wghd::RES}/bsuger/Areas/LWeChat/Scripts/jquery.validate.unobtrusive.js"></script>
 
-    <script src="{wghd:
-:RES}/bsuger/Scripts/base.js"></script>
-    <link href="{wghd:
-:RES}/bsuger/Content/css/diabetes.css" rel="stylesheet" />
+    <script src="{wghd::RES}/bsuger/Scripts/base.js"></script>
+    <link href="{wghd::RES}/bsuger/Content/css/diabetes.css" rel="stylesheet" />
     <script>
         function Begin() {
             //$("#TimeSlice").val($('#timearea').html());
@@ -34,15 +27,13 @@
     <title></title>
 </head>
 <body class="index">
-<form action="{wghd:
-:U('Steward/mupdate',array('token'=>$token,'wecha_id'=>$wecha_id))}" data-ajax="true" data-ajax-begin="Begin" data-ajax-method="Post" data-ajax-success="OnSuccess" id="form0" method="post"><input data-val="true" data-val-number="字段 ID 必须是一个数字。" data-val-required="The ID field is required." id="ID" name="ID" type="hidden" value="0" />        <div class="ol">
+<form action="{wghd::U('Steward/mupdate',array('token'=>$token,'wecha_id'=>$wecha_id))}" data-ajax="true" data-ajax-begin="Begin" data-ajax-method="Post" data-ajax-success="OnSuccess" id="form0" method="post"><input data-val="true" data-val-number="字段 ID 必须是一个数字。" data-val-required="The ID field is required." id="ID" name="ID" type="hidden" value="0" />        <div class="ol">
             <div class="pagetitle ul">
                 <div>
                     <a href="javascript:history.go(-1);"><i class="icon-back"></i></a>
                 </div>
                 <div class="f1">用药记录</div>
-                <input type="hidden" name="mid" value="{wghd:
-$medicine.id}">
+                <input type="hidden" name="mid" value="{wghd:$medicine.id}">
                 <div>
                     <a href="javascript:window.location.reload();"><i class="font2-arrows-cw"></i></a>
                 </div>
@@ -56,8 +47,7 @@ $medicine.id}">
                             <div class="title ">口服药：</div>
 
                             <div class="f1 title2 ul" style="padding-right: 0px;" data-role="boxer">
-                                <input class="f1" data-role="boxname" id="Name" name="Name" type="text" value="{wghd:
-$medicine.oralmedicine}" />
+                                <input class="f1" data-role="boxname" id="Name" name="Name" type="text" value="{wghd:$medicine.oralmedicine}" />
                                 <div class="select_box" style="">
                                     请选择<i class="font2-angle-down"></i>
                                     <select style="">
@@ -115,16 +105,14 @@ $medicine.oralmedicine}" />
                             <div class="f1 title2">
 
                                 <input id="now" type="text" />
-                                <input id="StartTime" name="StartTime" type="hidden" value="{wghd:
-$medicine.starttime}" />
+                                <input id="StartTime" name="StartTime" type="hidden" value="{wghd:$medicine.starttime}" />
                             </div>
                         </dt>
                         <dt class="ul">
                             <div class="title">结束时间：</div>
                             <div class="f1 title2">
                                 <input id="end" type="text" />
-                                <input id="EndTime" name="EndTime" type="hidden" value="{wghd:
-$medicine.endtime}" />
+                                <input id="EndTime" name="EndTime" type="hidden" value="{wghd:$medicine.endtime}" />
                             </div>
                         </dt>
 
@@ -135,8 +123,7 @@ $medicine.endtime}" />
                         </dt>
                         <dd>
                             <div class="input">
-                                <textarea cols="20" id="Remark" name="Remark" placeholder="今天情况特殊，等等" rows="2">{wghd:
-$medicine.note}
+                                <textarea cols="20" id="Remark" name="Remark" placeholder="今天情况特殊，等等" rows="2">{wghd:$medicine.note}
 </textarea>
                             </div>
                         </dd>
@@ -176,13 +163,10 @@ $medicine.note}
         </div>
     </article>
 </body>
-<script src="{wghd:
-:RES}/bsuger/Content/comm/js/iscroll.js"></script>
+<script src="{wghd::RES}/bsuger/Content/comm/js/iscroll.js"></script>
 <script src="http://cdn.hcharts.cn/highcharts/4.0.3/highcharts.js"></script>
-<script src="{wghd:
-:RES}/bsuger/Content/comm/js/date_input_rooms_old.js"></script>
-<script src="{wghd:
-:RES}/bsuger/Content/comm/js/timeformat.js"></script>
+<script src="{wghd::RES}/bsuger/Content/comm/js/date_input_rooms_old.js"></script>
+<script src="{wghd::RES}/bsuger/Content/comm/js/timeformat.js"></script>
 
 <script>
     $(function () {
@@ -219,24 +203,16 @@ $medicine.note}
 
 
 
-<script src="{wghd:
-:RES}/bsuger/Content/comm/js/mobiscroll.core-2.5.2.js" type="text/javascript"></script>
-<script src="{wghd:
-:RES}/bsuger/Content/comm/js/mobiscroll.core-2.5.2-zh.js" type="text/javascript"></script>
-<link href="{wghd:
-:RES}/bsuger/Content/comm/css/mobiscroll.core-2.5.2.css" rel="stylesheet" type="text/css">
-<link href="{wghd:
-:RES}/bsuger/Content/comm/css/mobiscroll.animation-2.5.2.css" rel="stylesheet" type="text/css">
-<script src="{wghd:
-:RES}/bsuger/Content/comm/js/mobiscroll.datetime-2.5.1.js" type="text/javascript"></script>
-<script src="{wghd:
-:RES}/bsuger/Content/comm/js/mobiscroll.datetime-2.5.1-zh.js" type="text/javascript"></script>
+<script src="{wghd::RES}/bsuger/Content/comm/js/mobiscroll.core-2.5.2.js" type="text/javascript"></script>
+<script src="{wghd::RES}/bsuger/Content/comm/js/mobiscroll.core-2.5.2-zh.js" type="text/javascript"></script>
+<link href="{wghd::RES}/bsuger/Content/comm/css/mobiscroll.core-2.5.2.css" rel="stylesheet" type="text/css">
+<link href="{wghd::RES}/bsuger/Content/comm/css/mobiscroll.animation-2.5.2.css" rel="stylesheet" type="text/css">
+<script src="{wghd::RES}/bsuger/Content/comm/js/mobiscroll.datetime-2.5.1.js" type="text/javascript"></script>
+<script src="{wghd::RES}/bsuger/Content/comm/js/mobiscroll.datetime-2.5.1-zh.js" type="text/javascript"></script>
 
 <!-- S 可根据自己喜好引入样式风格文件 -->
-<script src="{wghd:
-:RES}/bsuger/Content/comm/js/mobiscroll.android-ics-2.5.2.js" type="text/javascript"></script>
-<link href="{wghd:
-:RES}/bsuger/Content/comm/css/mobiscroll.android-ics-2.5.2.css" rel="stylesheet" type="text/css">
+<script src="{wghd::RES}/bsuger/Content/comm/js/mobiscroll.android-ics-2.5.2.js" type="text/javascript"></script>
+<link href="{wghd::RES}/bsuger/Content/comm/css/mobiscroll.android-ics-2.5.2.css" rel="stylesheet" type="text/css">
 <!-- E 可根据自己喜好引入样式风格文件 -->
 <script type="text/javascript">
     $(function () {

@@ -1,7 +1,7 @@
 <?php 
 	class CommentAction extends WapAction{
 		public function index(){
-			//医生ID
+			//孕育师ID
 			$id=$this->_get('id','intval');
 			$db=D('Doctor');
 			$where['id']=$id;
@@ -35,8 +35,8 @@
 		//判断是否已经做过评价
 		public function checkcomment(){
 			$db=D('Comment');
-			//获取评价表中相对应患者ID
-			$id=$this->_get('id','intval');//医生ID
+			//获取评价表中相对应孕妈ID
+			$id=$this->_get('id','intval');//孕育师ID
 			$cid=$db->field('cid')->where('did='.$id)->select();
 			//获取当前用户ID
 			$where['openid']=$this->wecha_id;

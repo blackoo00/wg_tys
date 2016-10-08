@@ -1,20 +1,14 @@
 <include file="Public:head"/>
 <body>
 	<div id="wrapper">
-		<div>总共{wghd:
-$hospitalnum}家医院  {wghd:
-$doctornum}位医生</div>
+		<div>总共{wghd:$hospitalnum}家医院  {wghd:$doctornum}位孕育师</div>
 		<section>
 			<div class="hospital_list">
 				<ul>
 					<volist id="list" name="hospital">
 						<li>
-							<a href="{wghd:
-:U('Doctor/index',array('id'=>$list['id']))}" title="{wghd:
-$list.name}">{wghd:
-$list.name}</a>
-							<span>({wghd:
-$list.doctornum})</span>
+							<a href="{wghd::U('Doctor/index',array('id'=>$list['id']))}" title="{wghd:$list.name}">{wghd:$list.name}</a>
+							<span>({wghd:$list.doctornum})</span>
 							<div class="clear"></div>
 						</li>
 					</volist>

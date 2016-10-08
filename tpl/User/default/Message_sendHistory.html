@@ -38,17 +38,13 @@
 </thead>
 <volist name="info" id="actinfo">
 <tr>
-<td>{wghd:
-$actinfo.title}</td>
-<td>{wghd:
-$actinfo.msgtype}</td>
-<td>{wghd:
-$actinfo.reachcount}</td>
+<td>{wghd:$actinfo.title}</td>
+<td>{wghd:$actinfo.msgtype}</td>
+<td>{wghd:$actinfo.reachcount}</td>
 <td>
 <php>echo date('Y-m-d',$actinfo['time']);</php>
 </td>
-<td class="norightborder"><a charset="a_oper" href="{wghd:
-:U('Message/item',array('id'=>$actinfo['id']))}">查看</a></td>
+<td class="norightborder"><a charset="a_oper" href="{wghd::U('Message/item',array('id'=>$actinfo['id']))}">查看</a></td>
 </volist>
 </tr>
 
@@ -57,8 +53,7 @@ $actinfo.reachcount}</td>
 </div>
 </div>
 <div class="footactions" style="padding-left:10px">
-  <div class="pages">{wghd:
-$page}</div>
+  <div class="pages">{wghd:$page}</div>
 </div>
           </div>
   

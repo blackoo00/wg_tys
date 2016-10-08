@@ -270,7 +270,7 @@ $func = array(
 				),
 				array(
 					'id' => 4,
-					'name' => '问医生',
+					'name' => '问孕育师',
 					'url' => 'http://m.soujibing.com',
 					'icon' => 'f01.png',
 					'info' => '',

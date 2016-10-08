@@ -1,13 +1,15 @@
 <?php 
 	class DoctorAction extends WapAction{
+		public $doctor;
 		public function __construct(){
 			parent::_initialize();
 			$where['openid']=$this->wecha_id;
 			$doctor=D(MODULE_NAME)->where($where)->relation(true)->find();
-			if(!$doctor){
+			if(!$doctor && ACTION_NAME !='login'){
 				$this->error('请先登陆',U('Doctor/login'));
 			}else{
 				$this->assign('doctor',$doctor);
+				$this->doctor = $doctor;
 			}
 				 // if($doctor['login']==0&&ACTION_NAME!='index'&&ACTION_NAME!='myqrcode'&&ACTION_NAME!='login'){
 					// $this->redirect(U('Doctor/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
@@ -22,7 +24,7 @@
 			// 	$hospital=$db->find($id);
 			// 	$this->assign('hospital',$hospital);
 			// }
-			// //显示医生列表
+			// //显示孕育师列表
 			// $db=D(MODULE_NAME);
 			// if($id){
 			// 	$where['hid']=$id;
@@ -41,15 +43,18 @@
 		}
 		//登陆判断
 		public function login(){
+			if($this->doctor['login'] == 1){
+				$this->error('账号已登陆',U('Doctor/personal'));
+			}
 			if(IS_POST){
 				$db=D('Doctor');
 				$where['username']=$_POST['username'];
 				$doctor=$db->where($where)->find();
 				if(!$doctor){//账号不存在
-					$this->error('账号或密码不正确',U('Doctor/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+					$this->error('账号或密码不正确',U('Doctor/login'));
 				}
 				if($doctor['password']!=md5($_POST['password'])){//密码错误
-					$this->error('账号或密码不正确',U('Doctor/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+					$this->error('账号或密码不正确',U('Doctor/login'));
 				}
 				if($doctor['openid']==$this->wecha_id||$doctor['openid']==NULL){
 						$where['id']=$doctor['id'];
@@ -65,25 +70,26 @@
 						}
 						$data['login']=1;
 						$db->where($where)->save($data);
-						$this->success('登陆成功',U('Doctor/personal',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+						$this->success('登陆成功',U('Doctor/personal'));
 				}else{//该账号已经被人使用
-					$this->error('该账号已经被人使用',U('Doctor/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+					$this->error('该账号已经被人使用',U('Doctor/login'));
 				}
 			}else{
 				$this->display();
 			}
 		}
 		//退出
-		// public function loginout(){
-		// 	$db=D('Doctor');
-	 //        $where['openid']=$this->wecha_id;
-	 //        $data['login']=0;
-	 //        $r=$db->where($where)->save($data);
-	 //        if($r){
-	 //        	$this->success('退出成功',U('Doctor/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
-	 //        }
-		// }
-		//通过医生ID查询有没有新的患者咨询
+		public function loginout(){
+			$db=D('Doctor');
+	        $where['openid']=$this->wecha_id;
+	        $data['login']=0;
+	        $data['openid']='';
+	        $r=$db->where($where)->save($data);
+	        if($r){
+	        	$this->success('退出成功',U('Doctor/login'));
+	        }
+		}
+		//通过孕育师ID查询有没有新的孕妈咨询
 		public function check_custom_consult($did){
 			$db=D('Consult');
 			$where['did']=$did;
@@ -96,13 +102,13 @@
 			}
 			return $check;
 		}
-		//我的患者
+		//我的孕妈
 		public function custom(){
 			$db=D('Doctor');
 
 			$where[openid]=$this->wecha_id;
 			$doctor=$db->where($where)->find();
-			//判断有没患者咨询
+			//判断有没孕妈咨询
 			$check=$this->check_custom_consult($doctor['id']);
 			$this->assign('check',$check);
 			// if($doctor['login']==0){
@@ -121,14 +127,14 @@
 			$this->display();
 			
 		}
-		//患者详细
+		//孕妈详细
 		public function cdetails(){
 			$id=$this->_get('id','intval');
 			$db=D('Custom');
 			$custom=$db->relation(true)->where('id='.$id)->find();
 			$this->assign('custom',$custom);
 			$this->assign('doctor',$custom['doctor']);
-			//判断有没患者咨询
+			//判断有没孕妈咨询
 			$check=$this->check_custom_consult($custom['doctor']['id']);
 			$this->assign('check',$check);
 			//获取血糖记录
@@ -154,7 +160,7 @@
 			$db=D(MODULE_NAME);
 			$where['openid']=$this->wecha_id;
 			$doctor=$db->where($where)->relation(true)->find();
-			//判断有没患者咨询
+			//判断有没孕妈咨询
 			$check=$this->check_custom_consult($doctor['id']);
 			$this->assign('check',$check);
 			if($this->_get('did','intval')){
@@ -330,7 +336,7 @@
 				$consultb=$db->where($where)->order('time asc')->select();
 				$this->assign('consultb',$consultb);
 
-				//通过咨询主表获取患者医生信息
+				//通过咨询主表获取孕妈孕育师信息
 				$where['id']=$id;
 				$dc=$db2->relation(true)->where($where)->find();
 			}
@@ -350,11 +356,11 @@
 				$where['did']=$id;
 				$list=$db->where($where)->order('id desc')->select();
 				$this->assign('list',$list);
-				//通过咨询主表获取患者医生信息
+				//通过咨询主表获取孕妈孕育师信息
 				$where1['id']=$id;
 				$doctor=$db2->where($where1)->find();
 			}
-			//判断有没患者咨询
+			//判断有没孕妈咨询
 			$check=$this->check_custom_consult($doctor['id']);
 			$this->assign('check',$check);
 
@@ -409,7 +415,7 @@
 			$db=D('Doctor');
 			$where['openid']=$this->wecha_id;
 			$doctor=$db->relation(true)->where($where)->find();
-			//判断有没患者咨询
+			//判断有没孕妈咨询
 			$check=$this->check_custom_consult($doctor['id']);
 			$this->assign('check',$check);
 			if($_POST==NULL){
@@ -428,11 +434,11 @@
 				}
 			}
 		}
-		//医生详细
+		//孕育师详细
 		public function details(){
 			$db=D(MODULE_NAME);
 			//获取用户openid
-			//医生ID
+			//孕育师ID
 			$id=$this->_get('id','intval');
 			if($id){
 				$doctor=$db->relation(true)->find($id);

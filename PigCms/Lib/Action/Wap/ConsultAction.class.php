@@ -6,7 +6,7 @@
 		}
 		//咨询列表
 		public function index(){
-			//获取医生ID
+			//获取孕育师ID
 			$db=D('Doctor');
 			$id=$this->_get('id','intval');
 			if($id){
@@ -37,7 +37,7 @@
 			unset($date['uppic']);
 			$r=$db->add($date);
 			if ($r) {
-				//对患者咨询次数加一8888888888888
+				//对孕妈咨询次数加一8888888888888
 				$db2->where("id=".$date['cid'])->setInc('consultnum'); 
 				D('Doctor')->where("id=".$date['did'])->setInc('consultnums');
 			    $this->success('操作成功', U('Doctor/details',array('id'=>$date['did'],'token'=>$this->token)));
@@ -67,7 +67,7 @@
 		}
 		//咨询主表
 		public function consultm(){
-			//获取医生ID
+			//获取孕育师ID
 			$did=$this->_get('did','intval');
 			// $dconsult=$db->relation(true)->where('did='.$did)->select();
 			// $this->assign('info',$dconsult);
@@ -108,9 +108,9 @@
 				}
 			}
 			$condition['cmid']=$cmid;
-			$consultb=D('Consultb')->where($condition)->limit(6)->order('time desc')->select();
+			$consultb=D('Consultb')->where($condition)->limit(6)->order('time desc')->relation(true)->select();
 			krsort($consultb);
-			//获取患者信息
+			//获取孕妈信息
 			$custom=D('Custom')->where('id='.$cid)->find();
 			$this->assign('custom',$custom);
 			$this->assign('cmid',$cmid);
@@ -118,9 +118,10 @@
 			$this->assign('doctor',$doctor);
 			$this->assign('consultb',$consultb);
 			$this->assign('consultm',$consultm);
+			$this->assign('title',$custom['name']);
 			$this->display();
 		}
-		//获取患者IP
+		//获取孕妈IP
 		public function getCipFromCmid(){
 			$cmid = $this->_get('cmid');
 			$consult = D('Consult')->where(array('id'=>$cmid))->find();
@@ -130,7 +131,7 @@
 				$this->ajaxReturn('','',2);
 			}
 		}
-		//判断新加入的是否是自己的患者
+		//判断新加入的是否是自己的孕妈
 		public function judgeCustom(){
 			$cmid = $this->_get('cmid');
 			$cip = $this->_get('cip');
@@ -141,7 +142,7 @@
 				$this->ajaxReturn('','',2);
 			}
 		}
-		//判断新加入的是否是自己的医生
+		//判断新加入的是否是自己的孕育师
 		public function judgeDoctor(){
 			$cmid = $this->_get('cmid');
 			$dip = $this->_get('dip');
@@ -152,7 +153,7 @@
 				$this->ajaxReturn('','',2);
 			}
 		}
-		//更新医生对话IP
+		//更新孕育师对话IP
 		public function updateDip(){
 			$cmid = $this->_get('cmid');
 			$dip = $this->_get('dip');
@@ -163,7 +164,7 @@
 				$this->ajaxReturn('','',2);
 			}
 		}
-		//更新患者对话IP
+		//更新孕妈对话IP
 		public function updateCip(){
 			$cmid = $this->_get('cmid');
 			$cip = $this->_get('cip');
@@ -222,7 +223,7 @@
 				echo json_encode($conbid);
 			}
 		}
-		//AJAX发送咨询（患者）
+		//AJAX发送咨询（孕妈）
 		public function sendconsult(){
 			$content=$this->_get('con');
 			$cid=$this->_get('cid');
@@ -237,15 +238,15 @@
 					$condition['did']=$did;
 					$condition['cid']=$cid;
 					$data['time']=time();
-					$data['cnew']=1;//新打开一个聊天提示医生此处为新内容
+					$data['cnew']=1;//新打开一个聊天提示孕育师此处为新内容
 					$data['dnew']=0;
-					$data['did']=$did;//新关注的医生ID
+					$data['did']=$did;//新关注的孕育师ID
 					$cm->where($condition)->save($data);
 				}else{//不存在
 					$data=array(
 						'cid'=>$cid,
 						'did'=>$did,
-						'cnew'=>1,//新打开一个聊天提示医生此处为新内容
+						'cnew'=>1,//新打开一个聊天提示孕育师此处为新内容
 						'time'=>time(),
 					);
 					$cm->add($data);
@@ -265,30 +266,27 @@
 				'dtalk'=>0,
 				'ctalk'=>1,
 				'time'=>time(),
-				'pic' =>$pic,
 				'year'=>date('Y',time()),
 				'month'=>date('m',time()),
 				'day'=>date('d',time()),
 			);
 			$id=$db->add($data);
 			if($id){
-				$str.="<div class='message right'>";
-				$str.=        "<span>".friendlyDate(time(),'normal',false)."</span>";
-				$str.= 	"<input type='hidden' id='time' value='".time()."'>";
-		        $str.=	"<img src='".$pic."' />";
-		        $str.=    "<div class='bubble'>";
-		        $str.=    	$content;
-		       	// $str.=        "<span>".friendlyDate($v['time'],'normal',false)."</span>";
-		        $str.=    "</div>";
-		        $str.=    "<div class='clear'></div>";
-		        // $str.=        "<span>".friendlyDate(time(),'normal',false)."</span>";
-		        $str.="</div>";
-		        echo $str;
+				// $str.="<div class='message right'>";
+				// $str.=        "<span>".friendlyDate(time(),'normal',false)."</span>";
+				// $str.= 	"<input type='hidden' id='time' value='".time()."'>";
+		  //       $str.=	"<img src='".$pic."' />";
+		  //       $str.=    "<div class='bubble'>";
+		  //       $str.=    	$content;
+		  //       $str.=    "</div>";
+		  //       $str.=    "<div class='clear'></div>";
+		  //       $str.="</div>";
+		        echo 'ok';
 			}else{
 				echo 'error';
 			}
 		}
-		//AJAX发送咨询（医生）
+		//AJAX发送咨询（孕育师）
 		public function sendconsult2(){
 			$content=$this->_get('con');
 			$cid=$this->_get('cid');
@@ -303,7 +301,7 @@
 					$condition['did']=$did;
 					$condition['cid']=$cid;
 					$data['time']=time();
-					$data['dnew']=1;//新打开一个聊天提示医生此处为新内容
+					$data['dnew']=1;//新打开一个聊天提示孕育师此处为新内容
 					$data['cnew']=0;
 					$data['cid']=$cid;
 					$cm->where($condition)->save($data);
@@ -311,7 +309,7 @@
 					$data=array(
 						'cid'=>$cid,
 						'did'=>$did,
-						'dnew'=>1,//新打开一个聊天提示医生此处为新内容
+						'dnew'=>1,//新打开一个聊天提示孕育师此处为新内容
 						'time'=>time(),
 					);
 					$cm->add($data);
@@ -332,23 +330,23 @@
 				'dtalk'=>1,
 				'ctalk'=>0,
 				'time'=>time(),
-				'pic' =>$pic,
 				'year'=>date('Y',time()),
 				'month'=>date('m',time()),
 				'day'=>date('d',time()),
 			);
 			$id=$db->add($data);
+
 			if($id){
-				$str.="<div class='message right'>";
-				$str.=        "<span>".friendlyDate(time(),'normal',false)."</span>";
-				$str.= 	"<input type='hidden' id='time' value='".time()."'>";
-		        $str.=	"<img src='".$pic."' />";
-		        $str.=    "<div class='bubble'>";
-		        $str.=    	$content;
-		        $str.=    "</div>";
-		        $str.=    "<div class='clear'></div>";
-		        $str.="</div>";
-		        echo $str;
+				// $str.="<div class='message right'>";
+				// $str.=        "<span>".friendlyDate(time(),'normal',false)."</span>";
+				// $str.= 	"<input type='hidden' id='time' value='".time()."'>";
+		  //       $str.=	"<img src='".$pic."' />";
+		  //       $str.=    "<div class='bubble'>";
+		  //       $str.=    	$content;
+		  //       $str.=    "</div>";
+		  //       $str.=    "<div class='clear'></div>";
+		  //       $str.="</div>";
+		        echo 'ok';
 			}else{
 				echo 'error';
 			}
@@ -388,7 +386,7 @@
 				echo "none";
 			}
 		}
-		//AJAX刷新咨询信息(医生)
+		//AJAX刷新咨询信息(孕育师)
 		public function refreshconsult2(){
 			$time=$this->_get('time');
 			$cid=$this->_get('cid');
@@ -425,7 +423,7 @@
 		public function loadmore(){
 			$cmid=$this->_get("cmid","intval");
 			$cnums=$this->_get("cnums");
-			$consultb=D("Consultb")->where("cmid=".$cmid)->limit($cnums.",".($cnums+10))->order('time desc')->select();
+			$consultb=D("Consultb")->where("cmid=".$cmid)->limit($cnums.",".($cnums+10))->order('time desc')->relation(true)->select();
 			krsort($consultb);
 			if($consultb){
 				foreach ($consultb as $k => $v) {
@@ -433,11 +431,15 @@
 						$str.="<div class='message right'>";
 					}
 					if($v['ctalk']==1){
-						$str.="<div class='message'>";
+						$str.="<div class='message left'>";
 					}
 					$str.=        "<span>".friendlyDate($v['time'],'normal',false)."</span>";
 					$str.= 	"<input type='hidden' id='time' value='".$v['time']."'>";
-			        $str.=	"<img src='".$v['pic']."' />";
+					if($v['dtalk'] ==  1){
+			        	$str.=	"<img src='".$v['doctor']['pic']."' />";
+					}else{
+			        	$str.=	"<img src='".$v['custom']['pic']."' />";
+					}
 			        $str.=    "<div class='bubble'>";
 			        $str.=    	$v['content'];
 			       	// $str.=        "<span>".friendlyDate($v['time'],'normal',false)."</span>";
@@ -465,7 +467,7 @@
 			// var_dump($doctor);
 			// echo "</pre>";
 			// exit();
-			//通过患者ID循环创建咨询主表
+			//通过孕妈ID循环创建咨询主表
 			foreach ($cidarr as $k => $v) {
 				//先查询该主表是否存在
 				$condition['did']=$did;

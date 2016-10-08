@@ -1,16 +1,13 @@
 <include file="Public:head"/>  
 <link rel="stylesheet" type="text/css" href="./tpl/User/default/common/css/cymain.css" />
- <link rel="stylesheet" href="{wghd:
-:RES}/css/diymen/tipswindown.css" type="text/css" media="all" />
-<script type="text/javascript" src="{wghd:
-:RES}/css/diymen/tipswindown.js"></script> 
+ <link rel="stylesheet" href="{wghd::RES}/css/diymen/tipswindown.css" type="text/css" media="all" />
+<script type="text/javascript" src="{wghd::RES}/css/diymen/tipswindown.js"></script> 
 
 <script type="text/javascript">
  $(document).ready(function() {
 	
 	$("#iframe1").click(function(){
-		tipsWindown("添加菜单","iframe:{wghd:
-:U('Diymen/class_add')}","760","480","true","","true","leotheme");
+		tipsWindown("添加菜单","iframe:{wghd::U('Diymen/class_add')}","760","480","true","","true","leotheme");
 	});
  });
  </script>
@@ -24,10 +21,8 @@
  <div class="ftip" style="margin:10px auto">通过认证的订阅号或者服务号才能使用自定义菜单</div>
  <div class="cLineD">
  	<form enctype="multipart/form-data" action="" method="post"> 
-    AppId:<input type="text" size="20" tabindex="1" class="px" value="{wghd:
-$diymen.appid}" id="appid" name="appid">　 
-	AppSecret: <input type="text" size="20" tabindex="1" class="px" value="{wghd:
-$diymen.appsecret}" id="appsecret" name="appsecret">
+    AppId:<input type="text" size="20" tabindex="1" class="px" value="{wghd:$diymen.appid}" id="appid" name="appid">　 
+	AppSecret: <input type="text" size="20" tabindex="1" class="px" value="{wghd:$diymen.appsecret}" id="appsecret" name="appsecret">
 	<button class=" btnGrayS vm" value="true" name="appidsubmit" type="submit"><strong>保存</strong></button>
 	
 </form>
@@ -51,59 +46,45 @@ $diymen.appsecret}" id="appsecret" name="appsecret">
   	<volist id="class" name="class">
 	<tr class="hover">
         <td class="td25">
-			<span>{wghd:
-$class.sort}</span>
+			<span>{wghd:$class.sort}</span>
 		</td>
         <td>
           <div>
-			<span>{wghd:
-$class.title}</span>
+			<span>{wghd:$class.title}</span>
           </div>
         </td>
-        <td><span>{wghd:
-$class.keyword}</span></td>
-        <td><span><if condition="$class['url'] eq false">无链接地址<else/>{wghd:
-$class.url}</if></span></td>
+        <td><span>{wghd:$class.keyword}</span></td>
+        <td><span><if condition="$class['url'] eq false">无链接地址<else/>{wghd:$class.url}</if></span></td>
         <td>
-			<a class="ajax btnGreen  cboxElement" href='javascript:tipsWindown("修改菜单","iframe:{wghd:
-:U('Diymen/class_edit',array('id'=>$class['id']))}","760","480","true","","true","leotheme");' title="修改主菜单">修改</a>
-			<a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '{wghd:
-:U('Diymen/class_del',array('id'=>$class['id']))}');">删除</a>
+			<a class="ajax btnGreen  cboxElement" href='javascript:tipsWindown("修改菜单","iframe:{wghd::U('Diymen/class_edit',array('id'=>$class['id']))}","760","480","true","","true","leotheme");' title="修改主菜单">修改</a>
+			<a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '{wghd::U('Diymen/class_del',array('id'=>$class['id']))}');">删除</a>
 		</td>				
       </tr>
 	  <volist id="class1" name="class['class']">
 	  <tr class="td29">
 			<td class="td25" colspan="1">
-				<span>{wghd:
-$class1.sort}</span>
+				<span>{wghd:$class1.sort}</span>
 			</td>
 			<td colspan="1">
 			  <div class="board">
-				<span>{wghd:
-$class1.title}</span>
+				<span>{wghd:$class1.title}</span>
 			  </div>
 			</td>
 			
 			<td colspan="1">
-				<span>{wghd:
-$class1.keyword}</span>
+				<span>{wghd:$class1.keyword}</span>
 			</td>
-			 <td><span><if condition="$class1['url'] eq false">无链接地址<else/>{wghd:
-$class1.url}</if></span></td>
+			 <td><span><if condition="$class1['url'] eq false">无链接地址<else/>{wghd:$class1.url}</if></span></td>
 			<td colspan="1">
-			<a class="ajax btnGreen cboxElement" href='javascript:tipsWindown("修改菜单","iframe:{wghd:
-$f_siteUrl}{wghd:
-:U('Diymen/class_edit',array('id'=>$class1['id']))}","760","480","true","","true","leotheme");' title="修改主菜单">修改</a>
-			<a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '{wghd:
-:U('Diymen/class_del',array('id'=>$class1['id']))}');">删除</a></td>				
+			<a class="ajax btnGreen cboxElement" href='javascript:tipsWindown("修改菜单","iframe:{wghd:$f_siteUrl}{wghd::U('Diymen/class_edit',array('id'=>$class1['id']))}","760","480","true","","true","leotheme");' title="修改主菜单">修改</a>
+			<a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '{wghd::U('Diymen/class_del',array('id'=>$class1['id']))}');">删除</a></td>				
 	 </tr>	
 	</volist>
 	</volist>
 	<tr class="hover">
         <td class="td25" colspan="5">
 		<if condition="$class neq false">
-		<a class="btnGreen " onclick="drop_confirm('自定义菜单最多勾选3个，每个菜单的子菜单最多5个，请确认!', '{wghd:
-:U('Diymen/class_send')}');" title="">生成自定义菜单</a>
+		<a class="btnGreen " onclick="drop_confirm('自定义菜单最多勾选3个，每个菜单的子菜单最多5个，请确认!', '{wghd::U('Diymen/class_send')}');" title="">生成自定义菜单</a>
 		</if>
 		<span style="float:left;" id="cdul">
 		<style>

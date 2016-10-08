@@ -1,7 +1,6 @@
 <include file="Public:head"/>
 <body>
-	<script src="{wghd:
-:RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="{wghd::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
 	<div id="wrapper" class="consult_allsendpage">
 		<div id="allsend">
 			<textarea name="" id="addsendcon"></textarea>
@@ -10,10 +9,8 @@
 				<a href="javascript:history.go(-1)" class="button blue">取消</a>
 			</div>
 		</div>
-		<script src="{wghd:
-:RES}/websorcket/fancywebsocket.js"></script>
-		<script src="{wghd:
-:RES}/websorcket/sorcket.js"></script>
+		<script src="{wghd::RES}/websorcket/fancywebsocket.js"></script>
+		<script src="{wghd::RES}/websorcket/sorcket.js"></script>
 		<script>
 			$(function(){
 				var did = $('#did').val();
@@ -36,8 +33,7 @@
 						send(send_con);
 
 						$.ajax({
-							url:"{wghd:
-:U('Consult/allsend',array('did'=>$did,'token'=>$token,'wecha_id'=>$wecha_id))}",
+							url:"{wghd::U('Consult/allsend',array('did'=>$did,'token'=>$token,'wecha_id'=>$wecha_id))}",
 							data:{con:con},
 							success:function(data){
 								console.log(data);
@@ -45,7 +41,7 @@
 									alert("发送成功");
 								}
 								if(data=="nocustom"){
-									alert("您还没有患者");
+									alert("您还没有孕妈");
 								}
 							}
 						})
@@ -54,7 +50,6 @@
 			})
 		</script>
 	</div>
-	<input type="hidden" id="did" value="{wghd:
-$did}">
+	<input type="hidden" id="did" value="{wghd:$did}">
 </body>
 </html>

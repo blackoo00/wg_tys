@@ -201,17 +201,18 @@
 		}
 	})
 	$('#place_order').click(function(){
-		$.ajax({
-			url:"<?php echo U('Store/checkLimitAjax');?>",
-			dataType:"json",
-			success:function(data){
-				if(data.status == 1){
-					location.href="<?php echo U('Store/orderCart');?>";
-				}else{
-					return floatNotify.simple(data.info);
-				}
-			}
-		});
+		location.href="<?php echo U('Store/orderCart');?>";
+		// $.ajax({
+		// 	url:"<?php echo U('Store/checkLimitAjax');?>",
+		// 	dataType:"json",
+		// 	success:function(data){
+		// 		if(data.status == 1){
+		// 			location.href="<?php echo U('Store/orderCart');?>";
+		// 		}else{
+		// 			return floatNotify.simple(data.info);
+		// 		}
+		// 	}
+		// });
 	})
 })(jQuery)
 function full_update(rowid,price) {

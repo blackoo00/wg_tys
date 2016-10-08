@@ -1,8 +1,6 @@
 <include file="Public:head"/>
 <body>
-    <script src="{wghd:
-:RES}/js/tys/require.js" data-main="{wghd:
-:RES}/js/tys/main" type="text/javascript"></script>
+    <script src="{wghd::RES}/js/tys/require.js" data-main="{wghd::RES}/js/tys/main" type="text/javascript"></script>
     <div class="steward_laboratory">
         <div>
             化验数据
@@ -10,23 +8,17 @@
         <div>
             <ul>
                 <volist id="list" name="info">
-                    <a href="{wghd:
-:U('Steward/showbigpic',array('id'=>$list[id], 'src'=>$list['pic'],'token'=>$token,'wecha_id'=>$wecha_id))}">
+                    <a href="{wghd::U('Steward/showbigpic',array('id'=>$list[id], 'src'=>$list['pic'],'token'=>$token,'wecha_id'=>$wecha_id))}">
                     <li class="labpic">
-                        <input type="hidden" id="labid" name="labid" value="{wghd:
-$list.id}">
-                        <img src="{wghd:
-$list.pic}">
-                        <span>{wghd:
-$list.recordtime|friendlyDate=###,ymd,false}</span>
-                        <span>{wghd:
-$list.recordtime|friendlyDate=###,his,false}</span>
+                        <input type="hidden" id="labid" name="labid" value="{wghd:$list.id}">
+                        <img src="{wghd:$list.pic}">
+                        <span>{wghd:$list.recordtime|friendlyDate=###,ymd,false}</span>
+                        <span>{wghd:$list.recordtime|friendlyDate=###,his,false}</span>
                     </li>
                     </a>
                 </volist>
                 <div id="loading" style="display:none">
-                    <img src="{wghd:
-:RES}/css/tys/photoswipe-loader.gif">
+                    <img src="{wghd::RES}/css/tys/photoswipe-loader.gif">
                 </div>
             </ul>
             <div class="showbigpic">
@@ -37,8 +29,7 @@ $list.recordtime|friendlyDate=###,his,false}</span>
                 </div>
             </div>
         </div>
-        <script src="{wghd:
-:RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+        <script src="{wghd::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
         <script>
             // $(function(){
             //     $('.labpic').click(function(){
@@ -56,8 +47,7 @@ $list.recordtime|friendlyDate=###,his,false}</span>
             // function delpic(){
             //     if(window.confirm('确定删除吗')){
             //         $.ajax({
-            //             url:'{wghd:
-:U('Steward/dellaboratorypic',array('token'=>$token,'wecha_id'=>$wecha_id))}',
+            //             url:'{wghd::U('Steward/dellaboratorypic',array('token'=>$token,'wecha_id'=>$wecha_id))}',
             //             data:{id:$('.delpic').attr('data-id')},
             //             success:function(data){
             //                 if(data==1);
@@ -70,8 +60,7 @@ $list.recordtime|friendlyDate=###,his,false}</span>
         </script>
         <div>
             <button class="greenbtn">上传化验图片</button>
-            <input id="pic" name="pic" type="file" title="化验图片" onchange="return laboratorypic('{wghd:
-:U('Steward/laboratorypic',array('token'=>$token,'wecha_id'=>$wecha_id))}')"> 
+            <input id="pic" name="pic" type="file" title="化验图片" onchange="return laboratorypic('{wghd::U('Steward/laboratorypic',array('token'=>$token,'wecha_id'=>$wecha_id))}')"> 
         </div>
         <include file="Public:support"/>
     </div>

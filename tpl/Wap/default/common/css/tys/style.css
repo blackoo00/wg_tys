@@ -682,7 +682,7 @@ footer {
   #user_foot ul > li {
     display: block;
     float: left;
-    width: 33.33333333333333333333333333333333333333%;
+    width: 50%;
     text-align: center;
     height: 65px;
     line-height: 40px;
@@ -703,7 +703,7 @@ footer {
     #user_foot ul > li:nth-of-type(1) > a:after {
       content: "\e601"; }
     #user_foot ul > li:nth-of-type(2) > a:after {
-      content: "\e602"; }
+      content: "\e600"; }
     #user_foot ul > li:nth-of-type(3) > a:after {
       content: "\e600"; }
 
@@ -762,15 +762,15 @@ footer {
   padding: 1%;
   border-bottom: 1px solid #DDD; }
   .doctor_custom ul li .prompt {
-    position: relative;
-    float: left; }
-    .doctor_custom ul li .prompt > img {
+    position: relative; }
+    .doctor_custom ul li .prompt img {
       width: 40px;
       height: 40px;
       display: inline-block;
       vertical-align: middle; }
-    .doctor_custom ul li .prompt p {
-      display: inline-block; }
+    .doctor_custom ul li .prompt .customname {
+      display: inline-block;
+      width: 66%; }
     .doctor_custom ul li .prompt span {
       position: absolute;
       width: 12px;
@@ -779,6 +779,10 @@ footer {
       background-color: red;
       left: 32px;
       top: -6px; }
+    .doctor_custom ul li .prompt .custom_detail {
+      float: right;
+      line-height: 40px;
+      margin-right: 5px; }
   .doctor_custom ul li .doctor_custom_details {
     float: left;
     width: 70%;

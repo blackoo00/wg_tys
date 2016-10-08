@@ -211,17 +211,18 @@
 		}
 	})
 	$('#place_order').click(function(){
-		$.ajax({
-			url:"{wghd::U('Store/checkLimitAjax')}",
-			dataType:"json",
-			success:function(data){
-				if(data.status == 1){
-					location.href="{wghd::U('Store/orderCart')}";
-				}else{
-					return floatNotify.simple(data.info);
-				}
-			}
-		});
+		location.href="{wghd::U('Store/orderCart')}";
+		// $.ajax({
+		// 	url:"{wghd::U('Store/checkLimitAjax')}",
+		// 	dataType:"json",
+		// 	success:function(data){
+		// 		if(data.status == 1){
+		// 			location.href="{wghd::U('Store/orderCart')}";
+		// 		}else{
+		// 			return floatNotify.simple(data.info);
+		// 		}
+		// 	}
+		// });
 	})
 })(jQuery)
 function full_update(rowid,price) {

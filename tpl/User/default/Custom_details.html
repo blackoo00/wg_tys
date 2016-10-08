@@ -10,22 +10,20 @@
 <div class="content" <if condition="session('isQcloud') eq true">style="float:center;"</if>
 >
 <div class="cLineB">
-  <h4>患者详细</h4>
+  <h4>孕妈详细</h4>
   <a href="javascript:history.go(-1);"  class="right btnGrayS vm" style="margin-top:-27px" >返回</a>
 </div>
 <div class="msgWrap">
   <TABLE class="userinfoArea" style=" margin:20px 0 0 0;" border="0" cellSpacing="0" cellPadding="0" width="100%">
-    <input type="hidden" name="id" value="{wghd:
-$info.id}" />
+    <input type="hidden" name="id" value="{wghd:$info.id}" />
     <tr>
       <th style="font-size:15px; color:red;">基本信息</th>
     </tr>
     <TR>
       <TH valign="top">
-        <label for="keyword">患者姓名：</label>
+        <label for="keyword">孕妈姓名：</label>
       </TH>
-      <TD>{wghd:
-$info.name}</TD>
+      <TD>{wghd:$info.name}</TD>
     </TR>
     <TR>
       <TH valign="top">
@@ -43,38 +41,33 @@ $info.name}</TD>
       <TH valign="top">
         <label for="keyword">年龄：</label>
       </TH>
-      <TD>{wghd:
-$info.age}</TD>
+      <TD>{wghd:$info.age}</TD>
     </TR>
     <TR>
       <TH valign="top">
-        <label for="keyword">患者电话：</label>
+        <label for="keyword">孕妈电话：</label>
       </TH>
-      <TD>{wghd:
-$info.tel}</TD>
+      <TD>{wghd:$info.tel}</TD>
     </TR>
     <TR>
       <TH valign="top">
         <label for="keyword">地址：</label>
       </TH>
-      <TD>{wghd:
-$info.address}</TD>
+      <TD>{wghd:$info.address}</TD>
     </TR>
-    <TR>
+    <!-- <TR>
       <TH valign="top">
         <label for="keyword">糖尿病类型：</label>
       </TH>
-      <TD>{wghd:
-$info.diabetes}</TD>
-    </TR>
+      <TD>{wghd:$info.diabetes}</TD>
+    </TR> -->
     <TR>
       <TH valign="top">
-        <label for="keyword">关注医生：</label>
+        <label for="keyword">关注孕育师：</label>
       </TH>
-      <TD>{wghd:
-$info.doctor.name}</TD>
+      <TD>{wghd:$info.doctor.name}</TD>
     </TR>
-    <tr>
+    <!-- <tr>
       <th style="font-size:15px; color:red;">血糖详情</th>
     </tr>
     <tr>
@@ -100,24 +93,15 @@ $info.doctor.name}</TD>
             </tr>
             <volist id="list" name="bsuger">
                 <tr>
-                    <td class="xtjl">{wghd:
-$list.recordtime|friendlyDate=###,md,false}</td>
-                    <td class="xtjl">{wghd:
-$list.lctxs}</td>
-                    <td class="xtjl">{wghd:
-$list.kf}</td>
-                    <td class="xtjl">{wghd:
-$list.zchtxs}</td>
-                    <td class="xtjl">{wghd:
-$list.acq}</td>
-                    <td class="xtjl">{wghd:
-$list.achtxs}</td>
-                    <td class="xtjl">{wghd:
-$list.wcq}</td>
-                    <td class="xtjl">{wghd:
-$list.wchtxs}</td>
-                    <td class="xtjl">{wghd:
-$list.sq}</td>
+                    <td class="xtjl">{wghd:$list.recordtime|friendlyDate=###,md,false}</td>
+                    <td class="xtjl">{wghd:$list.lctxs}</td>
+                    <td class="xtjl">{wghd:$list.kf}</td>
+                    <td class="xtjl">{wghd:$list.zchtxs}</td>
+                    <td class="xtjl">{wghd:$list.acq}</td>
+                    <td class="xtjl">{wghd:$list.achtxs}</td>
+                    <td class="xtjl">{wghd:$list.wcq}</td>
+                    <td class="xtjl">{wghd:$list.wchtxs}</td>
+                    <td class="xtjl">{wghd:$list.sq}</td>
                 </tr>
             </volist>
         </table>
@@ -130,36 +114,31 @@ $list.sq}</td>
       <TH valign="top">
         <label for="keyword">糖化血红蛋白(HbA1c):</label>
       </TH>
-      <TD class="xtjl">{wghd:
-$bprotein.hbaic}</TD>
+      <TD class="xtjl">{wghd:$bprotein.hbaic}</TD>
     </TR>
     <TR>
       <TH valign="top">
         <label for="keyword">BMI:</label>
       </TH>
-      <TD class="xtjl">{wghd:
-$bprotein.bmi}</TD>
+      <TD class="xtjl">{wghd:$bprotein.bmi}</TD>
     </TR>
     <TR>
       <TH valign="top">
         <label for="keyword">血压(mmHg):</label>
       </TH>
-      <TD class="xtjl">{wghd:
-$bprotein.presure}</TD>
+      <TD class="xtjl">{wghd:$bprotein.presure}</TD>
     </TR>
     <TR>
       <TH valign="top">
         <label for="keyword">甘油三脂(mmol/L):</label>
       </TH>
-      <TD class="xtjl">{wghd:
-$bprotein.xiezhi}</TD>
+      <TD class="xtjl">{wghd:$bprotein.xiezhi}</TD>
     </TR>
     <TR>
       <TH valign="top">
         <label for="keyword">用药情况:</label>
       </TH>
-      <TD class="xtjl">{wghd:
-$bprotein.note}</TD>
+      <TD class="xtjl">{wghd:$bprotein.note}</TD>
     </TR>
     <tr>
       <th style="font-size:15px; color:red;">化验单</th>
@@ -169,14 +148,12 @@ $bprotein.note}</TD>
         <ul class="cdul">
           <volist id="list" name="laboratory">
             <li>
-            <a href="{wghd:
-$list.pic}" target="_blank"><img src="{wghd:
-$list.pic}"></a>
+            <a href="{wghd:$list.pic}" target="_blank"><img src="{wghd:$list.pic}"></a>
             </li>
           </volist>
         </ul>
       </td>
-    </tr>
+    </tr> -->
   </TABLE>
 </div>
 </div>

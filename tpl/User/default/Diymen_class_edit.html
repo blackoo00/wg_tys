@@ -24,9 +24,7 @@ td{text-align: -webkit-left;font-size:12px;}
 				<select name="pid" id="pid">
 					<option  value="0">请选择菜单：</option>
 					<volist id="class" name="class">
-						<option  value="{wghd:
-$class.id}" <if condition="$show['pid'] eq $class['id']">selected</if>>{wghd:
-$class.title}</option>
+						<option  value="{wghd:$class.id}" <if condition="$show['pid'] eq $class['id']">selected</if>>{wghd:$class.title}</option>
 					</volist>
 				</select>
 				</div>
@@ -36,8 +34,7 @@ $class.title}</option>
 			<td align="right" height="62" width="">主菜单名称：</td>
 			<td>
 				<div class="mr15 l">
-				<input id="menu_title" class="txt" name="title" title="主菜单名称" value="{wghd:
-$show.title}" type="text"></div>
+				<input id="menu_title" class="txt" name="title" title="主菜单名称" value="{wghd:$show.title}" type="text"></div>
 				<div class="system l"></div>
 			</td>
 		</tr>
@@ -62,16 +59,14 @@ $show.title}" type="text"></div>
 		<tr bgcolor="#F1F1F1">
 			<td align="right" height="62" width="">关联关键词：</td>
 			<td>
-				<div class="mr15 l"><input id="menu_keyword" class="txt" name="keyword" title="关联关键词" value="{wghd:
-$show.keyword}" type="text"></div>
+				<div class="mr15 l"><input id="menu_keyword" class="txt" name="keyword" title="关联关键词" value="{wghd:$show.keyword}" type="text"></div>
 				<div class="system l"></div>
 			</td>
 		</tr>
 		<tr>
 			<td align="right" height="62" width="">外链接url：</td>
 			<td>
-				<div class="mr15 l"><input id="menu_key" class="txt" name="url" size="60" title="外链接url" value="{wghd:
-$show.url}" type="text"> <br/>非认证服务号或未开启用户授权请不要填写本站url  (<span style="color:red">微信自定义菜单已不支持一键拨号</span>)</div>
+				<div class="mr15 l"><input id="menu_key" class="txt" name="url" size="60" title="外链接url" value="{wghd:$show.url}" type="text"> <br/>非认证服务号或未开启用户授权请不要填写本站url  (<span style="color:red">微信自定义菜单已不支持一键拨号</span>)</div>
 				<div class="system l"></div>
 			</td>
 		</tr>
@@ -89,8 +84,7 @@ $show.url}" type="text"> <br/>非认证服务号或未开启用户授权请不�
 			<td align="right" height="62">排序：</td>
 			<td>
 				<div class="mr15 l">
-				<input id="sortid" class="txt" name="sort" title="排序" value="{wghd:
-$show.sort}" type="text"></div>
+				<input id="sortid" class="txt" name="sort" title="排序" value="{wghd:$show.sort}" type="text"></div>
 				<div class="system l"></div>
 			</td>
 		</tr>

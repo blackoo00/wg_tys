@@ -2,8 +2,7 @@
 <div class="content" <if condition="session('isQcloud') eq true">style="float:center;"</if>
 >
 <div class="cLineB">
-  <h4>关于<font style="color:red;">{wghd:
-$consultb['0']['consult']['title']}</font>的咨询详细</h4>
+  <h4>关于<font style="color:red;">{wghd:$consultb['0']['consult']['title']}</font>的咨询详细</h4>
   <a href="javascript:history.go(-1);"  class="right btnGrayS vm" style="margin-top:-27px" >返回</a>
 </div>
 <div class="msgWrap">
@@ -13,26 +12,20 @@ $consultb['0']['consult']['title']}</font>的咨询详细</h4>
     <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%">
       <THEAD>
         <TR>
-          <th>{wghd:
-$consult.doctor.name}</th>
-          <th>{wghd:
-$consult.custom.name}</th>
+          <th>{wghd:$consult.doctor.name}</th>
+          <th>{wghd:$consult.custom.name}</th>
         </TR>
       </THEAD>
       <TBODY>
         <TR></TR>
         <volist id="list" name="consultb">
           <tr>
-            <td style="line-height:22px; font-size:14px; letter-spacing:1px;"><if condition="$list.dtalk eq 1"><div>{wghd:
-$list.content}</div>
-                <span style="float:right; color:rgba(68,221,221,0.8);">{wghd:
-$list.time|friendlyDate}</span>
+            <td style="line-height:22px; font-size:14px; letter-spacing:1px;"><if condition="$list.dtalk eq 1"><div>{wghd:$list.content}</div>
+                <span style="float:right; color:rgba(68,221,221,0.8);">{wghd:$list.time|friendlyDate}</span>
                 </if>
             </td>
-            <td style="line-height:22px; font-size:14px; letter-spacing:1px;"><if condition="$list.ctalk eq 1"><div>{wghd:
-$list.content}</div>
-                <span style="float:right; color:rgba(68,221,221,0.8);">{wghd:
-$list.time|friendlyDate}</span>
+            <td style="line-height:22px; font-size:14px; letter-spacing:1px;"><if condition="$list.ctalk eq 1"><div>{wghd:$list.content}</div>
+                <span style="float:right; color:rgba(68,221,221,0.8);">{wghd:$list.time|friendlyDate}</span>
                 </if>
             </td>
           </tr>
@@ -44,8 +37,7 @@ $list.time|friendlyDate}</span>
 
 <div class="cLine">
   <div class="pageNavigator right">
-    <div class="pages">{wghd:
-$page}</div>
+    <div class="pages">{wghd:$page}</div>
   </div>
   <div class="clr"></div>
 </div>

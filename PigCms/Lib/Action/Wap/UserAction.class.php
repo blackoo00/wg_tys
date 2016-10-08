@@ -48,7 +48,7 @@
 		// 		$consultb=$db->where($where)->order('time asc')->select();
 		// 		$this->assign('consultb',$consultb);
 
-		// 		//通过咨询主表获取患者医生信息
+		// 		//通过咨询主表获取孕妈孕育師信息
 		// 		$where['id']=$id;
 		// 		$dc=$db2->relation(true)->where($where)->find();
 		// 		$dc['spic']=explode(",", $dc['spic']);
@@ -60,16 +60,16 @@
 		// }
 		//新咨询对话
 		public function customconsultb(){
-			//获取医生信息
+			//获取孕育師信息
 			$did=$this->_get('did','intval');
 			$doctor=D('Doctor')->where('id='.$did)->find();
 			$this->assign('doctor',$doctor);
-			//获取患者信息
+			//获取孕妈信息
 			$cid=$this->_get('cid','intval');
 			$condition['openid']=$this->wecha_id;
 			$custom=D('Custom')->where($condition)->find();
 			$this->assign('custom',$custom);
-			//判断医生日咨询量
+			//判断孕育師日咨询量
 			$t1=strtotime('today');
 			$t2=$t1+86400;
 			$where['did']=$did;
@@ -84,7 +84,7 @@
 					}
 				}
 				if($check==0){
-					$this->error("已达医生今日咨询总量",U('User/doctorlist', array('token'=>$this->token,'openid'=>$this->wecha_id)));
+					$this->error("已达孕育師今日咨询总量",U('User/doctorlist', array('token'=>$this->token,'openid'=>$this->wecha_id)));
 				}
 			}
 			//获取咨询分支
@@ -108,7 +108,7 @@
 				}
 			}
 			
-			$consultb=D('Consultb')->where('cmid='.$cmid)->limit(10)->order('time desc')->select();
+			$consultb=D('Consultb')->where('cmid='.$cmid)->limit(10)->order('time desc')->relation(true)->select();
 			$consultm = D('Consult')->where('id='.$cmid)->find();
 			krsort($consultb);
 			$this->assign('cmid',$cmid);
@@ -160,7 +160,7 @@
 		}
 		public function doctor(){
 			if(!$this->custom['doctor']){
-				$this->error('您还没有关注医生');
+				$this->error('您还没有关注孕育师');
 			}
 			$this->assign('click',"no");
 			$this->display();
@@ -212,12 +212,12 @@
 			$did=$this->_get('id','intval');
 			$r=D('Doctor')->where('id='.$did)->setDec('followers');//粉丝数减1
 			if(!r){
-				$this->error('医生粉丝数操作失败',U(MODULE_NAME . '/custom', array('token'=>$this->token,'openid'=>$this->wecha_id)));
+				$this->error('孕育师粉丝数操作失败',U(MODULE_NAME . '/custom', array('token'=>$this->token,'openid'=>$this->wecha_id)));
 			}
 			$db=D('Custom');
 			$where['openid']=$this->wecha_id;
 			$data['did']=NULL;
-			$id=$db->where($where)->save($data);//关注医生的ID清0
+			$id=$db->where($where)->save($data);//关注孕育师的ID清0
 
 			$cid=D('Custom')->field('id')->where($where)->find();
 			$cid=$cid['id'];

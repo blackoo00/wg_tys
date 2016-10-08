@@ -19,32 +19,23 @@
 	  </tr>
 	    <volist name="list" id="vo">
 			<tr>
-				<td align='center'>{wghd:
-$vo.id}</td>
-				<td >{wghd:
-$vo.username}</td>
-				<td >{wghd:
-$role[$vo['role']]}</td>
-				<td >{wghd:
-$vo.remark}</td>
-				<td align='center'>{wghd:
-$vo.last_login_ip}</td>
-				<td align='center'>{wghd:
-$vo.last_location}</td>
+				<td align='center'>{wghd:$vo.id}</td>
+				<td >{wghd:$vo.username}</td>
+				<td >{wghd:$role[$vo['role']]}</td>
+				<td >{wghd:$vo.remark}</td>
+				<td align='center'>{wghd:$vo.last_login_ip}</td>
+				<td align='center'>{wghd:$vo.last_location}</td>
 				<td align='center'><php>echo date('Y-m-d H:i:s', $vo['last_login_time'])</php></td>
 				<td align='center'><eq name="vo.status" value="1"><font color="red">√</font><else/><font color="blue">×</font></eq> 
 				</td>
 				<td align='center'>
-					<a href="{wghd:
-:U('User/edit/',array('id'=>$vo['id']))}">修改</a>
-					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{wghd:
-:U('User/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
+					<a href="{wghd::U('User/edit/',array('id'=>$vo['id']))}">修改</a>
+					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{wghd::U('User/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
 				</td>
 			</tr>
 	    </volist>
      <tr bgcolor="#FFFFFF"> 
-      <td colspan="8"><div class="listpage">{wghd:
-$page}</div></td>
+      <td colspan="8"><div class="listpage">{wghd:$page}</div></td>
     </tr>
    
 </table>

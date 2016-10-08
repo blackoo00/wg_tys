@@ -27,8 +27,7 @@
 </div>
 
           <div class="ftip" style="margin:25px auto 5px auto;">只有认证服务号才能使用（其他类型公众号请不要使用第三方群发，否则微信可能会封号），点击“添加图文消息”按钮来选择已经添加过的图文消息</div>
-          <form method="post" action="{wghd:
-:U('Message/sendAll')}">
+          <form method="post" action="{wghd::U('Message/sendAll')}">
           <div class="msgWrap form">
             <table class="userinfoArea" border="0" cellspacing="0" cellpadding="0" width="100%">
               <tbody>
@@ -36,24 +35,19 @@
               		<th>选择分组</th>
               		<td>
               		<pigcmsif where="$groups">
-              		<select name="wechatgroupid"><pigcmslist array="groups" foreach="g"><option value="{wghd:
-$g.wechatgroupid}">{wghd:
-$g.name}</option></pigcmslist></select>
+              		<select name="wechatgroupid"><pigcmslist array="groups" foreach="g"><option value="{wghd:$g.wechatgroupid}">{wghd:$g.name}</option></pigcmslist></select>
               		<else/>
-              		<a href="{wghd:
-:U('Wechat_group/groups')}">还没有同步公众平台的粉丝分组，点击这里进行分组设置</a>
+              		<a href="{wghd::U('Wechat_group/groups')}">还没有同步公众平台的粉丝分组，点击这里进行分组设置</a>
               		</pigcmsif>
               		</td>
               		</tr>
               		<tr style="display:none"> 
         <th>标题</th> 
-        <td><input type="text" id="title" name="title" value="{wghd:
-$info.title}" class="px require" style="width:200px;" /> 仅发送视频的时候填写</td> 
+        <td><input type="text" id="title" name="title" value="{wghd:$info.title}" class="px require" style="width:200px;" /> 仅发送视频的时候填写</td> 
        </tr> 
               		<TR style="display:none">
   <TH>媒体文件</TH>
-  <TD><input type="input" class="px" id="media" name="mediasrc" style="width:250px"> <script src="/tpl/static/upyun.js"></script><a href="###" onclick="chooseFile('media','background')" class="a_upload">选择</a>&nbsp;&nbsp;&nbsp;<a href="###" onclick="upyunPicUpload('media',1500,1000,'{wghd:
-$token}')" class="a_upload">上传</a> 仅发送图片消息、语音消息或视频消息的时候填写</TD>
+  <TD><input type="input" class="px" id="media" name="mediasrc" style="width:250px"> <script src="/tpl/static/upyun.js"></script><a href="###" onclick="chooseFile('media','background')" class="a_upload">选择</a>&nbsp;&nbsp;&nbsp;<a href="###" onclick="upyunPicUpload('media',1500,1000,'{wghd:$token}')" class="a_upload">上传</a> 仅发送图片消息、语音消息或视频消息的时候填写</TD>
 </TR>
 <tr style="display:none"> 
         <th><span class="red"></span>文本消息/简介</th> 

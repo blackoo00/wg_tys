@@ -138,7 +138,7 @@ jQuery(document).ready(function ($) {
               <div class="new_pro_name"><?php echo ($hostlist2["name"]); ?></div>
               <!-- <div class="new_pro_details"><?php echo ($hostlist2["des"]); ?></div> -->
               <div class="new_cart">
-                 <div class="new_price">￥<?php echo ($hostlist2["showprice"]); ?></div>
+                 <div class="new_price">￥<?php echo ($hostlist2["price"]); ?></div>
                  <div class="new_sales">销量：<?php echo ($hostlist2["fakemembercount"]); ?></div>
                  <!-- <div class="new_cart_pic"><img src="<?php echo RES;?>/css/store/images/index_28.png" /></div> -->
                  <div class="clear"></div>
@@ -181,7 +181,7 @@ jQuery(document).ready(function ($) {
 					  <div class="new_pro_name"><?php echo ($hostlist2["name"]); ?></div>
 					  <!-- <div class="new_pro_details"><?php echo ($hostlist2["des"]); ?></div> -->
 					  <div class="new_cart">
-						   <div class="new_price">￥<?php echo ($hostlist2["showprice"]); ?></div>
+						   <div class="new_price">￥<?php echo ($hostlist2["price"]); ?></div>
 						   <div class="new_sales">销量：<?php echo ($hostlist2["fakemembercount"]); ?></div>
 						   <!-- <div class="new_cart_pic"><img src="<?php echo RES;?>/css/store/images/index_28.png" /></div> -->
 						   <div class="clear"></div>
@@ -209,7 +209,7 @@ jQuery(document).ready(function ($) {
                  <div class="line"></div>
                  <div class="pro_name"><?php echo (msubstr($hostlist["name"],0,11)); ?></div>
                  <div class="line1"></div>
-                 <div class="pro_price">现价:￥<?php echo ($hostlist["showprice"]); ?> &nbsp;&nbsp; <span>已售:<?php echo ($hostlist["fakemembercount"]); ?></span></div>
+                 <div class="pro_price">现价:￥<?php echo ($hostlist["price"]); ?> &nbsp;&nbsp; <span>已售:<?php echo ($hostlist["fakemembercount"]); ?></span></div>
                 </a>
             </div><?php endforeach; endif; else: echo "" ;endif; ?>
      </div>

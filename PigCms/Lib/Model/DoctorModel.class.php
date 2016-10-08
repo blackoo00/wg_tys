@@ -2,7 +2,7 @@
 	class DoctorModel extends RelationModel{
 		protected $tableName = 'doctor_list'; 
 		protected $_validate =array(
-			array('name','require','医生名称不能为空',0),
+			array('name','require','孕育师名称不能为空',0),
 			array('username','require','账号不能为空',0),
 			array('password','require','密码不能为空',0),
 			array('newpassword','require','新密码不能为空',0),

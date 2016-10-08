@@ -8,17 +8,12 @@
 	<ul>
 		<volist id="list" name="consultb">
 			<li>
-				<if condition="$list.dtalk eq 1">{wghd:
-$doctorname}:<else/>{wghd:
-$customname}:</if>
-				{wghd:
-$list.content}<br>{wghd:
-$list.time|friendlyDate}
+				<if condition="$list.dtalk eq 1">{wghd:$doctorname}:<else/>{wghd:$customname}:</if>
+				{wghd:$list.content}<br>{wghd:$list.time|friendlyDate}
 			</li>
 		</volist>
 	</ul>
-	<form action="{wghd:
-:U('Doctor/insert',array('id'=>$cmid,'token'=>$token,'wecha_id'=>$wecha_id))}" method="post">
+	<form action="{wghd::U('Doctor/insert',array('id'=>$cmid,'token'=>$token,'wecha_id'=>$wecha_id))}" method="post">
 		<textarea name="content"></textarea><br>
 		<input type="submit" value="发送">
 	</form>

@@ -7,25 +7,16 @@ body,h2{margin:0;padding:0;}
 #faqdiv h2 a{position:absolute;right:5px;font-size:12px;color:#FF0000;}
 #faqdiv .form{padding:10px;}
 </style>
- <link rel="stylesheet" href="{wghd:
-:STATICS}/kindeditor/themes/default/default.css" />
-<link rel="stylesheet" href="{wghd:
-:STATICS}/kindeditor/plugins/code/prettify.css" />
-<script src="{wghd:
-:STATICS}/kindeditor/kindeditor.js" type="text/javascript"></script>
-<script src="{wghd:
-:STATICS}/kindeditor/lang/zh_CN.js" type="text/javascript"></script>
-<script src="{wghd:
-:STATICS}/kindeditor/plugins/code/prettify.js" type="text/javascript"></script>
-<script src="{wghd:
-:RES}/js/date/WdatePicker.js"></script>
-<script type="text/javascript" src="{wghd:
-:RES}/js/formCheck/formcheck.js"> </script>
+ <link rel="stylesheet" href="{wghd::STATICS}/kindeditor/themes/default/default.css" />
+<link rel="stylesheet" href="{wghd::STATICS}/kindeditor/plugins/code/prettify.css" />
+<script src="{wghd::STATICS}/kindeditor/kindeditor.js" type="text/javascript"></script>
+<script src="{wghd::STATICS}/kindeditor/lang/zh_CN.js" type="text/javascript"></script>
+<script src="{wghd::STATICS}/kindeditor/plugins/code/prettify.js" type="text/javascript"></script>
+<script src="{wghd::RES}/js/date/WdatePicker.js"></script>
+<script type="text/javascript" src="{wghd::RES}/js/formCheck/formcheck.js"> </script>
 
-<link rel="stylesheet" type="text/css" href="{wghd:
-:RES}/css/cymain.css" />
-<script src="{wghd:
-:RES}/js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{wghd::RES}/css/cymain.css" />
+<script src="{wghd::RES}/js/jquery.min.js"></script>
 <script>
 
 //弹出层start
@@ -83,8 +74,7 @@ $(document).ready(function(){
 
         $.ajax({
             type:"get",
-            url:"index.php?g=User&m=Reply&a=replyChk&token={wghd:
-$token}&chk_value="+chk_value,
+            url:"index.php?g=User&m=Reply&a=replyChk&token={wghd:$token}&chk_value="+chk_value,
             success:function(result){
                  $("input[name='items']").each(function(){
 	            if (this.checked) {
@@ -130,20 +120,16 @@ $(document).on("click","#del",function(){
     
     
 <div class="cLineB">
-<a href="{wghd:
-:U('Reply/index',array('token'=>$token,'wecha_id'=>$wecha_id))}" class="right  btnGreen" >返回</a> 
+<a href="{wghd::U('Reply/index',array('token'=>$token,'wecha_id'=>$wecha_id))}" class="right  btnGreen" >返回</a> 
 </div>
 
 
 <h4 id="addbtn" style="margin:10px 0">添加回复  </h4>
-<p style="padding:4px;" id="content" >{wghd:
-$message}</p>
+<p style="padding:4px;" id="content" >{wghd:$message}</p>
 <div  id="showmsg" >
-    <form method="post" onsubmit="return check();" action="{wghd:
-:U('User/Reply/addreply',array('token'=>$token,'wecha_id'=>$wecha_id,'message_id'=>$message_id))}">
+    <form method="post" onsubmit="return check();" action="{wghd::U('User/Reply/addreply',array('token'=>$token,'wecha_id'=>$wecha_id,'message_id'=>$message_id))}">
 <div style="margin-top:0px;"><textarea  id="addcontent" name="content"  rows="5" style="width:592px;height:100px;border:1px solid #D7DDE6;" ></textarea></div>
- <div style="margin:10px 0"><input type="submit" value="保存" class="btnGrayS vm smallbtn">&nbsp; <a href="{wghd:
-:U('Reply/index',array('token'=>$token,'wecha_id'=>$wecha_id))}" class="btnGrayS vm smallbtn">取消</a></div>
+ <div style="margin:10px 0"><input type="submit" value="保存" class="btnGrayS vm smallbtn">&nbsp; <a href="{wghd::U('Reply/index',array('token'=>$token,'wecha_id'=>$wecha_id))}" class="btnGrayS vm smallbtn">取消</a></div>
 </form>
 <div style="bordre-buttom:1px solid #EEEEEE;margin-top:5px;"></div>
 </div>
@@ -162,10 +148,8 @@ $message}</p>
 </div>
 <div class="msgWrap">
 <form method="post" action="" id="info">
-    <input name="wecha_id" type="hidden" id="wecha_id" value="{wghd:
-$wecha_id}">
-    <input name="checked" type="hidden" id="needCheck" value="{wghd:
-$needCheck}">
+    <input name="wecha_id" type="hidden" id="wecha_id" value="{wghd:$wecha_id}">
+    <input name="checked" type="hidden" id="needCheck" value="{wghd:$needCheck}">
 <table class="ListProduct" border="0" cellspacing="0" cellpadding="0" width="100%">
 <thead>
 
@@ -182,19 +166,14 @@ $needCheck}">
 <tr></tr>
 <volist name="res" id="item"> 
     <tr>
-<td><input type="checkbox" name="items" value="{wghd:
-$item.id}" class="checkitem"  ></td>
-<td><if condition="$item['differ'] neq 1"><font style="color:#94D38A;">(网友回复)</font><else/><font style="color:#94D38A;">(管理员回复)</font></if><if condition="$item['checked'] neq 1"><font color="red">(未审核)</font><else/><font ></font></if>{wghd:
-$item.reply|htmlspecialchars}</td>
-<td>{wghd:
-$item.time|date="Y-m-d H:i:s",###}</td> 
+<td><input type="checkbox" name="items" value="{wghd:$item.id}" class="checkitem"  ></td>
+<td><if condition="$item['differ'] neq 1"><font style="color:#94D38A;">(网友回复)</font><else/><font style="color:#94D38A;">(管理员回复)</font></if><if condition="$item['checked'] neq 1"><font color="red">(未审核)</font><else/><font ></font></if>{wghd:$item.reply|htmlspecialchars}</td>
+<td>{wghd:$item.time|date="Y-m-d H:i:s",###}</td> 
 
 <td class="norightborder">
 	
-    <if condition="$item['checked'] neq 1"><a href="{wghd:
-:U('Reply/replyChked',array('id'=>$item['id'],'token'=>$token))}">审核</a></if>
-    &nbsp;&nbsp;<a href="javascript:drop_confirm('您确定要删除吗?', '{wghd:
-:U('User/Reply/replyDeled',array('id'=>$item['id'],'token'=>$token))}');">删除</a></td>
+    <if condition="$item['checked'] neq 1"><a href="{wghd::U('Reply/replyChked',array('id'=>$item['id'],'token'=>$token))}">审核</a></if>
+    &nbsp;&nbsp;<a href="javascript:drop_confirm('您确定要删除吗?', '{wghd::U('User/Reply/replyDeled',array('id'=>$item['id'],'token'=>$token))}');">删除</a></td>
 </tr>
 
 </volist>
@@ -208,8 +187,7 @@ $item.time|date="Y-m-d H:i:s",###}</td>
 </if>
 <div class="cLine">
 <div class="pageNavigator right">
-<div class="pages">{wghd:
-$page}</div>
+<div class="pages">{wghd:$page}</div>
 </div>
 <div class="clr"></div>
 </div>

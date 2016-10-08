@@ -15,7 +15,7 @@
     <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%">
       <THEAD>
         <TR>
-          <th>医生名称</th>
+          <th>孕育师名称</th>
           <th>反馈信息</th>
 		  <th>是否处理</th>
           <th>操作</th>
@@ -25,14 +25,11 @@
         <TR></TR>
         <volist id="list" name="list">
           <tr>
-            <td>{wghd:
-$list.doctor.name}</td>
-            <td>{wghd:
-$list.info}</td>
+            <td>{wghd:$list.doctor.name}</td>
+            <td>{wghd:$list.info}</td>
             <td><eq name="list.status" value="1"><span style="color:green">已处理</span><else/><span style="color:red">未处理</span></eq></td>
             <td class="norightborder"> 
-              <eq name="list.status" value="0"><a onclick="return confirm('确定已完成处理么？');" href="{wghd:
-:U('Feedback/handleInfo',array('id'=>$list['id']))}" title="查看详细">处理完成</a></eq>
+              <eq name="list.status" value="0"><a onclick="return confirm('确定已完成处理么？');" href="{wghd::U('Feedback/handleInfo',array('id'=>$list['id']))}" title="查看详细">处理完成</a></eq>
             </td>
           </tr>
         </volist>
@@ -43,8 +40,7 @@ $list.info}</td>
 </div>
 <div class="cLine">
   <div class="pageNavigator right">
-    <div class="pages">{wghd:
-$page}</div>
+    <div class="pages">{wghd:$page}</div>
   </div>
   <div class="clr"></div>
 </div>

@@ -33,12 +33,9 @@ overflow: hidden;
   
  </div>
   <ul id="tags">
-          <li><a href="{wghd:
-:U('Catemenu/index')}">底部菜单分类设置</a> </li>
-          <li><a href="{wghd:
-:U('Catemenu/styleSet')}">底部菜单风格选择</a> </li>
-          <li class="selectTag"><a href="{wghd:
-:U('Home/plugmenu')}">菜单颜色与版权</a> </li>
+          <li><a href="{wghd::U('Catemenu/index')}">底部菜单分类设置</a> </li>
+          <li><a href="{wghd::U('Catemenu/styleSet')}">底部菜单风格选择</a> </li>
+          <li class="selectTag"><a href="{wghd::U('Home/plugmenu')}">菜单颜色与版权</a> </li>
           <div class="clr"></div>
         </ul>
         <div class="cLineB" style="padding:0;margin:0"></div>
@@ -46,12 +43,9 @@ overflow: hidden;
  	<table class="userinfoArea" style=" margin:0;" border="0" cellspacing="0" cellpadding="0" width="100%">
 <tbody>
 <tr>
-<td width="60"><div class="plug-menu" id="plugmenucolor" style="background-color:{wghd:
-$homeInfo.plugmenucolor}"><span class="close"></span></div></td>
+<td width="60"><div class="plug-menu" id="plugmenucolor" style="background-color:{wghd:$homeInfo.plugmenucolor}"><span class="close"></span></div></td>
 <td width="140"><strong>请选择快捷菜单的颜色：</strong></td>
-<td width="95"><input type="text" name="plugmenucolor" id="themeStyle" value="{wghd:
-$homeInfo.plugmenucolor}" class="px color" style="width: 55px; background-image: none; background-color:{wghd:
-$homeInfo.plugmenucolor}; color: rgb(255, 255, 255);" onblur="document.getElementById('plugmenucolor').style.backgroundColor=document.getElementById('themeStyle').value;"></td>
+<td width="95"><input type="text" name="plugmenucolor" id="themeStyle" value="{wghd:$homeInfo.plugmenucolor}" class="px color" style="width: 55px; background-image: none; background-color:{wghd:$homeInfo.plugmenucolor}; color: rgb(255, 255, 255);" onblur="document.getElementById('plugmenucolor').style.backgroundColor=document.getElementById('themeStyle').value;"></td>
 <td width="536">请在手机上查看效果！</td>
 
 </tr>
@@ -60,8 +54,7 @@ $homeInfo.plugmenucolor}; color: rgb(255, 255, 255);" onblur="document.getElemen
 <td width="60"> </td>
 <td><strong>设置页面版权：</strong></td>
  
-<td colspan="2"><textarea class="px" style="width:550px; height:35px" name="copyright">{wghd:
-$homeInfo.copyright}</textarea><br>例如：© 2001-2013 某某版权所有 </td>
+<td colspan="2"><textarea class="px" style="width:550px; height:35px" name="copyright">{wghd:$homeInfo.copyright}</textarea><br>例如：© 2001-2013 某某版权所有 </td>
 
 </tr>
 </if>
@@ -79,8 +72,7 @@ $homeInfo.copyright}</textarea><br>例如：© 2001-2013 某某版权所有 </td
 <tr style="display:none">
 <th style=" width:40px;">图标</th>
                     <th style=" width:80px;">名称</th>
-<th style=" width:270px;"><span class="tooltips">外链网站或活动 <img src="{wghd:
-:RES}/images/price_help.png" align="absmiddle"><span>
+<th style=" width:270px;"><span class="tooltips">外链网站或活动 <img src="{wghd::RES}/images/price_help.png" align="absmiddle"><span>
 <p>比如你想跳转到百度，就填写<a class="red">http://www.baidu.com</a></p>
 <p>不需要跳转就不用填写，还可以外链活动，</p>
 <p>直接填写活动外链地址：<a class="red">大转盘 888</a></p>

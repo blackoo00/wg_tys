@@ -5,33 +5,23 @@
 	<title>后台管理</title>
 </head>
 <body>
-	<form action="{wghd:
-:U('Doctor/msave',array('token'=>$token,'wecha_id'=>$wecha_id))}" enctype="multipart/form-data" method="post">
-	<input name="id" type="hidden" value="{wghd:
-$doctor.id}">
+	<form action="{wghd::U('Doctor/msave',array('token'=>$token,'wecha_id'=>$wecha_id))}" enctype="multipart/form-data" method="post">
+	<input name="id" type="hidden" value="{wghd:$doctor.id}">
 	<ul>
-		<li>姓名：<input name="name" type="text" value="{wghd:
-$doctor.name}"></li>
+		<li>姓名：<input name="name" type="text" value="{wghd:$doctor.name}"></li>
 		<li>
 			<select name="hid">
 				<volist id="hospital" name="hospital">
-					<option value="{wghd:
-$hospital.id}" <eq name="hospital.id" value="$doctor.hid">selected</eq> >{wghd:
-$hospital.name}</option>
+					<option value="{wghd:$hospital.id}" <eq name="hospital.id" value="$doctor.hid">selected</eq> >{wghd:$hospital.name}</option>
 				</volist>
 			</select>
 		</li>
-		<li>职位：<input type="text" name="persition" value="{wghd:
-$doctor.persition}"></li>
-		<li>专业特长：<textarea name="profession">{wghd:
-$doctor.profession}</textarea></li>
-		<li>医生简介：<textarea name="info">{wghd:
-$doctor.info}</textarea></li>
+		<li>职位：<input type="text" name="persition" value="{wghd:$doctor.persition}"></li>
+		<li>专业特长：<textarea name="profession">{wghd:$doctor.profession}</textarea></li>
+		<li>孕育师简介：<textarea name="info">{wghd:$doctor.info}</textarea></li>
 		<li>二维码上传：<input name="pic" type="file" value="选择图片"></li>
-		<li><a href="{wghd:
-:U('Doctor/modify',array('token'=>$token,'wecha_id'=>$wecha_id))}">修改登陆信息</a></li>
-		<li><a href="{wghd:
-:U('Doctor/loginout',array('token'=>$token,'wecha_id'=>$wecha_id))}">退出</a></li>
+		<li><a href="{wghd::U('Doctor/modify',array('token'=>$token,'wecha_id'=>$wecha_id))}">修改登陆信息</a></li>
+		<li><a href="{wghd::U('Doctor/loginout',array('token'=>$token,'wecha_id'=>$wecha_id))}">退出</a></li>
 	</ul>
 	<input type="submit" value="提交">
 	</form>

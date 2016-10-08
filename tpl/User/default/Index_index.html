@@ -2,8 +2,7 @@
 <script src="/tpl/static/jquery-1.4.2.min.js"></script>
 <script src="/tpl/static/artDialog/jquery.artDialog.js?skin=default"></script>
 <script src="/tpl/static/artDialog/plugins/iframeTools.js"></script>
-<link rel="stylesheet" type="text/css" href="{wghd:
-:Common}/default_user_com.css" media="all">
+<link rel="stylesheet" type="text/css" href="{wghd::Common}/default_user_com.css" media="all">
 <script language="JavaScript">
 if (window.top != self){
 	window.top.location = self.location;
@@ -23,29 +22,25 @@ function showApiInfo(id,name){
 <ul>
   <!--li>
     <a href="###" class="gold" title="查看资金" >
-      <p><strong>账户余额：</strong>{wghd:
-$thisUser.moneybalance}</p>
-      <p>充值数：{wghd:
-$thisUser.money}</p>
+      <p><strong>账户余额：</strong>{wghd:$thisUser.moneybalance}</p>
+      <p>充值数：{wghd:$thisUser.money}</p>
     </a>
   </li-->
 
-  <li class="addli">
-    <a class="addwx" title="添加公众号" onclick="location.href='{wghd:
-:U('Index/add')}';">添加公众号</a>
-  </li>
+ <!--  <li class="addli">
+    <a class="addwx" title="添加公众号" onclick="location.href='{wghd::U('Index/add')}';">添加公众号</a>
+  </li> -->
 
   <!--li>
     <a href="index.php?g=User&m=Alipay&a=index" title="会员充值" class="goldbuy">会员充值</a>
   </li-->
 
-  <li>
+ <!--  <li>
     <div class="qqqun">
       <div class="qt">官方QQ号</div>
-      <div class="qt2">{wghd:
-$f_qq}</div>
+      <div class="qt2">{wghd:$f_qq}</div>
     </div>
-  </li>
+  </li> -->
 
   <!--li class="addli">
     <a class="addbiz" title="添加企业号" onclick="addbiz()">添加企业号</a>
@@ -55,8 +50,7 @@ $f_qq}</div>
     <if condition="C('open_biz') eq 0">
       alert('请联系站长在后台开启企业号');
     <else />
-      location.href='{wghd:
-:U('Index/add',array('biz'=>1))}';
+      location.href='{wghd::U('Index/add',array('biz'=>1))}';
     </if>
   }
 </script>
@@ -83,25 +77,17 @@ $f_qq}</div>
                 <TR></TR>                
                  <volist name="info" id="vo"> 
 					<TR>
-					  <TD><p><a href="{wghd:
-:U('Function/index',array('id'=>$vo['id'],'token'=>$vo['token']))}" title="点击进入功能管理"><img src="{wghd:
-$vo.headerpic}" width="40" height="40"></a></p><p>{wghd:
-$vo.wxname}</p></TD>
-					  <TD align="center">{wghd:
-$thisGroup.name}</TD>
-					  <TD><p>创建时间:{wghd:
-$vo.createtime|date="Y-m-d",###}</p><p>到期时间:{wghd:
-$viptime|date="Y-m-d",###}</p><p><a href="###" onclick="addFee()" id="smemberss" class="green"><em>升降级vip续费</em></a></p></Td>
+					  <TD><p><a href="{wghd::U('Function/index',array('id'=>$vo['id'],'token'=>$vo['token']))}" title="点击进入功能管理"><img src="{wghd:$vo.headerpic}" width="40" height="40"></a></p><p>{wghd:$vo.wxname}</p></TD>
+					  <TD align="center">{wghd:$thisGroup.name}</TD>
+					  <TD><p>创建时间:{wghd:$vo.createtime|date="Y-m-d",###}</p><p>到期时间:{wghd:$viptime|date="Y-m-d",###}</p></Td>
 					  <TD><p>图文：<php>echo $_SESSION['diynum'].'/'.$group[$_SESSION['gid']]['did'];</php></p></TD>
 					   <TD><p>总请求数:<php>echo $_SESSION['connectnum']</php></p><p> 本月请求数:<php>echo $group[$_SESSION['gid']]['cid'];</php></p></TD>
 					  
-					  <TD class="norightborder">　<a href="{wghd:
-:U('Index/edit',array('id'=>$vo['id']))}">编辑</a>　<a  href="javascript:drop_confirm('您确定要删除吗?', '{wghd:
-:U('Index/del',array('id'=>$vo['id']))}');">删除</a>　
-					  <a href="{wghd:
-:U('Areply/index',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >功能管理</a>
-					  <a href="{wghd:
-:U('Home/Index/help',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >API接口</a>
+					  <TD class="norightborder">　
+            <a href="{wghd::U('Index/edit',array('id'=>$vo['id']))}">编辑</a>　
+            <!-- <a  href="javascript:drop_confirm('您确定要删除吗?', '{wghd::U('Index/del',array('id'=>$vo['id']))}');">删除</a>　 -->
+					  <a href="{wghd::U('Areply/index',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >功能管理</a>
+					  <!-- <a href="{wghd::U('Home/Index/help',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >API接口</a> -->
 					  </TD>
 					</TR>
                   </volist>
@@ -114,19 +100,15 @@ $viptime|date="Y-m-d",###}</p><p><a href="###" onclick="addFee()" id="smemberss"
           <pigcmsif where="$demo eq 1">
           <div class="alert">
           <p><b>欢迎试用微信许昌微信多用户营销系统，为了您测试方便，我们已经自动创建了公众号并填充了各类数据，您只需要按照下面步骤操作即可进行测试：</b></p>
-          <p>1、<a href="{wghd:
-:U('Index/edit',array('id'=>$wxinfo['id']))}">点击这里修改您的公众号信息</a></p>
-          <p>2、登录您的微信公众平台，按照说明绑定您的微信公众号(<a href="{wghd:
-:U('User/Index/bindHelp',array('id'=>$wxinfo['id'],'token'=>$wxinfo['token']))}" target="_blank">点击这里查看帮助说明</a>)</p>
-          <p>3、如果您需要测试自定义菜单功能，请<a href="{wghd:
-:U('Function/index',array('id'=>$wxinfo['id'],'token'=>$wxinfo['token']))}">进入功能管理</a>，然后生成自定义菜单，重新关注公众号就会看到自定义菜单了</p>
+          <p>1、<a href="{wghd::U('Index/edit',array('id'=>$wxinfo['id']))}">点击这里修改您的公众号信息</a></p>
+          <p>2、登录您的微信公众平台，按照说明绑定您的微信公众号(<a href="{wghd::U('User/Index/bindHelp',array('id'=>$wxinfo['id'],'token'=>$wxinfo['token']))}" target="_blank">点击这里查看帮助说明</a>)</p>
+          <p>3、如果您需要测试自定义菜单功能，请<a href="{wghd::U('Function/index',array('id'=>$wxinfo['id'],'token'=>$wxinfo['token']))}">进入功能管理</a>，然后生成自定义菜单，重新关注公众号就会看到自定义菜单了</p>
           <p>就这些，如果碰到任何问题，请您给我们留言，QQ：800022936</p>
           </div>
           </pigcmsif>
           <div class="cLine">
             <div class="pageNavigator right">
-              <div class="pages">{wghd:
-$page}</div>
+              <div class="pages">{wghd:$page}</div>
             </div>
             <div class="clr"></div>
           </div>
@@ -144,9 +126,7 @@ $page}</div>
   	
   	</div></div>
   	<div id="ad2" style="position:fixed; text-align:center; width:100%; top:140px; z-index:30001">
-  	<a href="<?php if ($thisAD['url']){?>{wghd:
-$thisAD.url}<?php }else{?>###<?php };?>" target="_blank"><img src="{wghd:
-$thisAD.imgs}" /></a>
+  	<a href="<?php if ($thisAD['url']){?>{wghd:$thisAD.url}<?php }else{?>###<?php };?>" target="_blank"><img src="{wghd:$thisAD.imgs}" /></a>
   	</div>
   	<div id="ad3" style="position:fixed; text-align:center; width:100%; top:140px;z-index:30012; background:#f80; opacity:0;filter:alpha(opacity=0);">
   	<div style="height:40px;width:700px;margin:0 auto;z-index:30012;">

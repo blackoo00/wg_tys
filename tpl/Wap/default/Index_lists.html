@@ -2,25 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>{wghd:
-$tpl.wxname}</title>
+        <title>{wghd:$tpl.wxname}</title>
         <base href="." />
         <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <meta name="format-detection" content="telephone=no" />
-        <link href="{wghd:
-:RES}/css/allcss/cate{wghd:
-$tpl.tpltypeid|default=2}_{wghd:
-$tpl.color_id|default=0}.css" rel="stylesheet" type="text/css" />
-        <link href="{wghd:
-:RES}/css/102/iscroll.css" rel="stylesheet" type="text/css" />
+        <link href="{wghd::RES}/css/allcss/cate{wghd:$tpl.tpltypeid|default=2}_{wghd:$tpl.color_id|default=0}.css" rel="stylesheet" type="text/css" />
+        <link href="{wghd::RES}/css/102/iscroll.css" rel="stylesheet" type="text/css" />
         <style>
 
 
         </style>
-        <script src="{wghd:
-:RES}/css/102/iscroll.js" type="text/javascript"></script>
+        <script src="{wghd::RES}/css/102/iscroll.js" type="text/javascript"></script>
 
     </head>
 
@@ -30,10 +24,7 @@ $tpl.color_id|default=0}.css" rel="stylesheet" type="text/css" />
 			<div id="scroller">
 				<ul id="thelist"> 
 				<volist name="flash" id="so">
-						<li><p>{wghd:
-$so.info}</p><a href="{wghd:
-$so.url}"><img src="{wghd:
-$so.img}" /></a></li>
+						<li><p>{wghd:$so.info}</p><a href="{wghd:$so.url}"><img src="{wghd:$so.img}" /></a></li>
 					</volist>
 				</ul>
 			</div>
@@ -42,8 +33,7 @@ $so.img}" /></a></li>
 			<div id="prev" onclick="myScroll.scrollToPage('prev', 0,400,3);return false">&larr; prev</div>
 			<ul id="indicator">
 			<volist name="flash" id="so">
-			<li   <if condition="$i eq 1">class="active"</if>  >{wghd:
-$i}</li>
+			<li   <if condition="$i eq 1">class="active"</if>  >{wghd:$i}</li>
 			</volist>
 			 
 			</ul>
@@ -56,13 +46,9 @@ $i}</li>
             <ul class="todayList">
                 <volist name="info" id="vo">
                     <li class="only2">
-                        <a href="<if condition="$vo['url'] eq ''">{wghd:
-:U('Wap/Index/content',array('id'=>$vo['id'],'token'=>$vo['token'],'wecha_id'=>$wecha_id))}<else/>{wghd:
-$vo.url|htmlspecialchars_decode}</if>">
-                            <h2 class="menutitle">{wghd:
-$vo.title}</h2>
-                            <span class="icon"><img src="{wghd:
-$vo.spic}"></span>
+                        <a href="<if condition="$vo['url'] eq ''">{wghd::U('Wap/Index/content',array('id'=>$vo['id'],'token'=>$vo['token'],'wecha_id'=>$wecha_id))}<else/>{wghd:$vo.url|htmlspecialchars_decode}</if>">
+                            <h2 class="menutitle">{wghd:$vo.title}</h2>
+                            <span class="icon"><img src="{wghd:$vo.spic}"></span>
                         </a>
                     </li>
                 </volist>
@@ -73,11 +59,9 @@ $vo.spic}"></span>
 
 <div class="copyright">
 <if condition="$iscopyright eq 1">
-{wghd:
-$homeInfo.copyright}
+{wghd:$homeInfo.copyright}
 <else/>
-{wghd:
-$siteCopyright}
+{wghd:$siteCopyright}
 </if>
 </div> 
 <include file="Index:styleInclude"/><include file="$cateMenuFileName"/> 

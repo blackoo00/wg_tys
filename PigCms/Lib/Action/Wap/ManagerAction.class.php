@@ -1,10 +1,17 @@
 <?php 
 	class ManagerAction extends WapAction{
+		public function __construct(){
+			parent::_initialize();
+			if(!session("tys_manager_login") && ACTION_NAME !='index' && ACTION_NAME !='checklogin'){
+				$this->error('请先登陆',U('Manager/index'));
+			}
+		}
 		public function index(){
 			if(session("tys_manager_login") == '1'){
-				$this->redirect(U('Manager/operation',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+				$this->redirect(U('Manager/operation'));
+			}else{
+				$this->display();
 			}
-			$this->display();
 		}
 		public function checklogin(){
 			$db=D('Manager');
@@ -15,24 +22,25 @@
 			$where['username']=$_POST['username'];
 			$users=$db->where($where)->find();
 			if(!$users){//账号不存在
-				$this->error('账号或密码错误',U('Manager/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+				$this->error('账号或密码错误',U('Manager/index'));
 			}else{
 				$pwd=$this->_post('password','trim,md5');
 				if($users['password']!=$pwd){//密码错误
-					$this->error('账号或密码错误',U('Manager/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+					$this->error('账号或密码错误',U('Manager/index'));
 				}else{
 					$condition['openid']=$this->wecha_id;
 					D('Custom')->where($condition)->setInc('login');
 					session("tys_manager_login", '1');
-					$this->success('登陆成功', U('Manager/operation',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+					$this->success('登陆成功', U('Manager/operation'));
 				}
 			}
 		}
 		//退出
 		public function loginout(){
-			$condition['openid']=$this->wecha_id;
-			D('Custom')->where($condition)->setDec('login');
-			$this->success('退出成功', U('Manager/index',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
+			session("tys_manager_login",NULL);
+			// $condition['openid']=$this->wecha_id;
+			// D('Custom')->where($condition)->setDec('login');
+			$this->success('退出成功', U('Manager/index'));
 		}
 		//管理操作
 		public function operation(){
@@ -47,16 +55,16 @@
 			$this->assign('doctor',$doctor);
 			$this->display();
 		}
-		//判断医生账号是否存在(AJAX)
+		//判断孕育师账号是否存在(AJAX)
 		public function judgeDoctorByUsernameAjax($username){
 			$username = $this->_get('username');
 			if($this->judgeDoctorByUsername($username)){
-				$this->ajaxReturn('','该医生账号已经存在',2);
+				$this->ajaxReturn('','该孕育师账号已经存在',2);
 			}else{
 				$this->ajaxReturn('','',1);
 			}
 		}
-		//判断医生账号是否存在
+		//判断孕育师账号是否存在
 		public function judgeDoctorByUsername($username){
 			$db=D('Doctor');
 			$where['username']=$username;
@@ -67,7 +75,7 @@
 				return false;
 			}
 		}
-		//添加医生
+		//添加孕育师
 		public function doctoradd(){
 			if($_POST==NULL){
 				//获取医院列表
@@ -153,9 +161,9 @@
 			}
 				echo $newstr;
 		}
-		//医生详细
+		//孕育师详细
 		public function doctor(){
-			//获取医生ID
+			//获取孕育师ID
 			$id=$this->_get('id','intval');
 			if($id){
 				$db=D('Doctor');

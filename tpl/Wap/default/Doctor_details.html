@@ -1,49 +1,36 @@
 <include file="Public:head"/>
 <body>
 	<div class="doctor_head">
-		<div class='hd1 dpic'><img src="{wghd:
-$doctor.pic}" alt=""></div>
+		<div class='hd1 dpic'><img src="{wghd:$doctor.pic}" alt=""></div>
 		<div class='hd1 dinfo'>
-			<input type="hidden" id="did" value="{wghd:
-$doctor.id}">
-			<div><span>{wghd:
-$doctor.name}</span>&nbsp;<span>{wghd:
-$doctor.persition}</span></div>
-			<div>{wghd:
-$doctor.hname}</div>
-			<div>{wghd:
-$doctor.profession}</div>
-			<!-- <div><a href="#">粉丝:{wghd:
-$doctor.followers}</a>
-				 <a href="javascript:if(confirm('确定取消关注吗?'))location='{wghd:
-:U('User/cancel',array('id'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}'">取消关注</a>
+			<input type="hidden" id="did" value="{wghd:$doctor.id}">
+			<div><span>{wghd:$doctor.name}</span>&nbsp;<span>{wghd:$doctor.persition}</span></div>
+			<div>{wghd:$doctor.hname}</div>
+			<div>{wghd:$doctor.profession}</div>
+			<!-- <div><a href="#">粉丝:{wghd:$doctor.followers}</a>
+				 <a href="javascript:if(confirm('确定取消关注吗?'))location='{wghd::U('User/cancel',array('id'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}'">取消关注</a>
 			</div> -->
 		</div>
 		<div class="clear"></div>
 	</div>
-	<script src="{wghd:
-:RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="{wghd::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
 	<div id="wrapper" class='doctor_details'>
 		<!--section>
 			<div>专业特长</div>
-			<div>{wghd:
-$doctor.profession}</div>
+			<div>{wghd:$doctor.profession}</div>
 		</section-->
 		<section>
-			<a href="{wghd:
-:U('User/customconsultb',array('did'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">在线咨询</a>
+			<a href="{wghd::U('User/customconsultb',array('did'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">在线咨询</a>
 		</section>
 		<section>
-			<div>医生简介</div>
-			<div>{wghd:
-$doctor.info}</div>
+			<div>孕育师简介</div>
+			<div>{wghd:$doctor.info}</div>
 		</section>
 		<section>
 			<include file="Public:week"/>
 		</section>
 		<section>
-			<a href="javascript:if(confirm('取消关注后将无法和医生进行互动?'))location='{wghd:
-:U('User/cancel',array('id'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}'">取消关注</a>
+			<a href="javascript:if(confirm('取消关注后将无法和孕育师进行互动?'))location='{wghd::U('User/cancel',array('id'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}'">取消关注</a>
 		</section>
 	</div>
 <include file="Public:support"/>

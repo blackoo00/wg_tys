@@ -153,7 +153,7 @@ body {
 	top:0;
 	left:0;	
 	display:none;
-	background:#fff;
+	background:#ebebeb;
 }
 #profile{
 	/*height:30%;*/
@@ -351,29 +351,31 @@ div.message.right .corner{
 	  text-align: center;
 }
 #sendmessage{
-	padding: 10px;
+	padding: 7px;
 	box-sizing:border-box;
-	border-top:1px solid #7f8389;	
+	border-top:1px solid #c3c3c3;	
 	position:absolute;
 	bottom:0;
 	left:0px;
 	width:100%;
 	background:#f4f4f6;
+	box-shadow: 0 0px 27px 0 #d4d4d4;
 }
-#sendmessage input{
+#sendmessage #consultcon{
 	border-radius: 6px;
-	border: 1px solid #7f8389;
+	border: 1px solid #c3c3c3;
 	background: #fdfdfd;
 	display: inline-block;
 	width: 100%;
 	/* padding: 10px 2%; */
 	box-sizing: border-box;
 	font-size: 1.2em;
-	line-height: 2em;
+	padding: 5px 0;
 	text-indent: 5px;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 400px;
-	color: #aab8c2;
+	color: #000;
+	overflow:scroll;overflow-y:hidden;overflow-x:hidden
 }
 #sendmessage input:focus{
 	 outline: 0;

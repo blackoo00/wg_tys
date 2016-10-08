@@ -44,7 +44,7 @@
 									</div>
 									<div class="weui_cell_ft">
 										<p>
-				                            <?php echo sprintf("%.2f",$row['detail'][0]['showprice']);?>
+				                            <?php echo sprintf("%.2f",$row['detail'][0]['price']);?>
 										</p>
 										<p>×
 				                            <?php echo ($row['detail'][0]['count']); ?>
@@ -61,7 +61,7 @@
 								</div>
 								<div class="weui_cell_ft">
 									<p>
-										<?php echo sprintf("%.2f",$row['showprice']);?>
+										<?php echo sprintf("%.2f",$row['price']);?>
 									</p>
 									<p>×
 										<?php echo ($row['count']); ?>
@@ -84,10 +84,10 @@
 					<div class="weui_cell">
 						<div class="weui_cell_bd weui_cell_primary"></div>
 						<div class="weui_cell_ft">
-							<?php if(($o["paid"]) == "0"): ?><a href="<?php echo U('Store/payNow',array('id'=>$o['id']));?>" data-id="<?php echo ($o["id"]); ?>" class="weui_btn weui_btn_mini weui_btn_primary cancel_order" style="font-size: 16px; background: #EF4F4F;">取消订单</a><?php endif; ?>
+							<!-- <?php if(($o["paid"]) == "0"): ?><a href="<?php echo U('Store/payNow',array('id'=>$o['id']));?>" data-id="<?php echo ($o["id"]); ?>" class="weui_btn weui_btn_mini weui_btn_primary cancel_order" style="font-size: 16px; background: #EF4F4F;">取消订单</a><?php endif; ?> -->
 							<?php if(($o["paid"] == 0) AND ($o["returnMoney"] == 0)): ?><a href="<?php echo U('Store/payNow',array('id'=>$o['id']));?>" data-id="<?php echo ($o["id"]); ?>" class="weui_btn weui_btn_mini weui_btn_primary place_order" style="font-size: 16px;">立即支付</a><?php endif; ?>
 							<?php if(($o["sent"] == 1) AND ($o["receive"] == 0)): ?><a href="javascript:;" data-id="<?php echo ($o["id"]); ?>" class="weui_btn weui_btn_mini weui_btn_primary get_product" style="font-size: 16px;">确认收货</a><?php endif; ?>
-							<a href="<?php echo U('Store/orderDetails',array('id'=>$o['orderid']));?>" class="weui_btn weui_btn_mini weui_btn_primary coad_bnfo_lage" style="font-size: 16px;">订单详情</a>
+							<a href="<?php echo U('Store/orderDetails',array('id'=>$o['orderid']));?>" class="weui_btn weui_btn_mini weui_btn_primary coad_lnfo_bage" style="font-size: 16px;">订单详情</a>
 						</div>
 					</div>
 				</div><?php endforeach; endif; else: echo "" ;endif; ?>

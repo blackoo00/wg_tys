@@ -8,7 +8,7 @@
             $Page       = new Page($count,10);//每页显示一个
         	$show       = $Page->show();
         	$this->assign('page',$show);
-        	//判断是显示全部还是指定患者的咨询
+        	//判断是显示全部还是指定孕妈的咨询
         	$id=$this->_get('id','intval');
         	if($id){
         		$where['cid']=$id;
@@ -38,7 +38,7 @@
 			$db=D('Consultb');
 			//显示分页
 			$count      = count($db->select());       
-            $Page       = new Page($count,10);//每页显示一个
+            $Page       = new Page($count,25);//每页显示一个
         	$show       = $Page->show();
         	$this->assign('page',$show);
 
@@ -48,7 +48,7 @@
 			$consultb=$db->relation(true)->where($where)->limit($Page->firstRow.','.$Page->listRows)->select();
 			$this->assign('consultb',$consultb);
 
-			//查询医生患者姓名
+			//查询孕育师孕妈姓名
 			$db=D(MODULE_NAME);
 			$where['id'] = $this->_get('id','intval');
 			$consult=D(MODULE_NAME)->relation(true)->where($where)->select();

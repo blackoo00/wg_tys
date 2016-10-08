@@ -2,17 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>{wghd:
-$tpl['wxname']}</title>
+<title>{wghd:$tpl['wxname']}</title>
 <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
 <meta charset="utf-8">
-<link href="{wghd:
-:RES}/css/ty/news5.css" rel="stylesheet" type="text/css" />
-<script src="{wghd:
-:RES}/js/ty/iscroll.js" type="text/javascript"></script>
+<link href="{wghd::RES}/css/ty/news5.css" rel="stylesheet" type="text/css" />
+<script src="{wghd::RES}/js/ty/iscroll.js" type="text/javascript"></script>
 
 <style>
 #cate6 .mainmenu li.li0:nth-child(5) .menumesg {
@@ -34,8 +31,7 @@ $tpl['wxname']}</title>
 
  .themeStyle{background:#DE0C04}  
 </style>
-<script src="{wghd:
-:RES}/css/flash/js/iscroll.js" type="text/javascript"></script>
+<script src="{wghd::RES}/css/flash/js/iscroll.js" type="text/javascript"></script>
 <script type="text/javascript">
 var myScroll;
 
@@ -63,21 +59,16 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 <div id="scroller">
 <ul id="thelist">
    <volist name="flash" id="so">
-		<li><p>{wghd:
-$so.info}</p><a href="{wghd:
-$so.url}"><img src="{wghd:
-$so.img}" /></a></li>
+		<li><p>{wghd:$so.info}</p><a href="{wghd:$so.url}"><img src="{wghd:$so.img}" /></a></li>
 	</volist>
 </ul>
 </div>
 </div>
 <div id="nav">
-<div id="prev" onclick="myScroll.scrollToPage('prev', 0,400,{wghd:
-$num-1});return false">&larr; prev</div>
+<div id="prev" onclick="myScroll.scrollToPage('prev', 0,400,{wghd:$num-1});return false">&larr; prev</div>
 <ul id="indicator">
 <volist name="flash" id="so">
-<li   <if condition="$i eq 1">class="active"</if>  >{wghd:
-$i}</li>
+<li   <if condition="$i eq 1">class="active"</if>  >{wghd:$i}</li>
 </volist>
 
 </ul>
@@ -118,15 +109,10 @@ document.getElementById("thelist").getElementsByTagName("img").item(i).style.css
 <ul  class="todayList">
    <volist name="info" id="vo">
 <li class="only4">
-	<a href="<if condition="$vo['url'] eq ''">{wghd:
-:U('Wap/Index/lists',array('classid'=>$vo['id'],'token'=>$vo['token']))}<else/>{wghd:
-$vo.url}</if>">
-		<div class="img"><img src="{wghd:
-$vo.img}" /></div>
-		<h2>{wghd:
-$vo.name}</h2>
-		<p class="onlyheight">{wghd:
-$vo.info}</p>
+	<a href="<if condition="$vo['url'] eq ''">{wghd::U('Wap/Index/lists',array('classid'=>$vo['id'],'token'=>$vo['token']))}<else/>{wghd:$vo.url}</if>">
+		<div class="img"><img src="{wghd:$vo.img}" /></div>
+		<h2>{wghd:$vo.name}</h2>
+		<p class="onlyheight">{wghd:$vo.info}</p>
 		<span class="icon">&nbsp;</span>
 		<div class="clr"></div>
 	</a>
@@ -141,29 +127,19 @@ $vo.info}</p>
 <php>echo htmlspecialchars_decode(C('copyright'))</php>
 </div>
 </eq>
-<div style="display:none">{wghd:
-$tpl.tongji|htmlspecialchars_decode}</div>
+<div style="display:none">{wghd:$tpl.tongji|htmlspecialchars_decode}</div>
 <include file="Index:styleInclude"/><include file="$cateMenuFileName"/>
 	<if condition="ACTION_NAME eq 'index'">
 		<script type="text/javascript">
 			window.shareData = {  
 					"moduleName":"Index",
 					"moduleID": '0',
-					"imgUrl": "{wghd:
-$homeInfo.picurl}", 
-					"timeLineLink": "{wghd:
-:C('site_url')}{wghd:
-:U(Index/ACTION_NAME,array('token'=>$_GET['token']))}",
-					"sendFriendLink": "{wghd:
-:C('site_url')}{wghd:
-:U(Index/ACTION_NAME,array('token'=>$_GET['token']))}",
-					"weiboLink": "{wghd:
-:C('site_url')}{wghd:
-:U(Index/ACTION_NAME,array('token'=>$_GET['token']))}",
-					"tTitle": "{wghd:
-$homeInfo.title}",
-					"tContent": "{wghd:
-$homeInfo.info}"
+					"imgUrl": "{wghd:$homeInfo.picurl}", 
+					"timeLineLink": "{wghd::C('site_url')}{wghd::U(Index/ACTION_NAME,array('token'=>$_GET['token']))}",
+					"sendFriendLink": "{wghd::C('site_url')}{wghd::U(Index/ACTION_NAME,array('token'=>$_GET['token']))}",
+					"weiboLink": "{wghd::C('site_url')}{wghd::U(Index/ACTION_NAME,array('token'=>$_GET['token']))}",
+					"tTitle": "{wghd:$homeInfo.title}",
+					"tContent": "{wghd:$homeInfo.info}"
 				};
 		</script>
 	<else />
@@ -171,26 +147,16 @@ $homeInfo.info}"
 			window.shareData = {  
 				"moduleName":"Index",
 				"moduleID": '1',
-				"imgUrl": "{wghd:
-$homeInfo.picurl}", 
-				"timeLineLink": "{wghd:
-:C('site_url')}{wghd:
-:U(Index/ACTION_NAME,array('token'=>$_GET['token'],'classid'=>$_GET['classid']))}",
-				"sendFriendLink": "{wghd:
-:C('site_url')}{wghd:
-:U(MODULE_NAME/ACTION_NAME,array('token'=>$_GET['token'],'classid'=>$_GET['classid']))}",
-				"weiboLink": "{wghd:
-:C('site_url')}{wghd:
-:U(MODULE_NAME/ACTION_NAME,array('token'=>$_GET['token'],'classid'=>$_GET['classid']))}",
-				"tTitle": "{wghd:
-$homeInfo.title}",
-				"tContent": "{wghd:
-$homeInfo.info}"
+				"imgUrl": "{wghd:$homeInfo.picurl}", 
+				"timeLineLink": "{wghd::C('site_url')}{wghd::U(Index/ACTION_NAME,array('token'=>$_GET['token'],'classid'=>$_GET['classid']))}",
+				"sendFriendLink": "{wghd::C('site_url')}{wghd::U(MODULE_NAME/ACTION_NAME,array('token'=>$_GET['token'],'classid'=>$_GET['classid']))}",
+				"weiboLink": "{wghd::C('site_url')}{wghd::U(MODULE_NAME/ACTION_NAME,array('token'=>$_GET['token'],'classid'=>$_GET['classid']))}",
+				"tTitle": "{wghd:$homeInfo.title}",
+				"tContent": "{wghd:$homeInfo.info}"
 			};
 		</script>	
 	
 	</if>
-{wghd:
-$shareScript}
+{wghd:$shareScript}
 </body>
 </html>

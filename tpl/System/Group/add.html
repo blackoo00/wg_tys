@@ -3,10 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>权限管理</title>
-<link href="{wghd:
-:RES}/images/main.css" type="text/css" rel="stylesheet">
-<script src="{wghd:
-:STATICS}/jquery-1.4.2.min.js" type="text/javascript"></script>
+<link href="{wghd::RES}/images/main.css" type="text/css" rel="stylesheet">
+<script src="{wghd::STATICS}/jquery-1.4.2.min.js" type="text/javascript"></script>
 <meta http-equiv="x-ua-compatible" content="ie=7" />
 <script type="text/javascript">
 	$(function(){
@@ -14,8 +12,7 @@
 			var forms=$('#form').serialize();
 			$.ajax({
 				type:'POST',
-				url:'{wghd:
-:U("$action/add")}',
+				url:'{wghd::U("$action/add")}',
 				data:forms,
 				success:function(msg){
 					msg=eval('('+msg+')');
@@ -31,8 +28,7 @@
 <form id="form">
 <table width="100%" border="0" cellspacing="0" cellpadding="0" id="addn">
   <tr>
-    <th colspan="4">{wghd:
-$title}</th>
+    <th colspan="4">{wghd:$title}</th>
     </tr>
 	<tr> 
       <td  height="48" align="right"><strong>组名：</strong></td>
@@ -51,9 +47,7 @@ $title}</th>
       <td><input type="text" name="remark"  class="ipt" size="45" /></td>
     </tr>
     <tr> 
-      <td height="48" colspan="2"><div id="addkey"></div><div class="fabu"><img src="{wghd:
-:RES}/images/main/addwz.gif" id="submit" /> <img src="{wghd:
-:RES}/images/main/addqx.gif" /></div></td>
+      <td height="48" colspan="2"><div id="addkey"></div><div class="fabu"><img src="{wghd::RES}/images/main/addwz.gif" id="submit" /> <img src="{wghd::RES}/images/main/addqx.gif" /></div></td>
     </tr>
 </table>
 </form>

@@ -3,17 +3,14 @@
 >
 <div class="cLine">
   <div class="pageNavigator left">
-    <a href='{wghd:
-:U("Doctor/add")}' title='新增医生' class='btnGrayS vm bigbtn'>
-      <img src="{wghd:
-:RES}/images/text.png" class="vm" />
-      新增医生
+    <a href='{wghd::U("Doctor/add")}' title='新增孕育师' class='btnGrayS vm bigbtn'>
+      <img src="{wghd::RES}/images/text.png" class="vm" />
+      新增孕育师
     </a>
   </div>
   <div style="float:right;line-height:30px;">
     <form action="#" method="post">
-      <input type="text" placeholder="请输入医生姓名" value="{wghd:
-$_POST['search']}" class="px" name="search" />    
+      <input type="text" placeholder="请输入孕育师姓名" value="{wghd:$_POST['search']}" class="px" name="search" />    
       <button class="btnGrayS" style="height: 29px;">搜索</button>
     </form>
   </div>
@@ -26,7 +23,7 @@ $_POST['search']}" class="px" name="search" />
     <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%">
       <THEAD>
         <TR>
-          <th>医生名称</th>
+          <th>孕育师名称</th>
           <th>所属医院</th>
           <th>职称</th>
           <th>粉丝数</th>
@@ -39,28 +36,17 @@ $_POST['search']}" class="px" name="search" />
         <TR></TR>
         <volist id="list" name="doctor">
           <tr>
-            <td>{wghd:
-$list.name}</td>
-            <td><input id="hid" name="hid" type="hidden" value="{wghd:
-$list.hospital.id}">{wghd:
-$list.hospital.name}</td>
-            <td>{wghd:
-$list.persition}</td>
-            <td>{wghd:
-$list.followers}</td>
-            <td><img style="width:120px; height='auto';" src="{wghd:
-$list.qrcode}"></td>
+            <td>{wghd:$list.name}</td>
+            <td><input id="hid" name="hid" type="hidden" value="{wghd:$list.hospital.id}">{wghd:$list.hospital.name}</td>
+            <td>{wghd:$list.persition}</td>
+            <td>{wghd:$list.followers}</td>
+            <td><img style="width:120px; height='auto';" src="{wghd:$list.qrcode}"></td>
             <!--  -->
-			<td>{wghd:
-$list.orderNums}（<a href="{wghd:
-:U('Store/orders',array('did'=>$list['id']))}" style="color:blue">明细</a>）</td>
+			<td>{wghd:$list.orderNums}（<a href="{wghd::U('Store/orders',array('did'=>$list['id']))}" style="color:blue">明细</a>）</td>
             <td class="norightborder"> 
-              <a href="{wghd:
-:U('Doctor/details',array('id'=>$list['id']))}" title="查看详细">查看详细</a>
-              <a href="{wghd:
-:U('Doctor/edit',array('id'=>$list['id']))}" title="编辑文本">编辑</a>
-              <a onclick="return confirm('确定要删除么？');" href="{wghd:
-:U('Doctor/del',array('id'=>$list['id'],'hid'=>$list['hospital']['id']))}">删除</a>
+              <a href="{wghd::U('Doctor/details',array('id'=>$list['id']))}" title="查看详细">查看详细</a>
+              <a href="{wghd::U('Doctor/edit',array('id'=>$list['id']))}" title="编辑文本">编辑</a>
+              <a onclick="return confirm('确定要删除么？');" href="{wghd::U('Doctor/del',array('id'=>$list['id'],'hid'=>$list['hospital']['id']))}">删除</a>
             </td>
           </tr>
         </volist>
@@ -71,8 +57,7 @@ $list.orderNums}（<a href="{wghd:
 </div>
 <div class="cLine">
   <div class="pageNavigator right">
-    <div class="pages">{wghd:
-$page}</div>
+    <div class="pages">{wghd:$page}</div>
   </div>
   <div class="clr"></div>
 </div>

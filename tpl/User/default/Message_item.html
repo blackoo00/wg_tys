@@ -27,24 +27,20 @@
   <tr>
               		<th>消息类型</th>
               		<td>
-              		{wghd:
-$info.msgtype}
+              		{wghd:$info.msgtype}
               		</td>
               		</tr>
               		<tr> 
         <th>标题</th> 
-        <td>{wghd:
-$info.title}</td> 
+        <td>{wghd:$info.title}</td> 
        </tr> 
               		<TR>
   <TH>媒体文件</TH>
-  <TD>{wghd:
-$info.mediasrc}</TD>
+  <TD>{wghd:$info.mediasrc}</TD>
 </TR>
 <tr> 
         <th><span class="red"></span>文本消息/简介</th> 
-        <td>{wghd:
-$info.text}</td> 
+        <td>{wghd:$info.text}</td> 
        </tr>
        <pigcmsif where="$info['msgtype'] eq 'news'">
 <TR>
@@ -555,15 +551,12 @@ a {
 <div class="media mediaFullText" id="titledom">
 
 <div class="mediaPanel">
-<div class="mediaHead"><span class="title" id="zbt">{wghd:
-$img.title}</span><span class="time"><?php echo date('Y-m-d',time());?></span>
+<div class="mediaHead"><span class="title" id="zbt">{wghd:$img.title}</span><span class="time"><?php echo date('Y-m-d',time());?></span>
 <div class="clr"></div>
 </div>
-<div class="mediaImg"><img id="suicaipic1" src="{wghd:
-$img.pic}"></div>
+<div class="mediaImg"><img id="suicaipic1" src="{wghd:$img.pic}"></div>
 <div class="mediaContent mediaContentP">
-<p id="zinfo">{wghd:
-$img.text}</p>
+<p id="zinfo">{wghd:$img.text}</p>
 </div>
 <div class="mediaFooter">
 <span class="mesgIcon right"></span><span style="line-height:50px;" class="left">查看全文</span>

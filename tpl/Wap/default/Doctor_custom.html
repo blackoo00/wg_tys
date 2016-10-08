@@ -1,7 +1,6 @@
 <include file="Public:head"/>
 <body>
-	<script src="{wghd:
-:RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="{wghd::RES}/js/tys/jquery-1.11.1.min.js" type="text/javascript"></script>
 	<style>
         .refresh{
             display: inline-block;
@@ -14,10 +13,9 @@
 			<div class="searchli">
 				<div>
 					<i class="icon-search"></i>
-					<input type="text" id="search" placeholder="输入患者姓名">
+					<input type="text" id="search" placeholder="输入孕妈姓名">
 				</div>
-				<a class="" href="{wghd:
-:U('Doctor/custom',array('token'=>$token,'wecha_id'=>$wecha_id))}">刷新</a>
+				<a class="" href="{wghd::U('Doctor/custom',array('token'=>$token,'wecha_id'=>$wecha_id))}">刷新</a>
 			</div>
 			<script>
 				$(function(){
@@ -40,61 +38,66 @@
 				})
 			</script>
 			<div id="qunfa">
-				<!-- <a href="{wghd:
-:U('Doctor/custom',array('token'=>$token,'wecha_id'=>$wecha_id))}" class="refresh"><i class="icon-loop2"></i></a> -->
-				<span>患者列表</span>
-				<a style="float:right;" href="{wghd:
-:U('Consult/allsendpage',array('did'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}" class="button blue">群发</a>
+				<!-- <a href="{wghd::U('Doctor/custom',array('token'=>$token,'wecha_id'=>$wecha_id))}" class="refresh"><i class="icon-loop2"></i></a> -->
+				<span>孕妈列表</span>
+				<a style="float:right;" href="{wghd::U('Consult/allsendpage',array('did'=>$doctor['id'],'token'=>$token,'wecha_id'=>$wecha_id))}" class="button blue">群发</a>
 				<div class="clear"></div>
 			</div>
 			<div class="clear">	</div>
 			<volist id="list" name="custom">
-				<a href="{wghd:
-:U('Consult/consultb',array('did'=>$doctor['id'],'cid'=>$list['id'],'token'=>$token,'wecha_id'=>$wecha_id))}">
 				<li>
 					<div class="prompt">
-						<img src="{wghd:
-$list.pic}">
-						<label class="has_newmessage" data-cid={wghd:
-$list.consult.cid}>
-							<eq name="list.consult.cnew" value="1"><font class="newmessage" style="color:red"><span></span></font></eq>
-						</label>
+						<a href="{wghd::U('Consult/consultb',array('did'=>$doctor['id'],'cid'=>$list['id'],'token'=>$token,'wecha_id'=>$wecha_id))}" class="show_consult_details">
+							<img src="{wghd:$list.pic}">
+							<label class="has_newmessage" data-cid={wghd:$list.consult.cid}>
+								<eq name="list.consult.cnew" value="1"><font class="newmessage" style="color:red"><span></span></font></eq>
+							</label>
 
-						<p id="customname">{wghd:
-$list.name}</p>
+							<p id="customname" class="customname">{wghd:$list.name}</p>
+						</a>
+						<p class="custom_detail">
+							<a href="{wghd::U('Doctor/cdetails',array('id'=>$list['id']))}">
+								查看详情>
+							</a>
+						</p>
 					</div>
-					<div class="clear"></div>
 				</li>
-				</a>
 			</volist>
-			<div class="wappages">{wghd:
-$page}</div>
+			<div class="wappages">{wghd:$page}</div>
 		</ul>
 	</div>
 	<include file="Doctor:foot" />
-	<input type="hidden" id="did" value="{wghd:
-$doctor.id}">
+	<input type="hidden" id="did" value="{wghd:$doctor.id}">
 </body>
 </html>
-<script src="{wghd:
-:RES}/websorcket/fancywebsocket.js"></script>
-<script src="{wghd:
-:RES}/websorcket/sorcket.js"></script>
+<script src="{wghd::RES}/websorcket/fancywebsocket.js"></script>
+<script src="{wghd::RES}/websorcket/sorcket.js"></script>
 <script>
 	$(document).ready(function() {
+
+		var show_detail = $('.show_consult_details');
+		show_detail.click(function(e){
+			e.preventDefault();
+			var href = $(this).attr('href');
+			$(this).find('.newmessage').hide();
+			location.href = href;
+		})
+
 		var did = $('#did').val();
 		//Log any messages sent from server
 		Server.bind('message', function( payload ) {
-			var fromid = eval(payload)[2]['fromid'];
-			var toid = eval(payload)[3]['toid'];
-			if(did == toid){
-				$('.has_newmessage').each(function(index, el) {
-					var cid = $(this).data('cid');
-					var str = '<font class="newmessage" style="color:red"><span></span></font>';
-					if(cid == fromid){
-						$(this).append(str);
-					}
-				});
+			if(payload.indexOf("fromid")>=0){
+				var fromid = eval(payload)[2]['fromid'];
+				var toid = eval(payload)[3]['toid'];
+				if(did == toid){
+					$('.has_newmessage').each(function(index, el) {
+						var cid = $(this).data('cid');
+						var str = '<font class="newmessage" style="color:red"><span></span></font>';
+						if(cid == fromid){
+							$(this).append(str);
+						}
+					});
+				}
 			}
 			console.log( payload );
 		});

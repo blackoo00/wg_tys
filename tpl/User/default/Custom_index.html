@@ -3,8 +3,7 @@
 <div class="cLine">
   <div style="float:right;line-height:30px;">
     <form action="#" method="post">
-      <input type="text" placeholder="请输入患者姓名" value="{wghd:
-$_POST['search']}" class="px" name="search" />    
+      <input type="text" placeholder="请输入孕妈姓名" value="{wghd:$_POST['search']}" class="px" name="search" />    
       <button class="btnGrayS" style="height: 29px;">搜索</button>
     </form>
   </div>
@@ -17,9 +16,9 @@ $_POST['search']}" class="px" name="search" />
     <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%">
       <THEAD>
         <TR>
-          <th>患者姓名</th>
+          <th>孕妈姓名</th>
           <th>性别</th>
-          <th>关注医生</th>
+          <th>关注孕育师</th>
           <th>电话</th>
 		  <th>下单数量</th>
           <th>操作</th>
@@ -29,22 +28,14 @@ $_POST['search']}" class="px" name="search" />
         <TR></TR>
         <volist id="list" name="custom">
           <tr>
-            <td>{wghd:
-$list.name}</td>
+            <td>{wghd:$list.name}</td>
             <td><eq name="list.sex" value="1">男<else/>女</eq></td>
-            <td>{wghd:
-$list.doctor.name}</td>
-            <td>{wghd:
-$list.tel}</td>
-			      <td>{wghd:
-$list.orderNums}（<a href="{wghd:
-:U('Store/orders',array('cid'=>$list['id']))}" style="color:blue">明细</a>）</td>
+            <td>{wghd:$list.doctor.name}</td>
+            <td>{wghd:$list.tel}</td>
+			      <td>{wghd:$list.orderNums}（<a href="{wghd::U('Store/orders',array('cid'=>$list['id']))}" style="color:blue">明细</a>）</td>
             <td class="norightborder">
-               <a href="{wghd:
-:U('Custom/details',array('id'=>$list['id']))}" title="详细信息">详细信息</a>
-               <!-- <a href="{wghd:
-:U('Consult/index',array('id'=>$list['id']))}" title="咨询信息">咨询信息({wghd:
-$list.consultnum})</a> -->
+               <a href="{wghd::U('Custom/details',array('id'=>$list['id']))}" title="详细信息">详细信息</a>
+               <!-- <a href="{wghd::U('Consult/index',array('id'=>$list['id']))}" title="咨询信息">咨询信息({wghd:$list.consultnum})</a> -->
             </td>
           </tr>
           </tr>
@@ -56,8 +47,7 @@ $list.consultnum})</a> -->
 </div>
 <div class="cLine">
   <div class="pageNavigator right">
-    <div class="pages">{wghd:
-$page}</div>
+    <div class="pages">{wghd:$page}</div>
   </div>
   <div class="clr"></div>
 </div>

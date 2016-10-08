@@ -4,8 +4,7 @@
 <div class="cLine">
   <div style="float:right;line-height:30px;">
     <form action="#" method="post">
-      <input type="text" placeholder="请输入医生姓名" value="{wghd:
-$_POST['search']}" class="px" name="search" />    
+      <input type="text" placeholder="请输入孕育师姓名" value="{wghd:$_POST['search']}" class="px" name="search" />    
       <button class="btnGrayS" style="height: 29px;">搜索</button>
     </form>
   </div>
@@ -23,10 +22,7 @@ $_POST['search']}" class="px" name="search" />
     </style>
 <!--     <volist id="list" name="doctor">
     <span class='doctor' <eq name="list.id" value="$did">style="background-color: #ECF5E5;"</eq>>
-        <a href="{wghd:
-:U('Comment/index',array('did'=>$list['id']))}" title="{wghd:
-$list.name}">{wghd:
-$list.name}</a>
+        <a href="{wghd::U('Comment/index',array('did'=>$list['id']))}" title="{wghd:$list.name}">{wghd:$list.name}</a>
       </span>
     </volist> -->
     <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%">
@@ -37,8 +33,8 @@ $list.name}</a>
       </colgroup>
       <THEAD>
         <TR>
-          <th>评价医生</th>
-          <th>评价患者</th>
+          <th>评价孕育师</th>
+          <th>评价孕妈</th>
           <th>评价星级</th>
           <th>评价内容</th>
         </TR>
@@ -47,10 +43,8 @@ $list.name}</a>
         <TR></TR>
         <volist id="list" name="comment">
           <tr>
-            <td>{wghd:
-$list.doctor.name}</td>
-            <td>{wghd:
-$list.custom.name}</td>
+            <td>{wghd:$list.doctor.name}</td>
+            <td>{wghd:$list.custom.name}</td>
             <td>
               <div id="stars">
                 <for start="0" end="$list.stars">
@@ -58,8 +52,7 @@ $list.custom.name}</td>
                 </for>
               </div>
             </td>
-            <td>{wghd:
-$list.info}</td>
+            <td>{wghd:$list.info}</td>
           </tr>
         </volist>
 
@@ -69,8 +62,7 @@ $list.info}</td>
 </div>
 <div class="cLine">
   <div class="pageNavigator right">
-    <div class="pages">{wghd:
-$page}</div>
+    <div class="pages">{wghd:$page}</div>
   </div>
   <div class="clr"></div>
 </div>

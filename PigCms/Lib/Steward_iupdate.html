@@ -5,19 +5,13 @@
 	<title>胰岛素记录修改</title>
 </head>
 <body>
-	<form action="{wghd:
-:U('Steward/iupdate',array('token'=>$token,'wecha_id'=>$wecha_id))}" method="post">
-		<input type="hidden" name="id" value="{wghd:
-$insulin.id}">
+	<form action="{wghd::U('Steward/iupdate',array('token'=>$token,'wecha_id'=>$wecha_id))}" method="post">
+		<input type="hidden" name="id" value="{wghd:$insulin.id}">
 		<ul>
-			<li>口服药:<input type="text" name="oralmedicine" value="{wghd:
-$insulin.oralmedicine}"></li>
-			<li>开始时间:<input type="text" name="starttime" value="{wghd:
-$insulin.starttime}"></li>
-			<li>结束时间:<input type="text" name="endtime" value="{wghd:
-$insulin.endtime}"></li>
-			<li>备注:<input type="text" name="note" value="{wghd:
-$insulin.note}"></li>
+			<li>口服药:<input type="text" name="oralmedicine" value="{wghd:$insulin.oralmedicine}"></li>
+			<li>开始时间:<input type="text" name="starttime" value="{wghd:$insulin.starttime}"></li>
+			<li>结束时间:<input type="text" name="endtime" value="{wghd:$insulin.endtime}"></li>
+			<li>备注:<input type="text" name="note" value="{wghd:$insulin.note}"></li>
 		</ul>
 		<input type="submit" value="保存">
 	</form>

@@ -1,6 +1,5 @@
 <include file="Public:head"/>
-<link rel="stylesheet" type="text/css" href="{wghd:
-:RES}/css/cymain.css" />  
+<link rel="stylesheet" type="text/css" href="{wghd::RES}/css/cymain.css" />  
 
 <div class="content">
          
@@ -29,16 +28,11 @@
                 <tr></tr>
                   <volist id="list" name="list">
                 <tr>
-                  <td>{wghd:
-$list.id}</td>
-                  <td>{wghd:
-$list.nickname}</td>
-                  <td><img src="{wghd:
-$list.headimgurl}" width="50"></td>
-                  <td>{wghd:
-$list.productname}</td>
-                  <td>{wghd:
-$list.addtime|date='Y-m-d',###}</td>
+                  <td>{wghd:$list.id}</td>
+                  <td>{wghd:$list.nickname}</td>
+                  <td><img src="{wghd:$list.headimgurl}" width="50"></td>
+                  <td>{wghd:$list.productname}</td>
+                  <td>{wghd:$list.addtime|date='Y-m-d',###}</td>
                 </tr>
                   </volist>
       			                
@@ -65,8 +59,7 @@ alert('未选中内容！')
    </div> 
           <div class="cLine">
             <div class="pageNavigator right">
-                 <div class="pages">{wghd:
-$page}</div>
+                 <div class="pages">{wghd:$page}</div>
               </div>
             <div class="clr"></div>
           </div>
