@@ -12,10 +12,12 @@ class AreplyAction extends UserAction{
 			$info=M('Wxuser')->find($id);
 		}
 		$token=$this->_get('token','trim');	
-		if($info==false||$info['token']!=$token){
+		if($info==false||$info['token']!=$this->token){
 			$this->error('非法操作',U('Home/Index/index'));
 		}
-		session('token',$token);
+		if(!session('token')){
+			session('token',$token);
+		}
 		session('wxid',$info['id']);
 		//第一次登陆　创建　功能所有权
 		$token_open=M('Token_open');

@@ -4,7 +4,7 @@
 
 <div class="cLineB">
   <h4>在线支付配置 </h4>
-   <div class="ftip" style="margin:10px 0">支持微信支付、财付通（WAP接口或者即时到帐接口）和支付宝支付（即时到帐接口）。请填写真实信息，否则支付中可能会出现错误</div> 
+   <!-- <div class="ftip" style="margin:10px 0">支持微信支付、财付通（WAP接口或者即时到帐接口）和支付宝支付（即时到帐接口）。请填写真实信息，否则支付中可能会出现错误</div>  -->
  </div>
    
  <!--tab start-->
@@ -32,7 +32,10 @@ function ccolumns(value){
 				</tr>
 				<tr>
 					<th>支付方式：</th>
-					<td><select name="paytype" onchange="ccolumns(this.value)"><option value="weixin" <if condition="$config.paytype eq 'weixin'"> selected</if>>微信支付</option><option value="alipay" <if condition="$config.paytype eq 'alipay'">selected</if>>支付宝</option><option value="tenpay" <if condition="$config.paytype eq 'tenpay'"> selected</if>>财付通(WAP手机接口)</option><option value="tenpayComputer" <if condition="$config.paytype eq 'tenpayComputer'"> selected</if>>财付通(即时到帐接口)</option></select> </td>
+					<td>
+					微信支付
+					<!-- <select name="paytype" onchange="ccolumns(this.value)"><option value="weixin" <if condition="$config.paytype eq 'weixin'"> selected</if>>微信支付</option><option value="alipay" <if condition="$config.paytype eq 'alipay'">selected</if>>支付宝</option><option value="tenpay" <if condition="$config.paytype eq 'tenpay'"> selected</if>>财付通(WAP手机接口)</option><option value="tenpayComputer" <if condition="$config.paytype eq 'tenpayComputer'"> selected</if>>财付通(即时到帐接口)</option></select>  -->
+					</td>
 				</tr>
 				
 				<tr class="alipay" <pigcmsif where="$config.paytype neq 'alipay'">style="display:none"</pigcmsif>>
@@ -79,7 +82,7 @@ function ccolumns(value){
 				</pigcmsif>
 				<th>&nbsp;</th>
 					<td>
-					<input type="hidden" name="token" value="{Pigcms:$token}" />
+					<input type="hidden" name="token" value="{wghd:$token}" />
 						<button type="submit" name="button" class="btnGreen">保存</button>
 						<a href="javascript:history.go(-1);" class="btnGray vm">取消</a>
 					</td>

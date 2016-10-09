@@ -28,7 +28,8 @@ class UserAction extends BaseAction
         $this->wxuser = $wecha;
         $this->assign('wxuser', $wecha);
         $this->assign('wecha', $wecha);
-        $this->token = session('token');
+        // $this->token = session('token');
+        $this->token = 'mhfcjx1421158741';
         $this->assign('token', $this->token);
         $token_open = M('token_open')->field('queryname')->where(array('token' => $this->token))->find();
         $this->userFunctions = explode(',', $token_open['queryname']);

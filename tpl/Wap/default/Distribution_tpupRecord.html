@@ -45,7 +45,7 @@
               <p class="weui_media_desc">升级时间：{wghd:$list.addtime|date='Y-m-d',###}</p>
               </eq>
             </div>
-            <eq name="list.aid" value="$account['id']">
+            <!-- <eq name="list.aid" value="$account['id']">
               <switch name="list.return">
                 <case value="0">
                   <eq name="list.back" value="0">
@@ -59,8 +59,8 @@
                   <div class="weui_cell_ft editinfo_con" data-id={wghd:$list.id}>退款完成</div>
                 </case>
               </switch>
-            </eq>
-            <eq name="list.bindaid" value="$account.id">
+            </eq> -->
+            <!-- <eq name="list.bindaid" value="$account.id">
               <switch name="list.return">
                 <case value="1">
                   <div class="weui_cell_ft editinfo_con" data-id={wghd:$list.id} id="topup_agree_refund">同意退款</div>
@@ -69,7 +69,7 @@
                   <div class="weui_cell_ft editinfo_con" data-id={wghd:$list.id}>退款完成</div>
                 </case>
               </switch>
-            </eq>
+            </eq> -->
           </a>
         </volist>
       </div>

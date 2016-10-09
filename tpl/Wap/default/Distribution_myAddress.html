@@ -45,17 +45,25 @@
 								<input type="checkbox" class="weui_check" name="checkbox1" id="s11" <eq name="list.choose" value="1"> checked="checked"</eq>> <i class="weui_icon_checked"></i>
 							</div>
 							<div class="weui_cell_bd weui_cell_primary set_default cursor_ios">
-								<p style="color:#09BB07;">设为默认</p>
+								<p style="color:#09BB07;">
+								<neq name="Think.get.from" value="order">
+								设为默认
+								<else/>
+								选择该地址
+								</neq>
+								</p>
 							</div>
-							<div class="weui_cell_ft weui_cell_ft_address">
-								<a href="{wghd::U('Distribution/editAddress',array('id'=>$list['id']))}" class="add_edit_btn"> <i class="iconfont">&#xe60b;</i>
-									<span>编辑</span>
-								</a>
-								<a href="javascript:;" class="delete_address">
-									<i class="iconfont">&#xe612;</i>
-								<span>删除</span>
-								</a>
-							</div>
+							<neq name="Think.get.from" value="order">
+								<div class="weui_cell_ft weui_cell_ft_address">
+									<a href="{wghd::U('Distribution/editAddress',array('id'=>$list['id']))}" class="add_edit_btn"> <i class="iconfont">&#xe60b;</i>
+										<span>编辑</span>
+									</a>
+									<a href="javascript:;" class="delete_address">
+										<i class="iconfont">&#xe612;</i>
+									<span>删除</span>
+									</a>
+								</div>
+							</neq>
 						</div>
 					</div>
 				</div>
